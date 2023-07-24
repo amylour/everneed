@@ -1,0 +1,91 @@
+/* Google Font import */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&family=Karla:wght@200;300;400&display=swap');
+
+:root {
+    /* fonts */
+    --title: 'Karla', sans-serif;
+    --main-font: 'Inconsolata', monospace;
+
+    /* colours */
+    --forest: #194f49;
+    --yellow: #ffc824;
+    --bluegreen: #0e7373;
+    --earth: #913d17;
+    --lightearth: #de7c50;
+    --white: #fff;
+    --black: #0d0d0d;
+
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: var(--title);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header {
+    font-family: var(--title);
+}
+
+a {
+    text-decoration: none;
+}
+
+em {
+    font-size: medium;
+}
+
+/* Use Outfit font in stong tags */
+strong {
+    font-family: var(--title);
+}
+
+main {
+    flex: 1 0 auto;
+    background-color: var(--white);
+}
+
+/* header */
+.navbar-light .navbar-brand {
+    color: var(--forest);
+}
+
+/* footer */
+.footer-bg {
+    background-color: var(--forest);
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+}
+
+.social-icon {
+    height: 1.5rem;
+    margin: 1rem;
+}
+
+li a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* media queries for mobile - under 576px */
+@media (max-width: 576px) {
+    .social-icon {
+        height: 1.25rem;
+        margin: 0.5rem;
+    }
+}
