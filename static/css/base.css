@@ -47,6 +47,11 @@ em {
     font-size: medium;
 }
 
+/* Border radius for form inputs */
+.form-control {
+    border-radius: 15px;
+}
+
 /* Use Outfit font in stong tags */
 strong {
     font-family: var(--title);
@@ -60,6 +65,16 @@ main {
 /* header */
 .navbar-light .navbar-brand {
     color: var(--forest);
+}
+
+.search-button {
+    border-style: none;
+    background-color: var(--white);
+}
+
+.nav-image {
+    height: 40px;
+    width: 40px;
 }
 
 /* footer */
