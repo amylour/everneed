@@ -1,5 +1,5 @@
 /* Google Font import */
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&family=Karla:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&family=Karla:wght@200;300;400;500&display=swap');
 
 :root {
     /* fonts */
@@ -65,6 +65,7 @@ main {
 /* header */
 .navbar-light .navbar-brand {
     color: var(--forest);
+    font-size: 38px;
 }
 
 .search-button {
