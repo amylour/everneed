@@ -2,29 +2,20 @@
 
 <header>
     {% with request.resolver_match.url_name as url_name %}
-    <!-- fixed top navbar from Bootstrap-->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light en-logo">
+    <!-- Fixed top navbar from Bootstrap-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand mx-2" href="#">everneed <img src="{% static 'icons/logo_en.png' %}" class="nav-image" alt="everneed logo"></a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">account<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">blog</a>
-                </li>
-            </ul>
-            <div class="text-center">
+        <a class="navbar-brand mx-2" href="#">everneed</a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
+            <div class="text-center ">
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="search-button my-2 my-sm-0" type="submit"><img src="{% static 'icons/search.png' %}"
+                    <input id="search-input" class="form-control mr-sm-2 search-box" type="search" placeholder="search"
+                        aria-label="Search">
+                    <button class="search-button my-2 my-sm-0" onclick="toggleSearchInput()" type="submit"><img
+                            src="{% static 'icons/search.png' %}" class="nav-search mx-1"
                             alt="search function"></button>
                 </form>
             </div>
@@ -36,15 +27,28 @@
                 </div>
                 <div class="col mx-1">
                     <div class="text-center">
-                        <img src="{% static 'icons/eco.png' %}" class="nav-image" alt="carbon footprint value">
+                        <img src="{% static 'icons/wishlist.png' %}" class="nav-image" alt="wishlist">
                     </div>
                 </div>
                 <div class="col mx-1">
                     <div class="text-center">
-                        <img src="{% static 'icons/shopping_basket.png' %}" class="nav-image" alt="shopping basket">
+                        <img src="{% static 'icons/carbon_fp.png' %}" class="nav-image" alt="carbon footprint value">
+                    </div>
+                </div>
+                <div class="col mx-1">
+                    <div class="text-center">
+                        <img src="{% static 'icons/bag.png' %}" class="nav-image" alt="shopping bag">
                     </div>
                 </div>
             </div>
     </nav>
     {% endwith %}
 </header>
+
+<!-- JavaScript for show/hide of search bar -->
+<script>
+    function toggleSearchInput() {
+        var searchInput = document.getElementById("search-input");
+        searchInput.classList.toggle("show");
+    }
+</script>

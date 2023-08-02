@@ -47,38 +47,76 @@ em {
     font-size: medium;
 }
 
-/* Border radius for form inputs */
-.form-control {
-    border-radius: 15px;
-}
-
-/* Use Outfit font in stong tags */
-strong {
-    font-family: var(--title);
-}
-
 main {
     flex: 1 0 auto;
     background-color: var(--white);
 }
 
-/* header */
+/* Forms */
+/* Border radius for form inputs */
+.form-control {
+    border-radius: 15px;
+}
+
+/* Remove blue highlight shadow from around input field when selected - credit: https: //tinyurl.com/yk2uaf8c */
+input:focus,
+input.form-control:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+/* Header - Navbar, Search, Navitems */
 .navbar-light .navbar-brand {
     color: var(--forest);
     font-size: 38px;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-brand:hover {
+    color: var(--forest);
 }
 
 .search-button {
-    border-style: none;
     background-color: var(--white);
+    border-style: none;
+}
+
+.search-button:focus {
+    outline: none;
+}
+
+.search-box {
+    background-color:#194f4929;
+    border-style: none;
+}
+
+.search-box:focus {
+    background-color: #194f4929;
+}
+
+.form-control:focus {
+    border: 3px dashed #194f4995;
+}
+
+/* search bar show/hide */
+.form-control:not(.show) {
+    display: none;
 }
 
 .nav-image {
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
 }
 
-/* footer */
+.nav-search {
+    height: 30px;
+    width: 30px;
+}
+
+/* Footer */
 .footer-bg {
     background-color: var(--forest);
 }
@@ -98,7 +136,7 @@ li a {
     text-decoration: none;
 }
 
-/* media queries for mobile - under 576px */
+/* Media queries for mobile - under 576px */
 @media (max-width: 576px) {
     .social-icon {
         height: 1.25rem;
