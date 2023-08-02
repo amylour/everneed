@@ -159,6 +159,8 @@ View live site: [everneed]()
 
 ## Code
 
+- Remove blue highlight shadow from around input field when selected [StackOverflow](https://tinyurl.com/yk2uaf8c)
+
 ## Media
 
 ### Additional reading/tutorials/books/blogs
