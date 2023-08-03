@@ -46,7 +46,82 @@
 </head>
 
 <body>
-    {% include 'includes/header.html' %}
+    <header class="container-fluid fixed-top p-0">
+        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex mx-1">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <a href="{% url 'home' %}" class="nav-link">
+                    <h2 class="my-0 navbar-logo">everneed</h2>
+                </a>
+            </div>
+            <div class="col-12 col-lg-8 my-auto py-1 py-lg-0">
+                <ul class="nav-menu list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="list-inline-item">
+                        <form method="GET" action="">
+                            <div class="search-field form-inline my-2 my-lg-0 mx-3">
+                                <input id="search-input" class="form-control mr-sm-2 search-box" type="search"
+                                    placeholder="search" aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="search-button my-2 my-sm-0" onclick="toggleSearchInput()"
+                                        type="submit"><img src="{% static 'icons/search.png' %}" class="nav-search mx-1"
+                                            alt="search function"></button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                    <li class="list-inline-item dropdown">
+                        <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false" title="Account">
+                            <div class="text-center mx-2">
+                                <img src="{% static 'icons/account_circle.png' %}" class="nav-image" alt="account">
+                            </div>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                            <a href="" class="dropdown-item">Admin Dashboard</a>
+                            {% endif %}
+                            <a href="" class="dropdown-item">Account</a>
+                            <a href="" class="dropdown-item">Logout</a>
+                            {% else %}
+                            <a href="" class="dropdown-item">Register</a>
+                            <a href="" class="dropdown-item">Login</a>
+                            {% endif %}
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="" href="" title="Wishlist">
+                            <div class="text-center mx-2">
+                                <img src="{% static 'icons/wishlist.png' %}" class="nav-image" alt="wishlist">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="" href="" title="Carbon Footprint">
+                            <div class="text-center mx-1">
+                                <img src="{% static 'icons/carbon_fp.png' %}" class="nav-image" alt="carbon footprint">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="" href="" title="Bag">
+                            <div class="text-center mx-2">
+                                <img src="{% static 'icons/bag.png' %}" class="nav-image" alt="shopping bag">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row bg-white">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {% include 'includes/main-header.html' %}
+            </nav>
+        </div>
+    </header>
 
     {% if messages %}
     <div class="message-container"></div>
@@ -61,6 +136,17 @@
 
 
     {% block postloadjs %}
+    <!-- JavaScript for show/hide of search bar -->
+    <script>
+        function toggleSearchInput() {
+            var searchInput = document.getElementById("search-input");
+            searchInput.classList.toggle("show");
+        }
+
+        var searchField = document.querySelector(".search-field");
+        searchField.addEventListener("mouseenter", toggleSearchInput);
+        searchField.addEventListener("mouseleave", toggleSearchInput);
+    </script>
     {% endblock %}
 
 

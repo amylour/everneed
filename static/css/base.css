@@ -43,8 +43,16 @@ a {
     text-decoration: none;
 }
 
+li a {
+    text-decoration: none;
+}
+
 em {
     font-size: medium;
+}
+
+ul li {
+    list-style-type: none;
 }
 
 main {
@@ -69,19 +77,19 @@ input.form-control:focus {
 }
 
 /* Header - Navbar, Search, Navitems */
-.navbar-light .navbar-brand {
+.navbar-logo {
     color: var(--forest);
     font-size: 38px;
     font-weight: bold;
 }
 
-.navbar-light .navbar-brand:hover {
+.navbar-logo:hover {
     color: var(--forest);
 }
 
 .search-button {
     background-color: var(--white);
-    border-style: none;
+    border: none;
 }
 
 .search-button:focus {
@@ -89,7 +97,7 @@ input.form-control:focus {
 }
 
 .search-box {
-    background-color:#194f4929;
+    background-color: #194f4929;
     border-style: none;
 }
 
@@ -116,6 +124,40 @@ input.form-control:focus {
     width: 30px;
 }
 
+.nav-links {
+    color: var(--forest);
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none !important;
+}
+
+.nav-links:hover {
+    color:#0b201e;
+}
+
+/* Fix padding issue with accounts dropdown */
+#user-options {
+    padding: 0;
+}
+
+/* Stop other nav items from moving when search bar is hovered over by setting alignment and removing padding/margin */
+ul.nav-menu {
+    margin: 0;
+    padding: 0;
+}
+
+ul.nav-menu li {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    /* Set line-height to vertically align the content */
+    vertical-align: middle;
+}
+
+#main-nav {
+    background-color: #194f4930;
+}
+
 /* Footer */
 .footer-bg {
     background-color: var(--forest);
@@ -131,7 +173,7 @@ input.form-control:focus {
     margin: 1rem;
 }
 
-li a {
+.footer-links {
     color: var(--white);
     text-decoration: none;
 }
