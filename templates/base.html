@@ -47,7 +47,8 @@
 
 <body>
     <header class="container-fluid fixed-top p-0">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex mx-1">
+        {% include 'includes/delivery_banner.html' %}
+        <div id="topnav" class="row bg-white d-none d-lg-flex mx-1 my-2">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link">
                     <h2 class="my-0 navbar-logo">everneed</h2>
@@ -57,8 +58,8 @@
                 <ul class="nav-menu list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item">
                         <form method="GET" action="">
-                            <div class="search-field form-inline my-2 my-lg-0 mx-3">
-                                <input id="search-input" class="form-control mr-sm-2 search-box" type="search"
+                            <div class="search-field form-inline my-2 my-lg-0 mx-1">
+                                <input id="search-input" class="form-control mr-sm-2 search-box rounded-pill" type="search"
                                     placeholder="search" aria-label="Search">
                                 <div class="input-group-append">
                                     <button class="search-button my-2 my-sm-0" onclick="toggleSearchInput()"
@@ -96,13 +97,6 @@
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="" href="" title="Carbon Footprint">
-                            <div class="text-center mx-1">
-                                <img src="{% static 'icons/carbon_fp.png' %}" class="nav-image" alt="carbon footprint">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
                         <a class="" href="" title="Bag">
                             <div class="text-center mx-2">
                                 <img src="{% static 'icons/bag.png' %}" class="nav-image" alt="shopping bag">
@@ -113,7 +107,7 @@
             </div>
         </div>
         <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
+            <nav class="navbar navbar-expand-lg navbar-light mx-auto">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

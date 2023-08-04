@@ -10,8 +10,8 @@
     --forest: #194f49;
     --yellow: #ffc824;
     --bluegreen: #0e7373;
-    --earth: #913d17;
-    --lightearth: #de7c50;
+    --purple: #8E164E;
+    --gold: #CC4818;
     --white: #fff;
     --black: #0d0d0d;
 
@@ -61,11 +61,6 @@ main {
 }
 
 /* Forms */
-/* Border radius for form inputs */
-.form-control {
-    border-radius: 15px;
-}
-
 /* Remove blue highlight shadow from around input field when selected - credit: https: //tinyurl.com/yk2uaf8c */
 input:focus,
 input.form-control:focus {
@@ -77,6 +72,36 @@ input.form-control:focus {
 }
 
 /* Header - Navbar, Search, Navitems */
+/* inspired by Patagonia's delivery banner */
+.delivery_dropdown {
+    background: linear-gradient(-45deg, #0e7373, #194f49, #8E164E, #CC4818);
+    background-size: 400vw 400vw;
+    animation: gradient 9s ease infinite alternate;
+}
+
+@keyframes gradient {
+    0% {
+        background: var(--bluegreen);
+    }
+
+    40% {
+        background: var(--forest);
+    }
+
+    80% {
+        background: var(--purple);
+    }
+
+    100% {
+        background: var(--gold);
+    }
+}
+
+.dropdown_white_arrow {
+    height: 10px;
+    width: 16px;
+}
+
 .navbar-logo {
     color: var(--forest);
     font-size: 38px;
