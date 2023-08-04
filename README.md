@@ -160,6 +160,7 @@ View live site: [everneed]()
 ## Code
 
 - Remove blue highlight shadow from around input field when selected [StackOverflow](https://tinyurl.com/yk2uaf8c)
+- Newsletter sign up template and SVG [Bootsnipp](https://bootsnipp.com/snippets/6XVAB)
 
 ## Media
 
