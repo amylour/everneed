@@ -79,6 +79,10 @@ input.form-control:focus {
     animation: gradient 9s ease infinite alternate;
 }
 
+.delivery_ban {
+    font-family: var(--main-font);
+}
+
 @keyframes gradient {
     0% {
         background: var(--bluegreen);
@@ -184,8 +188,11 @@ ul.nav-menu li {
 }
 
 /* Footer */
+footer {
+    overflow: hidden;
+}
 .footer-bg {
-    background-color: var(--forest);
+    background: linear-gradient(to bottom, var(--bluegreen), var(--forest));
 }
 
 .social {
@@ -195,12 +202,102 @@ ul.nav-menu li {
 
 .social-icon {
     height: 1.5rem;
-    margin: 1rem;
+    margin-left: 1.5rem;
+}
+
+.footer-info {
+    font-family: var(--main-font);
+    border-bottom: 5px dashed #194f4995;
+    padding-bottom: 5px;
 }
 
 .footer-links {
     color: var(--white);
     text-decoration: none;
+    font-family: var(--main-font);
+    text-align: right;
+    font-size: 18px;
+}
+
+.copyright {
+    font-family: var(--main-font);
+}
+
+/* Newsletter template and SVG from Bootsnipp credit -> https: //bootsnipp.com/snippets/6XVAB */
+.newsletter {
+    position: relative;
+    padding-top: 30px;
+    padding-left: 15px;
+    flex-grow: 1;
+}
+
+.newsletter svg {
+    position: absolute;
+    z-index: 0;
+    top: -135px;
+    left: -70px;
+    fill: var(--purple);
+}
+
+.newsletter .newsletter-title {
+    margin-bottom: 15px;
+    color:#fff;
+    font-size: 50px;
+    letter-spacing: -.02em;
+    line-height: 1;
+    position: relative;
+    z-index: 999;
+}
+
+.newsletter .newsletter-text {
+    color: #fff;
+    position: relative;
+    z-index: 999;
+    max-width: 450px;
+    font-size: 18px;
+    font-family: var(--main-font);
+}
+
+.newsletter .newsletter-form {
+    position: relative;
+    max-width: 355px;
+    margin-top: 23px;
+    z-index: 999;
+}
+
+.newsletter .newsletter-form input {
+    height: 55px;
+    width: 100%;
+    padding: 18px 135px 17px 30px;
+    border: 0 none;
+    border-radius: 20px;
+    outline: none;
+    background-color: #fff;
+    color: #000000;
+    font-size: 1.125rem;
+    line-height: 1;
+    font-family: var(--main-font)
+}
+
+.newsletter .newsletter-form button {
+    width: 116px;
+    height: 36px;
+    transition: background-color .3s cubic-bezier(.165, .84, .44, 1);
+    border-radius: 15px;
+    background-color: var(--gold);
+    color: #fff;
+    font-size: .875rem;
+    line-height: 1;
+    position: absolute;
+    right: 9px;
+    bottom: 9px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Media queries for mobile - under 576px */

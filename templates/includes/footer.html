@@ -1,31 +1,27 @@
-{% load static %} 
+{% load static %}
 
 <footer class="footer-bg text-white">
     <div class="container py-4">
         <div class="row justify-content-between">
-            <!-- Social Media Icons -->
-            <div class="col-6 col-md-3 social social-icons align-items-start">
-                <a href="https://www.facebook.com/" target="blank" rel="noopener" aria-label="Facebook-opens in a new tab"
-                    title="Facebook">
-                    <img src="{% static 'icons/facebook.png' %}" alt="Facebook Icon" class="social-icon">
-                </a>
-                <a href="https://twitter.com/home" target="blank" rel="noopener" aria-label="Twitter-opens in a new tab"
-                    title="Twitter">
-                    <img src="{% static 'icons/twitter.png' %}" alt="Twitter Icon" class="social-icon">
-                </a>
-                <a href="https://www.linkedin.com/in/amy-richardson-dev/" target="blank" rel="noopener"
-                    aria-label="LinkedIn-opens in a new tab" title="LinkedIn">
-                    <img src="{% static 'icons/linkedin.png' %}" alt="LinkedIn Icon" class="social-icon">
-                </a>
-                <a href="https://github.com/amylour" target="blank" rel="noopener" aria-label="Github-opens in a new tab"
-                    title="GitHub">
-                    <img src="{% static 'icons/github.png' %}" alt="Github Icon" class="social-icon">
-                </a>
+            <!-- Newsletter sign up -> credit: https://bootsnipp.com/snippets/6XVAB -->
+            <div class="newsletter js-rollover" data-radius="50">
+                <svg viewBox="0 0 694 549" width="550" height="450">
+                    <path
+                        d="M74.7,439.6c58.9,76.3,152.2,113.1,224.6,109C585.8,532.3,734.2,295,684.7,94.2C658.7-11.3,508.1-8.6,433.6,9.8C384.1,22,329.1,47.8,277.8,60.4c-42.5,10.5-90,7.2-130.4,17.1C60.4,99-21.1,201.9,4.9,307.6C16.7,355.3,45.2,401.4,74.7,439.6z">
+                    </path>
+                </svg>
+                <h2 class="newsletter-title">Hear from us . . .</h2>
+                <p class="newsletter-text">Subscribe to our newsletter</p>
+                <form method="GET" action="" class="newsletter-form" target="_blank">
+                    <input type="email" name="EMAIL" id="email" class="shadow" placeholder="Enter your email">
+                    <button type="submit" class="button">Subscribe</button>
+                </form>
             </div>
-            <!-- links -->
-            <div class="col-6 text-right">
-                <div class="row justify-content-end">
-                    <div class="col-12 col-md-4">
+            <div class="justify-content-end mt-2">
+                <!-- links -->
+                <div class="col-12 mb-4">
+                    <div class="text-right">
+                        <h4 class="mt-3 font-weight-bold footer-info">Information</h4>
                         <ul class="list-unstyled">
                             <li><a href="#" class="footer-links">Home</a></li>
                             <li><a href="#" class="footer-links">Shop</a></li>
@@ -35,11 +31,30 @@
                         </ul>
                     </div>
                 </div>
+                <!-- Social Media Icons -->
+                <div class="col-6 col-md-3 social social-icons mb-4">
+                    <a href="https://www.facebook.com/" target="blank" rel="noopener"
+                        aria-label="Facebook-opens in a new tab" title="Facebook">
+                        <img src="{% static 'icons/facebook.png' %}" alt="Facebook Icon" class="social-icon">
+                    </a>
+                    <a href="https://twitter.com/home" target="blank" rel="noopener"
+                        aria-label="Twitter-opens in a new tab" title="Twitter">
+                        <img src="{% static 'icons/twitter.png' %}" alt="Twitter Icon" class="social-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/amy-richardson-dev/" target="blank" rel="noopener"
+                        aria-label="LinkedIn-opens in a new tab" title="LinkedIn">
+                        <img src="{% static 'icons/linkedin.png' %}" alt="LinkedIn Icon" class="social-icon">
+                    </a>
+                    <a href="https://github.com/amylour" target="blank" rel="noopener"
+                        aria-label="Github-opens in a new tab" title="GitHub">
+                        <img src="{% static 'icons/github.png' %}" alt="Github Icon" class="social-icon">
+                    </a>
+                </div>
             </div>
         </div>
         <!-- copyright -->
-        <div class="text-center pt-4">
-            <p>&copy; 2023 Amy Richardson - For Educational Purposes Only</p>
-        </div>
+    </div>
+    <div class="text-center pt-4 copyright mt-4">
+        <p>&copy; 2023 Amy Richardson - For Educational Purposes Only</p>
     </div>
 </footer>
