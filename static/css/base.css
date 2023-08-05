@@ -106,6 +106,7 @@ input.form-control:focus {
     color: var(--forest);
     font-size: 38px;
     font-weight: bold;
+    margin-right: 30px;
 }
 
 .navbar-logo:hover {
@@ -113,7 +114,7 @@ input.form-control:focus {
 }
 
 .search-button {
-    background-color: var(--white);
+    background-color: #f8f9fa;
     border: none;
 }
 
