@@ -50,7 +50,7 @@
         {% include 'includes/delivery_banner.html' %}
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a href="{% url 'home' %}" class="nav-link">
-                <h2 class="my-0 navbar-logo">everneed</h2>
+                <h2 class="navbar-logo mx-2">everneed</h2>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -129,7 +129,7 @@
                 </ul>
                 <ul class="nav-menu list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item">
-                        <a class="nav-link" href="#" id="user-options" title="search">
+                        <a class="nav-link" href="#" id="searchIcon" title="search">
                             <div class="text-center mx-2">
                                 <img src="{% static 'icons/search.png' %}" class="nav-search" alt="account">
                             </div>
@@ -174,12 +174,37 @@
         </nav>
     </header>
 
+    <!-- Bootstrap modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="d-flex justify-content-end">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-header">
+                    <h4 class="modal-title mx-auto" id="searchModalLabel">Search for an Item</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <!-- Search form -->
+                    <form id="searchForm">
+                        <input type="text" class="form-control search-box mb-2" id="searchInput" placeholder="Search...">
+                        <button type="submit" class="search-button my-4 shadow text-center"><img src="{% static 'icons/search.png' %}" class="search-icon mx-1" alt="search icon"> Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     {% if messages %}
     <div class="message-container"></div>
     {% endif %}
 
     <main>
     {% block content %}
+    <div class="w-100 hero-image"></div>
     {% endblock %}
     </main>
 
@@ -187,6 +212,19 @@
 
 
     {% block postloadjs %}
+    <script>
+        $(document).ready(function () {
+            // Open the search modal when the search icon is clicked
+            $("#searchIcon").click(function () {
+                $("#searchModal").modal('show');
+            });
+
+            // Close the search modal
+            $("#searchModal").on('hidden.bs.modal', function () {
+                $("#searchInput").val(""); // Clear the search input when the modal is closed
+            });
+        });
+    </script>
     {% endblock %}
 
 
