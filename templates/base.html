@@ -63,7 +63,7 @@
                             aria-expanded="false">
                             all
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                        <div class="dropdown-menu border-0 menu-hide" aria-labelledby="all-products-link">
                             <a href="" class="dropdown-item">by price</a>
                             <a href="" class="dropdown-item ">by rating</a>
                             <a href="" class="dropdown-item ">by category</a>
@@ -75,7 +75,7 @@
                             aria-expanded="false">
                             wear
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                        <div class="dropdown-menu border-0 menu-hide" aria-labelledby="clothing-link">
                             <a href="" class="dropdown-item">outerwear</a>
                             <a href="" class="dropdown-item">tops</a>
                             <a href="" class="dropdown-item">bottoms</a>
@@ -89,7 +89,7 @@
                             aria-expanded="false">
                             care
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="personal-care-link">
+                        <div class="dropdown-menu border-0 menu-hide" aria-labelledby="personal-care-link">
                             <a href="" class="dropdown-item">hygiene</a>
                             <a href="" class="dropdown-item">first aid</a>
                             <a href="" class="dropdown-item">all care</a>
@@ -100,7 +100,7 @@
                             aria-expanded="false">
                             eat
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="foodware-link">
+                        <div class="dropdown-menu border-0 menu-hide" aria-labelledby="foodware-link">
                             <a href="" class="dropdown-item">utensils</a>
                             <a href="" class="dropdown-item">drinkware</a>
                             <a href="" class="dropdown-item">storage</a>
@@ -113,7 +113,7 @@
                             aria-expanded="false">
                             travel
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="travel-items-link">
+                        <div class="dropdown-menu border-0 menu-hide" aria-labelledby="travel-items-link">
                             <a href="" class="dropdown-item">bags</a>
                             <a href="" class="dropdown-item">accessories</a>
                             <a href="" class="dropdown-item">safety</a>
@@ -142,7 +142,7 @@
                                 <img src="{% static 'icons/account_circle.png' %}" class="nav-image" alt="account">
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-0 menu-hide" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                             <a href="" class="dropdown-item">Admin Dashboard</a>
@@ -223,7 +223,14 @@
             $("#searchModal").on('hidden.bs.modal', function () {
                 $("#searchInput").val(""); // Clear the search input when the modal is closed
             });
+            
+            // Hide the dropdown menu
+            $(".menu-hide").on("mouseleave", function () {
+                $(this).removeClass("show"); 
+            });
         });
+
+
     </script>
     {% endblock %}
 
