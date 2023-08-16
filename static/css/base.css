@@ -216,6 +216,11 @@ input.form-control:focus {
     transform: scale(0.95);
 }
 
+/* CSS styling for active links in navbar targetting only the parent anchor tags */
+.active-nav-item > a {
+    font-weight: bold;
+}
+
 .nav-links {
     color: var(--forest);
     font-size: 24px;
