@@ -45,134 +45,7 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top p-0">
-        {% include 'includes/delivery_banner.html' %}
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a href="{% url 'home' %}" class="nav-link">
-                <h2 class="navbar-logo mx-2">everneed</h2>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav w-auto mx-auto w-75">
-                    <li class="nav-item dropdown">
-                        <a class="nav-links mx-4" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            all
-                        </a>
-                        <div class="dropdown-menu border-0 menu-hide" aria-labelledby="all-products-link">
-                            <a href="" class="dropdown-item">by price</a>
-                            <a href="" class="dropdown-item ">by rating</a>
-                            <a href="" class="dropdown-item ">by category</a>
-                            <a href="" class="dropdown-item">all products</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-links mx-4" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            wear
-                        </a>
-                        <div class="dropdown-menu border-0 menu-hide" aria-labelledby="clothing-link">
-                            <a href="" class="dropdown-item">outerwear</a>
-                            <a href="" class="dropdown-item">tops</a>
-                            <a href="" class="dropdown-item">bottoms</a>
-                            <a href="" class="dropdown-item">shoes</a>
-                            <a href="" class="dropdown-item">all
-                                clothing</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-links mx-4" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            care
-                        </a>
-                        <div class="dropdown-menu border-0 menu-hide" aria-labelledby="personal-care-link">
-                            <a href="" class="dropdown-item">hygiene</a>
-                            <a href="" class="dropdown-item">first aid</a>
-                            <a href="" class="dropdown-item">all care</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-links mx-4" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            eat
-                        </a>
-                        <div class="dropdown-menu border-0 menu-hide" aria-labelledby="foodware-link">
-                            <a href="" class="dropdown-item">utensils</a>
-                            <a href="" class="dropdown-item">drinkware</a>
-                            <a href="" class="dropdown-item">storage</a>
-                            <a href="" class="dropdown-item">all
-                                eat</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-links mx-4" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            travel
-                        </a>
-                        <div class="dropdown-menu border-0 menu-hide" aria-labelledby="travel-items-link">
-                            <a href="" class="dropdown-item">bags</a>
-                            <a href="" class="dropdown-item">accessories</a>
-                            <a href="" class="dropdown-item">safety</a>
-                            <a href="" class="dropdown-item">all
-                                travel</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-links mx-4" href="#">
-                            read
-                        </a>
-                    </li>
-                </ul>
-                <ul class="nav-menu list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item">
-                        <a class="nav-link" href="#" id="searchIcon" title="Search">
-                            <div class="text-center mx-2">
-                                <img src="{% static 'icons/search.png' %}" class="nav-search" alt="account">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item dropdown">
-                        <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                            title="Account">
-                            <div class="text-center mx-2">
-                                <img src="{% static 'icons/account_circle.png' %}" class="nav-image" alt="account">
-                            </div>
-                        </a>
-                        <div class="dropdown-menu border-0 menu-hide" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a href="" class="dropdown-item">Admin Dashboard</a>
-                            {% endif %}
-                            <a href="" class="dropdown-item">Account</a>
-                            <a href="" class="dropdown-item">Logout</a>
-                            {% else %}
-                            <a href="" class="dropdown-item">Register</a>
-                            <a href="" class="dropdown-item">Login</a>
-                            {% endif %}
-                        </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="" href="" title="Wishlist">
-                            <div class="text-center mx-2">
-                                <img src="{% static 'icons/wishlist.png' %}" class="nav-image" alt="wishlist">
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="" href="" title="Bag">
-                            <div class="text-center mx-2">
-                                <img src="{% static 'icons/bag.png' %}" class="nav-image" alt="shopping bag">
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
+    {% include 'includes/header.html' %}
     <!-- Bootstrap modal -->
     <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel"
         aria-hidden="true">
@@ -197,13 +70,8 @@
         </div>
     </div>
 
-    {% if messages %}
-    <div class="message-container"></div>
-    {% endif %}
-
     <main>
     {% block content %}
-    <div class="w-100 hero-image"></div>
     {% endblock %}
     </main>
 
