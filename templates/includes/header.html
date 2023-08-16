@@ -85,15 +85,15 @@
                 <li class="list-inline-item">
                     <a class="nav-link" href="#" id="searchIcon" title="Search">
                         <div class="text-center mx-2">
-                            <img src="{% static 'icons/search.png' %}" class="nav-search" alt="account">
+                            <img src="{% static 'icons/search.png' %}" class="nav-search" alt="search">
                         </div>
                     </a>
                 </li>
                 <li class="list-inline-item dropdown">
-                    <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false" title="Account">
+                    <a class="nav-link" href="{% url 'profile' %}" id="user-options" aria-haspopup="true"
+                        aria-expanded="false" title="Profile">
                         <div class="text-center mx-2">
-                            <img src="{% static 'icons/account_circle.png' %}" class="nav-image" alt="account">
+                            <img src="{% static 'icons/account_circle.png' %}" class="nav-image" alt="profile">
                         </div>
                     </a>
                     <div class="dropdown-menu border-0 menu-hide" aria-labelledby="user-options">
@@ -101,7 +101,7 @@
                         {% if request.user.is_superuser %}
                         <a href="" class="dropdown-item">Admin Dashboard</a>
                         {% endif %}
-                        <a href="" class="dropdown-item">Account</a>
+                        <a href="" class="dropdown-item">Profile</a>
                         <a href="" class="dropdown-item">Logout</a>
                         {% else %}
                         <a href="" class="dropdown-item">Register</a>
@@ -110,7 +110,7 @@
                     </div>
                 </li>
                 <li class="list-inline-item">
-                    <a class="" href="" title="Wishlist">
+                    <a class="" href="{% url 'wishlist' %}" title="Wishlist">
                         <div class="text-center mx-2">
                             <img src="{% static 'icons/wishlist.png' %}" class="nav-image" alt="wishlist">
                         </div>

@@ -106,6 +106,21 @@
                     $(this).find(".dropdown-menu").removeClass("show");
                 }
             });
+
+            $(".list-inline-item.dropdown").on({
+                mouseenter: function () {
+                    $(this).find(".dropdown-menu").addClass("show");
+                },
+                mouseleave: function () {
+                    $(this).find(".dropdown-menu").removeClass("show");
+                },
+                touchstart: function () {
+                    $(this).find(".dropdown-menu").addClass("show");
+                },
+                touchend: function () {
+                    $(this).find(".dropdown-menu").removeClass("show");
+                }
+            });
         });
     </script>
 
