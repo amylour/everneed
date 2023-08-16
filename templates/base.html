@@ -90,15 +90,25 @@
             $("#searchModal").on('hidden.bs.modal', function () {
                 $("#searchInput").val(""); // Clear the search input when the modal is closed
             });
-            
-            // Hide the dropdown menu
-            $(".menu-hide").on("mouseleave", function () {
-                $(this).removeClass("show"); 
+
+            // Show and hide dropdown menus on hover and touch for mobile
+            $(".nav-item.dropdown").on({
+                mouseenter: function () {
+                    $(this).find(".dropdown-menu").addClass("show");
+                },
+                mouseleave: function () {
+                    $(this).find(".dropdown-menu").removeClass("show");
+                },
+                touchstart: function () {
+                    $(this).find(".dropdown-menu").addClass("show");
+                },
+                touchend: function () {
+                    $(this).find(".dropdown-menu").removeClass("show");
+                }
             });
         });
-
-
     </script>
+
     {% endblock %}
 
 
