@@ -54,6 +54,12 @@ ul li {
 main {
     flex: 1 0 auto;
     background-color: var(--white);
+    margin-top: 110px;
+}
+
+header {
+    height: 110px;
+    margin-bottom: 20px;
 }
 
 /* Forms */
