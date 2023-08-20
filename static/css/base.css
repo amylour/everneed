@@ -17,15 +17,15 @@
 
 }
 
-html,
+/* html,
 body {
     height: 100%;
-}
+} */
 
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    overflow: auto;
     font-family: var(--title);
 }
 
@@ -55,6 +55,7 @@ main {
     flex: 1 0 auto;
     background-color: var(--white);
     margin-top: 110px;
+    overflow: auto;
 }
 
 header {
@@ -267,6 +268,66 @@ ul.nav-menu li {
 .dropdown-item:active {
     background-color: #0e7373;
     color: #fff;
+}
+
+/* Hero section */
+.hero-banner {
+    background-color: #194f4990;
+    height: 60vh;
+    position: relative;
+}
+
+.hero-text-panel {
+    background-color: var(--forest);
+    height: 460px;
+    width: 415px;
+    border-radius: 60px;
+    position: absolute;
+    left: 225px;
+    top: 190px;
+}
+
+.heading-text {
+    color: var(--forest);
+}
+
+.best-sec {
+    color: #fff;
+    height: 350px;
+}
+
+.best-heading {
+    margin-top: 115px;
+}
+
+.mission-sec {
+    background-color: #0e737365;
+    height: 400px;
+}
+
+.mission-wave {
+    width: 100%;
+}
+
+.pack-sec {
+    color: #fff;
+}
+
+.light-pack,
+.medium-pack,
+.everything-pack {
+    height: 500px;
+}
+
+.list-group,
+.list-group-item {
+    border : none;
+}
+
+.list-group-item {
+    color: var(--forest);
+    font-size: 24px;
+    font-family: var(--main-font);
 }
 
 /* Footer */

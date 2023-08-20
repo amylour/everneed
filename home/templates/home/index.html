@@ -6,15 +6,62 @@
 
 {% block content %}
 
-<div class="container mt-5 text-center">
-    <h1 class="section-title mt-5">Home</h1>
-</div>
-<div class="container-fluid">
-    <p class="text-center">Home page coming soon...</p>
-</div>
+<section id="hero-image">
+    <div class="container-fluid hero-banner w-100 mb-5">
+        <div class="text-right">
+        <p class="text-white pt-5 mx-5">Illustration will go here..</p>
+        </div>
+        <div class="text-left hero-text-panel">
+            <p class="text-white text-center mt-5">Hero text</p>
+        </div>
+    </div>
+</section>
+<section id="bestsellers">
+    <div class="container-fluid text-center w-75 mb-5 best-sec">
+      <h2 class="heading-text pt-5 best-heading">Bestsellers</h3>
+    </div>
+</section>
 <section id="our_mission">
-    <div class="text-center">
-    <h2 class="text-center">Our Mission</h2>
+    <div class=" container-fluid text-center w-100 mission-sec">
+        <h2 class="text-center pt-5 pb-3 heading-text">Our Mission</h2>
+    </div>
+    <div class="w-100">
+        <!-- wave effect for bottom of div -->
+        <img src="{% static 'images/div_wave.png' %}" class="mission-wave" alt="div bottom wave effect">
+    </div>
+</section>
+<section id="pack_styles">
+    <div class="container-fluid text-center mb-5 pack-sec">
+        <h2 class="heading-text mb-5">Pack Styles</h3>
+            <div class="row justify-content-center mt-2">
+            <div class="col-md-3 col-sm-4 mx-2 mb-4">
+                <img src="{% static 'images/light_vec.png' %}" class="img-fluid light-pack" alt="vector shape for illustration">
+                <h3 class="text-center heading-text mt-4">Light</h3>
+                <ul class="text-center list-group mt-2 mb-3">
+                    <li class="list-group-item">- One</li>
+                    <li class="list-group-item">- Two</li>
+                    <li class="list-group-item">- Three</li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-4 mx-2 mb-4">
+                <img src="{% static 'images/medium_vec.png' %}" class="img-fluid medium-pack" alt="vector shape for illustration">
+                <h3 class="text-center heading-text mt-4">Medium</h3>
+                <ul class="text-center list-group mt-2 mb-3">
+                    <li class="list-group-item">- One</li>
+                    <li class="list-group-item">- Two</li>
+                    <li class="list-group-item">- Three</li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-4 mx-2 mb-4">
+                <img src="{% static 'images/everything_vec.png' %}" class="img-fluid everything-pack" alt="vectore shape for illustration">
+                <h3 class="text-center heading-text mt-4">Everything</h3>
+                <ul class="text-center list-group mt-2 mb-3">
+                    <li class="list-group-item">- One</li>
+                    <li class="list-group-item">- Two</li>
+                    <li class="list-group-item">- Three</li>
+                </ul>
+            </div>
+            </div>
     </div>
 </section>
 
