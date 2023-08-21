@@ -1,5 +1,5 @@
 /* Google Font import */
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&family=Karla:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500&family=Karla:wght@200;300;400;500&display=swap');
 
 :root {
     /* fonts */
@@ -273,7 +273,7 @@ ul.nav-menu li {
 /* Hero section */
 .hero-banner {
     background-color: #194f4990;
-    height: 60vh;
+    height: 600px;
     position: relative;
 }
 
@@ -284,7 +284,33 @@ ul.nav-menu li {
     border-radius: 60px;
     position: absolute;
     left: 225px;
-    top: 190px;
+    top: 236px;
+}
+
+.hero-button {
+    z-index: 1;
+    position: absolute;
+    left: 40px;
+    top: 295px;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.hero-btn-txt {
+    z-index: 2;
+    font-size: 32px;
+    position: absolute;
+    top: 338px;
+    left: 83px;
+    color: var(--forest);
+    font-weight: 500;
+}
+
+.hero-btn-icon {
+    z-index: 2;
+    position: absolute;
+    top: 339px;
+    left: 286px;
+
 }
 
 .heading-text {
@@ -473,6 +499,32 @@ footer {
 
 /* Media queries for mobile - under 1024px */
 @media (max-width: 1024px) {
+    .hero-text-panel {
+        height: 435px;
+        width: 400px;
+        left: 132px;
+        top: 258px;
+    }
+
+    .hero-button {
+        left: 53px;
+        top: 284px;
+        width: 295px;
+        height: 116px;
+    }
+
+    .hero-btn-txt {
+        top: 319px;
+        left: 78px;
+        font-size: 31px;
+    }
+
+    .hero-btn-icon {
+        top: 321px;
+        left: 269px;
+        height: 45px;
+    }
+
     .modal-content {
         bottom: 30px;
         padding: 20px 30px 20px 30px;
@@ -489,6 +541,40 @@ footer {
 
 /* Media queries for mobile - under 576px */
 @media (max-width: 576px) {
+    .navbar {
+        padding: 1rem 1rem;
+    }
+
+    .hero-banner {
+        height: 450px;
+    }
+
+    .hero-text-panel {
+        height: 338px;
+        width: 280px;
+        left: 55px;
+        top: 182px;
+    }
+
+    .hero-button {
+        left: 45px;
+        top: 226px;
+        height: 80px;
+        width: 200px;
+    }
+
+    .hero-btn-txt {
+        font-size: 21px;
+        top: 250px;
+        left: 63px;
+    }
+
+    .hero-btn-icon {
+        top: 253px;
+        left: 193px;
+        height: 28px;
+    }
+
     .nav-float {
         border-radius: 0;
     }
@@ -535,6 +621,36 @@ footer {
 
 /* Media queries for small mobile - under 375px */
 @media (max-width: 375px) {
+    .hero-banner {
+        height: 350px;
+    }
+    
+    .hero-text-panel {
+        height: 237px;
+        width: 205px;
+        left: 57px;
+        top: 165px;
+    }
+
+    .hero-button {
+        left: 32px;
+        top: 154px;
+        height: 57px;
+        width: 143px;  
+    }
+
+    .hero-btn-txt {
+        font-size: 16px;
+        top: 170px;
+        left: 43px;
+    }
+
+    .hero-btn-icon {
+        top: 173px;
+        left: 139px;
+        height: 20px;
+    }
+
     .modal-content {
         bottom: 70px;
         padding: 10px;
