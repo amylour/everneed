@@ -22,12 +22,52 @@
     </div>
 </section>
 <section id="bestsellers">
-    <div class="container-fluid text-center w-75 mb-5 best-sec">
+    <div class="container-fluid text-center mb-5 best-sec">
       <h2 class="heading-text pt-5 best-heading">Bestsellers</h3>
     </div>
+    <!-- Bootstrap Carousel for ecomm items credit -> Bootstrap docs & https://www.youtube.com/watch?v=8g9Glz5VlZo  -->
+    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="container">
+                <div class="row product-row justify-content-center">
+                    <div class="col-md-4 text-center mx-3">
+                        <!-- Product 1 -->
+                        <img src="{% static 'images/product_placeholder.png' %}" class="img-fluid product-ph" alt="Product 1">
+                        <h4 class="mt-4">Product 1</h4>
+                        <p>Description of Product 1</p>
+                    </div>
+                    <div class="col-md-4 text-center mx-3">
+                        <!-- Product 2 -->
+                        <img src="{% static 'images/product_placeholder.png' %}" class="img-fluid product-ph" alt="Product 2">
+                        <h4 class="mt-4">Product 2</h4>
+                        <p>Description of Product 2</p>
+                    </div>
+                    <div class="col-md-4 text-center mx-3">
+                        <!-- Product 3 -->
+                        <img src="{% static 'images/product_placeholder.png' %}" class="img-fluid product-ph" alt="Product 3">
+                        <h4 class="mt-4">Product 3</h4>
+                        <p>Description of Product 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+</div>
 </section>
+
 <section id="our_mission">
-    <div class=" container-fluid text-center w-100 mission-sec">
+    <div class=" container-fluid text-center w-100 mission-sec mt-5">
         <h2 class="text-center pt-5 pb-3 heading-text">Our Mission</h2>
     </div>
     <div class="w-100">
