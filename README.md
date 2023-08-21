@@ -161,6 +161,8 @@ View live site: [everneed]()
 
 - Remove blue highlight shadow from around input field when selected [StackOverflow](https://tinyurl.com/yk2uaf8c)
 - Newsletter sign up template and SVG [Bootsnipp](https://bootsnipp.com/snippets/6XVAB)
+- Change color of Bootstrap svg item using background image url [Codepen](https://codepen.io/noahblon/post/coloring-svgs-in-css-background-images)
+- Bootstrap e-commerce carousel for 'Bestsellers/Featured Items' [GeekProbin](https://www.youtube.com/watch?v=8g9Glz5VlZo) & [colorlib](https://colorlib.com/wp/template/carousel-02/)
 
 ## Media
 
