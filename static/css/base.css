@@ -628,6 +628,11 @@ footer {
         top: 258px;
     }
 
+    .hero-text {
+        font-size: 32px;
+        padding: 25px;
+    }
+
     .hero-button {
         left: 53px;
         top: 284px;
@@ -673,7 +678,7 @@ footer {
 
     .hero-text {
         font-size: 23px;
-        padding: 8px;
+        padding: 15px;
     }
 
     .hero-text-panel {
@@ -759,21 +764,26 @@ footer {
         top: 165px;
     }
 
+    .hero-text {
+        font-size: 17px;
+        padding: 0px 11px 0px 11px;
+    }
+
     .hero-button {
         left: 32px;
-        top: 154px;
+        top: 156px;
         height: 57px;
         width: 143px;  
     }
 
     .hero-btn-txt {
         font-size: 16px;
-        top: 170px;
+        top: 172px;
         left: 43px;
     }
 
     .hero-btn-icon {
-        top: 173px;
+        top: 174px;
         left: 139px;
         height: 20px;
     }
