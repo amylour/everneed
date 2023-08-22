@@ -101,11 +101,11 @@
                         {% if request.user.is_superuser %}
                         <a href="" class="dropdown-item">Admin Dashboard</a>
                         {% endif %}
-                        <a href="" class="dropdown-item">Profile</a>
-                        <a href="" class="dropdown-item">Logout</a>
+                        <a href="{% url 'profile' %}" class="dropdown-item">Profile</a>
+                        <a href="/accounts/logout/" class="dropdown-item">Logout</a>
                         {% else %}
                         <a href="/accounts/signup/" class="dropdown-item">Register</a>
-                        <a href="" class="dropdown-item">Login</a>
+                        <a href="/accounts/login/" class="dropdown-item">Login</a>
                         {% endif %}
                     </div>
                 </li>

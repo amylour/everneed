@@ -72,6 +72,41 @@ input.form-control:focus {
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
+    border: 2px dashed #194f4990;
+}
+
+.form-control {
+    border-radius: 10px;
+    font-size: 18px;
+    border: 1px solid #194f4970;
+}
+
+/* Override browser text input prefill colour - found through Dev Tools and https: //stackoverflow.com/questions/2338102/override-browser-form-filling-and-input-highlighting-with-html-css */
+/* Webkit (Chrome, Safari) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #194f4930 inset !important;
+    background-color: #ffffff !important;
+    color: fieldtext !important;
+}
+
+/* Firefox */
+input:-moz-autofill {
+    -moz-box-shadow: 0 0 0 30px #194f4930 inset !important;
+    background-color: #ffffff !important;
+    color: fieldtext !important;
+}
+
+/* Microsoft Edge */
+input:-ms-input-placeholder,
+input:-ms-autofill {
+    -ms-box-shadow: 0 0 0 30px #194f4930 inset !important;
+    background-color: #ffffff !important;
+    color: fieldtext !important;
+}
+
+label {
+    color: var(--forest);
+    font-size: 18px;
 }
 
 /* Header - Navbar, Search, Navitems */
@@ -268,6 +303,56 @@ ul.nav-menu li {
 .dropdown-item:active {
     background-color: #0e7373;
     color: #fff;
+}
+
+/* Auth section */
+.auth-btn {
+    background-color: #0e7373;
+    color: white;
+    border-radius: 35px;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    border: none;
+    padding: 8px 13px 8px 13px;
+    transition: transform 0.3s;
+    transform-origin: center;
+    font-size: 22px;
+}
+
+.auth-btn:hover {
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.auth-btn:active {
+    transform: scale(0.95);
+    outline: none !important;
+    box-shadow: none;
+}
+
+.auth-btn:focus {
+    /* remove blue outline when bottstrap button is clicked or hovered */
+    outline: none !important;
+    box-shadow: none;
+}
+
+.p-txt {
+    font-family: var(--main-font);
+    font-size: 22px;
+    color: var(--forest);
+}
+
+.special-anchor {
+    color: var(--gold);
+    font-size: 20px;
+}
+
+.special-anchor:hover {
+    color: var(--gold);
+    font-weight: bold;
+}
+
+input {
+    border-radius: 10px;
 }
 
 /* Hero section */

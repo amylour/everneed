@@ -108,12 +108,13 @@
                 mouseenter: function () {
                     $(this).find(".dropdown-menu").addClass("show");
                 },
-                touchstart: function () {
-                    $(this).find(".dropdown-menu").addClass("show");
-                },
-                touchend: function () {
-                    $(this).find(".dropdown-menu").removeClass("show");
-                }
+                // Commenting out these functions until I deploy and test on real mobile devices to ensure Profile dropdown works
+                // touchstart: function () {
+                //     $(this).find(".dropdown-menu").addClass("show");
+                // },
+                // touchend: function () {
+                //     $(this).find(".dropdown-menu").removeClass("show");
+                // }
             });
 
             //Bug Fix -> Moving this piece of JS outside of the above code seems to help in preventing the dropdown menu from being tempermental and not appearing randomly on hover...so far...
@@ -128,12 +129,12 @@
                 mouseleave: function () {
                     $(this).find(".dropdown-menu").removeClass("show");
                 },
-                touchstart: function () {
-                    $(this).find(".dropdown-menu").addClass("show");
-                },
-                touchend: function () {
-                    $(this).find(".dropdown-menu").removeClass("show");
-                }
+                // touchstart: function () {
+                //     $(this).find(".dropdown-menu").addClass("show");
+                // },
+                // touchend: function () {
+                //     $(this).find(".dropdown-menu").removeClass("show");
+                // }
             });
         });
     </script>
