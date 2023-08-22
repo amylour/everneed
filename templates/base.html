@@ -108,15 +108,17 @@
                 mouseenter: function () {
                     $(this).find(".dropdown-menu").addClass("show");
                 },
-                mouseleave: function () {
-                    $(this).find(".dropdown-menu").removeClass("show");
-                },
                 touchstart: function () {
                     $(this).find(".dropdown-menu").addClass("show");
                 },
                 touchend: function () {
                     $(this).find(".dropdown-menu").removeClass("show");
                 }
+            });
+
+            //Bug Fix -> Moving this piece of JS outside of the above code seems to help in preventing the dropdown menu from being tempermental and not appearing randomly on hover...so far...
+            $(".nav-item.dropdown").on("mouseleave", function () {
+                $(this).find(".dropdown-menu").removeClass("show");
             });
 
             $(".list-inline-item.dropdown").on({

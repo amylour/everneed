@@ -62,4 +62,6 @@ Return back to the [README.md](README.md) file.
 
 ## Bugs
 
+- JavaScript dropdown menu fix, movig the mouseleave function outside of the main code seems to fix the 'dropdown menu randomly not appearing on hover' issue. Commit -> 
+
 ### Unresolved/Known Bugs
