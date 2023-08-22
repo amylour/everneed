@@ -372,20 +372,28 @@ input {
     top: 236px;
 }
 
+.hero-text {
+    font-size: 34px;
+    padding: 30px;
+    font-family: var(--main-font);
+}
+
 .hero-button {
     z-index: 1;
     position: absolute;
-    left: 40px;
-    top: 295px;
+    left: 76px;
+    top: 313px;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    width: 263px;
+    height: 100px;
 }
 
 .hero-btn-txt {
     z-index: 2;
-    font-size: 32px;
+    font-size: 28px;
     position: absolute;
-    top: 338px;
-    left: 83px;
+    top: 342px;
+    left: 97px;
     color: var(--forest);
     font-weight: 500;
 }
@@ -393,9 +401,9 @@ input {
 .hero-btn-icon {
     z-index: 2;
     position: absolute;
-    top: 339px;
-    left: 286px;
-
+    top: 343px;
+    left: 271px;
+    height: 40px;
 }
 
 .heading-text {
@@ -661,6 +669,11 @@ footer {
 
     .hero-banner {
         height: 450px;
+    }
+
+    .hero-text {
+        font-size: 23px;
+        padding: 8px;
     }
 
     .hero-text-panel {
