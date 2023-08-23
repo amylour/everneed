@@ -62,6 +62,6 @@ Return back to the [README.md](README.md) file.
 
 ## Bugs
 
-- JavaScript dropdown menu fix, movig the mouseleave function outside of the main code seems to fix the 'dropdown menu randomly not appearing on hover' issue. Commit -> 
+- JavaScript dropdown menu fix, movig the mouseleave function outside of the main code seems to fix the 'dropdown menu randomly not appearing on hover' issue. Commit -> No.e27b7a5 This did not fix it, 2nd fix was to update to Bootstrap 4.6 and add 'ease' to menu hover transitions. Currently working consistently. Commit -> No...
 
 ### Unresolved/Known Bugs

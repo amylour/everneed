@@ -16,9 +16,9 @@
     {% endblock %}
 
     {% block corecss %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -108,16 +108,12 @@
                 mouseenter: function () {
                     $(this).find(".dropdown-menu").addClass("show");
                 },
-                // Commenting out these functions until I deploy and test on real mobile devices to ensure Profile dropdown works
-                // touchstart: function () {
-                //     $(this).find(".dropdown-menu").addClass("show");
-                // },
-                // touchend: function () {
-                //     $(this).find(".dropdown-menu").removeClass("show");
-                // }
             });
 
-            //Bug Fix -> Moving this piece of JS outside of the above code seems to help in preventing the dropdown menu from being tempermental and not appearing randomly on hover...so far...
+            // Bug Fix -> Moving this piece of JS outside of the above code seems 
+            // to help in preventing the dropdown menu from being tempermental and not 
+            // appearing randomly on hover...so far... -> It wasn't this :( 
+            // Bug Fix 2nd attempt -> updated Bootstrap to version 4.6 and added 'ease' to CSS transitions...working okay currently
             $(".nav-item.dropdown").on("mouseleave", function () {
                 $(this).find(".dropdown-menu").removeClass("show");
             });
@@ -129,12 +125,11 @@
                 mouseleave: function () {
                     $(this).find(".dropdown-menu").removeClass("show");
                 },
-                // touchstart: function () {
-                //     $(this).find(".dropdown-menu").addClass("show");
-                // },
-                // touchend: function () {
-                //     $(this).find(".dropdown-menu").removeClass("show");
-                // }
+            });
+            
+            // nav links open to page on click
+            $(".nav-links").on("click", function () {
+                window.location.href = $(this).attr("href");
             });
         });
     </script>
