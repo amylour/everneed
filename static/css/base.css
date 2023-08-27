@@ -430,6 +430,8 @@ input {
     border: none;
     background-color: #fff0;
     color: var(--forest);
+    width: 5%;
+    bottom: 100px;
 }
 
 /* Change color of bootstrap svg icons credit -> https: //codepen.io/noahblon/post/coloring-svgs-in-css-background-images */
@@ -446,10 +448,6 @@ input {
 .product-ph {
     height: 375px;
     width: 350px;
-}
-
-.product-row {
-    flex-wrap: nowrap;
 }
 
 .mission-sec {
