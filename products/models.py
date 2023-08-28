@@ -3,17 +3,23 @@ from django.db import models
 
 class Category(models.Model):
     """ Category Models """
+    # class constants for category names as strings 
+    # django docs -> https://tinyurl.com/aprpz8rd
     WEAR = 'wear'
     CARE = 'care'
     EAT = 'eat'
     TRAVEL = 'travel'
 
+    # tuple with constant-value pairs for each category of products
     CATEGORY_CHOICES = [
         (WEAR, 'Wear'),
         (CARE, 'Care'),
         (EAT, 'Eat'),
         (TRAVEL, 'Travel'),
     ]
+
+    class Meta:
+        verbose_name_plural = 'Categories'
 
     name = models.CharField(max_length=254, choices=CATEGORY_CHOICES)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
