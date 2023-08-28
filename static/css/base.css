@@ -479,6 +479,14 @@ input {
     font-family: var(--main-font);
 }
 
+/* Products */
+.product-image {
+    width: 100%;
+    height: 360px;
+    object-fit: contain;
+    background: linear-gradient(to bottom, #fff, #f8faf9);
+}
+
 /* Footer */
 footer {
     overflow: hidden;
