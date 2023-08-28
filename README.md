@@ -159,6 +159,7 @@ Libraries and frameworks used were dictated by the 'Boutique Ado' walkthrough fr
 
 ## Tools & Programs
 - [ImageCompressor](https://imagecompressor.com/) for compressing PNG/WEbp files
+- [Image ReSizer](https://www.simpleimageresizer.com/) for reducing image size
 - [EZGif](<https://ezgif.com/>) for gif conversion.
 - [Convertio](https://convertio.co/) for file conversion to PNG, WEBP.
 - [Tiny Png](https://tinypng.com/) for file size reduction.
