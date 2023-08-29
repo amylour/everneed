@@ -309,6 +309,10 @@ ul.nav-menu li {
     color: #fff;
 }
 
+.section-title {
+    color: var(--forest);
+}
+
 /* Auth section */
 .auth-btn {
     background-color: #0e7373;
@@ -486,6 +490,10 @@ input {
     object-fit: contain;
     background: linear-gradient(to bottom, #f6f6f6, #f8faf9);
     /* background-color: #f8f8fa; */
+}
+
+hr { 
+    display: none;
 }
 
 /* Footer */
