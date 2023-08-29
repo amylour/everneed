@@ -8,8 +8,7 @@
 
 <section id="hero-image">
     <div class="container-fluid hero-banner w-100 mb-5">
-        <!-- <p class="text-white pt-5 mx-5">Illustration will go here..</p> -->
-        <img src="{% static 'images/dt_lrg.png' %}" alt="" class="hero-image">
+        <img src="{% static 'images/dt_hero.png' %}" alt="main image of the items available in the store" class="hero-image p-0">
         <div class="text-left hero-text-panel">
             <p class="text-white text-center mt-5 hero-text">Discover the freedom of a lighter life with just the essentials.</p>
             <a href="{% url 'products' %}">
@@ -66,8 +65,21 @@
 </section>
 
 <section id="our_mission">
-    <div class=" container-fluid text-center w-100 mission-sec mt-5">
+    <div class=" container-fluid text-center mission-sec mt-5">
         <h2 class="text-center pt-5 pb-3 heading-text">Our Mission</h2>
+        <p class="text-center mission-text w-75 mx-auto">Everneed strives to be a modern, eco-conscious solution to fast fashion and impulsive shopping. We're your starting point for stylish, mindful choices
+        that support a sustainable future.</p>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="mt-5 mb-4"><img src="{% static 'icons/eco_friendly.png' %}" class="mission-icon" alt="eco friendly icon"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="mt-5 mb-4"><img src="{% static 'icons/cruelty_free.png' %}" class="mission-icon" alt="cruelty free icon"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="mt-5 mb-4"><img src="{% static 'icons/carbon_footprint.png' %}" class="mission-icon" alt="carbon footprint icon"></div>
+            </div>
+        </div>
     </div>
     <div class="w-100">
         <!-- wave effect for bottom of div -->

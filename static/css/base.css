@@ -55,7 +55,7 @@ main {
     flex: 1 0 auto;
     background-color: var(--white);
     margin-top: 110px;
-    overflow: auto;
+    overflow: hidden;
 }
 
 header {
@@ -368,6 +368,7 @@ input {
     background-color: #194f4990;
     height: 600px;
     position: relative;
+    padding: 0px;
 }
 
 .hero-text-panel {
@@ -387,9 +388,11 @@ input {
 }
 
 .hero-image {
-    width: 1630px;
     height: 600px;
+    overflow: hidden;
     position: relative;
+    width: 100vw;
+    object-fit: cover;
 }
 
 .hero-button {
@@ -461,13 +464,25 @@ input {
 
 .mission-sec {
     background-color: #0e737365;
-    height: 400px;
+    height: auto;
+    width: 100vw;
 }
 
 .mission-wave {
-    width: 100%;
+    width: 100vw;
 }
 
+.mission-icon {
+    height: 115px;
+    width: 115px;
+}
+
+.mission-text {
+    color: var(--forest);
+    font-size: 24px;
+}
+
+/* Packing Section */
 .pack-sec {
     color: #fff;
 }
