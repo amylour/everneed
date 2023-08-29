@@ -371,7 +371,7 @@ input {
 }
 
 .hero-text-panel {
-    background-color: var(--forest);
+    background: linear-gradient(to bottom, #0e7373, #194f49);
     height: 460px;
     width: 415px;
     border-radius: 60px;
@@ -384,6 +384,12 @@ input {
     font-size: 34px;
     padding: 30px;
     font-family: var(--main-font);
+}
+
+.hero-image {
+    width: 1630px;
+    height: 600px;
+    position: relative;
 }
 
 .hero-button {
