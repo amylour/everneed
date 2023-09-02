@@ -61,8 +61,8 @@
                 </div>
                 <div class="modal-body text-center">
                     <!-- Search form -->
-                    <form id="searchForm">
-                        <input type="text" class="form-control search-box mb-2" id="searchInput" placeholder="Search...">
+                    <form method="GET" action="{% url 'products' %}" id="searchForm">
+                        <input type="text" name="q" class="form-control search-box mb-2" id="searchInput" placeholder="Search...">
                         <button type="submit" class="search-button my-4 shadow text-center"><img src="{% static 'icons/search.png' %}" class="search-icon mx-1" alt="search icon"> Submit</button>
                     </form>
                 </div>
