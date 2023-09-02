@@ -265,7 +265,7 @@ label {
 }
 
 .nav-links:hover {
-    color: #0b201e;
+    color: var(--forest);
 }
 
 .nav-profile {
