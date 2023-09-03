@@ -17,11 +17,6 @@
 
 }
 
-/* html,
-body {
-    height: 100%;
-} */
-
 body {
     display: flex;
     flex-direction: column;
@@ -40,11 +35,16 @@ header {
 }
 
 a {
+    color: var(--forest);
     text-decoration: none !important;
 }
 
 em {
     font-size: medium;
+}
+
+p {
+    color: var(--forest);
 }
 
 ul li {
@@ -511,6 +511,24 @@ input {
 
 hr { 
     display: none;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: 3px dashed #194f4960;
+    border-radius: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
+.btt-link:hover {
+    color:var(--bluegreen);
 }
 
 /* Footer */
