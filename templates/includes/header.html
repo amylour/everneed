@@ -18,12 +18,12 @@
                         aria-haspopup="true" aria-expanded="false">
                         all
                     </a>
-                    <!-- <div class="dropdown-menu border-0 menu-hide" aria-labelledby="all-products-link">
-                        <a href="" class="dropdown-item">by price</a>
-                        <a href="" class="dropdown-item ">by rating</a>
-                        <a href="" class="dropdown-item ">by category</a>
-                        <a href="" class="dropdown-item">all products</a>
-                    </div> -->
+                    <div class="dropdown-menu border-0 menu-hide" aria-labelledby="all-products-link">
+                        <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">by price</a>
+                        <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">by rating</a>
+                        <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">by category</a>
+                        <a href="{% url 'products' %}" class="dropdown-item">all products</a>
+                    </div>
                 </li>
                 <li class="nav-item dropdown {% if request.GET.category == 'wear' %}active-nav-item{% endif %}">
                     <a class="nav-links mx-4" href="{% url 'products' %}?category=wear" id="clothing-link" data-toggle="dropdown" aria-haspopup="true"
