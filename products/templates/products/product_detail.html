@@ -25,11 +25,30 @@
             <div class="product-details-container mb-5 mt-md-5">
                 <p class="mb-0">{{ product.name }}</p>
                 <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
-                {% if product.rating %}
-                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                {% else %}
-                <small class="text-muted">No Rating</small>
+                {% if product.category.name == 'wear' %}
+                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                    <i class="fas fa-shirt fa-xs mr-2"></i>{{ product.category.friendly_name }}
+                </a>
+                {% elif product.category.name == 'care' %}
+                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                    <i class="fas fa-kit-medical mr-2"></i>{{ product.category.friendly_name }}
+                </a>
+                {% elif product.category.name == 'eat' %}
+                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                    <i class="fas fa-utensils mr-2"></i>{{ product.category.friendly_name }}
+                </a>
+                {% elif product.category.name == 'travel' %}
+                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                    <i class="fas fa-compass mr-2"></i>{{ product.category.friendly_name }}
+                </a>
                 {% endif %}
+                <div>
+                    {% if product.rating %}
+                    <small class="text-muted"><i class="fas fa-leaf mr-2"></i>{{ product.rating }} / 5</small>
+                    {% else %}
+                    <small class="text-muted"><i class="fas fa-leaf mr-2"></i>No Rating</small>
+                    {% endif %}
+                </div>
                 <p class="mt-3">{{ product.description }}</p>
             </div>
         </div>
