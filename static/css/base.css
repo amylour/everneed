@@ -244,17 +244,13 @@ label {
     transform-origin: center;
 }
 
-.nav-item:hover {
-    transform: scale(1.10);
-}
-
 .nav-item:active {
     transform: scale(0.95);
 }
 
 /* CSS styling for active links in navbar targetting only the parent anchor tags */
 .active-nav-item > a {
-    font-weight: bold;
+    color: var(--gold);
 }
 
 .nav-links {
@@ -265,7 +261,7 @@ label {
 }
 
 .nav-links:hover {
-    color: var(--forest);
+    color: var(--gold);
 }
 
 .nav-profile {
