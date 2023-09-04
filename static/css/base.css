@@ -492,6 +492,19 @@ input {
     color: var(--forest);
 }
 
+/* scroll fade in animation credit -> http: //tinyurl.com/5c6d5nhy */
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 /* styling for icon inset effect */
 .icon-container {
     width: 200px;
@@ -741,6 +754,14 @@ footer {
         bottom: 30px;
         padding: 20px 30px 20px 30px;
     }
+
+    .mission-text {
+        font-size: 24px;
+    }
+
+    .icon-text {
+        font-size: 26px;
+    }
 }
 
 /* Media queries for mobile - under 896px */
@@ -792,6 +813,10 @@ footer {
         height: 28px;
     }
 
+    .hero-image {
+        height: 580px;
+    }
+
     .nav-float {
         border-radius: 0;
     }
@@ -799,6 +824,14 @@ footer {
     .modal-content {
         padding: 20px;
         border-radius: 10px;
+    }
+
+    .best-heading {
+        margin-top: 145px;
+    }
+
+    .mission-text {
+        width: 300px !important;
     }
 
     .newsletter .newsletter-title {
@@ -861,6 +894,10 @@ footer {
         width: 143px;  
     }
 
+    .hero-image {
+        height: 500px;
+    }
+
     .hero-btn-txt {
         font-size: 16px;
         top: 172px;
@@ -876,6 +913,28 @@ footer {
     .modal-content {
         bottom: 70px;
         padding: 10px;
+    }
+
+    .heading-text {
+        font-size: 38px;
+    }
+
+    .best-heading {
+        margin-top: 180px;
+    }
+
+    .mission-text {
+        font-size: 20px;
+        width: 230px !important;
+    }
+
+    .mission-icon {
+        height: 100px;
+        width: 100px;
+    }
+
+    .icon-text {
+        font-size: 22px;
     }
 
     .newsletter .newsletter-form input {
