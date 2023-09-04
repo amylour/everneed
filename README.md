@@ -220,6 +220,7 @@ The following blogs/tutorials complemented my learning for this project, alongsi
 - Newsletter sign up template and SVG [Bootsnipp](https://bootsnipp.com/snippets/6XVAB)
 - Change color of Bootstrap svg item using background image url [Codepen](https://codepen.io/noahblon/post/coloring-svgs-in-css-background-images)
 - Bootstrap e-commerce carousel for 'Bestsellers/Featured Items' [GeekProbin](https://www.youtube.com/watch?v=8g9Glz5VlZo) & [colorlib](https://colorlib.com/wp/template/carousel-02/)
+- Scroll fade in animation for 'Mission' section [Nucleio Tech](http://tinyurl.com/5c6d5nhy)
 
 ## Media
 
