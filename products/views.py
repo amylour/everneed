@@ -5,7 +5,6 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 
 
-
 def all_products(request):
     """ A view to return the products page, sorting and search queries """
 
@@ -74,3 +73,4 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+

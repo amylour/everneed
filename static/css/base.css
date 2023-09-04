@@ -425,11 +425,15 @@ input {
 
 /* Bestseller Section */
 .best-sec {
-    color: #fff;
+    /* color: #fff; */
 }
 
 .best-heading {
     margin-top: 115px;
+}
+
+.feature_price {
+    font-size: 18px;
 }
 
 /* Carousel icon styling */

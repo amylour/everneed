@@ -24,44 +24,41 @@
       <h2 class="heading-text pt-5 best-heading">Bestsellers</h3>
     </div>
     <!-- Bootstrap Carousel for ecomm items credit -> Bootstrap docs & https://www.youtube.com/watch?v=8g9Glz5VlZo  -->
-    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6 col-sm-12 text-center ">
-                        <!-- Product 1 -->
-                        <img src="{% static 'images/product_placeholder.png' %}" class="img-fluid product-ph" alt="Product 1">
-                        <h4 class="mt-4">Product 1</h4>
-                        <p>Description of Product 1</p>
+    <div id="productCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner p-5">
+            {% for product in feature_products %}
+            {% if forloop.first or forloop.counter0|divisibleby:4 %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <div class="row">
+                    {% endif %}
+                    <div class="col-md-3 my-2 text-center">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid product-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                        <h4 class="mt-3 mb-1">{{ product.name }}</h4>
+                        <p class="m-1 feature_price">€{{ product.price }}</p>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                        <!-- Product 2 -->
-                        <img src="{% static 'images/product_placeholder.png' %}" class="img-fluid product-ph" alt="Product 2">
-                        <h4 class="mt-4">Product 2</h4>
-                        <p>Description of Product 2</p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                        <!-- Product 3 -->
-                        <img src="{% static 'images/product_placeholder.png' %}" class="img-fluid product-ph" alt="Product 3">
-                        <h4 class="mt-4">Product 3</h4>
-                        <p>Description of Product 3</p>
-                    </div>
+                    {% if forloop.counter|divisibleby:4 or forloop.last %}
                 </div>
             </div>
+            {% endif %}
+            {% endfor %}
         </div>
+        <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <div class="container">
-        <div class="d-flex justify-content-between">
-            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-        </div>
-    </div>
-</div>
 </section>
 
 <section id="our_mission">
