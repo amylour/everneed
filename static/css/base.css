@@ -421,6 +421,7 @@ input {
 
 .heading-text {
     color: var(--forest);
+    font-size: 40px;
 }
 
 /* Bestseller Section */
@@ -479,7 +480,34 @@ input {
 
 .mission-text {
     color: var(--forest);
-    font-size: 24px;
+    font-family: var(--main-font);
+    font-size: 26px;
+    line-height: 2.5rem;
+}
+
+.mission-p {
+    font-size: 20px;
+    line-height: 2.5rem;
+    list-style-type: disc;
+    color: var(--forest);
+}
+
+/* styling for icon inset effect */
+.icon-container {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom, #dcefef 0%, #fff 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow:inset 1px 3px 16px #194f49;
+}
+
+.icon-text {
+    font-size: 30px;
+    font-family: var(--main-font);
 }
 
 /* Packing Section */
