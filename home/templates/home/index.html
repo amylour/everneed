@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<section id="hero-image">
+<div id="hero-image">
     <div class="container-fluid hero-banner w-100 mb-5">
         <img src="{% static 'images/dt_hero.png' %}" alt="main image of the items available in the store" class="hero-image p-0">
         <div class="text-left hero-text-panel">
@@ -18,10 +18,10 @@
             </a>
         </div>
     </div>
-</section>
+</div>
 <section id="bestsellers">
     <div class="container-fluid text-center mb-5 best-sec">
-      <h2 class="heading-text pt-5 best-heading">Bestsellers</h3>
+      <h2 class="heading-text pt-5 best-heading">Bestsellers</h2>
     </div>
     <!-- Bootstrap Carousel for ecomm items credit -> Bootstrap docs & https://www.youtube.com/watch?v=8g9Glz5VlZo  -->
     <div id="productCarousel" class="carousel slide" data-ride="carousel">
@@ -111,7 +111,7 @@
 </section>
 <section id="pack_styles">
     <div class="container-fluid text-center mb-5 pack-sec">
-        <h2 class="heading-text mb-5">Pack Styles</h3>
+        <h2 class="heading-text my-5">Pack Styles</h2>
             <div class="row justify-content-center mt-2">
             <div class="col-md-3 col-sm-4 mx-2 mb-4">
                 <img src="{% static 'images/light_vec.png' %}" class="img-fluid light-pack" alt="vector shape for illustration">

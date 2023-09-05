@@ -40,7 +40,7 @@
     {% endblock %}
 
     <!-- favicon -->
-    <link rel="icon" href="{% static 'icons/en_logo.png' %}" type="image/x-icon for everneed">
+    <link rel="icon" href="{% static 'icons/en_logo.png' %}" type="image/x-icon">
 
     <title>everneed {% block extra_title %}{% endblock %}</title>
 </head>
@@ -98,27 +98,12 @@
 
     {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $(document).ready(function () {
             // Close the search modal
             $("#searchModal").on('hidden.bs.modal', function () {
                 $("#searchInput").val(""); // Clear the search input when the modal is closed
             });
-
-            // // Show and hide dropdown menus on hover and touch for mobile
-            // $(".nav-item.dropdown").on({
-            //     mouseenter: function () {
-            //         $(this).find(".dropdown-menu").addClass("show");
-            //     },
-            // });
-
-            // // Bug Fix -> Moving this piece of JS outside of the above code seems 
-            // // to help in preventing the dropdown menu from being tempermental and not 
-            // // appearing randomly on hover...so far... -> It wasn't this :( 
-            // // Bug Fix 2nd attempt -> updated Bootstrap to version 4.6 and added 'ease' to CSS transitions...working okay currently
-            // $(".nav-item.dropdown").on("mouseleave", function () {
-            //     $(this).find(".dropdown-menu").removeClass("show");
-            // });
 
             $(".nav-item.dropdown").on({
                 mouseenter: function () {
