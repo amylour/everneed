@@ -23,9 +23,12 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-5 mt-md-5">
-                <p class="mb-0">{{ product.name }}</p>
-                <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
-                {% if product.category.name == 'wear' %}
+                <div class="row m-1">
+                <p class="mr-5 mb-1 prod-title">{{ product.name }}</p>
+                <div class="ml-lg-5"><button class="wishlist-btn p-2">Add to Wishlist<i class="fas fa-heart mx-2"></i></button></div>
+                </div>
+                <p class="lead mb-0 text-left ml-1 mb-2 font-weight-bold prod-price">€{{ product.price }}</p>
+                <!-- {% if product.category.name == 'wear' %}
                 <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
                     <i class="fas fa-shirt fa-xs mr-2"></i>{{ product.category.friendly_name }}
                 </a>
@@ -41,17 +44,18 @@
                 <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
                     <i class="fas fa-compass mr-2"></i>{{ product.category.friendly_name }}
                 </a>
-                {% endif %}
-                <div>
+                {% endif %} -->
+                <div class="prod-rating ml-1">
                     {% if product.rating %}
                     <small class="text-muted"><i class="fas fa-leaf mr-2"></i>{{ product.rating }} / 5</small>
                     {% else %}
                     <small class="text-muted"><i class="fas fa-leaf mr-2"></i>No Rating</small>
                     {% endif %}
                 </div>
-                <p class="mt-3">{{ product.description }}</p>
+                <p class="mt-3 prod-description">{{ product.description }}</p>
             </div>
         </div>
+        
     </div>
 </div>
 
