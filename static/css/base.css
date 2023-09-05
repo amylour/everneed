@@ -17,6 +17,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -267,7 +271,7 @@ label {
 
 .nav-links {
     color: var(--forest);
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 500;
     text-decoration: none !important;
 }
@@ -436,6 +440,29 @@ input {
     font-size: 40px;
 }
 
+/* underline Mission heading on scroll credit -> https: //www.youtube.com/watch?v=wsDZm6PXeVw */
+.heading__line {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* style underline */
+.heading__line::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(to right, #194f4990 50%, transparent 50%);
+    background-size: 18px 5px;
+    transition: 0.7s width;
+}
+
+.heading__line--active::before {
+    width: 100%;
+}
+
 /* Bestseller Section */
 .best-sec {
     /* color: #fff; */
@@ -599,6 +626,13 @@ hr {
     display: none;
 }
 
+/* Back to Top button */
+#bttBtn {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ease-in-out, visibility 0.5s ease-in-out;
+}
+
 .btt-button {
     height: 42px;
     width: 42px;
@@ -611,6 +645,8 @@ hr {
 
 .btt-link {
     cursor: pointer;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 .btt-link:hover {
@@ -780,6 +816,11 @@ footer {
 
 /* Media queries for mobile - under 1024px */
 @media (max-width: 1024px) {
+
+    .nav-links {
+        font-size: 24px;
+    }
+
     .hero-text-panel {
         height: 435px;
         width: 400px;

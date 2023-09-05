@@ -20,4 +20,30 @@
 
         // To check the scroll position on the page load
         reveal();
+
+        // underline Mission heading on scroll credit -> https://www.youtube.com/watch?v=wsDZm6PXeVw
+        const headingLine = document.querySelector(".heading__line");
+        
+        // check if headingLine elemenet is in view
+        document.addEventListener("scroll", function () {
+            if (isInView(headingLine)) {
+                headingLine.classList.add("heading__line--active");
+            } else {
+                headingLine.classList.remove("heading__line--active");
+            }
+        });
+        
+        // get element dimensions and position relative to viewport
+        function isInView(element){
+            const rect = element.getBoundingClientRect();
+            return (
+                // check if bottom edge of element is below top edge of viewport and if top
+                // edge is above the bottom edge of viewport with offset of 500 pixels
+                // to determine if it is in view
+                rect.bottom > 0 &&
+                rect.top <
+                (window.innerHeight - 500 || document.documentElement.
+                clientHeight - 500)
+            );
+        }
 </script>
