@@ -618,12 +618,41 @@ input {
     font-size: 18px;
 }
 
+.prod-reviews {
+    height: 300px;
+    width: auto;
+    background-color: #E1F0E7;
+}
+
 .text-muted {
     color: #194f4990 !important;
 }
 
 hr { 
     display: none;
+}
+
+/* Reviews */
+.username {
+    color: var(--forest);
+    font-size: 22px;
+}
+
+.rating-leaf {
+    width: 16px;
+    height: 16px;
+    opacity: 0.7;
+}
+
+.rating-leaf-sm {
+    width: 14px;
+    height: 14px;
+    opacity: 0.6;
+}
+
+.review-leaf {
+    height: 22px;
+    width: 22px;
 }
 
 /* Back to Top button */
@@ -872,6 +901,10 @@ footer {
         bottom: 30px;
         padding: 15px;
     }
+
+    .lower-product {
+        width: 100% !important;
+    }
 }
 
 /* Media queries for mobile - under 576px */
@@ -934,6 +967,10 @@ footer {
 
     .mission-text {
         width: 300px !important;
+    }
+
+    .lower-product {
+        width: 100% !important;
     }
 
     .newsletter .newsletter-title {
@@ -1037,6 +1074,10 @@ footer {
 
     .icon-text {
         font-size: 22px;
+    }
+
+    .lower-product {
+        width: 100% !important;
     }
 
     .newsletter .newsletter-form input {

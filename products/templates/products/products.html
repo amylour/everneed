@@ -88,9 +88,9 @@
                                     {% endif %}
                                     <div>
                                     {% if product.rating %}
-                                    <small class="text-muted"><i class="fas fa-leaf mr-2"></i>{{ product.rating }} / 5</small>
+                                    <small class="text-muted"><img src="{% static 'icons/eco_leaf_full.png' %}" class="rating-leaf-sm mr-2" alt="eco leaf icon for rating">{{ product.rating }} / 5</small>
                                     {% else %}
-                                    <small class="text-muted"><i class="fas fa-leaf mr-2"></i>No Rating</small>
+                                    <small class="text-muted"><img src="{% static 'icons/eco_leaf_full.png' %}" class="rating-leaf-sm mr-2" alt="eco leaf icon for rating">No Rating</small>
                                     {% endif %}
                                     </div>
                                 </div>

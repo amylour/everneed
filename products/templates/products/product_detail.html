@@ -28,34 +28,50 @@
                 <div class="ml-lg-5"><button class="wishlist-btn p-2">Add to Wishlist<i class="fas fa-heart mx-2"></i></button></div>
                 </div>
                 <p class="lead mb-0 text-left ml-1 mb-2 font-weight-bold prod-price">€{{ product.price }}</p>
-                <!-- {% if product.category.name == 'wear' %}
-                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                    <i class="fas fa-shirt fa-xs mr-2"></i>{{ product.category.friendly_name }}
-                </a>
-                {% elif product.category.name == 'care' %}
-                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                    <i class="fas fa-kit-medical mr-2"></i>{{ product.category.friendly_name }}
-                </a>
-                {% elif product.category.name == 'eat' %}
-                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                    <i class="fas fa-utensils mr-2"></i>{{ product.category.friendly_name }}
-                </a>
-                {% elif product.category.name == 'travel' %}
-                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                    <i class="fas fa-compass mr-2"></i>{{ product.category.friendly_name }}
-                </a>
-                {% endif %} -->
                 <div class="prod-rating ml-1">
                     {% if product.rating %}
-                    <small class="text-muted"><i class="fas fa-leaf mr-2"></i>{{ product.rating }} / 5</small>
+                    <small class="text-muted"><img src="{% static 'icons/eco_leaf_full.png' %}" class="rating-leaf" alt="eco leaf icon for rating">{{ product.rating }} / 5</small>
                     {% else %}
-                    <small class="text-muted"><i class="fas fa-leaf mr-2"></i>No Rating</small>
+                    <small class="text-muted"><img src="{% static 'icons/eco_leaf_full.png' %}" class="rating-leaf mr-1" alt="eco leaf icon for rating"> No Rating</small>
                     {% endif %}
                 </div>
-                <p class="mt-3 prod-description">{{ product.description }}</p>
             </div>
         </div>
-        
+        <!-- lower product detail area -->
+        <div class="row w-75 mx-auto lower-product">
+        <div class="col-12 col-md-12 col-lg-12">
+            <h3 class="prod-title">Description</h3>
+            <p class="mb-4 prod-description">Unisex Organic cotton trousers, relaxed fit with a stretch that suits most body types. Light feeling with robust
+            wearability. Rollable leg cuff to adjust leg length.</p>
+        </div>
+        <!-- Customer reviews section -->
+        <div class="col-12 col-md-12 col-lg-12">
+            <div class="my-4">
+            <h3 class="prod-title">Customer Reviews</h3>
+            </div>
+            <div class="mb-4 prod-reviews">
+                <div class="rating-section row ml-2">
+                    <div class="username mt-4 ml-4">
+                        <h4 class="">username - </h4>
+                    </div>
+                    <div class="row ml-2 mt-4 pt-1">
+                        <img src="{% static 'icons/eco_leaf_full.png' %}" class="review-leaf mr-2" alt="1 point for review - full leaf">
+                        <img src="{% static 'icons/eco_leaf_full.png' %}" class="review-leaf mr-2" alt="1 point for review - full leaf">
+                        <img src="{% static 'icons/eco_leaf_full.png' %}" class="review-leaf mr-2" alt="1 point for review - full leaf">
+                        <img src="{% static 'icons/eco_leaf.png' %}" class="review-leaf mr-2" alt="1 point for review - full leaf">
+                        <img src="{% static 'icons/eco_leaf.png' %}" class="review-leaf mr-2" alt="1 point for review - full leaf">
+                    </div>
+                </div>
+                <div class="review-txt mx-4">
+                    <p class="prod-description mx-2">Lorem ipsum dolor sit amet consectetur. Est ultrices blandit cursus enim.
+                        Consectetur
+                        euismod tortor ultrices risus
+                        tortor odio quam nam.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
     </div>
 </div>
 
