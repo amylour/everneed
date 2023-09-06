@@ -22,23 +22,27 @@
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="product-details-container mb-5 mt-md-5">
-                <div class="row m-1">
-                <p class="mr-5 mb-1 prod-title">{{ product.name }}</p>
-                <div class="ml-lg-5"><button class="wishlist-btn p-2">Add to Wishlist<i class="fas fa-heart mx-2"></i></button></div>
+            <div class="product-details-container mb-5 mt-md-5 mx-1">
+                <div class="row justify-content-between m-1">
+                    <div>
+                    <p class="mr-5 mb-1 prod-title">{{ product.name }}</p>
+                    </div>
+                    <div class="ml-lg-5"><button class="wishlist-btn p-2">Add to Wishlist<i class="fas fa-heart mx-2"></i></button></div>
                 </div>
                 <p class="lead mb-0 text-left ml-1 mb-2 font-weight-bold prod-price">€{{ product.price }}</p>
                 <div class="prod-rating ml-1">
                     {% if product.rating %}
-                    <small class="text-muted"><img src="{% static 'icons/eco_leaf_full.png' %}" class="rating-leaf" alt="eco leaf icon for rating">{{ product.rating }} / 5</small>
+                    <small class="text-muted"><img src="{% static 'icons/eco_leaf_full.png' %}" class="rating-leaf"
+                            alt="eco leaf icon for rating">{{ product.rating }} / 5</small>
                     {% else %}
-                    <small class="text-muted"><img src="{% static 'icons/eco_leaf_full.png' %}" class="rating-leaf mr-1" alt="eco leaf icon for rating"> No Rating</small>
+                    <small class="text-muted"><img src="{% static 'icons/eco_leaf_full.png' %}" class="rating-leaf mr-1"
+                            alt="eco leaf icon for rating"> No Rating</small>
                     {% endif %}
                 </div>
             </div>
         </div>
         <!-- lower product detail area -->
-        <div class="row w-75 mx-auto lower-product">
+        <div class="row w-75 mx-auto lower-product mx-1">
         <div class="col-12 col-md-12 col-lg-12">
             <h3 class="prod-title">Description</h3>
             <p class="mb-4 prod-description">Unisex Organic cotton trousers, relaxed fit with a stretch that suits most body types. Light feeling with robust

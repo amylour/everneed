@@ -6,11 +6,29 @@
 
 {% block content %}
 
-<div class="container mt-5 text-center">
-    <h1 class="section-title mt-5">Bag</h1>
-</div>
-<div class="container-fluid">
-    <p class="text-center">Bag coming soon...</p>
+<div class="overlay"></div>
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <h2 class="heading-text my-4">Shopping Bag</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            {% if bag_items %}
+            <div class="table-responsive rounded"></div>
+            {% else %}
+            <p class="lead mb-5">Your bag is empty.</p>
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+            {% endif %}
+        </div>
+    </div>
 </div>
 
 {% endblock %}

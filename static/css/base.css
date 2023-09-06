@@ -632,6 +632,11 @@ hr {
     display: none;
 }
 
+/* Bag */
+.text-uppercase {
+    color: var(--forest);
+}
+
 /* Reviews */
 .username {
     color: var(--forest);
