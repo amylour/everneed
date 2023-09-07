@@ -120,7 +120,12 @@
                 <li class="list-inline-item">
                     <a class="" href="{% url 'bag' %}" title="Bag">
                         <div class="text-center mx-2">
+                            {% if total_quantity == 0 %}
                             <img src="{% static 'icons/bag.png' %}" class="nav-image" alt="shopping bag">
+                            {% else %}
+                            <img src="{% static 'icons/bag_number_item.png' %}" class="nav-image" alt="shopping bag">
+                            <span class="bag-quantity">{{ total_quantity }}</span>
+                            {% endif %}
                         </div>
                     </a>
                 </li>

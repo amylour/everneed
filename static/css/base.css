@@ -231,9 +231,22 @@ label {
 }
 
 .nav-image {
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
     transition: transform 0.3s ease;
+    position: relative;
+}
+
+.bag-quantity {
+    position: absolute;
+    top: 5px;
+    right: 24px;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 13px;
+    height: 20px;
+    width: 20px;
+    z-index: 2;
 }
 
 .nav-image:active {
@@ -907,6 +920,19 @@ footer {
         padding: 15px;
     }
 
+    /* move bag quantity text with icon on mobile screens */
+    .nav-image {
+        position: static;
+    }
+
+    .bag-quantity {
+        position: relative;
+        top: -11px;
+        left: -21px;
+        z-index: 2;
+        color: #fff;
+    }
+
     .lower-product {
         width: 100% !important;
     }
@@ -916,6 +942,18 @@ footer {
 @media (max-width: 576px) {
     .navbar {
         padding: 1rem 1rem;
+    }
+    /* move bag quantity text with icon on mobile screens */
+    .nav-image {
+        position: static;
+    }
+
+    .bag-quantity {
+        position: relative;
+        top: -11px;
+        left: -21px;
+        z-index: 2;
+        color: #fff;
     }
 
     .hero-banner {
