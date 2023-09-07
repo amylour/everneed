@@ -863,9 +863,8 @@ footer {
 
 /* Media queries for mobile - under 1024px */
 @media (max-width: 1024px) {
-
     .nav-links {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .hero-text-panel {
@@ -915,6 +914,10 @@ footer {
 
 /* Media queries for mobile - under 896px */
 @media (max-width: 896px) {
+    .nav-links {
+        font-size: 20px;
+    }
+    
     .modal-content {
         bottom: 30px;
         padding: 15px;
@@ -946,6 +949,10 @@ footer {
     /* move bag quantity text with icon on mobile screens */
     .nav-image {
         position: static;
+    }
+
+    .navbar-logo {
+        left: 50%;
     }
 
     .bag-quantity {
@@ -1053,6 +1060,10 @@ footer {
 
 /* Media queries for small mobile - under 375px */
 @media (max-width: 375px) {
+    .navbar-logo {
+        font-size: 30px;
+    }
+
     .hero-banner {
         height: 350px;
     }

@@ -3,9 +3,25 @@
 <header class="container-fluid fixed-top p-0">
     {% include 'includes/delivery_banner.html' %}
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="row">
+            <div class="mobile-bag d-block d-sm-none d-block d-md-none">
+                <a class="" href="{% url 'bag' %}" title="Bag">
+                    <div class="text-center mx-2">
+                        {% if total_quantity == 0 %}
+                        <img src="{% static 'icons/bag.png' %}" class="nav-image" alt="shopping bag">
+                        {% else %}
+                        <img src="{% static 'icons/bag_number_item.png' %}" class="nav-image" alt="shopping bag">
+                        <span class="bag-quantity">{{ total_quantity }}</span>
+                        {% endif %}
+                    </div>
+                </a>
+            </div>
+            <div class="logo">
         <a href="{% url 'home' %}" class="nav-link">
-            <h2 class="navbar-logo mx-2">everneed</h2>
+            <h2 class="navbar-logo pl-sm-0 pl-md-3 mx-3">everneed</h2>
+            </div>
         </a>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -14,7 +30,7 @@
             <ul class="navbar-nav w-auto mx-auto w-75">
                 <!-- Display all products but remove active class bold styling from 'all' if another navbar item is selected -->
                 <li class="nav-item dropdown {% if request.resolver_match.url_name == 'products' and not request.GET.category %}active-nav-item{% endif %}">
-                    <a class="nav-links mx-4 pb-2" href="{% url 'products' %}" id="all-products-link" data-toggle="dropdown"
+                    <a class="nav-links mx-lg-4 mx-md-2 pb-2" href="{% url 'products' %}" id="all-products-link" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         all
                     </a>
@@ -26,7 +42,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown {% if request.GET.category == 'wear' %}active-nav-item{% endif %}">
-                    <a class="nav-links mx-4" href="{% url 'products' %}?category=wear" data-toggle="dropdown" aria-haspopup="true"
+                    <a class="nav-links mx-lg-4 mx-md-2" href="{% url 'products' %}?category=wear" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         wear
                     </a>
@@ -40,7 +56,7 @@
                     </div> -->
                 </li>
                 <li class="nav-item dropdown {% if request.GET.category == 'care' %}active-nav-item{% endif %}">
-                    <a class="nav-links mx-4" href="{% url 'products' %}?category=care" data-toggle="dropdown" aria-haspopup="true"
+                    <a class="nav-links mx-lg-4 mx-md-2" href="{% url 'products' %}?category=care" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         care
                     </a>
@@ -51,7 +67,7 @@
                     </div> -->
                 </li>
                 <li class="nav-item dropdown {% if request.GET.category == 'eat' %}active-nav-item{% endif %}">
-                    <a class="nav-links mx-4" href="{% url 'products' %}?category=eat" data-toggle="dropdown" aria-haspopup="true"
+                    <a class="nav-links mx-lg-4 mx-md-2" href="{% url 'products' %}?category=eat" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         eat
                     </a>
@@ -64,7 +80,7 @@
                     </div> -->
                 </li>
                 <li class="nav-item dropdown {% if request.GET.category == 'travel' %}active-nav-item{% endif %}">
-                    <a class="nav-links mx-4" href="{% url 'products' %}?category=travel" data-toggle="dropdown" aria-haspopup="true"
+                    <a class="nav-links mx-lg-4 mx-md-2" href="{% url 'products' %}?category=travel" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         travel
                     </a>
@@ -77,7 +93,7 @@
                     </div> -->
                 </li>
                 <li class="nav-item dropdown {% if request.resolver_match.url_name == 'article' %}active-nav-item{% endif %}">
-                    <a class="nav-links mx-4" href="{% url 'article' %}" title="articles">
+                    <a class="nav-links mx-lg-4 mx-md-2" href="{% url 'article' %}" title="articles">
                         read
                     </a>
                 </li>
@@ -119,7 +135,7 @@
                 </li>
                 <li class="list-inline-item">
                     <a class="" href="{% url 'bag' %}" title="Bag">
-                        <div class="text-center mx-2">
+                        <div class="text-center mx-2 d-none d-sm-block">
                             {% if total_quantity == 0 %}
                             <img src="{% static 'icons/bag.png' %}" class="nav-image" alt="shopping bag">
                             {% else %}
