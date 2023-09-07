@@ -952,7 +952,7 @@ footer {
     }
 
     .navbar-logo {
-        left: 50%;
+        padding-left: 30px;
     }
 
     .bag-quantity {
@@ -1061,7 +1061,7 @@ footer {
 /* Media queries for small mobile - under 375px */
 @media (max-width: 375px) {
     .navbar-logo {
-        font-size: 30px;
+        font-size: 34px;
     }
 
     .hero-banner {
@@ -1139,5 +1139,12 @@ footer {
         padding: 18px 135px 17px 18px;
     }
 
+}
 
+/* Media queries for small mobile - under 320px */
+@media (max-width: 320px) {
+    .navbar-logo {
+        font-size: 30px;
+        padding-left: 0px;
+    }
 }

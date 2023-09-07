@@ -2,9 +2,9 @@
 
 <header class="container-fluid fixed-top p-0">
     {% include 'includes/delivery_banner.html' %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
         <div class="row">
-            <div class="mobile-bag d-block d-sm-none d-block d-md-none">
+            <div class="mobile-bag d-block d-sm-none d-md-block d-lg-none d-xl-none">
                 <a class="" href="{% url 'bag' %}" title="Bag">
                     <div class="text-center mx-2">
                         {% if total_quantity == 0 %}
@@ -16,11 +16,10 @@
                     </div>
                 </a>
             </div>
-            <div class="logo">
-        <a href="{% url 'home' %}" class="nav-link">
-            <h2 class="navbar-logo pl-sm-0 pl-md-3 mx-3">everneed</h2>
+            <div class="logo ml-lg-2 ml-xl-2">
+                <a href="{% url 'home' %}" class="nav-link"></a>
+                <h2 class="navbar-logo mx-2">everneed</h2>
             </div>
-        </a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -135,7 +134,7 @@
                 </li>
                 <li class="list-inline-item">
                     <a class="" href="{% url 'bag' %}" title="Bag">
-                        <div class="text-center mx-2 d-none d-sm-block">
+                        <div class="text-center mx-2 d-none d-sm-block d-md-none d-lg-block d-xl-block">
                             {% if total_quantity == 0 %}
                             <img src="{% static 'icons/bag.png' %}" class="nav-image" alt="shopping bag">
                             {% else %}
