@@ -38,6 +38,10 @@ header {
     font-family: var(--title);
 }
 
+h6 {
+    color: var(--forest);
+}
+
 a {
     color: var(--forest);
     text-decoration: none !important;
@@ -45,6 +49,15 @@ a {
 
 em {
     font-size: medium;
+}
+
+th {
+    font-size: 20px;
+    color: var(--forest);
+}
+
+strong {
+    color: var(--forest);
 }
 
 p {
