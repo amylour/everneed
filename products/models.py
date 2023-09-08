@@ -46,6 +46,7 @@ class Product(models.Model):
     discount = models.DecimalField(
         max_digits=6, decimal_places=2, null=True, blank=True)
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
+    ml_sizes = models.BooleanField(default=False, null=True, blank=True)
     is_shoe = models.BooleanField(default=False, null=True, blank=True)
     carbon_fp = models.DecimalField(
         max_digits=6, decimal_places=2, blank=True, null=True)
