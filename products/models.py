@@ -45,20 +45,8 @@ class Product(models.Model):
         max_digits=6, decimal_places=2, null=True, blank=True)
     discount = models.DecimalField(
         max_digits=6, decimal_places=2, null=True, blank=True)
-    shoe_size = models.CharField(max_length=10, choices=[
-        ('32-34', '32-34'),
-        ('35-36', '35-36'),
-        ('38-40', '38-40'),
-        ('41-43', '41-43'),
-        ('44-46', '44-46'),
-    ], blank=True)
-    clothes_size = models.CharField(max_length=2, choices=[
-        ('XS', 'XS'),
-        ('S', 'S'),
-        ('M', 'M'),
-        ('L', 'L'),
-        ('XL', 'XL'),
-    ], blank=True)
+    has_sizes = models.BooleanField(default=False, null=True, blank=True)
+    is_shoe = models.BooleanField(default=False, null=True, blank=True)
     carbon_fp = models.DecimalField(
         max_digits=6, decimal_places=2, blank=True, null=True)
     carbon_saved = models.DecimalField(

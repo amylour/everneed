@@ -108,6 +108,7 @@ select.custom-select:focus {
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
+    border: none;
 }
 
 /* Override browser text input prefill colour - found through Dev Tools and https: //stackoverflow.com/questions/2338102/override-browser-form-filling-and-input-highlighting-with-html-css */

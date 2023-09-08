@@ -42,6 +42,27 @@
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
+                        {% with product.has_sizes as s %}
+                        {% if s %}
+                        <div class="col-12 mt-3">
+                            <p><strong>Size:</strong></p>
+                            <select class="form-control custom-select w-50" name="product_size" id='id_product_size'>
+                                {% if product.is_shoe %}
+                                <option value="32-34">32-34</option>
+                                <option value="35-36">35-36</option>
+                                <option value="38-40">38-40</option>
+                                <option value="41-43">41-43</option>
+                                <option value="44-46">44-46</option>
+                                {% else %}
+                                <option value="xs">XS</option>
+                                <option value="s">S</option>
+                                <option value="m" selected>M</option>
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                        {% endif %}
                         <div class="col-12 m-1">
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
@@ -61,6 +82,7 @@
                             <input type="submit" class="wishlist-btn m-1 p-2 px-4" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        {% endwith %}
                     </div>
                 </form>
             </div>
