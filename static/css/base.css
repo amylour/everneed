@@ -139,6 +139,11 @@ remove the blue highlight on click */
     -webkit-box-shadow: none;
 }
 
+.input-group:not(.has-validation)>.input-group-append:not(:last-child)>.btn {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 select:focus,
 select.custom-select:focus {
     outline: 2px dashed #194f4990 !important;
@@ -745,7 +750,9 @@ hr {
     border-radius: 10px;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
     background-color: #fff;
     border-radius: 10px;
