@@ -7,18 +7,19 @@
             <div class="mobile-bag d-block d-sm-none d-md-block d-lg-none d-xl-none">
                 <a class="" href="{% url 'bag' %}" title="Bag">
                     <div class="text-center mx-2">
-                        {% if total_quantity == 0 %}
-                        <img src="{% static 'icons/bag.png' %}" class="nav-image" alt="shopping bag">
+                        {% if total_item_count == 0 %}
+                        <img src="{% static 'icons/bag.png' %}" class="nav-image mr-2" alt="shopping bag">
                         {% else %}
                         <img src="{% static 'icons/bag_number_item.png' %}" class="nav-image" alt="shopping bag">
-                        <span class="bag-quantity">{{ total_quantity }}</span>
+                        <span class="bag-quantity">{{ total_item_count }}</span>
                         {% endif %}
                     </div>
                 </a>
             </div>
             <div class="logo ml-lg-2 ml-xl-2">
-                <a href="{% url 'home' %}" class="nav-link"></a>
-                <h2 class="navbar-logo mx-2">everneed</h2>
+                <a href="{% url 'home' %}" class="nav-link navbar-logo ml-3">
+                everneed
+                </a>
             </div>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
@@ -135,11 +136,11 @@
                 <li class="list-inline-item">
                     <a class="" href="{% url 'bag' %}" title="Bag">
                         <div class="text-center mx-2 d-none d-sm-block d-md-none d-lg-block d-xl-block">
-                            {% if total_quantity == 0 %}
+                            {% if total_item_count == 0 %}
                             <img src="{% static 'icons/bag.png' %}" class="nav-image" alt="shopping bag">
                             {% else %}
                             <img src="{% static 'icons/bag_number_item.png' %}" class="nav-image" alt="shopping bag">
-                            <span class="bag-quantity">{{ total_quantity }}</span>
+                            <span class="bag-quantity">{{ total_item_count }}</span>
                             {% endif %}
                         </div>
                     </a>
