@@ -102,6 +102,43 @@ input.form-control:focus {
     border: 1px solid #194f4970;
 }
 
+.border-quantity {
+    border: 1px solid #194f4970;
+    border-radius: 10px;
+}
+
+/* specifically target the product detail quantity buttons to include the border radius and
+remove the blue highlight on click */
+.input-group:not(.has-validation)>.form-control:not(:last-child),
+.decrement-qty.btn {
+    border-top-left-radius: 10px; 
+    border-bottom-left-radius: 10px;
+    background-color: #194f4930;
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.input-group:not(.has-validation)>.form-control:not(:last-child) {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: #fff;
+    border: none;
+}
+
+.input-group>.form-control:not(:first-child),
+.increment-qty.btn {
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px; 
+    background-color: #194f4930;
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
 select:focus,
 select.custom-select:focus {
     outline: 2px dashed #194f4990 !important;
@@ -653,6 +690,10 @@ input {
 
 .text-muted {
     color: #194f4990 !important;
+}
+
+.quantity-muted {
+    color: #194f49;
 }
 
 hr { 
