@@ -295,7 +295,7 @@ label {
 
 .bag-quantity {
     position: absolute;
-    top: 5px;
+    top: 6px;
     right: 24px;
     color: #fff;
     border-radius: 50%;
@@ -993,7 +993,7 @@ footer {
     .bag-quantity {
         position: relative;
         top: -11px;
-        left: -21px;
+        left: -18px;
         z-index: 2;
         color: #fff;
     }
@@ -1020,7 +1020,7 @@ footer {
     .bag-quantity {
         position: relative;
         top: -11px;
-        left: -21px;
+        left: -18px;
         z-index: 2;
         color: #fff;
     }
