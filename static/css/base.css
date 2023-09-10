@@ -181,6 +181,23 @@ label {
     font-size: 18px;
 }
 
+/* Toasts */
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+    color: var(--forest);
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 /* Header - Navbar, Search, Navitems */
 /* inspired by Patagonia's delivery banner */
 .delivery_dropdown {

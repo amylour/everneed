@@ -1,0 +1,32 @@
+<script>
+    $(document).ready(function () {
+        // Close the search modal
+        $("#searchModal").on('hidden.bs.modal', function () {
+            $("#searchInput").val(""); // Clear the search input when the modal is closed
+        });
+
+        $(".nav-item.dropdown").on({
+            mouseenter: function () {
+                $(this).find(".dropdown-menu").addClass("show");
+            },
+            mouseleave: function () {
+                $(this).find(".dropdown-menu").removeClass("show");
+            },
+        });
+
+        $(".list-inline-item.dropdown").on({
+            mouseenter: function () {
+                $(this).find(".dropdown-menu").addClass("show");
+            },
+            mouseleave: function () {
+                $(this).find(".dropdown-menu").removeClass("show");
+            },
+        });
+
+        // nav links open to page on click
+        $(".nav-links").on("click", function () {
+            window.location.href = $(this).attr("href");
+        });
+
+    });
+</script>

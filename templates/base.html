@@ -47,6 +47,25 @@
 
 <body>
     {% include 'includes/header.html' %}
+
+    {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
     <!-- Bootstrap modal for search function-->
     <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel"
         aria-hidden="true">
@@ -98,38 +117,10 @@
 
     {% block postloadjs %}
     {{ block.super }}
-    <script>
-        $(document).ready(function () {
-            // Close the search modal
-            $("#searchModal").on('hidden.bs.modal', function () {
-                $("#searchInput").val(""); // Clear the search input when the modal is closed
-            });
-
-            $(".nav-item.dropdown").on({
-                mouseenter: function () {
-                    $(this).find(".dropdown-menu").addClass("show");
-                },
-                mouseleave: function () {
-                    $(this).find(".dropdown-menu").removeClass("show");
-                },
-            });
-
-            $(".list-inline-item.dropdown").on({
-                mouseenter: function () {
-                    $(this).find(".dropdown-menu").addClass("show");
-                },
-                mouseleave: function () {
-                    $(this).find(".dropdown-menu").removeClass("show");
-                },
-            });
-            
-            // nav links open to page on click
-            $(".nav-links").on("click", function () {
-                window.location.href = $(this).attr("href");
-            });
-        });
+    {% include 'includes/base_script.html' %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
     </script>
-
     {% endblock %}
 
 
