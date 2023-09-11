@@ -64,6 +64,10 @@ p {
     color: var(--forest);
 }
 
+.text-danger {
+    color: var(--gold)!important;
+}
+
 ul li {
     list-style-type: none;
 }
@@ -198,6 +202,63 @@ label {
     height: 2px;
 }
 
+.toast-header {
+    border-bottom: 2px dashed #0e737390;
+}
+
+.bg-success {
+    background-color: var(--bluegreen)!important;
+}
+
+.bg-warning {
+    background-color: var(--yellow)!important;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #8E164E !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #194f49 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #941b27 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #e6a226 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #0e7373 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
 /* Header - Navbar, Search, Navitems */
 /* inspired by Patagonia's delivery banner */
 .delivery_dropdown {
@@ -312,7 +373,7 @@ label {
 
 .bag-quantity {
     position: absolute;
-    top: 6px;
+    top: 7px;
     right: 24px;
     color: #fff;
     border-radius: 50%;
@@ -799,6 +860,15 @@ hr {
     transform: scale(0.95);
 }
 
+.wishlist-btn:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 2px dashed #194f4990;
+}
+
 /* Footer */
 footer {
     overflow: hidden;
@@ -1010,9 +1080,13 @@ footer {
     .bag-quantity {
         position: relative;
         top: -11px;
-        left: -18px;
+        left: -21px;
         z-index: 2;
         color: #fff;
+    }
+
+    .message-container {
+        right: 0px;
     }
 
     .lower-product {
