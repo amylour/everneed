@@ -223,6 +223,7 @@ The following blogs/tutorials complemented my learning for this project, alongsi
 - Scroll fade in animation for 'Mission' section [Nucleio Tech](http://tinyurl.com/5c6d5nhy)
 - Underline animation for 'Our Mission' section [Youtube](https://www.youtube.com/watch?v=wsDZm6PXeVw)
 - Scroll to top button & hide/show button [devdevshow](https://devdevshow.com/back-to-top-button-scroll-button-css/)
+- Change color of checkbox using 'accent' [CodeProject](https://tinyurl.com/jtecnb39)
 
 ## Media
 
