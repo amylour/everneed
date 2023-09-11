@@ -42,7 +42,8 @@ h6 {
     color: var(--forest);
 }
 
-a {
+a,
+a span {
     color: var(--forest);
     text-decoration: none !important;
 }
@@ -51,21 +52,29 @@ em {
     font-size: medium;
 }
 
-th {
+th,
+.fieldset-label {
     font-size: 20px;
     color: var(--forest);
+    font-weight: bold;
 }
 
-strong {
-    color: var(--forest);
+.label-gold {
+    color: var(--gold);
 }
 
-p {
+strong,
+p,
+.icon-green {
     color: var(--forest);
 }
 
 .text-danger {
     color: var(--gold)!important;
+}
+
+.border-info {
+    border-color: #194f4970!important;
 }
 
 ul li {
@@ -104,6 +113,7 @@ input.form-control:focus {
     border-radius: 10px;
     font-size: 18px;
     border: 1px solid #194f4970;
+    font-family: var(--main-font);
 }
 
 .border-quantity {
@@ -183,6 +193,28 @@ input:-ms-autofill {
 label {
     color: var(--forest);
     font-size: 18px;
+    font-family: var(--main-font);
+}
+
+/* Change the color of the checkbox border and check */
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #194f4970;
+    border-radius: 4px;
+}
+
+input[type="checkbox"]:checked::before {
+    border-color: #194f4970;
+}  
+
+/* change color of checkbox using accent credit -> https: //tinyurl.com/jtecnb39 */
+input[type='checkbox'] {
+    accent-color: var(--forest);
 }
 
 /* Toasts */
@@ -508,6 +540,12 @@ ul.nav-menu li {
     color: var(--forest);
 }
 
+.p-txt-small {
+    font-family: var(--main-font);
+    font-size: 18px;
+    color: var(--forest);
+}
+
 .special-anchor {
     color: var(--gold);
     font-size: 20px;
@@ -783,6 +821,42 @@ hr {
     display: none;
 }
 
+.wishlist-btn {
+    border-radius: 15px;
+    background-color: #d5e2da;
+    color: var(--forest);
+    border: none;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    font-size: 16px;
+    display: inline-flex;
+        /* Display both as inline-flex elements */
+    align-items: center;
+        /* Vertically align content */
+    height: 100%;
+        /* Set a fixed height to match */
+}
+
+.wishlist-btn:hover {
+    transform: scale(1.05);
+    background-color: #e1f0e7;
+}
+
+.wishlist-btn:active {
+    transform: scale(0.95);
+    border: none;
+}
+
+.wishlist-btn:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border: none;
+}
+
 /* Bag */
 .text-uppercase {
     color: var(--forest);
@@ -838,35 +912,6 @@ hr {
 
 .btt-link:hover {
     color:var(--bluegreen);
-}
-
-.wishlist-btn {
-    border-radius: 15px;
-    background-color: #d5e2da;
-    color: var(--forest);
-    border: none;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
-    transition: transform 0.3s ease;
-    transform-origin: center;
-    font-size: 16px;
-}
-
-.wishlist-btn:hover {
-    transform: scale(1.05);
-    background-color: #e1f0e7;
-}
-
-.wishlist-btn:active {
-    transform: scale(0.95);
-}
-
-.wishlist-btn:focus {
-    outline: none !important;
-    outline-width: 0 !important;
-    box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    border: 2px dashed #194f4990;
 }
 
 /* Footer */

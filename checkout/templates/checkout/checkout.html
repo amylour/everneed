@@ -14,20 +14,20 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4">Checkout</h2>
+            <h2 class="section-title mb-4">Checkout</h2>
             <hr>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-12 col-lg-6 order-lg-last mb-5">
-            <p class="text-muted">Order Summary ({{ product_count }})</p>
+        <div class="col-12 col-lg-6 order-lg-last mb-5 p-4">
+            <p class="font-weight-bold">Order Summary ({{ product_count }})</p>
             <div class="row">
                 <div class="col-7 offset-2">
-                    <p class="mb-1 mt-0 small text-muted">Item</p>
+                    <p class="mb-1 mt-0">Item</p>
                 </div>
                 <div class="col-3 text-right">
-                    <p class="mb-1 mt-0 small text-muted">Subtotal</p>
+                    <p class="mb-1 mt-0">Subtotal</p>
                 </div>
             </div>
             {% for item in bag_items %}
@@ -47,7 +47,7 @@
                         <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                     </div>
                     <div class="col-3 text-right">
-                        <p class="my-0 small text-muted all-price">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        <p class="my-0 all-price">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                     </div>
                 </div>
             {% endfor %}
@@ -66,16 +66,16 @@
             </div>
         </div>
         <div class="col-12 col-lg-6">
-            <p class="text-muted">Please fill out the form below to complete your order</p>
+            <p class="p-txt-small ml-4">Please fill out the form below to complete your order</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small px-2 w-auto">Details</legend>
+                    <legend class="fieldset-label px-2 w-auto">Details</legend>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small px-2 w-auto">Delivery</legend>
+                    <legend class="fieldset-label px-2 w-auto">Delivery</legend>
                     {{ order_form.phone_number | as_crispy_field }}
                     {{ order_form.country | as_crispy_field }}
                     {{ order_form.postcode | as_crispy_field }}
@@ -85,7 +85,7 @@
                     {{ order_form.county | as_crispy_field }}
                     <div class="form-check form-check-inline float-right mr-0">
                         {% if user.is_authenticated %}
-                        <label class="form-check-label" for="id-save-info">Save this delivery information to my
+                        <label class="form-check-label label-gold" for="id-save-info">Save this delivery information to my
                             profile</label>
                         <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info"
                             checked>
@@ -98,7 +98,7 @@
                     </div>
                 </fieldset>
                 <fieldset class="px-3">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                    <legend class="fieldset-label px-2 w-auto">Payment</legend>
                     <!-- A Stripe card element will go here -->
                     <div class="mb-3" id="card-element"></div>
 
@@ -107,19 +107,19 @@
                 </fieldset>
 
                 <div class="submit-button text-right mt-5 mb-2">
-                    <a href="{% url 'bag' %}" class="wishlist-btn p-2">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
+                    <a href="{% url 'bag' %}" class="wishlist-btn m-1 mr-md-3 mr-lg-3 p-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-chevron-left icon-green"></i>
                         </span>
-                        <span class="font-weight-bold">Adjust Bag</span>
+                        <span class="text-uppercase">Adjust Bag</span>
                     </a>
-                    <button id="submit-button" class="wishlist-btn p-2">
-                        <span class="font-weight-bold">Complete Order</span>
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
+                    <button id="submit-button" class="wishlist-btn m-1 p-2 px-4">
+                        <span class="text-uppercase">Complete Order</span>
+                        <span class="icon ml-2">
+                            <i class="fas fa-lock icon-green"></i>
                         </span>
                     </button>
-                    <p class="small text-danger my-0">
+                    <p class="small text-danger my-3">
                         <span class="icon">
                             <i class="fas fa-exclamation-circle"></i>
                         </span>
