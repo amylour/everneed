@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'profiles',
     'wishlist',
 
-    #Other
+    # Other
     'crispy_forms',
 ]
 
