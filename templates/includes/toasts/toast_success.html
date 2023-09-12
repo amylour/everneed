@@ -45,12 +45,22 @@
                 </p>
                 {% endif %}
                 <div class="text-center mb-2">
-                <a href="{% url 'bag' %}" class="btn wishlist-btn p-2">
+                <!-- if on bag page, display checkout link, if not, display bag link in success toast  -->
+                {% if request.path == '/bag/' %}
+                <a href="{% url 'checkout' %}" class="btn wishlist-btn p-2">
                     <span class="text-uppercase">Go To Secure Checkout</span>
                     <span class="icon ml-2">
                         <i class="fas fa-lock"></i>
                     </span>
                 </a>
+                {% else %} 
+                <a href="{% url 'bag' %}" class="btn wishlist-btn p-2">
+                    <span class="text-uppercase">Go To Bag</span>
+                    <span class="icon ml-2">
+                        <i class="fas fa-bag-shopping"></i>
+                    </span>
+                </a>
+                {% endif %} 
                 </div>
             </div>
         </div>
