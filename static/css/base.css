@@ -73,6 +73,10 @@ p,
     color: var(--gold)!important;
 }
 
+.text-info {
+    color: var(--bluegreen)!important;
+}
+
 .border-info {
     border-color: #194f4970!important;
 }
@@ -272,7 +276,7 @@ input[type='checkbox'] {
 }
 
 .arrow-danger {
-    border-bottom-color: #941b27 !important;
+    border-bottom-color: #a71d2b !important;
 }
 
 .arrow-warning {

@@ -91,14 +91,14 @@
                             checked>
                         {% else %}
                         <label class="form-check-label" for="id-save-info">
-                            <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
-                            <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                            <a class="label-gold" href="{% url 'account_signup' %}">Create an account</a> or
+                            <a class="label-gold" href="{% url 'account_login' %}">login</a> to save this information
                         </label>
                         {% endif %}
                     </div>
                 </fieldset>
                 <fieldset class="px-3">
-                    <legend class="fieldset-label px-2 w-auto">Payment</legend>
+                    <legend class="fieldset-label px-2">Payment</legend>
                     <!-- A Stripe card element will go here -->
                     <div class="mb-3" id="card-element"></div>
 
@@ -130,4 +130,11 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
