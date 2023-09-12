@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="overlay"></div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col text-center my-auto">
+            <h1 class="heading-text">
+                This page can't be found.
+            </h1>
+            <div class="my-4">
+                <div>
+                    <a href="{% url 'home' %}" class="wishlist-btn p-2 text-uppercase py-2">
+                        Go back home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
