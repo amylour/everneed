@@ -1,5 +1,7 @@
 from django.http import HttpResponse
 
+import stripe
+
 
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
@@ -19,6 +21,20 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.succeeded webhook from Stripe
         """
+        intent = event.data.object
+        pid = intent.id
+        bag = intent.metadata.bag
+        save_info = intent.metadata.save_info
+
+        # Get the Charge object
+        stripe_charge = stripe.Charge.retrieve(
+            intent.latest_charge
+        )
+
+        billing_details = stripe_charge.billing_details
+        shipping_details = intent.shipping
+        grand_total = round(stripe_charge.amount / 100, 2)
+        print(intent)
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)
