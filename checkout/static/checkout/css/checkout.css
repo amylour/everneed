@@ -1,7 +1,7 @@
 .StripeElement,
 .stripe-style-input {
     box-sizing: border-box;
-    height: 40px;
+    height: 41px;
     padding: 10px 12px;
     border: 1px solid #194f4970;
     border-radius: 10px;
@@ -15,7 +15,6 @@
 .stripe-style-input:focus,
 .stripe-style-input:active {
     box-shadow: 0 1px 3px 0 #c3c5c9;
-    border: 2px dashed #194f4990;
 }
 
 .StripeElement--webkit-autofill {
@@ -24,6 +23,20 @@
 
 .stripe-style-input::placeholder {
     color: #194f4990;
+}
+
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
+fieldset select {
+    border: none;
 }
 
 .fieldset-label {
@@ -44,6 +57,15 @@
 #card-element:focus {
     color: #194f49;
     border: 2px dashed #194f4980;
+}
+
+/* prevent duplicate dashed border when countryfield focused */
+select#id_country.stripe-style-input.lazyselect.form-control:focus {
+    border: none;
+}
+
+select#id_country.stripe-style-input.lazyselect.form-control option {
+   color: #194f49;
 }
 
 .order-confirmation-wrapper {

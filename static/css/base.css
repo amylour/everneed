@@ -224,8 +224,8 @@ input[type='checkbox'] {
 /* Toasts */
 .message-container {
     position: fixed;
-    top: 72px;
-    right: 15px;
+    top: 100px;
+    right: 5px;
     z-index: 99999999999;
 }
 
@@ -248,51 +248,6 @@ input[type='checkbox'] {
 
 .bg-warning {
     background-color: var(--yellow)!important;
-}
-
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
-}
-
-/* Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
-    border-bottom-color: #8E164E !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-    border-bottom-color: #194f49 !important;
-}
-
-.arrow-danger {
-    border-bottom-color: #a71d2b !important;
-}
-
-.arrow-warning {
-    border-bottom-color: #e6a226 !important;
-}
-
-.arrow-info {
-    border-bottom-color: #0e7373 !important;
-}
-
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
 }
 
 /* Header - Navbar, Search, Navitems */
