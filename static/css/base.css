@@ -224,7 +224,7 @@ input[type='checkbox'] {
 /* Toasts */
 .message-container {
     position: fixed;
-    top: 100px;
+    top:100px;
     right: 5px;
     z-index: 99999999999;
 }
@@ -507,7 +507,7 @@ ul.nav-menu li {
 
 .special-anchor {
     color: var(--gold);
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .special-anchor:hover {
@@ -517,6 +517,10 @@ ul.nav-menu li {
 
 input {
     border-radius: 10px;
+}
+
+.form-check-label {
+    margin-left: 10px;
 }
 
 /* Hero section */
