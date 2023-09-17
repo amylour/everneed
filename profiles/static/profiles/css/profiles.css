@@ -48,3 +48,17 @@ th {
     font-family: 'Inconsolata', monospace;
 }
 
+td,
+li.order-li {
+    color:#194f49;
+    font-family: 'Inconsolata', monospace;
+}
+
+.order-history {
+    max-height: 416px;
+    overflow-y: auto;
+}
+
+a:hover {
+    color: #cc4818;
+}

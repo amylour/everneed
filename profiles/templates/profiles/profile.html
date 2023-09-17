@@ -45,11 +45,11 @@
                                     {{ order.order_number|truncatechars:6 }}
                                 </a>
                             </td>
-                            <td>{{ order.date }}</td>
+                            <td>{{ order.date|date:"d/m/Y" }}</td>
                             <td>
                                 <ul class="list-unstyled">
                                     {% for item in order.lineitems.all %}
-                                    <li class="small">
+                                    <li class="pl-2 order-li">
                                         {% if item.product.has_sizes %}
                                         Size {{ item.product.size|upper }}
                                         {% endif %}{{ item.product.name }} x{{ item.quantity }}
@@ -57,7 +57,7 @@
                                     {% endfor %}
                                 </ul>
                             </td>
-                            <td class="all-price font-weight-bold">€{{ order.grand_total }}</td>
+                            <td class="all-price">€{{ order.grand_total }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
