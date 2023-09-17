@@ -167,6 +167,25 @@
                 </div>
             </div>
         </div>
+        <div class="row my-3">
+            <div class="col-12 col-lg-7 text-right my-2">
+                {% if from_profile %}
+                <a href="{% url 'profile' %}" class="wishlist-btn p-2">
+                    <span class="icon mr-2">
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                    <span class="text-uppercase">Back to Account</span>
+                </a>
+                {% else %}
+                <a href="{% url 'products' %}" class="wishlist-btn p-2">
+                    <span class="icon mr-2">
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
+                {% endif %}
+            </div>
+        </div>
 </div>
 {% endblock %}
 
