@@ -200,7 +200,7 @@ label {
     font-family: var(--main-font);
 }
 
-/* Change the color of the checkbox border and check */
+/* Change the color of the checkbox border and check
 input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
@@ -217,9 +217,9 @@ input[type="checkbox"]:checked::before {
 }  
 
 /* change color of checkbox using accent credit -> https: //tinyurl.com/jtecnb39 */
-input[type='checkbox'] {
+/* input[type='checkbox'] {
     accent-color: var(--forest);
-}
+} */ 
 
 /* Toasts */
 .message-container {

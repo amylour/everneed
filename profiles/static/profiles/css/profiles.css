@@ -1,0 +1,50 @@
+/* Profile */
+/* prevent duplicate dashed border when countryfield focused */
+.profile-form-input {
+    background-color: white;
+    box-shadow: 0 1px 3px 0 #cdcfd3;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+    color: #194f49;
+}
+
+select.profile-form-input::placeholder,
+.profile-form-input::placeholder {
+    color: #194f4990;
+}
+
+select#id_default_country.form-control.profile-form-input.lazyselect:focus {
+    outline: none !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+select#id_default_country.form-control.profile-form-input.lazyselect option {
+    color: #194f49;
+}
+
+select.form-control:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 2px dashed #194f4990;
+}
+
+.profile-p {
+    font-size: 20px;
+    line-height: 2.5rem;
+    list-style-type: disc;
+    color: var(--forest);
+}
+
+th {
+    font-size: 18px;
+    font-style: italic;
+    font-family: 'Inconsolata', monospace;
+}
+
