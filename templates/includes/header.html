@@ -81,7 +81,7 @@
                 </li>
                 <li class="list-inline-item dropdown">
                     <a class="nav-link nav-links" href="{% url 'profile' %}" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false" title="Profile">
+                        aria-expanded="false" title="Account">
                         <div class="text-center mx-2">
                             <img src="{% if request.user.is_authenticated %}{% static 'icons/logged_in.png' %}{% else %}{% static 'icons/account_circle.png' %}{% endif %}" class="nav-image nav-profile" alt="profile">
                         </div>
@@ -100,11 +100,19 @@
                     </div>
                 </li>
                 <li class="list-inline-item">
+                    {% if request.user.is_authenticated %}
                     <a class="" href="{% url 'wishlist' %}" title="Wishlist">
                         <div class="text-center mx-2">
                             <img src="{% static 'icons/wishlist.png' %}" class="nav-image" alt="wishlist">
                         </div>
                     </a>
+                    {% else %}
+                    <a class="" href="/accounts/login/" title="Wishlist">
+                        <div class="text-center mx-2">
+                            <img src="{% static 'icons/wishlist.png' %}" class="nav-image" alt="wishlist">
+                        </div>
+                    </a>
+                    {% endif %}
                 </li>
                 <li class="list-inline-item">
                     <a class="" href="{% url 'bag' %}" title="Bag">
