@@ -1,7 +1,7 @@
 .StripeElement,
 .stripe-style-input {
     box-sizing: border-box;
-    height: 41px;
+    height: 42px;
     padding: 10px 12px;
     border: 1px solid #194f4970;
     border-radius: 10px;
@@ -90,5 +90,21 @@ select#id_country.stripe-style-input.lazyselect.form-control option {
     justify-content: center;
     margin: 0;
     height: 100%;
+}
+
+/* Change the color of the checkbox border and check */
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+}
+
+input[type="checkbox"]:checked::before {
+    border-color: #194f4970;
+}
+
+/* change color of checkbox using accent credit -> https: //tinyurl.com/jtecnb39 */
+input[type='checkbox'] {
+    accent-color: var(--forest);
 }
 
