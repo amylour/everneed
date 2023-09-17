@@ -46,51 +46,24 @@
                         aria-expanded="false">
                         wear
                     </a>
-                    <!-- <div class="dropdown-menu border-0 menu-hide" aria-labelledby="clothing-link">
-                        <a href="" class="dropdown-item">outerwear</a>
-                        <a href="" class="dropdown-item">tops</a>
-                        <a href="" class="dropdown-item">bottoms</a>
-                        <a href="" class="dropdown-item">shoes</a>
-                        <a href="" class="dropdown-item">all
-                            clothing</a>
-                    </div> -->
                 </li>
                 <li class="nav-item dropdown {% if request.GET.category == 'care' %}active-nav-item{% endif %}">
                     <a class="nav-links mx-lg-4 mx-md-2" href="{% url 'products' %}?category=care" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         care
                     </a>
-                    <!-- <div class="dropdown-menu border-0 menu-hide" aria-labelledby="personal-care-link">
-                        <a href="" class="dropdown-item">hygiene</a>
-                        <a href="" class="dropdown-item">first aid</a>
-                        <a href="" class="dropdown-item">all care</a>
-                    </div> -->
                 </li>
                 <li class="nav-item dropdown {% if request.GET.category == 'eat' %}active-nav-item{% endif %}">
                     <a class="nav-links mx-lg-4 mx-md-2" href="{% url 'products' %}?category=eat" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         eat
                     </a>
-                    <!-- <div class="dropdown-menu border-0 menu-hide" aria-labelledby="foodware-link">
-                        <a href="" class="dropdown-item">utensils</a>
-                        <a href="" class="dropdown-item">drinkware</a>
-                        <a href="" class="dropdown-item">storage</a>
-                        <a href="" class="dropdown-item">all
-                            eat</a>
-                    </div> -->
                 </li>
                 <li class="nav-item dropdown {% if request.GET.category == 'travel' %}active-nav-item{% endif %}">
                     <a class="nav-links mx-lg-4 mx-md-2" href="{% url 'products' %}?category=travel" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         travel
                     </a>
-                    <!-- <div class="dropdown-menu border-0 menu-hide" aria-labelledby="travel-items-link">
-                        <a href="" class="dropdown-item">bags</a>
-                        <a href="" class="dropdown-item">accessories</a>
-                        <a href="" class="dropdown-item">safety</a>
-                        <a href="" class="dropdown-item">all
-                            travel</a>
-                    </div> -->
                 </li>
                 <li class="nav-item dropdown {% if request.resolver_match.url_name == 'article' %}active-nav-item{% endif %}">
                     <a class="nav-links mx-lg-4 mx-md-2" href="{% url 'article' %}" title="articles">
@@ -118,7 +91,7 @@
                         {% if request.user.is_superuser %}
                         <a href="" class="dropdown-item">Admin Dashboard</a>
                         {% endif %}
-                        <a href="{% url 'profile' %}" class="dropdown-item">Profile</a>
+                        <a href="{% url 'profile' %}" class="dropdown-item">Account</a>
                         <a href="/accounts/logout/" class="dropdown-item">Logout</a>
                         {% else %}
                         <a href="/accounts/signup/" class="dropdown-item">Register</a>
