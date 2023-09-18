@@ -120,9 +120,17 @@
     {% block postloadjs %}
     {{ block.super }}
     {% include 'includes/base_script.html' %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
+    <!-- <script>
+        $(document).ready(function () {
+            // Show the toast
+            $('.toast').toast('show');
+
+            // Automatically hide the toast after 10 seconds
+            setTimeout(function () {
+                $('.toast').toast('hide');
+            }, 10000); // 10000 milliseconds = 10 seconds
+        });
+    </script> -->
     {% endblock %}
 
 

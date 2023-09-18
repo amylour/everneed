@@ -28,5 +28,13 @@
             window.location.href = $(this).attr("href");
         });
 
+         // Show the toast
+        $('.toast').toast('show');
+
+        // Automatically hide the toast after 5 seconds
+        setTimeout(function () {
+            $('.toast').toast('hide');
+        }, 5000);
+
     });
 </script>
