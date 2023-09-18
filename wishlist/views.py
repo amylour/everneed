@@ -17,7 +17,6 @@ def wishlist(request):
     return render(request, 'wishlist/wishlist.html', {'user_wishlist': user_wishlist})
 
 
-
 @login_required
 def add_to_wishlist(request, product_id):
     """
@@ -53,4 +52,3 @@ def remove_from_wishlist(request, product_id):
     wishlist_item.delete()
     messages.success(request, f'{product.name} has been successfully removed.')
     return redirect(reverse('wishlist'))
-    
