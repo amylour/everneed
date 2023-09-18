@@ -83,7 +83,9 @@
                         <td colspan="5" class="pt-5 text-right">
                             <h6><strong class="all-price">Bag Total: €{{ total|floatformat:2 }}</strong></h6>
                             <h6 class="all-price">Delivery: €{{ delivery|floatformat:2 }}</h6>
-                            <h4 class="mt-4"><strong class="all-price">Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+                            <h4 class="mb-4"><strong class="all-price">Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+                            <h6><strong class="all-price mt-3 carbon-value">Carbon Footprint Total: {{ total_carbon_fp|floatformat:2 }}kg of C0<sub>2</sub></strong></h6>
+                            <h6><strong class="all-price mt-3 carbon-value">Carbon Saved: {{ total_carbon_saved|floatformat:2 }}kg of C0<sub>2</sub></strong></h6>
                             {% if free_delivery_delta > 0 %}
                             <p class="mb-2 text-danger">
                                 You could get free delivery by spending just <strong class="all-price">€{{ free_delivery_delta }}</strong> more!

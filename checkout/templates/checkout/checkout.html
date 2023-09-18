@@ -64,6 +64,22 @@
                     <p class="my-0"><strong class="all-price">€{{ grand_total | floatformat:2 }}</strong></p>
                 </div>
             </div>
+            <!-- carbon saving -->
+            <div class="row text-center mt-5 carbon-saved p-3">
+                <div class="col-md-3 p-3">
+                    <div class="icon-container">
+                    <img src="{% static 'icons/carbon_footprint.png' %}" class="carbon-fp-img" alt="">
+                    </div>
+                </div>
+                <div class="col-md-9 p-3">
+                    <p class="my-0 carbon-text">
+                        By shopping with <strong>everneed</strong> today, you have saved a total of
+                        <strong>{{total_carbon_saved|floatformat:2 }}kg of C0<sub>2</sub></strong> from entering our atmosphere
+                        and your order has a <strong>Carbon Footprint Total</strong>
+                        of <strong>{{ total_carbon_saved|floatformat:2 }}kg of C0<sub>2</sub></strong>.
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="col-12 col-lg-6">
             <p class="p-txt-small ml-4">Please fill out the form below to complete your order</p>

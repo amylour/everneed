@@ -108,3 +108,30 @@ input[type='checkbox'] {
     accent-color: var(--forest);
 }
 
+/* carbon section */
+.carbon-saved {
+    background-color: #b6d5c2;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 2px dashed #194f4990;
+}
+
+.carbon-fp-img {
+    height: 70px;
+    width: auto;
+}
+
+.icon-container {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom, #dcefef 0%, #fff 100%);
+    border-radius: 50%;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: inset 1px 3px 7px #194f49;
+}
+
+.carbon-text {
+    font-size:
+}
+

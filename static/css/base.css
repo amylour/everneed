@@ -851,6 +851,10 @@ hr {
     color: var(--forest);
 }
 
+.carbon-value {
+    color: var(--gold);
+}
+
 /* Reviews */
 .username {
     color: var(--forest);
