@@ -9,9 +9,9 @@
 
 <div class="overlay"></div>
 <div class="container mb-4">
-    <div class="row">
+    <div class="row mt-5">
         <div class="col">
-            <h2 class="heading-text text-center my-5">Your Bag</h2>
+            <h2 class="heading-text text-center my-4">Your Bag</h2>
         </div>
     </div>
     <div class="row">
@@ -110,12 +110,12 @@
                 </table>
             </div>
             {% else %}
-            <div class="text-center mb-5">
-                <div class="mb-5">
-                    <p class="p-txt my-5">Your bag is empty.</p>
+            <div class="text-center">
+                <div>
+                    <p class="p-txt my-2">Your bag is empty.</p>
                 </div>
-                <div class="mb-5">
-                    <a href="{% url 'products' %}" class="wishlist-btn my-5 m-1 p-2 icon-green mb-5">
+                <div class="mb-2">
+                    <a href="{% url 'products' %}" class="wishlist-btn my-4 m-1 p-2 icon-green">
                         <span class="icon mr-2">
                             <i class="fas fa-chevron-left"></i>
                         </span>
