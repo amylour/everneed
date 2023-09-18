@@ -94,7 +94,7 @@ def checkout(request):
         if not bag:
             messages.error(request, "Your bag is empty.")
             return redirect(reverse('products'))
-        
+
         current_bag = bag_contents(request)
         total = current_bag['grand_total']
         stripe_total = round(total * 100)
@@ -103,7 +103,7 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-        
+
         # Attempt to prefill the form with any info the user maintains in their profile
         if request.user.is_authenticated:
             try:
@@ -127,7 +127,7 @@ def checkout(request):
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
             Did you forget to set it in your environment?')
-    
+
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
@@ -154,7 +154,7 @@ def checkout_success(request, order_number):
         order.user_profile = profile
         order.save()
 
-        # Save the user's info
+      # Save the user's info
         if save_info:
             profile_data = {
                 'default_phone_number': order.phone_number,
@@ -178,3 +178,4 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
+
