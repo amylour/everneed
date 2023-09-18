@@ -221,6 +221,13 @@ input[type="checkbox"]:checked::before {
     accent-color: var(--forest);
 } */ 
 
+/* Wishlist */
+.wishlist-prod {
+    height: 155px;
+    width: 155px;
+    object-fit: contain;
+}
+
 /* Toasts */
 .message-container {
     position: fixed;

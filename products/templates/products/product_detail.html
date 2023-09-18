@@ -30,8 +30,11 @@
                     
                     <div class="my-2">
                         {% if user.is_authenticated %}
-                        <button class="wishlist-btn p-2">Add to Wishlist<i class="fas fa-heart mx-2"></i></button>
-                    {% endif %}
+                        <a href="{% url 'add_to_wishlist' product.id %}">
+                            <button class="wishlist-btn p-2" data-product-id="{{ product.id }}">Add to Wishlist<i
+                                    class="fas fa-heart mx-2"></i></button>
+                        </a>
+                        {% endif %}
                     </div>
                 </div>
                 <p class="lead mb-0 text-left ml-1 mb-2 font-weight-bold prod-price">€{{ product.price }}</p>
