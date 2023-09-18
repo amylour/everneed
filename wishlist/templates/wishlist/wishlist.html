@@ -8,9 +8,9 @@
 
 <div class="container mt-5 text-center">
     <div class="row">
-        <h1 class="col section-title mt-5">Wishlist</h1>
+        <h1 class="col section-title my-3">Wishlist</h1>
     </div>
-    <div class="row">
+    <div class="row wishlist-border p-2 mb-4 m-2 shadow">
         <div class="col-12">
             {% if user_wishlist %}
             <ul class="list-group">
@@ -31,8 +31,8 @@
                             <p class="my-0">{{ item.product.name }}</p>
                         </div>
                         <div class="col-4">
-                            <a href="">
-                                <i class="fas fa-trash"></i> Remove
+                            <a href="{% url 'remove_from_wishlist' item.product.id %}" class="wishlist-delete">
+                                <i class="fas fa-trash wishlist-icon"></i> Remove
                             </a>
                         </div>
                     </div>
@@ -49,3 +49,4 @@
 </div>
 
 {% endblock %}
+
