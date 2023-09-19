@@ -172,6 +172,10 @@ select.custom-select:focus {
     border: none;
 }
 
+.invalid-feedback {
+    display: block;
+}
+
 /* Override browser text input prefill colour - found through Dev Tools and https: //stackoverflow.com/questions/2338102/override-browser-form-filling-and-input-highlighting-with-html-css */
 /* Webkit (Chrome, Safari) */
 input:-webkit-autofill {
@@ -221,31 +225,6 @@ input[type="checkbox"]:checked::before {
 /* input[type='checkbox'] {
     accent-color: var(--forest);
 } */ 
-
-/* Wishlist */
-.wishlist-prod {
-    height: 155px;
-    width: 155px;
-    object-fit: contain;
-}
-
-.wishlist-icon {
-    height: 20px;
-    width: 20px;
-}
-
-.wishlist-delete {
-    font-size: 18px;;
-}
-
-.wishlist-border {
-    border: 2px dashed #194f4990;
-    border-radius: 20px;
-}
-
-a.wishlist-delete:hover {
-    color: var(--gold);
-}
 
 /* Toasts */
 .message-container {
@@ -589,6 +568,7 @@ input {
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
     width: 263px;
     height: 100px;
+    transition: transform 0.3s ease;
 }
 
 .hero-btn-txt {
@@ -599,6 +579,18 @@ input {
     left: 97px;
     color: var(--forest);
     font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.txt-hover {
+    transition: transform 0.3s ease;
+}
+
+.txt-hover:hover .hero-btn-txt {
+    background: linear-gradient(to bottom, #da8655, #ce410e);
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(1.05);
 }
 
 .hero-btn-icon {
@@ -607,6 +599,18 @@ input {
     top: 343px;
     left: 271px;
     height: 40px;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.txt-hover:hover .hero-btn-icon,
+.txt-hover:hover .hero-button {
+    transform: scale(1.05);
+}
+
+.txt-hover:active .hero-btn-icon,
+.txt-hover:active .hero-button {
+    transform: scale(0.95);
 }
 
 .heading-text {
@@ -810,6 +814,32 @@ hr {
     display: none;
 }
 
+/* Wishlist */
+.wishlist-prod {
+    height: 155px;
+    width: 155px;
+    object-fit: contain;
+}
+
+.wishlist-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.wishlist-delete {
+    font-size: 18px;
+    ;
+}
+
+.wishlist-border {
+    border: 2px dashed #194f4990;
+    border-radius: 20px;
+}
+
+a.wishlist-delete:hover {
+    color: var(--gold);
+}
+
 .wishlist-btn {
     border-radius: 15px;
     background-color: #d5e2da;
@@ -820,14 +850,12 @@ hr {
     transform-origin: center;
     font-size: 16px;
     display: inline-flex;
-        /* Display both as inline-flex elements */
     align-items: center;
-        /* Vertically align content */
     height: 100%;
-        /* Set a fixed height to match */
 }
 
 .wishlist-btn:hover {
+    transition: transform 0.3s ease;
     transform: scale(1.05);
     background-color: #e1f0e7;
 }
@@ -1064,6 +1092,7 @@ footer {
         width: 400px;
         left: 132px;
         top: 258px;
+        transition: color 0.2s ease-in-out;
     }
 
     .hero-text {
@@ -1076,12 +1105,6 @@ footer {
         top: 284px;
         width: 295px;
         height: 116px;
-    }
-
-    .hero-btn-txt {
-        top: 319px;
-        left: 78px;
-        font-size: 31px;
     }
 
     .hero-btn-icon {
@@ -1157,6 +1180,10 @@ footer {
         left: -18px;
         z-index: 2;
         color: #fff;
+    }
+
+    main {
+        padding: 20px;
     }
 
     .hero-banner {
@@ -1258,6 +1285,10 @@ footer {
 @media (max-width: 375px) {
     .navbar-logo {
         font-size: 34px;
+    }
+
+    main {
+        padding: 20px;
     }
 
     .hero-banner {

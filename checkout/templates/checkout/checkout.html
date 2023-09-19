@@ -20,8 +20,8 @@
     </div>
 
     <div class="row">
-        <div class="col-12 col-lg-6 order-lg-last mb-5 p-4">
-            <p class="font-weight-bold">Order Summary ({{ product_count }})</p>
+        <div class="col-12 col-lg-6 pl-lg-5 order-lg-last mb-5">
+            <p class="font-weight-bold">Order Summary: ({{ product_count }}) Items</p>
             <div class="row">
                 <div class="col-7 offset-2">
                     <p class="mb-1 mt-0">Item</p>
@@ -81,8 +81,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-lg-6">
-            <p class="p-txt-small ml-4">Please fill out the form below to complete your order</p>
+        <div class="col-12 col-lg-6 pr-lg-5">
+            <p class="p-txt-small ml-3">Please fill out the form below to complete your order</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
