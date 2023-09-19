@@ -1,5 +1,26 @@
 {% load static %} 
 
-<div class="text-center w-100 p-2 text-white delivery_dropdown">
-    <span class="delivery_ban">Free delivery on orders over €{{ free_delivery_threshold }}&nbsp;&nbsp;<img src="{% static 'icons/dropdown_white.png' %}" class="dropdown_white_arrow" alt="dropdown arrow for delivery information overlay"></span>
+<div class="dropdown">
+    <div class="text-center w-100 p-2 text-white delivery_dropdown">
+        <span class="delivery_ban" id="dropdown-arrow">
+            Free delivery on orders over €{{ free_delivery_threshold }}
+            <img src="{% static 'icons/dropdown_white.png' %}" class="dropdown_white_arrow"
+                alt="dropdown arrow for delivery information overlay">
+        </span>
+    </div>
+    <div class="dropdown-content" id="dropdown-content">
+        <span class="close-button" id="close-button">X</span>
+        <div class="row mt-5 p-5">
+            <div class="col-6">
+                <h3 class="mt-2 text-white delivery-header">Delivery Options:</h3>
+        <p class="mt-5 dropdown-txt">Here are the delivery details for you to read</p>
+            </div>
+            <div class="col-6">
+                <h3 class="mt-2 text-white delivery-header">Environmental Impacts:</h3>
+                <p class="mt-5 dropdown-txt">
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
+

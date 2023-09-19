@@ -261,10 +261,7 @@ input[type="checkbox"]:checked::before {
     background: linear-gradient(-45deg, #0e7373, #194f49, #8E164E, #CC4818);
     background-size: 400vw 400vw;
     animation: gradient 9s ease infinite alternate;
-}
-
-.delivery_ban {
-    font-family: var(--main-font);
+    cursor: pointer;
 }
 
 @keyframes gradient {
@@ -285,11 +282,59 @@ input[type="checkbox"]:checked::before {
     }
 }
 
+.delivery_ban {
+    font-family: var(--main-font);
+}
+
+.dropdown {
+    position: relative;
+}
+
+#dropdown-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #194f49, #181717);
+    z-index: 1000;
+    overflow: auto;
+    text-align: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    color:#fff;
+}
+
+.dropdown-txt {
+    font-size: 18px;
+    color:#fff;
+    font-family: var(--main-font);
+}
+
 .dropdown_white_arrow {
     height: 10px;
     width: 16px;
+    transition: transform 0.3s ease;
 }
 
+.dropdown_white_arrow:hover {
+    transform: scale(1.3);
+}
+
+.delivery-header {
+    border-bottom: 3px dashed #fff;
+    display: inline-block;
+    line-height: 2.5rem;
+}
+
+/* Navbar */
 .navbar-logo {
     color: var(--forest);
     font-size: 38px;
@@ -855,7 +900,6 @@ a.wishlist-delete:hover {
 }
 
 .wishlist-btn:hover {
-    transition: transform 0.3s ease;
     transform: scale(1.05);
     background-color: #e1f0e7;
 }
