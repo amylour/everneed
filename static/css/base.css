@@ -297,7 +297,7 @@ input[type="checkbox"]:checked::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, #194f49, #181717);
+    background: linear-gradient(to bottom, #194f49, #194f49 20%, #181717 80%, #181717 100%);
     z-index: 1000;
     overflow: auto;
     text-align: center;
@@ -329,7 +329,7 @@ input[type="checkbox"]:checked::before {
 }
 
 .delivery-header {
-    border-bottom: 3px dashed #fff;
+    border-bottom: 4px dashed var(--gold);
     display: inline-block;
     line-height: 2.5rem;
 }
