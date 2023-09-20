@@ -5,6 +5,7 @@ from .models import Article
 from .forms import ArticleForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
+from django.core.exceptions import PermissionDenied
 from django.contrib.auth.models import User
 
 
