@@ -633,7 +633,7 @@ input {
 }
 
 .txt-hover:hover .hero-btn-txt {
-    background: linear-gradient(to bottom, #da8655, #ce410e);
+    background: linear-gradient(to bottom, #da6928, #c43806);
     -webkit-background-clip: text;
     color: transparent;
     transform: scale(1.05);
