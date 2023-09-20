@@ -4,6 +4,10 @@
 
 {% block title %}Articles{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'article/css/article.css' %}">
+{% endblock %}
+
 {% block content %}
 
 <div class="container mt-5 text-center">
@@ -18,7 +22,7 @@
                         <div class="img-fluid col-4"></div>
                         <div class="col-6">
                             <div class="card-title">
-                                <div class="h3">Title</div>
+                                <h3 class="card-title">Title</h3>
                             </div>
                             <div class="card-excerpt">
                                 <p>Excerpt</p>

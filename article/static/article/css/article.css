@@ -1,0 +1,12 @@
+/* Article Cards */
+.article-card {
+    color: #194f49;
+    font-family: 'Inconsolata', monospace;
+    font-size: 18px;
+    border: 2px dashed #194f4990;
+    border-radius: 20px;
+}
+
+.card-title {
+    font-family: 'Karla', sans-serif;
+}
