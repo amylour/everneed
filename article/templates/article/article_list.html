@@ -13,28 +13,49 @@
 <div class="container mt-5 text-center">
     <h1 class="section-title my-4">Articles</h1>
 </div>
-<div class="container-fluid">
+<div class="container-fluid article-container">
     <div class="row">
-        <div class="col-10 justify-content-center">
-            <div class="container-fluid article-card">
-                <div class="card">
-                    <div class="row">
-                        <div class="img-fluid col-4"></div>
-                        <div class="col-6">
-                            <div class="card-title">
-                                <h3 class="card-title">Title</h3>
-                            </div>
-                            <div class="card-excerpt">
-                                <p>Excerpt</p>
-                            </div>
-                            <div class="card-descrip">
-                                <p>Description</p>
-                            </div>
+        {% if articles|length == 0 %}
+        <div class="col-12 text-center">
+            <p class="section-p">No articles found.</p>
+            <div class="mb-3 mx-auto text-center">
+                <a href="{% url 'home' %}" class="wishlist-btn my-3 p-2">Back to Home</a>
+            </div>
+        </div>
+        {% else %}
+        {% for article in articles %}
+        <div class="col-9 mx-auto mb-5">
+            <div class="article-card shadow p-3">
+                <div class="row">
+                    <div class="img-fluid pl-5 col-4">
+                        {% if article.image %}
+                        <a href="{% url 'article' article.slug %}">
+                            <img class="img-fluid article-image" src="{{ article.image.url }}"
+                                alt="{{ article.title }}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'article' article.slug %}">
+                            <img class="img-fluid article-image" src="{{ MEDIA_URL }}product_placeholder.png"
+                                alt="{{ article.title }}">
+                        </a>
+                        {% endif %}
+                    </div>
+                    <div class="col-6">
+                        <div class="card-title">
+                            <a href="{% url 'article' article.slug %}" class="article-link">
+                                <h2 class="my-2">{{ article.title }}</h2>
+                            </a>
+                            <p class="card-text h6">{{ article.created_on }}</p>
+                        </div>
+                        <div class="card-excerpt">
+                            <p>Excerpt</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        {% endfor %}
+        {% endif %}
     </div>
 </div>
 

@@ -4,29 +4,35 @@
 
 {% block title %}Articles{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'article/css/article.css' %}">
+{% endblock %}
+
 {% block content %}
 
 {% load crispy_forms_tags %}
 
-<!-- Article image section -->
-<div class="jumbotron jumbotron-fluid">
-    <div class="container article-container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="d-flex align-items-center mt-5">
-                    <h1 class="article-title">{{ article.title }}</h1>
-                    <!-- Show edit/delete buttons if the author is viewing the article logged in -->
-                </div>
-                <p class="article-details">{{ article.author }} | {{ article.created_on }}</p>
-                <p class="article-excerpt"><em>{{ article.excerpt }}</em></p>
-                <div class="col-md-6 jumboimage">
-                    <!-- Set placeholder image if user has not submitted the image or if image is unavailable -->
-                    {% if "placeholder" in article.featured_image.url %}
-                    <img src="{% static 'images/product_placeholder.png' %}" class="article-img" alt="placeholder image">
-                    {% else %}
-                    <img src=" {{ article.featured_image.url }}" class="article-img" alt="featured image">
-                    {% endif %}
-                </div>
+<div class="container article-container mt-5">
+    <div class="row">
+        <div class="col image-container">
+            <!-- Article image section -->
+            {% if article.image %}
+            <a href="{% url 'article' article.slug %}">
+                <img class="img-fluid feature-image" src="{{ article.image.url }}" alt="{{ article.title }}">
+            </a>
+            {% else %}
+            <a href="{% url 'article' article.slug %}">
+                <img class="img-fluid feature-image" src="{{ MEDIA_URL }}product_placeholder.png" alt="{{ article.title }}">
+            </a>
+            {% endif %}
+        </div>
+        <div class="col-md-6">
+            <div class="d-flex align-items-center mt-5">
+                <h1 class="article-title">{{ article.title }}</h1>
+            </div>
+            <p class="article-details">{{ article.author }} | {{ article.created_on }}</p>
+            <p class="article-excerpt"><em>{{ article.excerpt|safe }}</em></p>
+            <div class="col-md-6 jumboimage">
             </div>
         </div>
     </div>
@@ -35,7 +41,7 @@
 <!-- Article text section -->
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left top">
+        <div class="col mb-4  mt-3 left top">
             <div class="card-body">
                 <div class="card-text ">
                     <!-- Safe filter to tell Django to treat the content as HTML and render the content as is -->
