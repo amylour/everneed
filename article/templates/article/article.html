@@ -6,11 +6,44 @@
 
 {% block content %}
 
-<div class="container mt-5 text-center">
-    <h1 class="section-title mt-5">Articles</h1>
+{% load crispy_forms_tags %}
+
+<!-- Article image section -->
+<div class="jumbotron jumbotron-fluid">
+    <div class="container article-container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center mt-5">
+                    <h1 class="article-title">{{ article.title }}</h1>
+                    <!-- Show edit/delete buttons if the author is viewing the article logged in -->
+                </div>
+                <p class="article-details">{{ article.author }} | {{ article.created_on }}</p>
+                <p class="article-excerpt"><em>{{ article.excerpt }}</em></p>
+                <div class="col-md-6 jumboimage">
+                    <!-- Set placeholder image if user has not submitted the image or if image is unavailable -->
+                    {% if "placeholder" in article.featured_image.url %}
+                    <img src="{% static 'images/product_placeholder.png' %}" class="article-img" alt="placeholder image">
+                    {% else %}
+                    <img src=" {{ article.featured_image.url }}" class="article-img" alt="featured image">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="container-fluid">
-    <p class="text-center">Articles coming soon...</p>
+
+<!-- Article text section -->
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4  mt-3 left top">
+            <div class="card-body">
+                <div class="card-text ">
+                    <!-- Safe filter to tell Django to treat the content as HTML and render the content as is -->
+                    {{ article.content | safe }}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}

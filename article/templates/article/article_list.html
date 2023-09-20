@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Articles{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5 text-center">
+    <h1 class="section-title my-4">Articles</h1>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-10 justify-content-center">
+            <div class="container-fluid article-card">
+                <div class="card">
+                    <div class="row">
+                        <div class="img-fluid col-4"></div>
+                        <div class="col-6">
+                            <div class="card-title">
+                                <div class="h3">Title</div>
+                            </div>
+                            <div class="card-excerpt">
+                                <p>Excerpt</p>
+                            </div>
+                            <div class="card-descrip">
+                                <p>Description</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
