@@ -11,15 +11,19 @@ from django.contrib.auth.models import User
 
 def article_list(request):
     """ A view to return the articles page """
+    articles = Article.objects.all()
 
-    return render(request, 'article/article_list.html')
+    context = {
+        'articles': articles,
+    }
+
+    return render(request, 'article/article_list.html', context)
 
 
 def article(request, slug):
     """ View individual articles """
     # Get  the article based on the slug
-    article = Article.objects.get(slug=slug)
-
+    article = get_object_or_404(Article, slug=slug)
     return render(request, 'article/article.html', {'article': article})
 
 
@@ -56,11 +60,11 @@ def edit_article(request, slug):
     if request.user != article.author:
         raise PermissionDenied
     if request.method == 'POST':
-        form = ArtifleForm(request.POST, instance=article) 
+        form = ArticleForm(request.POST, instance=article) 
         if form.is_valid(): 
             form.save()
             messages.success(request,
-             f'Your article {article.title} has been updated.')
+              f'Your article {article.title} has been updated.')
             return redirect ('article_page', slug=slug)
     else: 
         form = ArticleForm(instance=article)
