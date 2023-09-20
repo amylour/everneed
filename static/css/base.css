@@ -649,9 +649,12 @@ input {
     transform-origin: center;
 }
 
-.txt-hover:hover .hero-btn-icon,
 .txt-hover:hover .hero-button {
     transform: scale(1.05);
+}
+
+.txt-hover:hover .hero-btn-icon {
+    transform: scale(1.15);
 }
 
 .txt-hover:active .hero-btn-icon,
