@@ -1,0 +1,13 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    color: #194f49;
+}
+
+select.form-control,
+input.form-control,
+textarea.form-control {
+    border-radius: 20px !important;
+}

@@ -1225,14 +1225,14 @@ footer {
     .bag-quantity {
         position: relative;
         top: -11px;
-        left: -18px;
+        left: -16px;
         z-index: 2;
         color: #fff;
     }
 
-    main {
+    /* main {
         padding: 20px;
-    }
+    } */
 
     .hero-banner {
         height: 450px;

@@ -79,7 +79,7 @@ def product_detail(request, product_id):
 
 
 @login_required
-def add_dashboard(request):
+def admin_dashboard(request):
     """ A view to return the admin dashboard """
 
     return render(request, 'products/admin_dashboard.html')
