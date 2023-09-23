@@ -1,0 +1,1 @@
+web: gunicorn everneed.wsgi:application
