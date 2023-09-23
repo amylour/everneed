@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-amylour-everneed-f3sgpqbcec.us2.codeanyapp.com', 'everneed.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-amylour-everneed-f3sgpqbcec.us2.codeanyapp.com', 'everneed-096aafe5d13c.herokuapp.com', 'localhost']
 
 
 # Application definition
