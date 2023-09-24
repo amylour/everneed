@@ -3,16 +3,22 @@
     color: #194f49;
     font-family: 'Inconsolata', monospace;
     font-size: 18px;
-    border: 2px dashed #194f4990;
+    border: 2px dashed #d5e2da;
     border-radius: 20px;
     background: linear-gradient(to left bottom, #d5e2da, #fff);
 }
 
-.card-title {
-    font-family: 'Karla', sans-serif;
+.article-card:hover {
+    border: 2px dashed #194f4990;
+    cursor: pointer;
 }
 
-.card-title a:hover {
+.card-title {
+    font-family: 'Karla', sans-serif;
+    color: #194f49;
+}
+
+.card-title:hover {
     color: #cc4818;
 }
 
@@ -20,7 +26,11 @@
     height: 150px;
     width: 200px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 17px;
+}
+
+.article-title {
+    color: #cc4818;
 }
 
 .feature-image {
@@ -44,4 +54,8 @@
     height: 100%;
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 48%, rgba(255, 255, 255, 1) 92%);
     z-index: 1;
+}
+
+.article-text {
+    font-size: 20px;
 }

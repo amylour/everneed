@@ -24,27 +24,22 @@
         </div>
         {% else %}
         {% for article in articles %}
-        <div class="col-9 mx-auto mb-5">
+        <div class="col-lg-9 col-sm-4 mx-auto mb-5">
             <div class="article-card shadow p-3">
+                <a href="{% url 'article' article.slug %}" class="article-link">
                 <div class="row">
-                    <div class="img-fluid pl-5 col-4">
+                    <div class="img-fluid col-lg-4 col-sm-2">
                         {% if article.image %}
-                        <a href="{% url 'article' article.slug %}">
                             <img class="img-fluid article-image" src="{{ article.image.url }}"
                                 alt="{{ article.title }}">
-                        </a>
                         {% else %}
-                        <a href="{% url 'article' article.slug %}">
                             <img class="img-fluid article-image" src="{{ MEDIA_URL }}product_placeholder.png"
                                 alt="{{ article.title }}">
-                        </a>
                         {% endif %}
                     </div>
                     <div class="col-6">
                         <div class="card-title">
-                            <a href="{% url 'article' article.slug %}" class="article-link">
                                 <h2 class="my-2">{{ article.title }}</h2>
-                            </a>
                             <p class="card-text h6">{{ article.created_on }}</p>
                         </div>
                         <div class="card-excerpt">
@@ -52,6 +47,7 @@
                         </div>
                     </div>
                 </div>
+            </a>
             </div>
         </div>
         {% endfor %}
