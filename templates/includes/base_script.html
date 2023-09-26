@@ -40,19 +40,21 @@
 
     // Delivery banner dropdown function
     document.addEventListener("DOMContentLoaded", function () {
-            // Dropdown arrow and content
-            var droparrow = document.getElementById("dropdown-arrow");
-            var content = document.getElementById("dropdown-content");
-            var closeButton = document.getElementById("close-button");
+        var droparrow = document.getElementById("dropdown-arrow");
+        var content = document.getElementById("dropdown-content");
+        var closeButton = document.getElementById("close-button");
 
-            // On click, drop the delivery banner
-            droparrow.addEventListener("click", function () {
-                content.style.display = "block";
-            });
+        droparrow.addEventListener("click", function () {
+            if (content.classList.contains('open')) {
+                content.classList.remove('open'); // Roll banner up
+            } else {
+                content.classList.add('open');    // Roll banner down
+            }
+        });
 
-            // On click, close the delivery banner
-            closeButton.addEventListener("click", function () {
-                content.style.display = "none";
-            });
+        closeButton.addEventListener("click", function () {
+            content.classList.remove('open');     // Roll banner up
+        });
     });
+
 </script>
