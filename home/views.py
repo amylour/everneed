@@ -13,7 +13,3 @@ def index(request):
     return render(request, 'home/index.html', context)
 
 
-def faq(request):
-    """ A view to return the FAQ page """
-
-    return render(request, 'home/faq.html')
