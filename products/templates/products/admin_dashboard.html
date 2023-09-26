@@ -10,26 +10,27 @@
 
 <div class="overlay"></div>
 <div class="container my-5">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-12 col-md-6">
             <hr>
-            <h2 class="section-title mb-4 text-center">Admin Dashboard</h2>
+            <h2 class="section-title my-4 text-center">Admin Dashboard</h2>
             <hr>
         </div>
     </div>
-    <div class="row text-center">
-        <div class="col">
-            <div>
-                <a class="wishlist-btn m-1 p-2" href="{% url 'add_product' %}">Add Product</a>
-            </div>
-            <div>
-            <div>
-                <a class="wishlist-btn m-1 p-2" href="">Delete Product</a></div>
-            <div>
-                <a class="wishlist-btn m-1 p-2" href="">Orders</a></div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-3 mb-3">
+            <a class="wishlist-btn d-block m-2 p-2 text-center" href="{% url 'add_product' %}">ADD PRODUCT</a>
+        </div>
+        <div class="col-12 col-md-3 mb-3">
+            <a class="wishlist-btn d-block m-2 p-2 text-center" href="{% url 'products' %}">EDIT PRODUCT</a>
+        </div>
+        <div class="col-12 col-md-3 mb-3">
+            <a class="wishlist-btn d-block m-2 p-2 text-center" href="{% url 'products' %}">DELETE PRODUCT</a>
+        </div>
+        <div class="col-12 col-md-3 mb-3">
+            <a class="wishlist-btn d-block m-2 p-2 text-center" href="">BACKEND ADMIN PANEL</a>
         </div>
     </div>
-
 
 </div>
 
