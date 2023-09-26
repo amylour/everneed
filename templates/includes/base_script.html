@@ -38,23 +38,27 @@
 
     });
 
+
     // Delivery banner dropdown function
     document.addEventListener("DOMContentLoaded", function () {
         var droparrow = document.getElementById("dropdown-arrow");
         var content = document.getElementById("dropdown-content");
         var closeButton = document.getElementById("close-button");
+        var pageContents = document.getElementById("page-contents");  // Target only contents behind delivery banner
 
         droparrow.addEventListener("click", function () {
             if (content.classList.contains('open')) {
-                content.classList.remove('open'); // Roll banner up
+                content.classList.remove('open');    // Roll banner up
+                pageContents.classList.remove('blurred-content');  // Remove blur from the main content
             } else {
                 content.classList.add('open');    // Roll banner down
+                pageContents.classList.add('blurred-content');   // Add blur to the main content
             }
         });
 
         closeButton.addEventListener("click", function () {
-            content.classList.remove('open');     // Roll banner up
+            content.classList.remove('open');    // Roll banner up (in case it's down)
+            pageContents.classList.remove('blurred-content');  // Remove blur from the main content
         });
     });
-
 </script>

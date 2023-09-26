@@ -49,7 +49,7 @@
 
 <body>
     {% include 'includes/header.html' %}
-
+    <div id="page-contents">
     {% if messages %}
         <div class="message-container px-3">
             {% for message in messages %}
@@ -122,7 +122,7 @@
     {% include 'includes/base_script.html' %}
     {% endblock %}
 
-
+</div>
 </body>
 
 </html>

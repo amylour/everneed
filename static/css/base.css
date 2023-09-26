@@ -322,6 +322,18 @@ input[type="checkbox"]:checked::before {
     color:#fff;
 }
 
+/* target all contents accept for delivery banner, smooth blur transition */
+#page-contents {
+    transition: filter 0.3s ease;
+}
+
+/* Blur and disable page contents apart from delivery banner when banner is down */
+.blurred-content {
+    filter: blur(5px);
+    pointer-events: none;
+    user-select: none;
+}
+
 .dropdown-txt {
     font-size: 18px;
     color:#fff;
@@ -833,10 +845,11 @@ input {
     box-shadow: none;
 }
 
-.card-body {
+.card-body-faq {
     font-family: var(--main-font);
     color: #194f49;
     font-size: 20px;
+    padding: 25px;
 }
 
 /* Products */
