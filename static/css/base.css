@@ -789,26 +789,45 @@ input {
     font-family: var(--main-font);
 }
 
-/* Packing Section */
-.pack-sec {
-    color: #fff;
+/* FAQ Section */
+.card {
+    border: 3px dashed #194f4990;
+    border-radius: 10px;
 }
 
-.light-pack,
-.medium-pack,
-.everything-pack {
-    height: 500px;
+.card-header {
+    background-color: #d5e2da;
+    border-bottom: none;
 }
 
-.list-group,
-.list-group-item {
-    border : none;
+.btn,
+.btn-link {
+    color: #194f49;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    transition: none;
 }
 
-.list-group-item {
-    color: var(--forest);
-    font-size: 24px;
+.btn:hover,
+.btn-link:hover {
+    color: var(--purple);
+    text-decoration: none;
+    outline: none;
+}
+
+.btn,
+.btn-link.focus,
+.btn-link:focus {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.card-body {
     font-family: var(--main-font);
+    color: #194f49;
+    font-size: 20px;
 }
 
 /* Products */

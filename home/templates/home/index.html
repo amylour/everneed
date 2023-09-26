@@ -109,40 +109,106 @@
     </div>
     </div>
 </section>
-<section id="pack_styles">
-    <div class="container-fluid text-center mb-5 pack-sec">
-        <h2 class="heading-text my-5">Pack Styles</h2>
-            <div class="row justify-content-center mt-2">
-            <div class="col-md-3 col-sm-4 mx-2 mb-4">
-                <img src="{% static 'images/light_vec.png' %}" class="img-fluid light-pack" alt="vector shape for illustration">
-                <h3 class="text-center heading-text mt-4">Light</h3>
-                <ul class="text-center list-group mt-2 mb-3">
-                    <li class="list-group-item">- One</li>
-                    <li class="list-group-item">- Two</li>
-                    <li class="list-group-item">- Three</li>
-                </ul>
+<!-- Bootstrap Accordian drop down -> https://getbootstrap.com/docs/4.0/components/collapse/ -->
+<section id="faq">
+    <div class="container-fluid mb-3 mt-5 p-5">
+        <h2 class="text-center pt-5 pb-2 mb-5 heading-text">Got Some Questions?</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link btn-block text-center" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What makes a product eco-friendly or sustainable?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        A product is considered eco-friendly or sustainable when it is made from renewable resources,
+                        has minimal impact on the environment during its lifecycle, and is produced through ethical and
+                        responsible methods. This includes using organic or recycled materials, employing
+                        energy-efficient manufacturing processes, and ensuring minimal waste and pollution.
+                        Additionally, sustainable products often have a longer lifespan and are designed to be recycled
+                        or biodegraded at the end of their use.
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3 col-sm-4 mx-2 mb-4">
-                <img src="{% static 'images/medium_vec.png' %}" class="img-fluid medium-pack" alt="vector shape for illustration">
-                <h3 class="text-center heading-text mt-4">Medium</h3>
-                <ul class="text-center list-group mt-2 mb-3">
-                    <li class="list-group-item">- One</li>
-                    <li class="list-group-item">- Two</li>
-                    <li class="list-group-item">- Three</li>
-                </ul>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link btn-block text-center" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            Are your products packaged sustainably?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Yes, we prioritise sustainable packaging for all our products. Our packaging materials are either recyclable,
+                        compostable, or made from recycled content. We constantly evaluate and seek new methods to reduce our packaging
+                        footprint and encourage our customers to recycle or compost the packaging after use.
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3 col-sm-4 mx-2 mb-4">
-                <img src="{% static 'images/everything_vec.png' %}" class="img-fluid everything-pack" alt="vectore shape for illustration">
-                <h3 class="text-center heading-text mt-4">Everything</h3>
-                <ul class="text-center list-group mt-2 mb-3">
-                    <li class="list-group-item">- One</li>
-                    <li class="list-group-item">- Two</li>
-                    <li class="list-group-item">- Three</li>
-                </ul>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link btn-block text-center" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                            How do you ensure the ethical sourcing of your products?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        We have a strict vendor assessment process in place. Our suppliers are required to meet our sustainability and ethical
+                        standards, which include fair labor practices, responsible sourcing of raw materials, and minimal environmental impact.
+                        Regular audits and site visits are conducted to ensure our suppliers adhere to these standards.
+                    </div>
+                </div>
             </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link btn-block text-center" type="button" data-toggle="collapse"
+                            data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            Why might some sustainable products be more expensive than their conventional counterparts?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Sustainable products can sometimes be more expensive due to the higher quality, eco-friendly materials used, and the
+                        ethical and environmentally-friendly production methods employed. The processes involved in creating sustainable
+                        products often prioritise long-term environmental benefits over short-term cost savings. However, in the long run, many
+                        customers find that sustainable products offer better value due to their durability and reduced impact on the
+                        environment.
+                    </div>
+                </div>
             </div>
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link btn-block text-center" type="button" data-toggle="collapse"
+                            data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                            How can I properly dispose of or recycle the products once I'm done using them?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Each product we sell comes with specific disposal or recycling instructions. Most of our products are designed to be
+                        either recyclable or compostable. If you're unsure, please refer to the product label or contact our customer service
+                        for guidance. We also partner with local recycling initiatives to help our customers find convenient drop-off locations
+                        for certain products.
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+
 
 {% endblock %}
 
