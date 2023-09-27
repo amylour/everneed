@@ -70,15 +70,15 @@ p,
 }
 
 .text-danger {
-    color: var(--gold)!important;
+    color: var(--gold) !important;
 }
 
 .text-info {
-    color: var(--bluegreen)!important;
+    color: var(--bluegreen) !important;
 }
 
 .border-info {
-    border-color: #194f4970!important;
+    border-color: #194f4970 !important;
 }
 
 ul li {
@@ -130,7 +130,7 @@ input.form-control:focus {
 remove the blue highlight on click */
 .input-group:not(.has-validation)>.form-control:not(:last-child),
 .decrement-qty.btn {
-    border-top-left-radius: 10px; 
+    border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     background-color: #194f4930;
     outline: none !important;
@@ -139,6 +139,7 @@ remove the blue highlight on click */
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
 }
+
 .input-group:not(.has-validation)>.form-control:not(:last-child) {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -148,8 +149,8 @@ remove the blue highlight on click */
 
 .input-group>.form-control:not(:first-child),
 .increment-qty.btn {
-    border-top-right-radius: 10px; 
-    border-bottom-right-radius: 10px; 
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: #194f4930;
     outline: none !important;
     outline-width: 0 !important;
@@ -224,12 +225,12 @@ input[type="checkbox"]:checked::before {
 /* change color of checkbox using accent credit -> https: //tinyurl.com/jtecnb39 */
 /* input[type='checkbox'] {
     accent-color: var(--forest);
-} */ 
+} */
 
 /* Toasts */
 .message-container {
     position: fixed;
-    top:100px;
+    top: 100px;
     right: 5px;
     z-index: 99999999999;
 }
@@ -248,11 +249,11 @@ input[type="checkbox"]:checked::before {
 }
 
 .bg-success {
-    background-color: var(--bluegreen)!important;
+    background-color: var(--bluegreen) !important;
 }
 
 .bg-warning {
-    background-color: var(--yellow)!important;
+    background-color: var(--yellow) !important;
 }
 
 /* Header - Navbar, Search, Navitems */
@@ -298,7 +299,6 @@ input[type="checkbox"]:checked::before {
     max-height: 100%;
     background: linear-gradient(-45deg, #0e7373, #194f49, #8E164E, #CC4818);
     z-index: 1000;
-    overflow-y: auto;
     text-align: center;
     animation: gradient 7s ease infinite alternate;
     transform: translateY(-100%);
@@ -319,7 +319,7 @@ input[type="checkbox"]:checked::before {
     right: 30px;
     cursor: pointer;
     font-size: 20px;
-    color:#fff;
+    color: #fff;
 }
 
 /* target all contents accept for delivery banner, smooth blur transition */
@@ -336,7 +336,7 @@ input[type="checkbox"]:checked::before {
 
 .dropdown-txt {
     font-size: 18px;
-    color:#fff;
+    color: #fff;
     font-family: var(--main-font);
 }
 
@@ -475,7 +475,7 @@ input[type="checkbox"]:checked::before {
 }
 
 /* CSS styling for active links in navbar targetting only the parent anchor tags */
-.active-nav-item > a {
+.active-nav-item>a {
     color: var(--gold);
 }
 
@@ -523,7 +523,7 @@ ul.nav-menu li {
 }
 
 .dropdown-item:hover {
-    background-color:#194f4930;
+    background-color: #194f4930;
 }
 
 .dropdown-item:active {
@@ -537,15 +537,17 @@ ul.nav-menu li {
 
 /* Auth section */
 .auth-btn {
-    background-color: #0e7373;
-    color: white;
-    border-radius: 35px;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+    background-color: #d5e2da;
+    color: var(--forest);
     border: none;
-    padding: 8px 13px 8px 13px;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
     transition: transform 0.3s ease;
     transform-origin: center;
-    font-size: 22px;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
 }
 
 .auth-btn:hover {
@@ -802,7 +804,7 @@ input {
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
-    box-shadow:inset 1px 3px 16px #194f49;
+    box-shadow: inset 1px 3px 16px #194f49;
 }
 
 .icon-text {
@@ -811,13 +813,13 @@ input {
 }
 
 /* FAQ Section */
-.card {
+.card-faq {
     border: 3px dashed #194f4990;
     border-radius: 10px;
 }
 
-.card-header {
-    background-color: #d5e2da;
+.card-header-faq {
+    background-color: #0e737340;
     border-bottom: none;
 }
 
@@ -826,7 +828,6 @@ input {
     color: #194f49;
     text-decoration: none;
     font-size: 22px;
-    font-weight: bold;
     transition: none;
 }
 
@@ -900,7 +901,7 @@ input {
     color: #194f49;
 }
 
-hr { 
+hr {
     display: none;
 }
 
@@ -963,6 +964,16 @@ a.wishlist-delete:hover {
     border: none;
 }
 
+.list-group,
+.list-group-item {
+    border: none;
+}
+
+.list-group-item {
+    color: var(--forest);
+    font-size: 24px;
+}
+
 /* Bag */
 .text-uppercase {
     color: var(--forest);
@@ -1021,7 +1032,7 @@ a.wishlist-delete:hover {
 }
 
 .btt-link:hover {
-    color:var(--bluegreen);
+    color: var(--bluegreen);
 }
 
 /* Footer */
@@ -1096,7 +1107,7 @@ footer {
 
 .newsletter .newsletter-title {
     margin-bottom: 15px;
-    color:#fff;
+    color: #fff;
     font-size: 50px;
     letter-spacing: -.02em;
     line-height: 1;
@@ -1156,14 +1167,14 @@ footer {
 }
 
 .newsletter-button {
-    transition: transform 0.3s  ease;
+    transition: transform 0.3s ease;
     transform-origin: center;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
 }
 
 .newsletter-button:hover {
     transform: scale(1.05);
-    background-color:#cc5428;
+    background-color: #cc5428;
 }
 
 .newsletter-button:active {
@@ -1221,7 +1232,7 @@ footer {
     .nav-links {
         font-size: 20px;
     }
-    
+
     .modal-content {
         bottom: 30px;
         padding: 15px;
@@ -1240,6 +1251,10 @@ footer {
         color: #fff;
     }
 
+    .dropdown-txt {
+        font-size: 14px;
+    }
+
     .message-container {
         right: 0px;
     }
@@ -1254,6 +1269,7 @@ footer {
     .navbar {
         padding: 1rem 1rem;
     }
+
     /* move bag quantity text with icon on mobile screens */
     .nav-image {
         position: static;
@@ -1271,9 +1287,9 @@ footer {
         color: #fff;
     }
 
-    /* main {
-        padding: 20px;
-    } */
+    .dropdown-txt {
+        font-size: 14px;
+    }
 
     .hero-banner {
         height: 450px;
@@ -1380,10 +1396,14 @@ footer {
         padding: 20px;
     }
 
+    .dropdown-txt {
+        font-size: 14px;
+    }
+
     .hero-banner {
         height: 350px;
     }
-    
+
     .hero-text-panel {
         height: 237px;
         width: 205px;
@@ -1400,7 +1420,7 @@ footer {
         left: 32px;
         top: 156px;
         height: 57px;
-        width: 143px;  
+        width: 143px;
     }
 
     .hero-image {
