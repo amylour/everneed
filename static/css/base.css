@@ -282,6 +282,8 @@ label {
     transform: translateY(-100%);
     transition: transform 0.5s ease;
     display: block;
+    overflow-y: auto;
+    max-height: 100%;
 }
 
 #dropdown-content.open {
@@ -1280,7 +1282,7 @@ footer {
     .bag-quantity {
         position: relative;
         top: -11px;
-        left: -16px;
+        left: -17px;
         z-index: 2;
         color: #fff;
     }
@@ -1291,6 +1293,15 @@ footer {
 
     th {
         font-size: 14px;
+    }
+
+    button.remove-item,
+    button.add-item,
+    .remove-iem.btn,
+    .add-item.btn {
+        background-color: transparent !important;
+        border: none;
+        font-size: 16px;
     }
 
     .dropdown-txt {
@@ -1494,8 +1505,8 @@ footer {
 /* Media queries for small mobile - under 320px */
 @media (max-width: 320px) {
     .navbar-logo {
-        font-size: 24px;
-        padding-left: 0px;
+        font-size: 26px;
+        padding-left: 10px;
     }
 
     .wishlist-btn {
