@@ -36,6 +36,7 @@ h5,
 h6,
 header {
     font-family: var(--title);
+    color: var(--forest);
 }
 
 h6 {
