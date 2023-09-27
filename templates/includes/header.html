@@ -30,7 +30,7 @@
             <ul class="navbar-nav w-auto mx-auto w-75">
                 <!-- Display all products but remove active class bold styling from 'all' if another navbar item is selected -->
                 <li class="nav-item dropdown {% if request.resolver_match.url_name == 'products' and not request.GET.category %}active-nav-item{% endif %}">
-                    <a class="nav-links mx-lg-4 mx-md-2 pb-2" href="{% url 'products' %}" id="all-products-link" data-toggle="dropdown"
+                    <a class="nav-links mx-lg-3 mx-md-2 pb-2" href="{% url 'products' %}" id="all-products-link" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         all
                     </a>

@@ -206,27 +206,6 @@ label {
     font-family: var(--main-font);
 }
 
-/* Change the color of the checkbox border and check
-input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border: 1px solid #194f4970;
-    border-radius: 4px;
-}
-
-input[type="checkbox"]:checked::before {
-    border-color: #194f4970;
-}  
-
-/* change color of checkbox using accent credit -> https: //tinyurl.com/jtecnb39 */
-/* input[type='checkbox'] {
-    accent-color: var(--forest);
-} */
-
 /* Toasts */
 .message-container {
     position: fixed;
@@ -296,15 +275,12 @@ input[type="checkbox"]:checked::before {
     top: 0;
     left: 0;
     width: 100%;
-    max-height: 100%;
     background: linear-gradient(-45deg, #0e7373, #194f49, #8E164E, #CC4818);
     z-index: 1000;
     text-align: center;
     animation: gradient 7s ease infinite alternate;
     transform: translateY(-100%);
-    /* Starts off-screen */
     transition: transform 0.5s ease;
-    /* Transition */
     display: block;
 }
 
@@ -538,7 +514,7 @@ ul.nav-menu li {
 /* Auth section */
 .auth-btn {
     border-radius: 20px;
-    background-color: #d5e2da;
+    background: linear-gradient(to bottom, #e5ede8, #b5c9bd);
     color: var(--forest);
     border: none;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
@@ -933,7 +909,7 @@ a.wishlist-delete:hover {
 
 .wishlist-btn {
     border-radius: 15px;
-    background-color: #d5e2da;
+    background: linear-gradient(to bottom, #e5ede8, #b5c9bd);
     color: var(--forest);
     border: none;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
@@ -1150,7 +1126,7 @@ footer {
     height: 36px;
     transition: .3s cubic-bezier(.165, .84, .44, 1);
     border-radius: 15px;
-    background-color: var(--gold);
+    background: linear-gradient(to bottom, #c96541, #cc4818);
     color: #fff;
     font-size: .875rem;
     line-height: 1;
@@ -1187,6 +1163,14 @@ footer {
         font-size: 22px;
     }
 
+    .navbar-logo {
+        font-size: 34px;
+    }
+
+    .bag-quantity {
+        top: 4px;
+    }
+
     .hero-text-panel {
         height: 435px;
         width: 400px;
@@ -1213,6 +1197,12 @@ footer {
         height: 45px;
     }
 
+    .hero-btn-txt {
+        z-index: 2;
+        top: 320px;
+        left: 88px;
+    }
+
     .modal-content {
         bottom: 30px;
         padding: 20px 30px 20px 30px;
@@ -1231,6 +1221,14 @@ footer {
 @media (max-width: 896px) {
     .nav-links {
         font-size: 20px;
+    }
+
+    .dropdown-txt {
+        font-size: 14px;
+    }
+
+    .delivery-header {
+        font-size: 24px;
     }
 
     .modal-content {
@@ -1287,8 +1285,20 @@ footer {
         color: #fff;
     }
 
-    .dropdown-txt {
+    .heading-text {
+        font-size: 34px;
+    }
+
+    th {
         font-size: 14px;
+    }
+
+    .dropdown-txt {
+        font-size: 16px;
+    }
+
+    .delivery-header {
+        font-size: 24px;
     }
 
     .hero-banner {
@@ -1384,6 +1394,10 @@ footer {
         height: 1.25rem;
         margin: 0.5rem;
     }
+
+    .wishlist-btn {
+        font-size: 14px;
+    }
 }
 
 /* Media queries for small mobile - under 375px */
@@ -1392,12 +1406,12 @@ footer {
         font-size: 34px;
     }
 
-    main {
-        padding: 20px;
+    .dropdown-txt {
+        font-size: 16px;
     }
 
-    .dropdown-txt {
-        font-size: 14px;
+    .delivery-header {
+        font-size: 24px;
     }
 
     .hero-banner {
@@ -1444,10 +1458,6 @@ footer {
         padding: 10px;
     }
 
-    .heading-text {
-        font-size: 38px;
-    }
-
     .best-heading {
         margin-top: 180px;
     }
@@ -1475,12 +1485,20 @@ footer {
         padding: 18px 135px 17px 18px;
     }
 
+    .wishlist-btn {
+        font-size: 14px;
+    }
+
 }
 
 /* Media queries for small mobile - under 320px */
 @media (max-width: 320px) {
     .navbar-logo {
-        font-size: 30px;
+        font-size: 24px;
         padding-left: 0px;
+    }
+
+    .wishlist-btn {
+        font-size: 14px;
     }
 }
