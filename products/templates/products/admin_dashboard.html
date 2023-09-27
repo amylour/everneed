@@ -19,16 +19,21 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-12 col-md-3 mb-3">
-            <a class="wishlist-btn d-block m-2 p-2 text-center" href="{% url 'add_product' %}">ADD PRODUCT</a>
+            <a class="admin-btn d-block m-2 p-2 text-center" href="{% url 'add_product' %}"><span class="icon mr-2">
+                <i class="fas fa-plus"></i>
+            </span>ADD PRODUCT</a>
         </div>
         <div class="col-12 col-md-3 mb-3">
-            <a class="wishlist-btn d-block m-2 p-2 text-center" href="{% url 'products' %}">EDIT PRODUCT</a>
+            <a class="admin-btn d-block m-2 p-2 text-center" href="{% url 'products' %}"><span class="icon mr-2">
+                <i class="fas fa-pen-to-square"></i>
+            </span>EDIT/DELETE PRODUCT<span class="icon ml-2">
+                <i class="fas fa-minus"></i>
+            </span></a>
         </div>
         <div class="col-12 col-md-3 mb-3">
-            <a class="wishlist-btn d-block m-2 p-2 text-center" href="{% url 'products' %}">DELETE PRODUCT</a>
-        </div>
-        <div class="col-12 col-md-3 mb-3">
-            <a class="wishlist-btn d-block m-2 p-2 text-center" href="">BACKEND ADMIN PANEL</a>
+            <a class="admin-btn d-block m-2 p-2 text-center" href="/admin/"> <span class="icon mr-2">
+                <i class="fas fa-gear"></i>
+            </span>BACKEND ADMIN PANEL</a>
         </div>
     </div>
 
