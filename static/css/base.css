@@ -283,7 +283,7 @@ label {
     transform: translateY(-100%);
     transition: transform 0.5s ease;
     display: block;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     max-height: 100%;
 }
 
@@ -1050,6 +1050,7 @@ footer {
     font-family: var(--main-font);
     border-bottom: 5px dashed #194f4995;
     padding-bottom: 5px;
+    color: #fff;
 }
 
 .footer-links {
@@ -1420,6 +1421,10 @@ footer {
 
     .dropdown-txt {
         font-size: 16px;
+    }
+
+    #dropdown-content {
+        overflow-y: auto;
     }
 
     .delivery-header {
