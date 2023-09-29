@@ -20,6 +20,21 @@ def article_list(request):
     return render(request, 'article/article_list.html', context)
 
 
+@login_required
+def admin_article_list(request):
+    if not request.user.is_superuser:
+        # Only allow superusers (admins) to access this page
+        raise PermissionDenied
+
+    articles = Article.objects.all()
+    context = {
+        'articles': articles,
+    }
+
+    return render(request, 'article/admin_article_list.html', context)
+
+
+
 def article(request, slug):
     """ View individual articles """
     # Get  the article based on the slug
@@ -47,7 +62,7 @@ def add_article(request):
             else:
                 messages.success(request,
                  f'Your article {article.title} has been posted.')
-            return redirect('article_list')
+            return redirect('admin_article_list')
     else:
         form = ArticleForm()
     return render(request, 'article/add_article.html', {'form': form})

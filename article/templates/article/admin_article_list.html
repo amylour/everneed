@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Articles{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'article/css/article.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5 text-center">
+    <h1 class="section-title my-4">Articles</h1>
+</div>
+<div class="container-fluid article-container">
+    <div class="row">
+        {% if articles|length == 0 %}
+        <div class="col-12 text-center">
+            <p class="section-p">No articles found.</p>
+            <div class="mb-3 mx-auto text-center">
+                <a href="{% url 'home' %}" class="wishlist-btn my-3 p-2">Back to Home</a>
+            </div>
+        </div>
+        {% else %}
+        {% for article in articles %}
+        <div class="col-lg-9 col-sm-4 mx-auto mb-5">
+            <div class="article-card shadow p-3">
+                <a href="{% url 'article' article.slug %}" class="article-link">
+                <div class="row">
+                    <div class="img-fluid col-lg-4 col-sm-2">
+                        {% if article.image %}
+                            <img class="img-fluid article-image" src="{{ article.image.url }}"
+                                alt="{{ article.title }}">
+                        {% else %}
+                            <img class="img-fluid article-image" src="{{ MEDIA_URL }}product_placeholder.png"
+                                alt="{{ article.title }}">
+                        {% endif %}
+                    </div>
+                    <div class="col-6">
+                        <div class="card-title">
+                                <h2 class="my-2">{{ article.title }}</h2>
+                            <p class="card-text h6">{{ article.created_on }}</p>
+                        </div>
+                        <div class="card-excerpt">
+                            <p>Excerpt</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
