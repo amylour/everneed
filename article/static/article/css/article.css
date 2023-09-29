@@ -59,3 +59,42 @@
 .article-text {
     font-size: 20px;
 }
+
+.btn-danger {
+    background-color: #ef6674;
+    border: none;
+    border-radius: 20px;
+}
+
+.btn-danger:hover {
+    background-color: #ed9aa2;
+    border: none;
+}
+
+.btn-info {
+    border: none;
+    border-radius: 20px;
+    background-color: #45a5b3;
+}
+
+.btn-info:hover {
+    border: none;
+    background-color: #65aeba;
+}
+
+.modal-content {
+    bottom: 0px;
+}
+
+.modal-content {
+    font-size: 18px;
+}    
+
+.modal-footer {
+    border-top: none;
+}
+
+button.btn.btn-secondary,
+button.btn-danger {
+    border-radius: 15px;
+}

@@ -100,7 +100,7 @@ def delete_article(request, slug):
         article.delete()
         messages.success(request,
          f'Article {article.title} deleted successfully.')
-    return redirect ('article_list')
+    return redirect ('admin_article_list')
 
 
 
