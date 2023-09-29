@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="overlay"></div>
+<div class="container my-5">
+    <div class="row text-center">
+        <div class="col-12 col-md-6 mx-auto">
+            <hr>
+            <h2 class="section-title mb-4 text-center">Article Management</h2>
+            <h5 class="header-txt">Add an Article</h5>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-12 col-md-6 mx-auto">
+            <form method="POST" action="{% url 'add_article' %}" class="form mb-2" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                {{ field | as_crispy_field }}
+                {% endfor %}
+                <div class="text-right">
+                    <button class="wishlist-btn m-1 p-2" type="submit">Add Article</button>
+                    <a class="wishlist-btn m-1 p-2" href="{% url 'article_list' %}">Cancel</a>  
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
