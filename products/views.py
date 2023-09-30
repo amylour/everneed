@@ -66,6 +66,21 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
+@login_required
+def admin_product_list(request):
+    """ A view to show an alphabetical list of products for admin """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    products = Product.objects.all().order_by('name')
+    context = {
+        'products': products,
+    }
+
+    return render(request, 'products/admin_product_list.html', context)
+
+
 def product_detail(request, product_id):
     """ A view to return an individual products page """
 
@@ -76,6 +91,23 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+# Admin product detai view accessible via admin dashboard
+@login_required
+def admin_product_detail(request, product_id):
+    """ A view to return an individual product's page for admin """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Sorry, only store owners can access this page.')
+        return redirect(reverse('home'))
+
+    product = get_object_or_404(Product, pk=product_id)
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'products/admin_product_detail.html', context)
 
 
 @login_required
@@ -97,7 +129,8 @@ def add_product(request):
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Product added successfully!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            # Redirecting to admin_product_detail instead of product_detail
+            return redirect(reverse('admin_product_detail', args=[product.id]))
         else:
             messages.error(
                 request, 'Failed to add product. Please ensure the form is valid.')
@@ -125,7 +158,8 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Product successfully updated!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            # Redirecting to admin_product_detail instead of product_detail
+            return redirect(reverse('admin_product_detail', args=[product.id]))
         else:
             messages.error(
                 request, 'Failed to update product. Please ensure the form is valid.')
@@ -152,4 +186,4 @@ def delete_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')
-    return redirect(reverse('products'))
+    return redirect(reverse('admin_product_list'))

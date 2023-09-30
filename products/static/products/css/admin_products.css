@@ -1,9 +1,33 @@
+/* Google Font import */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500&family=Karla:wght@200;300;400;500&display=swap');
+
+:root {
+    /* fonts */
+    --title: 'Karla', sans-serif;
+    --main-font: 'Inconsolata', monospace;
+
+    /* colours */
+    --forest: #194f49;
+    --yellow: #ffc824;
+    --bluegreen: #0e7373;
+    --purple: #8E164E;
+    --gold: #CC4818;
+    --white: #fff;
+    --black: #0d0d0d;
+}
+
 a {
     text-decoration: none;
 }
 
+a:active,
+a:focus,
+a:hover {
+    color: var(--purple);
+}
+
 body {
-    color: #194f49;
+    color: var(--forest);
 }
 
 select.form-control,
@@ -48,7 +72,6 @@ textarea.form-control {
 }
 
 /* Product Form */
-
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -102,5 +125,83 @@ select.form-control {
     border: none;
 }
 
+/* Product List */
+.table {
+    color: var(--forest);
+    font-size: 18px
+}
 
+/* Edit/Delete buttons & modal */
+.btn-danger {
+    background-color: #ef6674;
+    border: none;
+    border-radius: 20px;
+}
 
+.btn-danger:hover {
+    background-color: #ed9aa2;
+    border: none;
+}
+
+.btn-info {
+    border: none;
+    border-radius: 20px;
+    background-color: #45a5b3;
+    font-size: 22px;
+}
+
+.btn-info:hover {
+    border: none;
+    background-color: #65aeba;
+}
+
+.modal-content {
+    bottom: 0px;
+}
+
+.modal-content {
+    font-size: 18px;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+button.btn.btn-secondary,
+button.btn-danger {
+    border-radius: 20px;
+}
+
+.product-list {
+    border: 3px dashed #194f4990;
+    border-radius: 30px;
+}
+
+/* Media queries for mobile - under 1024px */
+@media (max-width: 1024px) {
+    .btn-info,
+    .btn-danger {
+        font-size: 18px;
+    }
+
+    .table {
+        font-size: 16px;
+    }
+}
+
+/* Media queries for mobile - under 896px */
+@media (max-width: 896px) {
+
+    .btn-info,
+    .btn-danger {
+        font-size: 18px;
+    }
+
+    .table {
+        font-size: 16px;
+    }
+
+    .product-list {
+        border: none;
+    }
+}

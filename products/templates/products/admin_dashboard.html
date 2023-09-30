@@ -7,9 +7,8 @@
 {% endblock %}
 
 {% block content %}
-
 <div class="overlay"></div>
-<div class="container my-5">
+<div class="container my-5"></div>
     <div class="row justify-content-center">
         <div class="col-12 col-md-6">
             <hr>
@@ -24,7 +23,7 @@
             </span>ADD PRODUCT</a>
         </div>
         <div class="col-sm-10 col-lg-8 mb-3">
-            <a class="admin-btn d-block m-2 p-2 text-center" href="{% url 'products' %}"><span class="icon mr-2">
+            <a class="admin-btn d-block m-2 p-2 text-center" href="{% url 'admin_product_list' %}"><span class="icon mr-2">
                 <i class="fas fa-pen-to-square"></i>
             </span>EDIT/DELETE PRODUCT<span class="icon ml-2">
                 <i class="fas fa-minus"></i>
@@ -48,7 +47,5 @@
             </span>BACKEND ADMIN PANEL</a>
         </div>
     </div>
-
 </div>
-
 {% endblock %}

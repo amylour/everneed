@@ -7,7 +7,6 @@
 {% endblock %}
 
 {% block content %}
-
 <div class="overlay"></div>
 <div class="container my-5">
     <div class="row text-center">
@@ -30,14 +29,13 @@
             {{ field }}
             {% endif %}
             {% endfor %}
-            <div class="text-right">
-                <a class="wishlist-btn m-1 p-2" href="{% url 'products' %}">Cancel</a>
-                <button class="wishlist-btn m-1 p-2" type="submit">Add Product</button>
+            <div class="text-center">
+                <button class="wishlist-btn m-2 p-2" type="submit">Add Product</button>
+                <a class="wishlist-btn m-2 p-2" href="{% url 'admin_dashboard' %}">Cancel</a>
             </div>
         </form>
        </div>
     </div>
 </div>
-
 {% endblock %}
 

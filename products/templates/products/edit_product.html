@@ -31,8 +31,9 @@
                 {% endif %}
                 {% endfor %}
                 <div class="text-center">
-                    <button class="wishlist-btn m-1 p-2" type="submit">Edit Product</button>
-                    <a class="wishlist-btn m-1 p-2" href="{% url 'products' %}">Cancel</a>
+                    <button class="wishlist-btn m-2 p-2" type="submit">Save Changes</button>
+                    <a class="wishlist-btn m-2 p-2" href="{% url 'admin_product_detail' product.id %}">Cancel</a>
+
                 </div>
             </form>
         </div>

@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/admin_products.css' %}">
+{% endblock %}
+
+{% block title %}Products{% endblock %}
+
+{% block content %}
+<!-- Layout guided by Boutique Ado walkthrough credit: https://tinyurl.com/y8myvsxz -->
+<a href="{% url 'admin_product_list' %}" class="btn wishlist-btn p-2 mt-4 ml-lg-5 ml-md-3 ml-sm-2">
+    <span class="icon mr-2">
+        <i class="fas fa-chevron-left"></i>
+    </span>
+    <span class="">Admin Product List</span>
+</a>
+<div class="container-fluid my-5">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container my-5">
+                {% if product.image %}
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid product-image" src="{{ MEDIA_URL }}product_placeholder.png" alt="{{ product.name }}">
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-details-container mb-5 mt-md-5 mx-1">
+                <div class="row justify-content-between m-1">
+                    <div>
+                    <p class="mr-5 mb-1 prod-title">{{ product.name }}</p>
+                    </div>
+                </div>
+                <p class="lead mb-0 text-left ml-1 mb-2 font-weight-bold prod-price">€{{ product.price }}</p>
+                <div class="prod-rating ml-1">
+                    {% if product.rating %}
+                    <small class="text-muted"><img src="{% static 'icons/eco_leaf_full.png' %}" class="rating-leaf"
+                            alt="eco leaf icon for rating">{{ product.rating }} / 5</small>
+                    {% else %}
+                    <small class="text-muted"><img src="{% static 'icons/eco_leaf_full.png' %}" class="rating-leaf mr-1"
+                            alt="eco leaf icon for rating"> No Rating</small>
+                    {% endif %}
+                    {% if request.user.is_superuser %}
+                    <small class="ml-3">
+                        <a href="{% url 'edit_product' product.id %}" class="btn btn-info btn-sm m-2"><i
+                                class="fas fa-pen-to-square p-1 pr-2"></i>Edit</a>
+                        <button class="btn btn-danger btn-sm m-2" data-toggle="modal" data-target="#deleteModal_{{product.id}}"><i
+                                class="fas fa-trash-can p-1 pr-2"></i>Delete</button>
+                    </small>
+                    {% endif %}
+                </div>
+                    <div class="form-row">
+                        {% with product.has_sizes as s %}
+                        {% if s %}
+                        <div class="col-12 mt-3">
+                            <p><strong>Size:</strong></p>
+                            <select class="form-control custom-select w-50" name="product_size" id='id_product_size'>
+                                {% if product.is_shoe %}
+                                <option value="32-34">32-34</option>
+                                <option value="35-36">35-36</option>
+                                <option value="38-40">38-40</option>
+                                <option value="41-43">41-43</option>
+                                <option value="44-46">44-46</option>
+                                {% elif product.ml_sizes %}
+                                <option value="m">M</option>
+                                <option value="l">L</option>
+                                {% else %}
+                                <option value="xs">XS</option>
+                                <option value="s">S</option>
+                                <option value="m" selected>M</option>
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                                {% endif %}
+                            </select>
+                        </div>
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+            </div>
+        </div>
+        <!-- lower product detail area -->
+        <div class="row w-75 mx-auto lower-product mx-1">
+        <div class="col-12 col-md-12 col-lg-12">
+            <h3 class="prod-title">Description</h3>
+            <p class="mb-4 prod-description">{{ product.description }}</p>
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteModal_{{product.id}}" tabindex="-1" role="dialog"
+    aria-labelledby="deleteModalLabel_{{product.id}}" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel_{{product.id}}">Confirm Deletion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete the product named "{{product.name}}"?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-info p-2 m-2" data-dismiss="modal">Cancel</button>
+                <form action="{% url 'delete_product' product.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger p-2 m-2">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+{% endblock %}
