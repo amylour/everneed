@@ -1,3 +1,28 @@
+/* Google Font import */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500&family=Karla:wght@200;300;400;500&display=swap');
+
+:root {
+    /* fonts */
+    --title: 'Karla', sans-serif;
+    --main-font: 'Inconsolata', monospace;
+
+    /* colours */
+    --forest: #194f49;
+    --yellow: #ffc824;
+    --bluegreen: #0e7373;
+    --purple: #8E164E;
+    --gold: #CC4818;
+    --white: #fff;
+    --black: #0d0d0d;
+
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: var(--purple);
+}
+
 /* Article Cards */
 .article-card {
     color: #194f49;
@@ -60,6 +85,7 @@
     font-size: 20px;
 }
 
+/* Edit/Delete buttons & Modal */
 .btn-danger {
     background-color: #ef6674;
     border: none;
@@ -82,12 +108,13 @@
     background-color: #65aeba;
 }
 
-.modal-content {
-    bottom: 0px;
+.modal-body {
+    color: var(--forest);
 }
 
 .modal-content {
     font-size: 18px;
+    bottom: 0px;
 }    
 
 .modal-footer {
@@ -96,5 +123,5 @@
 
 button.btn.btn-secondary,
 button.btn-danger {
-    border-radius: 15px;
+    border-radius: 20px;
 }

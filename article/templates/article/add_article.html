@@ -2,6 +2,10 @@
 
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'article/css/article.css' %}">
+{% endblock %}
+
 {% block content %}
 
 <div class="overlay"></div>
@@ -10,7 +14,7 @@
         <div class="col-12 col-md-6 mx-auto">
             <hr>
             <h2 class="section-title mb-4 text-center">Article Management</h2>
-            <h5 class="header-txt">Add an Article</h5>
+            <h5 class="header-txt">Add Article</h5>
             <hr>
         </div>
     </div>
@@ -22,7 +26,7 @@
                 {% for field in form %}
                 {{ field | as_crispy_field }}
                 {% endfor %}
-                <div class="text-right">
+                <div class="text-center">
                     <button class="wishlist-btn m-1 p-2" type="submit">Add Article</button>
                     <a class="wishlist-btn m-1 p-2" href="{% url 'admin_article_list' %}">Cancel</a>  
                 </div>

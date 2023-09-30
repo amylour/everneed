@@ -13,6 +13,12 @@
 {% load crispy_forms_tags %}
 
 <div class="container article-container mt-5">
+    <a href="{% url 'article_list' %}" class="btn wishlist-btn p-2 mb-4 ml-lg-5 ml-md-3 ml-sm-2">
+        <span class="icon mr-2">
+            <i class="fas fa-chevron-left"></i>
+        </span>
+        <span class="">Article List</span>
+    </a>
     <div class="row">
         <div class="col image-container">
             <!-- Article image section -->
