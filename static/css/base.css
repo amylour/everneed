@@ -106,7 +106,8 @@ header {
 /* Forms */
 /* Remove blue highlight shadow from around input field when selected - credit: https: //tinyurl.com/yk2uaf8c */
 input:focus,
-input.form-control:focus {
+input.form-control:focus,
+textarea.form-control:focus {
     outline: none !important;
     outline-width: 0 !important;
     box-shadow: none;
@@ -1067,6 +1068,22 @@ footer {
 
 .copyright {
     font-family: var(--main-font);
+}
+
+/* Contact Us Form */
+.contact {
+    bottom: 0px;
+}
+
+.contact-form, {
+    border-style: none;
+    border-radius: 30px;
+    font-size: 1.25rem;
+    font-family: var(--main-font);
+}
+
+.contact-form:focus {
+    background-color: #194f4929;
 }
 
 /* Newsletter template and SVG from Bootsnipp credit -> https: //bootsnipp.com/snippets/6XVAB */

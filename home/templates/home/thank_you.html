@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container text-center mt-4">
+    <div class="row justify-contents-center">
+        <div class="col">
+            <h2 class="header-text my-3">Thank you for contacting us!</h2>
+            <p class="p-txt my-4">Your message has been sent successfully. We'll get back to you soon.</p>
+            <div>
+            <a href="{% url 'home' %}" class="btn wishlist-btn m-2 p-2"><span class="icon mr-2">
+                <i class="fas fa-chevron-left"></i>
+            </span>Return Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

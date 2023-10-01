@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!doctype html>
 <html lang="en">
 
@@ -96,18 +97,27 @@
     <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
+            <div class="modal-content contact">
                 <div class="d-flex justify-content-end">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-header">
-                    <h4 class="modal-title mx-auto" id="contactModalLabel">Contact form coming soon...</h4>
+                    <h4 class="modal-title mx-auto" id="contactModalLabel">Contact Us</h4>
+                </div>
+                <div class="modal-body text-center">
+                    {% load crispy_forms_tags %}
+                    <form method="POST" action="{% url 'contact_form' %}" class="contact-form">
+                        {% csrf_token %}
+                        {{ contact_form|crispy }}
+                        <button type="submit" class="btn search-button m-2 p-2 text-white">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+
 
     <main>
     {% block content %}
