@@ -1089,7 +1089,6 @@ footer {
 /* Newsletter template and SVG from Bootsnipp credit -> https: //bootsnipp.com/snippets/6XVAB */
 .newsletter {
     position: relative;
-    padding-top: 30px;
     padding-left: 15px;
     flex-grow: 1;
 }
