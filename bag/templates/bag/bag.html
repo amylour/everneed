@@ -22,7 +22,7 @@
                     <thead class="">
                         <tr>
                             <th scope="col">Product Info</th>
-                            <th scope="col"></th>
+                            <th scope="col"  class="d-none d-md-table-cell"></th>
                             <th scope="col">Price</th>
                             <th scope="col">Qty</th>
                             <th scope="col">Subtotal</th>
@@ -30,7 +30,7 @@
                     </thead>
                     {% for item in bag_items %}
                     <tr>
-                        <td class="p-3 w-25">
+                        <td class="p-3 w-25 d-none d-md-table-cell">
                             {% if item.product.image %}
                             <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                             {% else %}
@@ -42,10 +42,10 @@
                             <p class="my-0"><strong>Size : </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
                             <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                         </td>
-                        <td class="py-3">
+                        <td class="py-3 col-md-6 col-6">
                             <p class="my-0 all-price">€{{ item.product.price }}</p>
                         </td>
-                        <td class="py-3 w-25">
+                        <td class="py-3 col-md-6 col-12">
                             <form action="{% url 'adjust_bag' item.item_id %}" method="POST" class="form update-form">
                                 {% csrf_token %}
                                 <div class="form-group">
