@@ -10,7 +10,7 @@ With the growing threat of climate change and sudden mass displacement of large 
 
 Choosing to only purchase 100% necessary items, that have been created in the most sustainable way, and to be aware of your carbon spending at the same time, could be an e-commerce store type that will be with us sooner than we think. [Carbon credits](https://carboncredits.com/carbon-credits-explained-2023-guide/) are already being implemented in industrial and agricultural sectors in an effort to slow our global carbon emissions rate, it could, in the near future, start affecting our purchases as individuals.
 
-View live site: [everneed]()
+View live site: [everneed](https://everneed-096aafe5d13c.herokuapp.com/)
 
 ## Table of Contents
 
@@ -68,16 +68,56 @@ View live site: [everneed]()
   - [Acknowledgements](#acknowledgements)
 
 ## Overview
+Everneed is an eco-friendly products store focusing on procuring the best in sustainabale, long-life products. Users are invited to:
+
+- View the store as Guests
+- Register for an Account
+- Use the stores Wishlist feature to record liked products
+- Browse products by category and price
+- View, add and edit products in their bag
+- Discover their carbon savings on certain items
+- As registered users, view past orders
+- Read the latest articles on climate change and environmental impacts
+- Sign up for a weekly environment issues newsletters
+
+Everneed is accessible via all browsers with full responsiveness on different screen sizes. It's aim is to raise awareness of our carbon spend and provide an alternative to the fast-fashion trap. 
 
 ## Customer Goals
 
+Customers are provided with an easy, intuitive shopping experience and are encouraged to avail of sustainable, eco-friendly products. It is hoped that customers will sign up/register an account with everneed to be able to avail of the full range of user features. Customers are consistenly encouraged to make the best choices in terms of quality, environmentally friendly products. A sense of community is created with a weekly newsletter which will inform the customers of new products, trends and articles on everneed.
+
+
 ## Business Goals
+
+Everneed provides easy Admin functionality for the business owner with an accessible, easy-use Admin Dashboard to manage inventory and articles. The additonal frontend forms allows the business owner to make quick and easy changes. Further information regarding users and orders can be accessed via the Admin Dashboard with a direct link to the information stored within the Django Admin Panel. 
+
+Everneed seeks to build a strong base of regular shoppers who seek long-life, quality products made from high quality, natural materials. The newsletter, articles and carbon footprint features aim to attract those who have concerns for the rising environmental issues that our planet faces. Further marketing is made through the businesses social media channels, in particular their Facebook page.
+
 
 # UX/UI - User Experience/User Interface
 
 ## Design Inspiration
 
+From the beginning of the project, I knew that the colour palette would reflect nature with shades of green acting as the primary colour, in particular forest green, #194f49. The website is kept clean, with good flow, using plenty of white space to draw attention to the products and the website's mission in reducing the carbon footprints of it's users.
+
+A simple logo, created using [LogoAI](www.logoai.com) is used as a favicon and email branding logo. The logo depicts a plant trapped within a vault, as we must protect our environment at all costs.
+
+![everneed logo]
+(docs/readme_images/en_logo.png)
+*everneed logo*
+
+Only the necessary information is displayed so as to not increase the size of the website and it's own carbon footprint. Purple #8E164E and 
+gold #CC4818 are used as accents to draw attention to active buttons and carbon totals. I created a hero image, using Figma and the site's product images, to add a modern, graphic edge to the website.
+
+![Hero Image]
+(docs/readme_images/dt_hero.png)
+*Image created by myself in Figma using product images*
+
 ### Color Scheme
+
+![Everneed Color Scheme]
+(docs/readme_images/en_final_colors.png)
+*Everneed Color Scheme*
 
 ### Typography & Iconography
 
