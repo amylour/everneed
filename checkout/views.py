@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from django.core.mail import send_mail
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -56,7 +57,7 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_basket = json.dumps(bag)
             bag_data = bag_contents(request)
-            total_carbon_fp = bag_data.get('total_carbon_fp', 0)  
+            total_carbon_fp = bag_data.get('total_carbon_fp', 0)
             total_carbon_saved = bag_data.get('total_carbon_saved', 0)
             order.carbon_fp_total = total_carbon_fp
             order.carbon_saved_total = total_carbon_saved
@@ -153,6 +154,13 @@ def checkout_success(request, order_number):
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
 
+    subject = f"Confirmation for order {order_number}"
+    message = f"Thank you for your purchase. Your order number is {order_number}."
+    email_from = settings.DEFAULT_FROM_EMAIL
+    recipient_list = [order.email,]
+
+    send_mail(subject, message, email_from, recipient_list)
+
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         # Attach the user's profile to the order
@@ -183,4 +191,3 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
-
