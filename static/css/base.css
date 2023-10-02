@@ -39,10 +39,6 @@ header {
     color: var(--forest);
 }
 
-h6 {
-    color: var(--forest);
-}
-
 a,
 a span {
     color: var(--forest);

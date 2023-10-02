@@ -1,5 +1,7 @@
 # everneed
 
+![everneed responsive screenshot](docs/readme_images/everneed_rep_view.png)
+
 ## Introduction
 
 Everneed is an e-commerce site selling practical, sustainable, earth-friendly products with a carbon-footprint total for your order. It has been developed as my Portfolio Project 5 for the Code Institute's Full Stack Software Developer Course using Django, HTML, CSS, JS & Python.
@@ -11,6 +13,11 @@ With the growing threat of climate change and sudden mass displacement of large 
 Choosing to only purchase 100% necessary items, that have been created in the most sustainable way, and to be aware of your carbon spending at the same time, could be an e-commerce store type that will be with us sooner than we think. [Carbon credits](https://carboncredits.com/carbon-credits-explained-2023-guide/) are already being implemented in industrial and agricultural sectors in an effort to slow our global carbon emissions rate, it could, in the near future, start affecting our purchases as individuals.
 
 View live site: [everneed](https://everneed-096aafe5d13c.herokuapp.com/)
+
+For full Admin access to Django Admin panel with relevant sign-in credentials: [Everneed Admin](https://everneed-096aafe5d13c.herokuapp.com/admin/)
+
+For access to Admin Dashboard frontend view with relebant sign-in credentials: [Everneed Admin Dashboard](https://everneed-096aafe5d13c.herokuapp.com/products/admin_dashboard/)
+
 
 ## Table of Contents
 
@@ -102,24 +109,62 @@ From the beginning of the project, I knew that the colour palette would reflect 
 
 A simple logo, created using [LogoAI](www.logoai.com) is used as a favicon and email branding logo. The logo depicts a plant trapped within a vault, as we must protect our environment at all costs.
 
-![everneed logo]
-(docs/readme_images/en_logo.png)
-*everneed logo*
+![everneed logo](docs/readme_images/en_logo.png)  
+*Everneed logo*
 
-Only the necessary information is displayed so as to not increase the size of the website and it's own carbon footprint. Purple #8E164E and 
-gold #CC4818 are used as accents to draw attention to active buttons and carbon totals. I created a hero image, using Figma and the site's product images, to add a modern, graphic edge to the website.
+Only the necessary information is displayed so as to not increase the size of the website and it's own carbon footprint. Purple #8E164E and gold #CC4818 are used as accents to draw attention to active buttons and carbon totals. I created a hero image, using Figma and the site's product images, to add a modern, graphic edge to the website.
 
-![Hero Image]
-(docs/readme_images/dt_hero.png)
+![Hero Image](docs/readme_images/dt_hero.png)
 *Image created by myself in Figma using product images*
+
+Product images are kept clean with no backgrounds so that focus is on the product itself. Feedback is continuously provided to the user via the website's header which displays whether the user is logged in and how many items are in their bag. Message 'toasts' are also visible upon user actions to display further information.
+
+![Header Feedback](docs/readme_images/header_feedback.png)  
+*Header feedback is kept clean and intuitive*
 
 ### Color Scheme
 
-![Everneed Color Scheme]
-(docs/readme_images/en_final_colors.png)
+![Everneed Color Scheme](docs/readme_images/en_final_colors.png)
 *Everneed Color Scheme*
 
+Variables were used within the CSS file to call colours as they were needed:
+- --forest: #194f49;
+- --yellow: #ffc824;
+- --bluegreen: #0e7373;
+- --purple: #8E164E;
+- --gold: #CC4818;
+- --white: #fff;
+- --black: #0d0d0d;
+
+The above colours were chosen to reflect colours found naturally within nature. The primary, dominant colour of forest green #194f49, is used repretedly throught the website for it's font and main sectioning. A muted version is used for dashed borders for input field focus and feedback to the user, this replaces the default blue border used in most browsers. The main buttons are created using #e5ede8 in a gradient to a darker #b5c9bd. This creates a sense of depth and creates a 3D feel to the buttons.
+
+![Everneed Main Button](docs/readme_images/main_button.png)  
+*Everneed Main Button*
+
+The purple is used when a button or field text is brought into focus by the user, this provides feedback that there is an action available in the feature/area. The gold is used to provide contrast for important text that provides a link and also in the 'Subscribe' button visible in the newsletter section of the footer area.White space is maintained throughout the website to keep it clean, clear and fresh.
+
+Further preparation for the colour scheme was carried out on [Adobe Color](https://color.adobe.com/create/color-accessibility) to check for contrast levels and accessibility for those with sight issues. Text contrasts were checked also to ensure they exceeded the WCAG 2.1 Level for suitable contrast of web text.
+
+
+![Everneed Color Scheme accesssibility Check](docs/readme_images/color_blind_safe.png)  
+*Everneed Color Accessibility Check*
+
+![Everneed Color Scheme Contrast Check](docs/readme_images/contrast_main.png)  
+*Everneed Color Contrast Check - Main*
+
+![Everneed Color Scheme Contrast Check](docs/readme_images/button_contrast.png)  
+*Everneed Color Contrast Check - Button*
+
+
+
 ### Typography & Iconography
+
+![Everneed Font Pairing](docs/readme_images/fontpair.png)
+*Everneed Font Pairing*
+
+Karla and Inconsolata were both imported foom [Google Fonts](https://fonts.google.com/). They were chosen for their compatibility and aesthetics that aligned with the store brand. Karla is a sans-serif typeface with a clean and modern design which delivers a fresh and simple look to the store. Inconsolata is a monospace font which allows clear display of descriptions and information about the products. Together they apply enough textual contrast to allow for a good flow of information to the user, improving user experience. Using Google Fonts allows for faster, reliable loading times for the website, ensuring the user stays when they visit.
+
+In development, 'Karla' was identified by variable ```--title```, whilst 'Inconsolata' was set as ```--main-font``` within the CSS file. Similar to my setup for the project's colours, using variables helped to speed up the frontend process.
 
 # Project Planning
 
@@ -135,7 +180,15 @@ gold #CC4818 are used as accents to draw attention to active buttons and carbon 
 
 | Sprint No. | Sprint Content | Start/Finish Dates |
 |------------|----------------|--------------------|
-|            |                |                    |
+|    # 1     | Project Setup  |                    |
+|    # 2     | AllAuth & Basic Naviagtion |        |
+|    # 3     | Product Views & CRUD       |        |
+|    # 4     | Shopping Bag Functionality & Styling |      |
+|    # 5     | Wishlist Feature   |                |
+|    # 6     | Carbon Footprint & Articles  |      |
+|    # 7     | Admin Dashboard        |            |
+|    # 8     | User/Customer Correspondence  |     |
+|    # 9     | Documentation & Testing   |         |
 
 ### Marketing
 
@@ -205,6 +258,7 @@ Libraries and frameworks used were dictated by the 'Boutique Ado' walkthrough fr
 - [Tiny Png](https://tinypng.com/) for file size reduction.
 - [Lucidchart](https://www.lucidchart.com/pages) for ERD (entity relationship diagram) creation.
 - [Favicon](https://favicon.io/) for converting an icon into favicon.
+- [amiresponsive](https://ui.dev/amiresponsive) for screenshot of Everneed on different screen sizes.
 - [Perplexity AI](https://www.perplexity.ai/) for breaking down Python concepts and Django documentation into more understandable chunks.
 
 
