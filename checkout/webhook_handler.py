@@ -66,7 +66,6 @@ class StripeWH_Handler:
             if value == "":
                 shipping_details.address[field] = None
 
-        
         # Update profile information if save_info was checked
         profile = None
         username = intent.metadata.username
@@ -82,7 +81,6 @@ class StripeWH_Handler:
                 profile.default_county = shipping_details.address.state
                 profile.save()
 
-        
         order_exists = False
         attempt = 1
         while attempt <= 5:
