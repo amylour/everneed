@@ -32,11 +32,69 @@ Return back to the [README.md](README.md) file.
 
 ### HTML Validation
 
+For my HTML files I have used [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
+
+I have had to follow a different approach for validating my HTML for this project as the majority of my pages are developed using Jinja syntax such as '{% extends "base.html" %}' and '{{ form|crispy }}' and most require user authentication. The HTML validator will throw errors if I were to use my website's URL so I have had to follow the below approach for every page:
+
+- Via the deployed Heroku app link, I have navigated to each individual page.
+- Right clicking on the screen/CTRL+U/⌘+U on Mac, allows a menu to appear, giving me the option to 'View page source'.
+- The complete HTML code for the deployed page will appear, allowing you to select the entire code using CTRL+A/⌘+A on Mac.
+- Paste the copied code into the [validate by input](https://validator.w3.org/#validate_by_input) option.
+- Check for errors and warnings, fix any issues, revalidate by following the above steps and record the results.
+
+![html validation](docs/testing_images/html_validation.png)  
+
+All HTML pages were validated and received a 'No errors or warning to show' for code that I had written, result as shown above.
+
+| HTML Source Code/Page | Errors | Warnings |
+| ---- | ------ | -------- |
+| Home | 0 | 0 |
+| Log In | 0 | 0 |
+| Register | 0 | 0 |
+| Account | 0 | 0 |
+| Wishlist | 0 | 0 |
+| Admin Dashboard | 0 | 0 |
+| Add Article |  |  |
+| Edit Article |  |  |
+| Delete Article |  |  |
+| Add Product |  |  |
+| Edit Product |  |  |
+| Delete Product | 0 | 0 |
+| All Products | 0 | 0 |
+| Wear| 0 | 0 |
+| Care | 0 | 0 |
+| Eat | 0 | 0 |
+| Travel | 0 | 0 |
+| Read | 0 | 0 |
+| Forgot Password | 0 | 0 |
+| Error 403 | 0 | 0 |
+| Error 404 | 0 | 0 |
+| Error 500 | 0  | 0 |
+
 ### JavaScript Validation
+
+[JSHint](https://jshint.com/) was used to validate the JavaScript code added to the project. External JS, for Bootstrap, jQuery and Fontawesome purposes were not validated through JSHint.
+
+| Page | Screenshot | Errors | Warnings |
+| ---- | ---------- | ------ | -------- |
+| base.html | ![js from base.html](docs/g) | none | none |
+
 
 ### Python Validation
 
 ### CSS Validation
+
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS files. External CSS for Bootstrap, provided by [CDN](https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css) was not tested.
+
+![css validation](docs/testing_images/css_valid.png)
+
+| CSS File | Errors | Warnings |
+| ---- | ------ | -------- |
+| Article | 0 | 0 |
+| Checkout | 0 | 0 |
+| Admin Products | 0 | 0 |
+| Profiles | 0 | 0 |
+| Base CSS | 0 | 0 |
 
 ### Lighthouse Scores
 
