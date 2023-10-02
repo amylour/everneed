@@ -40,7 +40,11 @@ For access to Admin Dashboard frontend view with relebant sign-in credentials: [
     - [Marketing](#marketing)
   - [User Stories](#user-stories)
     - [Visitor User Stories](#visitor-user-stories)
-    - [Admin User Stories](#admin-user-stories)
+    - [Epic - Home View \& User Account](#epic---home-view--user-account)
+    - [Epic - Products](#epic---products)
+    - [Epic - Basket Management \& Purchasing](#epic---basket-management--purchasing)
+    - [Epic - Wishlist](#epic---wishlist)
+    - [Epic - Newsletter](#epic---newsletter)
   - [Scope Plane](#scope-plane)
   - [Structural Plane](#structural-plane)
   - [Skeleton Plane](#skeleton-plane)
@@ -49,11 +53,9 @@ For access to Admin Dashboard frontend view with relebant sign-in credentials: [
   - [Surface Plane](#surface-plane)
     - [Defensive Design](#defensive-design)
 - [Features](#features)
-  - [User View](#user-view)
+  - [User View - Guests/Account Holders](#user-view---guestsaccount-holders)
   - [CRUD Functionality](#crud-functionality)
   - [Features Showcase](#features-showcase)
-    - [Admin View](#admin-view)
-    - [Error Pages](#error-pages)
   - [Future Features](#future-features)
 - [Technologies \& Languages Used](#technologies--languages-used)
   - [Libraries \& Frameworks](#libraries--frameworks)
@@ -63,6 +65,7 @@ For access to Admin Dashboard frontend view with relebant sign-in credentials: [
   - [Connecting to GitHub](#connecting-to-github)
   - [Django Project SetUp](#django-project-setup)
   - [Relevant API's - details](#relevant-apis---details)
+    - [Elephant SQL](#elephant-sql)
   - [Heroku Deployment](#heroku-deployment)
   - [AWS Config](#aws-config)
   - [Stripe Config](#stripe-config)
@@ -170,17 +173,36 @@ In development, 'Karla' was identified by variable ```--title```, whilst 'Incons
 
 ## Strategy Plane
 
-The primary objective was to create an e-commerce store that satisfied the assessment criteria of the Code Institute's Project 5. The store must provide the expected functions of a responsive e-commerce store using Stripe as a payment system, user/guest views for authentication and store features, some extra features of my choosing and demonstration of some marketing/SEO skills. Orders on Everneed were to display the carbon footprint totals and carbon saved, (where data is available), reflecting the pressing need for eco-consciousness in these modern times. The User, whether paying customer or just browsing, must receive the best in UX and feel that Everneed is relatable and trust-worthy.
+The primary objective was to create an e-commerce store that satisfied the assessment criteria of the Code Institute's Project 5. The store must provide the expected functions of a responsive e-commerce store using Stripe as a payment system, user/guest views for authentication and store features, some extra features of my choosing, wishlist and articles, and demonstration of some marketing/SEO skills. Orders on Everneed were to display the carbon footprint totals and carbon saved, (where data is available), reflecting the pressing need for eco-consciousness in these modern times. The User, whether paying customer or just browsing, must receive the best in UX and feel that Everneed is relatable and trust-worthy.
 
-
+*ADD*
 
 ### Site Goals
 
+- Site provides enjoyable experience for shoppers
+- Customers feel informed that they are making a good choice shopping with Everneed
+- UX remains similar across screen sizes
+- CRUD functionalities work as intended with easy to user frontend forms
+- Scalable site to allow for extra features in the future
+
 ## Agile Methodologies
+
+Everneed followed Agile planning methodolgies to it's completion. [GitHub Projects](https://github.com/users/amylour/projects/6) provided an ideal platform to create issues, boards and milestones for each of the projects Epics. Using labels I could easily identify my next task and organise them into the appropriate Sprints
+
+*ADD*
 
 ### MoSCoW Prioritization
 
+I chose to follow the MoSCoW Prioritization method for Everneed, identifying and labelling my:
+
+- **Must Haves**: the 'required', critical components of the project. Completing my 'Must Haves' helped me to reach the MVP (Minimum Viable Product) for this project. 
+- **Should Haves**: the components that are valuable to the project but not absolutely 'vital' at the MVP stage. The 'Must Haves' must receive priority over the 'Should Haves'.
+- **Could Haves**: these are the features that are a 'bonus' to the project, it would be nice to have them in this phase, but only if the most important issues have been completed first and time allows.
+- **Won't Haves**: the features or components that either no longer fit the project's brief or are of very low priority for this release. 
+
 ### Sprints
+
+My Sprints were broken down into appropriately sized chunks from the beginning and I followed them to the best of my abilities. It is difficult to quantify the time taken exactly for each sprint as running a busy household outside of the course meant the hours the project was completed in were outside of the normal working week. I have done my best to record them below. They are representative of a general timeframe of focus on the project areas.
 
 | Sprint No. | Sprint Content | Start/Finish Dates |
 |------------|----------------|--------------------|
@@ -198,13 +220,73 @@ The primary objective was to create an e-commerce store that satisfied the asses
 
 ## User Stories
 
+User stories and features were recorded and managed on [GitHub Projects](https://github.com/users/amylour/projects/6)
+
 ### Visitor User Stories
 
-### Admin User Stories
+| User Story | Priority |
+|------------|------------------|
+| As a **customer**, I can **view the site's home page** so that I can **understand the site's intentions and purpose**. | **MUST HAVE** |
+| As a **customer**, I can **see and use the navigation bar** so that I can **make my way around the site and get to where I would like**. | **MUST HAVE** |
+| As a **customer**, I can **enter text into the search bar** so that I can **search for a specific item**. | **MUST HAVE** |
+
+### Epic - Home View & User Account
+
+| User Story | Priority |
+|------------------|---------------------|
+| As a **customer** I can **create and manage an account with Everneed** so that I can **keep my personal details, order history and speed up my checkout process**. | **MUST HAVE** |
+| As a **customer**, I can **edit my personal details on my account** so that I can **keep them up to date**. | **MUST HAVE** |
+| As a **site user**, I can **enter my login details** so that I can **login in to my account**. | **MUST HAVE** |
+| As a **site user**, I can **click on the visible links in the footer** so that I can **view the relevant information and destinations**. | **MUST HAVE** |
+| As a **site user**, I can **register my email and receive a validation link via email** so that I can **create an account with everneed to track my spending and purchases**. | **SHOULD HAVE** |
+| As a **customer**, I can **use the Contact Us form** so I can **send a message to the business/site admin**. | **SHOULD HAVE** |
+
+### Epic - Products
+
+| User Story | Priority |
+|------------------|---------------------|
+| As a **site user** I can **interact with sorting and view features on the 'All Products' page** so that I can **improve my shopping experience on the site**. | **MUST HAVE** |
+| As a **site user**, I can **click on a navbar item for a specific category** so that I can **choose to view a smaller amount of related products**. | **MUST HAVE** |
+| As a **customer**, I can **choose an individual product** so that I can **view its description, price, colours, sizes available etc**. | **MUST HAVE** |
+| As a **site admin** I can **add a product to my inventory using a frontend from** so that I can **increase my range/amount of products available on site**. | **MUST HAVE** |
+| As a**site admin**, I can **edit existing inventory from a frontend form** so I can **change the quantity of stock, sizes, colours or edit products description, price or image**. | **MUST HAVE** |
+| As a **site admin**, I can **delete product from the inventory using a frontend form** so that I can **remove it from sale**. | **MUST HAVE** |
+
+### Epic - Basket Management & Purchasing
+
+| User Story | Priority |
+|------------------|---------------------|
+| As a **customer** I can **create and manage an account with everneed** so that I can **keep my personal details, order history and speed up my checkout process**. | **MUST HAVE** |
+| As a **customer**, I can **click on 'Add to Bag' in my product view**so that I can **add the product to my bag**. | **MUST HAVE** |
+| As a **customer**, I can **increase/decrease/remove quantities of a product in my bag** so that I can **have control over what I wish to purchase**. | **MUST HAVE** |
+| As a **customer**, I can **view my bag total from any page** so that I can **keep track of my potential spending**. | **MUST HAVE** |
+| As a **customer**, I can **view my running total of carbon saved when I add products** so that I can **see how much carbon my purchases would had saved in their production vs non eco-friendly products of the same type**. | **MUST HAVE** |
+| As a **customer**, I can **view my total carbon footprint saving on checkout and it's associated climate impact/lifestyle changes** so that I can **understand the equivalent value of carbon saved versus purchasing the same non eco-friendly products**. | **MUST HAVE** |
+| As a **customer**, I can **checkout my products securely** so that I can **complete my purchase**. | **MUST HAVE** |
+| As a **customer**, I can **receive an email after purchasing** so that I can **confirm my purchase and keep a record of my order**. | **MUST HAVE** |
+| As a **site user** I can **view error pages with 'Home' links** so that I can **return to the main page if a page is missing or forbidden**. | **MUST HAVE** |
+
+### Epic - Wishlist 
+
+| User Story | Priority |
+|------------------|---------------------|
+| As a **logged-in user** I can **click the 'Add to Wishlist' button** so that I can **keep a record of my favourite items**. | **COULD HAVE** |
+| As a **logged-in user** I can **click the 'Remove' icon beside my Wishlist item** so that I can **remove that product from my Wishlist**. | **COULD HAVE** |
+
+### Epic - Newsletter
+
+| User Story | Priority |
+|------------------|---------------------|
+| As a **customer**, I can **enter my details into the newsletter form** so I can **receive emails about products or environmental issues/climate saving tips**. | **SHOULD HAVE** |
 
 ## Scope Plane
 
+*ADD*
+
 ## Structural Plane
+
+![]()  
+**
 
 ## Skeleton Plane
 
@@ -216,19 +298,103 @@ The primary objective was to create an e-commerce store that satisfied the asses
 
 ### Defensive Design
 
+Everneed was developed to ensure a reliable user experience. It's intention was to cause no frustrations for the users and to ensure they return to make further purchases.
+
+- Input validation and error messages provide feedback to the user to guide them towards the desired outcome. 
+- Unregistered users are diverted to the Sign Up page from restricted access pages. 
+- Authentication processes control edit/delete icons to reveal them to the Admin only, this is further secured through accessing of CRUD functionalities in the Admin Dashboard. 
+- Deletion of data is confirmed through an additional modal, double-checking with the user.
+- Error pages are displayed with 'Home' buttons to help users get back on track. 
+- Testing and validation of features completes the process.
+
+**CSRF Tokens**
+
+CSRF (Cross-Site Request Forgery) tokens are included in every form to help authenticate the request with the server when the form is submitted. Absence of these tokens can leave a site vulnerable to attackers who may steal a users data.
+
 # Features
 
-## User View
+## User View - Guests/Account Holders
+
+| Feature   | Guest | Registered, Account Holder |
+|-----------|-------------------|-----------------|
+| Home Page | Visable           | Visable         |
+| Account  | Not Visible - 'Account' option only appears for registered, logged-in users | Visable and full feature interaction available |
+| All Products  | Visable - items can be viewed and added to Bag, Wishlist function not available | Visable and full feature interaction available |
+| Categories   | Visable - items can be viewed and added to Bag, Wishlist function not available | Visable and full feature interaction available |
+| Read   | Visable | Visable |
+| Search  | Visable | Visible |
+| Contact Us/Newsletter | Visible | Visible |
+| Admin Dashboard | Not Visible | Only visible to Admin |
 
 ## CRUD Functionality
 
+Customers have full CRUD functionality with their prospective purchases. They may edit their bag, add more items or remove all items. They may also edit their delivery details if they are registered, logged-in users. Everneed Admin have access to the Admin Dashboard which allow them full CRUD over Product Management and Article posting.
+
+| Feature | Create | Read | Update | Delete |
+|---------|--------|------|--------|--------|
+| Account | On registration | Yes, delivery details and order history | Yes, update address | No, users are unable to delete their accounts, this is restricted to Admin |
+| Bag | Yes, customers may add to their bag | Yes | Yes, items can be added/removed | Yes |
+| Products | Yes, Admin only | Yes, all users | Yes, Admin only | Yes, Admin only |
+| Articles | Yes, Admin only | Yes, all users | Yes, Admin only | Yes, Admin only |
+
 ## Features Showcase
 
-### Admin View
+**Header/Navigation & Footer**
 
-### Error Pages
+*For features showcase, screenshots of the features in use were taken on Laptop/iPad Pro/iPhone 12 Pro*
+
+<details open>
+    <summary>Header & Navigation - All Users</summary>  
+    <img src="">  
+</details>
+
+**Home Page**
+
+
+**Delivery Banner**
+
+
+**Search**
+
+
+**All Products**
+
+
+**Categories**
+
+
+**Account**
+
+
+**All Auth**
+
+
+**Articles**
+
+
+**Bag**
+
+
+**Admin Dashboard**
+
+
+**Footer**
+
+
+**Contact Us**
+
+
+**Newsletter**
+
+
+**403, 404, 500 Pages**
+
 
 ## Future Features
+
+- Article Comment, Article React
+- Reviews feature with Ratings
+- Further Categorise products with eco-labels for materials and production processes
 
 # Technologies & Languages Used
 
@@ -284,15 +450,111 @@ To begin this project from scratch, you must first create a new GitHub repositor
 
 ## Django Project SetUp
 
+1. Install Django and supporting libraries:
+
+- ```pip3 install 'django<4' gunicorn```
+- ```pip3 install dj_database_url psycopg2``` 
+  
+1. Once you have installed any relevant dependencies or libraries, such as the ones listed above, it is important to create a **requirements.txt** file and add all installed libraries to it with the ```pip3 freeze --local > requirements.txt``` command in the terminal.  
+2. Create a new Django project in the terminal ```django-admin startproject everneed .```
+3. Create a new app eg. ```python3 mangage.py startapp home```
+5. Add this to list of **INSTALLED_APPS** in **settings.py** - 'home',
+6. Create a superuser for the project to allow Admin access and enter credentials: ```python3 manage.py createsuperuser```
+7. Migrate the changes with commands: ```python3 manage.py migrate```
+8. An **env.py** file must be created to store all protected data such as the **DATABASE_URL** and **SECRET_KEY**. These may be called upon in your project's **settings.py** file along with your Database configurations. The **env.py** file must be added to your **gitignore** file so that your important, protected information is not pushed to public viewing on GitHub. For adding to **env.py**:
+
+- ```import os```
+- ```os.environ["DATABASE_URL"]="<copiedURLfromElephantSQL>"```
+- ```os.environ["SECRET_KEY"]="my_super^secret@key"```
+  
+For adding to **settings.py**:
+
+- ```import os```
+- ```import dj_database_url```
+- ```if os.path.exists("env.py"):```
+- ```import env```
+- ```SECRET_KEY = os.environ.get('SECRET_KEY')``` (actual key hidden within env.py)  
+
+9. Replace **DATABASES** with:
+
+```
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+  }
+```
+
+10. Set up the templates directory in **settings.py**:
+
+- Under ``BASE_DIR`` enter ``TEMPLATES_DIR = os.path.join(BASE_DIR, ‘templates’)``
+- Update ``TEMPLATES = 'DIRS': [TEMPLATES_DIR]`` with:
+
+```
+os.path.join(BASE_DIR, 'templates'),
+os.path.join(BASE_DIR, 'templates', 'allauth')
+```
+
+- Create the media, static and templates directories in top level of project file in IDE workspace.
+
+11. A **Procfile** must be created within the project repo for Heroku deployment with the following placed within it: ```web: gunicorn everneed.wsgi```
+12. Make the necessary migrations again.
+
 ## Relevant API's - details
 
+### Elephant SQL
+
+A new database instance can be created on [Elephant SQL](https://www.elephantsql.com/) for your project. 
+
+- Choose a name and select the **Tiny Turtle** plan, which is free.
+- Select your Region and the nearest Data Center to you. 
+- From your user dashboard, retrieve the important 'postgres://....' value. Place the value within your **DATABASE_URL**  in your **env.py** file and follow the below instructions to place it in your Heroku Config Vars.
+
 ## Heroku Deployment
+
+To start the deployment process , please follow the below steps:
+
+1. Log in to [Heroku](https://id.heroku.com/login) or create an account if you are a new user.
+2. Once logged in, in the Heroku Dashboard, navigate to the '**New**' button in the top, right corner, and select '**Create New App**'.
+3. Enter an app name and choose your region. Click '**Create App**'.
+4. In the Deploy tab, click on the '**Settings**', reach the '**Config Vars**' section and click on '**Reveal Config Vars**'. Here you will enter KEY:VALUE pairs for the app to run successfully. The KEY:VALUE pairs that you will need are your:
+
+   - **DATABASE_URL**:**postgres://...**
+   - **DISABLE_COLLECTSTATIC** of value '1' (N.B Remove this Config Var before deployment),
+   - **SECRET_KEY** and value  
+   - **AWS_ACCESS_KEY** and value
+   - **AWS_SECRET_ACCESS_KEY** and value
+   - **EMAIL_HOST_PASS** and value
+   - **EMAIL_HOST_USER** and value
+   - **STRIPE_PUBLIC_KEY** and value
+   - **STRIPE_SECRET_KEY** and value
+   - **STRIPE_WH_SECRET** and value
+   - **USE_AWS** and value
+
+5. Add the Heroku host name into **ALLOWED_HOSTS** in your projects **settings.py file** -> ```['herokuappname', ‘localhost’, ‘8000 port url’].```
+2. Once you are sure that you have set up the required files including your requirements.txt and Procfile, you have ensured that **DEBUG=False**, save your project, add the files, commit for initial deployment and push the data to GitHub.
+3. Go to the '**Deploy**' tab and choose GitHub as the Deployment method.
+4. Search for the repository name, select the branch that you would like to build from, and connect it via the '**Connect**' button.
+5. Choose from '**Automatic**' or '**Manual**' deployment options, I chose the 'Manual' deployment method. Click '**Deploy Branch**'.
+6.  Once the waiting period for the app to build has finished, click the '**View**' link to bring you to your newly deployed site. If you receive any errors, Heroku will display a reason in the app build log for you to investigate. **DISABLE_COLLECTSTATIC**  may be removed from the Config Vars once you have saved and pushed an image within your project.
 
 ## AWS Config
 
 ## Stripe Config
 
 ## Clone Project
+
+A local clone of this repository can be made on GitHub. Please follow the below steps:
+
+1. Navigate to GitHub and log in.
+2. The [Everneed Repository](https://github.com/amylour/everneed) can be found at this location.
+3. Above the repository file section, locate the '**Code**' button.
+4. Click on this button and choose your clone method from HTTPS, SSH or GitHub CLI, copy the URL to your clipboard by clicking the '**Copy**' button.
+5. Open your Git Bash Terminal.
+6. Change the current working directory to the location you want the cloned directory to be made.
+7. Type `git clone` and paste in the copied URL from step 4.
+8. Press '**Enter**' for the local clone to be created.
+9. Using the ``pip3 install -r requirements.txt`` command, the dependencies and libraries needed for FreeFido will be installed.
+10. Set up your **env.py** file and from the above steps for ElephantSQL, gather the Elephant SQL url for additon to your code and add your SECRET_KEY and STRIPE/AWS keys if using these services.
+11. Ensure that your **env.py** file is placed in your **.gitignore** file and follow the remaining steps in the above Django Project Setup section before pushing your code to GitHub.
 
 ## Fork Project
 
