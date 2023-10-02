@@ -54,5 +54,16 @@
         {% endif %}
     </div>
 </div>
+<div class="btt-button shadow-sm" id="bttBtn">
+    <a class="btt-link d-flex h-100" title="Back to Top">
+        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+    </a>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'article/includes/script.html' %}
 
 {% endblock %}
