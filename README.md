@@ -170,6 +170,10 @@ In development, 'Karla' was identified by variable ```--title```, whilst 'Incons
 
 ## Strategy Plane
 
+The primary objective was to create an e-commerce store that satisfied the assessment criteria of the Code Institute's Project 5. The store must provide the expected functions of a responsive e-commerce store using Stripe as a payment system, user/guest views for authentication and store features, some extra features of my choosing and demonstration of some marketing/SEO skills. Orders on Everneed were to display the carbon footprint totals and carbon saved, (where data is available), reflecting the pressing need for eco-consciousness in these modern times. The User, whether paying customer or just browsing, must receive the best in UX and feel that Everneed is relatable and trust-worthy.
+
+
+
 ### Site Goals
 
 ## Agile Methodologies
