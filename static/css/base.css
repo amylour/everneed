@@ -14,7 +14,6 @@
     --gold: #CC4818;
     --white: #fff;
     --black: #0d0d0d;
-
 }
 
 html {
@@ -924,6 +923,7 @@ a.wishlist-delete:hover {
 .wishlist-btn:hover {
     transform: scale(1.05);
     background-color: #e1f0e7;
+    color: var(--purple);
 }
 
 .wishlist-btn:active {
@@ -938,6 +938,7 @@ a.wishlist-delete:hover {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     border: none;
+    color: var(--purple);
 }
 
 .list-group,

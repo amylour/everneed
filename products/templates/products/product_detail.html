@@ -19,11 +19,13 @@
             <div class="image-container my-5">
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}"
+                        alt="{{ product.name }}">
                 </a>
                 {% else %}
                 <a href="">
-                    <img class="card-img-top img-fluid product-image" src="{{ MEDIA_URL }}product_placeholder.png" alt="{{ product.name }}">
+                    <img class="card-img-top img-fluid product-image" src="{{ MEDIA_URL }}product_placeholder.png"
+                        alt="{{ product.name }}">
                 </a>
                 {% endif %}
             </div>
@@ -32,14 +34,13 @@
             <div class="product-details-container mb-5 mt-md-5 mx-1">
                 <div class="row justify-content-between m-1">
                     <div>
-                    <p class="mr-5 mb-1 prod-title">{{ product.name }}</p>
+                        <p class="mr-5 mb-1 prod-title">{{ product.name }}</p>
                     </div>
-                    
+
                     <div class="my-2">
                         {% if user.is_authenticated %}
-                        <a href="{% url 'add_to_wishlist' product.id %}">
-                            <button class="wishlist-btn p-2" data-product-id="{{ product.id }}">Add to Wishlist<i
-                                    class="fas fa-heart mx-2"></i></button>
+                        <a href="{% url 'add_to_wishlist' product.id %}" class="wishlist-btn p-2" data-product-id="{{ product.id }}">
+                            Add to Wishlist<i class="fas fa-heart mx-2"></i>
                         </a>
                         {% endif %}
                     </div>
@@ -93,8 +94,8 @@
                                             </span>
                                         </button>
                                     </div>
-                                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99"
-                                        data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <input class="form-control qty_input" type="number" name="quantity" value="1"
+                                        min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                     <div class="input-group-append">
                                         <button class="increment-qty btn quantity-muted" data-item_id="{{ product.id }}"
                                             id="increment-qty_{{ product.id }}">
@@ -107,12 +108,6 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <!-- <a href="{% url 'products' %}" class="wishlist-btn p-2 px-4">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Keep Shopping</span>
-                            </a> -->
                             <input type="submit" class="wishlist-btn m-1 p-2 px-4" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
@@ -123,42 +118,10 @@
         </div>
         <!-- lower product detail area -->
         <div class="row w-75 mx-auto lower-product mx-1">
-        <div class="col-12 col-md-12 col-lg-12">
-            <h3 class="prod-title">Description</h3>
-            <p class="mb-4 prod-description">{{ product.description }}</p>
-        </div>
-        <!-- Customer reviews section -->
-        <!-- <div class="col-12 col-md-12 col-lg-12">
-            <div class="my-4">
-                <h3 class="prod-title">Customer Reviews</h3>
+            <div class="col-12 col-md-12 col-lg-12">
+                <h3 class="prod-title">Description</h3>
+                <p class="mb-4 prod-description">{{ product.description }}</p>
             </div>
-            <div class="mb-4 prod-reviews">
-                <div class="rating-section row ml-2">
-                    <div class="username mt-4 ml-4">
-                        <h4 class="">username - </h4>
-                    </div>
-                    <div class="row ml-2 mt-4 pt-1">
-                        <img src="{% static 'icons/eco_leaf_full.png' %}" class="review-leaf mr-2"
-                            alt="1 point for review - full leaf">
-                        <img src="{% static 'icons/eco_leaf_full.png' %}" class="review-leaf mr-2"
-                            alt="1 point for review - full leaf">
-                        <img src="{% static 'icons/eco_leaf_full.png' %}" class="review-leaf mr-2"
-                            alt="1 point for review - full leaf">
-                        <img src="{% static 'icons/eco_leaf.png' %}" class="review-leaf mr-2"
-                            alt="1 point for review - full leaf">
-                        <img src="{% static 'icons/eco_leaf.png' %}" class="review-leaf mr-2"
-                            alt="1 point for review - full leaf">
-                    </div>
-                </div>
-                <div class="review-txt mx-4">
-                    <p class="prod-description mx-2">Lorem ipsum dolor sit amet consectetur. Est ultrices blandit cursus enim.
-                        Consectetur
-                        euismod tortor ultrices risus
-                        tortor odio quam nam.</p>
-                </div>
-            </div>
-        </div> -->
-        </div>
         </div>
     </div>
 </div>
