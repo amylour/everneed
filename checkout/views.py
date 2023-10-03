@@ -55,12 +55,7 @@ def checkout(request):
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
-            order.original_basket = json.dumps(bag)
-            bag_data = bag_contents(request)
-            total_carbon_fp = bag_data.get('total_carbon_fp', 0)
-            total_carbon_saved = bag_data.get('total_carbon_saved', 0)
-            order.carbon_fp_total = total_carbon_fp
-            order.carbon_saved_total = total_carbon_saved
+            order.original_bag = json.dumps(bag)
             order.save()
             for item_id, item_data in bag.items():
                 try:

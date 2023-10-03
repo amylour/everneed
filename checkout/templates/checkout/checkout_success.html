@@ -18,22 +18,6 @@
             <hr>
              <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
         </div>
-        <!-- carbon saving -->
-        <div class="row justify-content-center col-10 my-3 mx-auto carbon-saved p-3">
-            <div class="col-md-3 p-3">
-                <div class="icon-container">
-                    <img src="{% static 'icons/carbon_footprint.png' %}" class="carbon-fp-img" alt="">
-                </div>
-            </div>
-            <div class="col-md-9 p-3">
-                <p class="my-0 carbon-text">
-                    By shopping with <strong>everneed</strong> today, you have saved a total of
-                    <strong>{{order.carbon_saved_total|floatformat:2 }}kg of C0<sub>2</sub></strong> from entering our atmosphere
-                    and your order has a <strong>Carbon Footprint Total</strong>
-                    of <strong>{{ order.carbon_fp_total|floatformat:2 }}kg of C0<sub>2</sub></strong>.
-                </p>
-            </div>
-        </div>
     </div>
 
     <div class="row justify-content-center mt-4 mb-2">
