@@ -41,10 +41,10 @@
                 <p class="lead mb-0 text-left ml-1 mb-2 font-weight-bold prod-price">€{{ product.price }}</p>
                 <div class="prod-rating ml-1">
                     {% if product.rating %}
-                    <small class="text-muted"><img src="{% static 'icons/eco_leaf_full.png' %}" class="rating-leaf"
+                    <small class="text-muted"><img src="{% static 'icons/eco_leaf_full.png' %}" class="rating-leaf mr-2"
                             alt="eco leaf icon for rating">{{ product.rating }} / 5</small>
                     {% else %}
-                    <small class="text-muted"><img src="{% static 'icons/eco_leaf_full.png' %}" class="rating-leaf mr-1"
+                    <small class="text-muted"><img src="{% static 'icons/eco_leaf_full.png' %}" class="rating-leaf mr-2"
                             alt="eco leaf icon for rating"> No Rating</small>
                     {% endif %}
                     {% if request.user.is_superuser %}
