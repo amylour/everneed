@@ -15,11 +15,8 @@ Return back to the [README.md](README.md) file.
     - [CSS Validation](#css-validation)
     - [Lighthouse Scores](#lighthouse-scores)
     - [Wave Accessibility Score](#wave-accessibility-score)
-  - [Automated Testing](#automated-testing)
-    - [Python Testing](#python-testing)
-    - [JavaScript Testing](#javascript-testing)
   - [Manual Testing](#manual-testing)
-    - [User Input](#user-input)
+    - [User Input/Form Validation](#user-inputform-validation)
     - [Browser Compatibility](#browser-compatibility)
     - [Responsiveness](#responsiveness)
     - [Testing User Stories](#testing-user-stories)
@@ -82,6 +79,12 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 
 ### Python Validation
 
+[CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files that were created or edited by myself. No issues presented and line lengths were double checked. I have included some screenshots with the results below.
+
+| Feature | admin.py | forms.py | models.py | urls.py | views.py |
+|---------|----------|----------|-----------|---------|----------|
+|
+
 ### CSS Validation
 
 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS files. External CSS for Bootstrap, provided by [CDN](https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css) was not tested.
@@ -98,23 +101,89 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 
 ### Lighthouse Scores
 
+Lighthouse testing was carried out in Incognito mode to acheive the best result. Images used in the sites design were saved in webp and png format, and compressed using [tinypng](https://tinypng.com/) and [Convertio](https://www.convertio.co) to offer the best chance for a decent performance score.
+
+| Page | Lighthouse Scores | Notes |
+| ---- | ----------------- | -------- |
+| Home |                   |          |
+| All  |                   |          |
+| Categories |             |          |
+| Read  |                  |          |
+| Account |                |          |
+| Admin Dashboard |        |          |
+| Add Product     |        |          |
+| Edit/Delete Product |           |        |
+| Add Article |            |          |
+| Edit/Delete Article |           |    |
+| Wishlist |               |          |
+| Bag  |                   |          |
+
+
 ### Wave Accessibility Score
 
-## Automated Testing
+Accessibility was included in every planning stage for Everneed, through the use of the WAVE report tool I could ensure that any necessary changes were made to make the website as accessible as it could be. 
 
-### Python Testing
+| Page | Wave Scores | Notes |
+| ---- | ----------------- | -------- |
+| Home |                   |          |
+| All  |                   |          |
+| Categories |             |          |
+| Read  |                  |          |
+| Account |                |          |
+| Admin Dashboard |        |          |
+| Add Product     |        |          |
+| Edit/Delete Product |           |        |
+| Add Article |            |          |
+| Edit/Delete Article |           |    |
+| Wishlist |               |          |
+| Bag  |                   |          |
 
-### JavaScript Testing
 
 ## Manual Testing
 
-### User Input
+### User Input/Form Validation
+
+Testing was carried out on desktop using a Chrome browser to ensure all forms take the intended input and process the input appropriately.
+
+| Feature                    | Tested?  | User Input Required | User Feedback Provided     | Pass/Fail | Fix |
+|----------------------------|----------|---------------------|----------------------------|-----------|-----|
+| Navbar Logo and Icons      | 
+| Home Page                  |
+| Register Page              |
+| Log In Page                |
+| Log Out Page               |
+| Account - Edit Address     |
+| Search                     |
+| Contact Us Form            |
+| Newsletter Sign Up         |
+| Add Product                |
+| Edit Product               |
+| Add Article                |
+| Edit Article               |
+| Product Quantity           |
+| Product Sizes              |
+| Checkout                   |
+| Footer                     |
+| Delivery Banner            |
 
 ### Browser Compatibility
+
+Freefido was tested on the following browsers, new users were created, old users data edited and all features were tested:
+
+- Chrome v117.0.5938.92
+- Firefox v114.0.2
+- Edge v114.0.1823.79
+- Safari v16.5.1
+
+| Browser | Issue | Functionality |
+|---------|-------|---------------|
+
 
 ### Responsiveness
 
 ### Testing User Stories
+
+User Stories are documented in the Everneed [GitHub Projects Board](https://github.com/users/amylour/projects/6). User Stories are completed, with Acceptance Criteria and Tasks detailed within. Testing was carried out on Dev Tools for desktop/tablet/mobile, by creating multiple accounts for test users: Test01, Test02, Test03 etc and following through by ensuring that the Acceptance Criteria were met. All features were tested to ensure that they provided the user with the expected output and action.
 
 ### Dev Tools/Real World Device Testing
 
