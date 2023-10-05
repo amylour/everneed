@@ -636,6 +636,15 @@ The following blogs/tutorials complemented my learning for this project, alongsi
 - big bag: https://www.sixmoondesigns.com/products/minimalist-v2-ultralight-backpack
 - black tshirt: https://www.freepik.com/free-photo/isolated-opened-black-t-shirt_19425579.htm#query=tshirt%20plain&position=6&from_view=search&track=ais
 - felt shoes: <https://www.freepik.com/free-photo/isolated-opened-black-t-shirt_19425579.htm#query=tshirt%20plain&position=6&from_view=search&track=ais>
+- fire article image by Matt Palmer: <https://unsplash.com/@mattpalmer?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+- community article image Photo by Markus Spiske: https://unsplash.com/@markusspiske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+- icebergs article image by Melissa Bradley <https://unsplash.com/@alaskanhoneybee?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+- bee image by Felice Wolke: <https://unsplash.com/@felicewoelke?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+- traffic sign image by Photo by Kelly Sikkema: <https://unsplash.com/@kellysikkema?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+  
+  
+  
+  
 
 
 
