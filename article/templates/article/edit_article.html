@@ -8,6 +8,8 @@
 
 {% block content %}
 
+{% load crispy_forms_tags %}
+
 <div class="overlay"></div>
 <div class="container my-5">
     <div class="row justify-content-center">
@@ -24,6 +26,7 @@
             <form method="POST" action="{% url 'edit_article' article.slug %}" class="form rounded mb-2"
                 enctype="multipart/form-data">
                 {% csrf_token %}
+                {{ form.media }}
                 {% for field in form %}
                 {% if field.name != 'image' %}
                 {{ field | as_crispy_field }}

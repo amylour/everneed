@@ -8,6 +8,8 @@
 
 {% block content %}
 
+{% load crispy_forms_tags %}
+
 <div class="overlay"></div>
 <div class="container my-5">
     <div class="row text-center">
@@ -23,6 +25,7 @@
         <div class="col-12 col-md-6 mx-auto">
             <form method="POST" action="{% url 'add_article' %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
+                {{ form.media }}
                 {% for field in form %}
                 {{ field | as_crispy_field }}
                 {% endfor %}

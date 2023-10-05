@@ -21,6 +21,8 @@ class ArticleForm(forms.ModelForm):
         model = Article
         fields = ['title', 'image', 'image_alt', 'excerpt', 'content', 'status']
 
+        content = forms.CharField(widget=RichTextWidget())
+        
         labels = {
             "title": "Article Title",
             "image": "Upload Image",
