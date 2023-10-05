@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-
+{% load crispy_forms_tags %}
 <div class="overlay"></div>
 <div class="container my-5">
     <div class="row justify-content-center">
@@ -23,6 +23,7 @@
         <div class="col-12 col-md-6">
             <form method="POST" action="{% url 'edit_product' product.id %}" class="form rounded mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
+                {{ form.media }}
                 {% for field in form %}
                 {% if field.name != 'image' %}
                 {{ field | as_crispy_field }}
