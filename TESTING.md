@@ -147,24 +147,29 @@ Testing was carried out on desktop using a Chrome browser to ensure all forms ta
 
 | Feature                    | Tested?  | User Input Required | User Feedback Provided     | Pass/Fail | Fix |
 |----------------------------|----------|---------------------|----------------------------|-----------|-----|
-| Navbar Logo and Icons      | 
-| Home Page                  |
-| Register Page              |
-| Log In Page                |
-| Log Out Page               |
-| Account - Edit Address     |
-| Search                     |
-| Contact Us Form            |
-| Newsletter Sign Up         |
-| Add Product                |
+| Navbar Logo and Icons      | Yes      | Click Links bring user to correct destination    | Text Colour Change/Icon Animation/Dropdowns | Pass | N/A |
+| Home Page                  | Yes      | Hover/Click interactive features | Carousel moves, Accordian FAQ section | Pass | N/A |
+| Register Page              | Yes      | Text Input/Click Links | Form field highlight/Font weight change on hover/Toast message | Pass | N/A |
+| Email Validate             | Yes      | Click Links | Button animation/Toast message | Pass | N/A |
+| Forgot Password             | Yes     | Text Input/Click Links | Form field highlight/Button animation/Toast message | Pass | N/A |
+| Log In Page                | Yes      | Text Input/Click Links | Form field highlight/Font weight on hover/Toast message | Pass | N/A |
+| Log Out Page               | Yes      | Click Links bring user to correct destination | Button animation/Font color change/Toast message | Pass | N/A |
+| Account - Edit Address     | Yes      | Text Input/Click to Save | Form field highlight/Button animation/Toast message | 
+| Search                     | Yes      | Text Input/Click to Search | Pop up Modal/Form field highlight/Button Animation | Pass | N/A |
+| Contact Us Form            | Yes      | Text Input/Click to Save | Pop up Modal/Form field highlight/Button animation | Pass | N/A |
+| Newsletter Sign Up         | Yes      | Text Input/ Click to Subscribe | Button animation/New tab subscription confirmation | Pass | N/A |
+| Admin Dashboard            | Yes      | Click Links brings user to correct URL | Button animation on hover | Pass | N/A |
+| Products                   | Yes      | Click product brings user to product description | Pointer change on hover of products | Pass | N/A |
+| Add Product                | Yes      |
 | Edit Product               |
+| View Article               | Yes      | Click link for article | Article card border change on hover | Pass | N/A |
 | Add Article                |
 | Edit Article               |
-| Product Quantity           |
-| Product Sizes              |
+| Product Quantity           | Yes      | Click increment/decrement | Colour change on hover/product quantity successfully changed | Pass | N/A |
+| Product Sizes              | Yes      | Click dropdown/Click to select | Form field highlight/Size highlight | Pass | N/A |
 | Checkout                   |
-| Footer                     |
-| Delivery Banner            |
+| Footer                     | Yes      | Click Link brings user to FAQ section on Home Page | Font colour change on hover | Pass | N/A |
+| Delivery Banner            | Yes      | Click dropdown to reveal banner | Dropdown arrow resize on hover/a=banner dropdown | Pass | N/A |
 
 ### Browser Compatibility
 
