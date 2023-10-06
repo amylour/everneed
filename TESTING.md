@@ -190,13 +190,41 @@ Freefido was tested on the following browsers, new users were created, old users
 
 User Stories are documented in the Everneed [GitHub Projects Board](https://github.com/users/amylour/projects/6). User Stories are completed, with Acceptance Criteria and Tasks detailed within. Testing was carried out on Dev Tools for desktop/tablet/mobile, by creating multiple accounts for test users: Test01, Test02, Test03 etc and following through by ensuring that the Acceptance Criteria were met. All features were tested to ensure that they provided the user with the expected output and action.
 
+| User Story                 | Acceptance Criteria Met?  | Tested | Response     | Pass/Fail | Fix     |
+|----------------------------|---------------------------|--------|--------------|-----------|---------|
+|
+
 ### Dev Tools/Real World Device Testing
+
+Responsiveness testing was carried out using Google Dev Tools on the devices detailed within the below table. Responsiveness was evident on all features throughout all tested devices.
+
+**Dev Tools Device Testing - all features tested, issues noted below**
+| Device  | Feature    | Issue  | Fix  |
+| ------- | ---------- | ------ |------|
+| iPhone 4 | Order History table | Content overflow on y-axis | Separate media query created for screens max-width: 350px to cope with iPhone4 320px screen width, font-size reduced for order history table |
+| iPhone12 Pro | All features | None | None  |
+| Samsung Galaxy S20 | All features | None | None  |
+| iPad Pro | All features | All features | None | None |
+
+**Real World Device Testing**
+| Device      | Feature    | Issue  | Fix  |
+| ------------| ---------- | ------ |------|
+| OPPO Reno 8 Lite |   All features    | No issues | None needed |
+| iPhone XR | All features |  No issues  | None needed |
+| iPhone 12  | All features | No issues | None needed |
+| iPad Pro 2021 |    All features      |    No issues    |  None needed |
+| Acer Aspire 3 2019 laptop | All features | No issues | None needed |
+
 
 ## Bugs
 
-- JavaScript dropdown menu fix, moving the mouseleave function outside of the main code seems to fix the 'dropdown menu randomly not appearing on hover' issue. Commit -> No.e27b7a5 This did not fix it, 2nd fix was to update to Bootstrap 4.6 and add 'ease' to menu hover transitions. Currently working consistently. Commit -> No. 2aab065 03/09/2023 - 'pb-2' added to'all' fully fixed it *faceplam*
-- UnboundLocalError:Local variable 'categories' referenced before assignment & navbar active item styling. 'All' products option not displaying due to category = None when it was necessary for it to be categories. Changed to categories = [] to initialize as empty list and added 'not request.GET.category' to 'all' nav-item li tag to remove bold styling when other product categories selected. Fix credit -> Stackoverflow <https://tinyurl.com/26a5ksrd> & CareerKarma <https://tinyurl.com/yc847kb7>. Commit -> No.76e8ef8
-- Checkout form info not saving to Profile/Account form on checkout success. The 'save_info' section of checkout_success did not save the changed user info to the user's profile. I considered that I may have caused an issue with my Wishlist app signals/contexts but after debugging their was no issue. Debugging with print statements to the terminal showed that the checkout form data was not being saved. I tried several fixes. First was to clear the site data via Dev Tools->Application->Clear Site Data and restart the server. No positive fix. I then backtracked to some earlier commits and removed the 'full_name' field that I had added to my UserProfile models and changed the '_' in checkout.html name='save_info' to name='save-info'. Tested my code with superuser and created a new user to find the issue resolved and no issue with Wishlist app. Fix credit -> Gemma from Tutor Support for helping me to confirm my debugging process was correct and the 'Clear SiteData' tip, and a strong coffee for the second pass at spotting and fixing the bug. Commit no -> 7659ada
-- Email Confirmation for order displaying multiple zeros at the end of the totals. Fixed with '|floatformat:2' in confimration_email.txt. Commit -> 
+| No. | Bug | Solved | Fix | Solution Credit | Commit no. |
+| --- | ---------------- | ---- | ------------- | -------------- | ------------|
+| 1   | JavaScript dropdown menu fix | Yes | moving the mouseleave function outside of the main code seems to fix the 'dropdown menu randomly not appearing on hover' issue, This did not fix it, 2nd fix was to update to Bootstrap 4.6 and add 'ease' to menu hover transitions. Currently working consistently, 'pb-2' added to'all' fully fixed it | Investigating the CSS myself | e27b7a5/2aab065 |
+| 2   | UnboundLocalError:Local variable 'categories' referenced before assignment & navbar active item styling. 'All' products option not displaying due to category = None when it was necessary for it to be categories. | Yes | Changed to categories = [] to initialize as empty list and added 'not request.GET.category' to 'all' nav-item li tag to remove bold styling when other product categories selected. | Stackoverflow <https://tinyurl.com/26a5ksrd> & CareerKarma <https://tinyurl.com/yc847kb7> | 76e8ef8 |
+| 3   | Checkout form info not saving to Profile/Account form on checkout success. The 'save_info' section of checkout_success did not save the changed user info to the user's profile. | Yes | I considered that I may have caused an issue with my Wishlist app signals/contexts but after debugging their was no issue. Debugging with print statements to the terminal showed that the checkout form data was not being saved. I tried several fixes. First was to clear the site data via Dev Tools->Application->Clear Site Data and restart the server. No positive fix. I then backtracked to some earlier commits and removed the 'full_name' field that I had added to my UserProfile models and changed the '_' in checkout.html name='save_info' to name='save-info'. Tested my code with superuser and created a new user to find the issue resolved and no issue with Wishlist app. | Fix credit -> Gemma from Tutor Support for helping me to confirm my debugging process was correct and the 'Clear SiteData' tip, and a strong coffee for the second pass at spotting and fixing the bug. | 7659ada |
+| 4  | Email Confirmation for order displaying multiple zeros at the end of the totals. | Yes | Fixed with '|floatformat:2' in confimration_email.txt | 5774e14 |
+| 5  | 
+
 
 ### Unresolved/Known Bugs
