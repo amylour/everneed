@@ -1258,6 +1258,11 @@ footer {
         position: static;
     }
 
+    .btn.btn-info,
+    .btn.btn-danger {
+        font-size: 12px;
+    }
+
     .bag-quantity {
         position: relative;
         top: -11px;
@@ -1297,7 +1302,7 @@ footer {
     .bag-quantity {
         position: relative;
         top: -11px;
-        left: -17px;
+        left: -18px;
         z-index: 2;
         color: #fff;
     }
@@ -1502,6 +1507,10 @@ footer {
         width: 100px;
     }
 
+    .modal-content {
+        bottom: 0px;
+    }
+
     .icon-text {
         font-size: 22px;
     }
@@ -1515,8 +1524,20 @@ footer {
         padding: 18px 135px 17px 18px;
     }
 
+    thead th {
+        font-size: 14px;
+    }
+
+    .table td {
+        font-size: 12px;
+    }
+
     .wishlist-btn {
         font-size: 14px;
+    }
+
+    .wishlist-delete {
+        font-size: 16px;
     }
 
 }
