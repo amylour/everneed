@@ -17,7 +17,7 @@
                 {% for item in user_wishlist %}
                 <li class="list-group-item">
                     <div class="row align-items-center">
-                        <div class="col-2">
+                        <div class="col-lg-2 col-sm-4">
                             <a href="{% url 'product_detail' item.product.id %}">
                                 {% if item.product.image %}
                                 <img class="w-100 wishlist-prod" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
@@ -27,10 +27,10 @@
                                 {% endif %}
                             </a>
                         </div>
-                        <div class="col-6 text-left">
+                        <div class="col-lg-6 col-sm-4 text-left">
                             <p class="my-0">{{ item.product.name }}</p>
                         </div>
-                        <div class="col-4">
+                        <div class="col-lg-4 col-sm-4">
                             <a href="{% url 'remove_from_wishlist' item.product.id %}" class="wishlist-delete">
                                 <i class="fas fa-trash wishlist-icon"></i> Remove
                             </a>
