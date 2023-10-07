@@ -41,7 +41,14 @@ def contact_form(request):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
+def terms_conditions(request):
+    return render(request, 'home/terms_conditions.html')
+
+
 def thank_you(request):
     return render(request, 'thank_you.html')
+
+
+
 
 
