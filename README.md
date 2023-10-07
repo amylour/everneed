@@ -33,6 +33,7 @@ For access to Admin Dashboard frontend view with relebant sign-in credentials: [
     - [Typography \& Iconography](#typography--iconography)
 - [Project Planning](#project-planning)
   - [Strategy Plane](#strategy-plane)
+    - [Carbon Footprint Planning](#carbon-footprint-planning)
     - [Site Goals](#site-goals)
   - [Agile Methodologies](#agile-methodologies)
     - [MoSCoW Prioritization](#moscow-prioritization)
@@ -47,10 +48,9 @@ For access to Admin Dashboard frontend view with relebant sign-in credentials: [
     - [Epic - Newsletter](#epic---newsletter)
   - [Scope Plane](#scope-plane)
   - [Structural Plane](#structural-plane)
-  - [Skeleton Plane](#skeleton-plane)
+  - [Skeleton \& Surface Planes](#skeleton--surface-planes)
     - [Wireframes](#wireframes)
     - [Database Schema](#database-schema)
-  - [Surface Plane](#surface-plane)
     - [Defensive Design](#defensive-design)
 - [Features](#features)
   - [User View - Guests/Account Holders](#user-view---guestsaccount-holders)
@@ -173,23 +173,33 @@ In development, 'Karla' was identified by variable ```--title```, whilst 'Incons
 
 ## Strategy Plane
 
-The primary objective was to create an e-commerce store that satisfied the assessment criteria of the Code Institute's Project 5. The store must provide the expected functions of a responsive e-commerce store using Stripe as a payment system, user/guest views for authentication and store features, some extra features of my choosing, wishlist and articles, and demonstration of some marketing/SEO skills. Orders on Everneed were to display the carbon footprint totals and carbon saved, (where data is available), reflecting the pressing need for eco-consciousness in these modern times. The User, whether paying customer or just browsing, must receive the best in UX and feel that Everneed is relatable and trust-worthy.
+The primary objective was to create an e-commerce store that satisfied the assessment criteria of the Code Institute's Project 5: E-Commerce Module. The store must provide the expected functions of a responsive e-commerce store using Stripe as a payment system, user/guest views for authentication and store features, some extra features of my choosing, wishlist and articles, and demonstration of some marketing/SEO skills. Orders on Everneed were to display the carbon footprint totals and carbon saved, (where data is available, see below), reflecting the pressing need for eco-consciousness in these modern times. The User, whether paying customer or just browsing, must receive the best in UX and feel that Everneed is relatable and trust-worthy. 
 
-*ADD*
+The site's design and graphic assets were collected through various copyright-free image websites. Images were edited for the wesite to be cohesive. The hero-image on the home page and above, was created by myself in Figma. Bootstrap and Cripsy Forms were used for the project's frontend to speed up the process and to keep the templates consistent. Further customisation to the buttons, forms, modals, toasts and user feedback processes were added to the project's CSS files. 
+
+If a customer chooses to make a purchase then they are given consistent feedback through the use of 'toasts' messages and confirmation emails. The purchasing process is presented using Stripe payment handlers, obtained and setup using [Stripe's](https://stripe.com/docs) documentation and website.
+
+### Carbon Footprint Planning
+I spent a large portion of my project planning and researching to ensure that I would have sufficient product carbon footprint data available to me. This was so I could set up the carbon footprint total for the bulk of my store items. Carbon totals were calculated through my assessment of research materials and articles about carbon footprints and industry responsibilities. The values contained in the project are to be treated as approximate and are as follows:
+
+![Google Sheets CFP data](docs/readme_images/excel_cfp_data_1.png)  
+*Carbon Footprint Data Calculations-Part 1*  
+  
+![Google Sheets CFP data](docs/readme_images/excel_cfp_data_2.png)  
+*Carbon Footprint Data Calculations-Part 2*
 
 ### Site Goals
 
-- Site provides enjoyable experience for shoppers
-- Customers feel informed that they are making a good choice shopping with Everneed
-- UX remains similar across screen sizes
-- CRUD functionalities work as intended with easy to user frontend forms
-- Scalable site to allow for extra features in the future
+- Site provides enjoyable experience for shoppers.
+- Customers are educated about carbon footprints/credits/sustainable products through the checkout process and through reading the site articles and FAQ's.
+- Customers feel informed that they are making a good choice shopping with Everneed.
+- UX remains similar across screen sizes.
+- CRUD functionalities work as intended with easy to user frontend forms.
+- Scalable site to allow for extra features in the future.
 
 ## Agile Methodologies
 
-Everneed followed Agile planning methodolgies to it's completion. [GitHub Projects](https://github.com/users/amylour/projects/6) provided an ideal platform to create issues, boards and milestones for each of the projects Epics. Using labels I could easily identify my next task and organise them into the appropriate Sprints
-
-*ADD*
+Everneed followed Agile planning methodolgies to it's completion. [GitHub Projects](https://github.com/users/amylour/projects/6) provided an ideal platform to create issues, boards and milestones for each of the projects Epics. Using labels I could easily identify my next task and organise them into the appropriate Milestones and Sprints. Keeping focused on individual sections as I built Everneed reduced the number of bugs and human errors.
 
 ### MoSCoW Prioritization
 
@@ -202,7 +212,7 @@ I chose to follow the MoSCoW Prioritization method for Everneed, identifying and
 
 ### Sprints
 
-My Sprints were broken down into appropriately sized chunks from the beginning and I followed them to the best of my abilities. It is difficult to quantify the time taken exactly for each sprint as running a busy household outside of the course meant the hours the project was completed in were outside of the normal working week. I have done my best to record them below. They are representative of a general timeframe of focus on the project areas.
+My Sprints were broken down into appropriately sized chunks from the beginning and I followed them to the best of my abilities. It is difficult to quantify the time taken exactly for each sprint as running a busy household outside of the course meant the hours the project was completed in hours outside of the normal working week. I have done my best to record them below. They are representative of a general timeframe of focus on the project areas.
 
 | Sprint No. | Sprint Content | Start/Finish Dates |
 |------------|----------------|--------------------|
@@ -217,6 +227,11 @@ My Sprints were broken down into appropriately sized chunks from the beginning a
 |    # 9     | Documentation & Testing   |         |
 
 ### Marketing
+
+An [Everneed Facebook Page](https://www.facebook.com/profile.php?id=61552368530738) was created to demonstrate promotion of the Everneed store on social media. Posts informing customers of deals and new products would be made on the page with the hopes of drawing in more revenue. Facebook provides an easy, minimal-step process to allow business owners to promote their business, with additional paid 'boost' features to further promote and spread the reach of the posts. 
+
+![Everneed Facebook Business Page](docs/readme_images/everneed_facebook.png)
+*Everneed Facebook Business Page*
 
 ## User Stories
 
@@ -281,25 +296,45 @@ User stories and features were recorded and managed on [GitHub Projects](https:/
 
 ## Scope Plane
 
-*ADD*
+To focus on the learning of the Stripe API and webhook handlers that would ultimately drive the inner workings of the project, I kept my Everneed scope lower than my previous project, FreeFido. A working e-commerce store was essential so I intially planned to keep to the MVP to ensure that I would complete the project successfully. Especially with the project being my final one for this Diploma, a rigorous year of learning left me ecstatic with my progress but cautious not to fall at the final hurdle from fatigue. However through the planning stages I realised that I wanted to push further with the theme of an eco store and introduce carbon footprint as a currency that we may see in the future in the form of carbon credits.
 
+Adding an Articles feature posted solely by the Admin of the website felt important to give more information to the customers on climate-change and manufacturing processes and their environmental impacts. An additional Wishlist feature would complement the site as some of the items have a higher price point due to their robust and eco-friendly manufacturing processes and longevity and the customer may like to purchase them at a later date. 
+
+Django's MVT framework allowed these features to be built quickly and addition of an Admin frontend panel for managing products and articles created a robust e-commerce site that could start taking orders tomorrow.
+
+Essential features were:
+- User Accounts with AllAuth
+- Payment system with Stripe
+- Articles creation and management - Full CRUD
+- Product inventory management - Full CRUD
+- Shopping UX with Bag and Checkout processes - Full CRUD
+- Site responsivity
+- Business details to inform the user
+    
 ## Structural Plane
 
 ![]()  
 **
 
-## Skeleton Plane
+## Skeleton & Surface Planes
 
 ### Wireframes
 
+<details open>
+    <summary>Mobile/Tablet Home Page Wireframe</summary>  
+    <img src="">  
+</details>
+
 ### Database Schema
 
-## Surface Plane
+![]()  
+*Database Schema (ERD) for Everneed displaying relationships between feature components saved within the database*
 
 ### Defensive Design
 
 Everneed was developed to ensure a reliable user experience. It's intention was to cause no frustrations for the users and to ensure they return to make further purchases.
 
+- Django AllAuth for user registration/log in/log out
 - Input validation and error messages provide feedback to the user to guide them towards the desired outcome. 
 - Unregistered users are diverted to the Sign Up page from restricted access pages. 
 - Authentication processes control edit/delete icons to reveal them to the Admin only, this is further secured through accessing of CRUD functionalities in the Admin Dashboard. 
@@ -350,14 +385,49 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 
 **Home Page**
 
+<details open>
+    <summary>Home Page - All Users</summary>  
+    <img src="docs/readme_images/dt_home.png">  
+</details>
+
+<details open>
+    <summary>Home Page: Bestsellers Carousel - All Users</summary>  
+    <img src="docs/readme_images/bestsellers_screenshot.png">  
+</details>
+
+<details open>
+    <summary>Home Page: Mission Section - All Users</summary>  
+    <img src="docs/readme_images/our_mission.png">  
+</details>
+
+<details open>
+    <summary>Home Page: FAQ Section - All Users</summary>  
+    <img src="docs/readme_images/accordian_faq.png">  
+</details>
+
 
 **Delivery Banner**
+
+<details open>
+    <summary>Delivery Banner - All Users</summary>  
+    <img src="docs/readme_images/dt_delivery.png">  
+</details>
 
 
 **Search**
 
+<details open>
+    <summary>Search - All Users</summary>  
+    <img src="docs/readme_images/search.png">  
+</details>
+
 
 **All Products**
+
+<details open>
+    <summary>All Products - All Users</summary>  
+    <img src="docs/readme_images/.png">  
+</details>
 
 
 **Categories**
@@ -365,9 +435,28 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 
 **Account**
 
+<details open>
+    <summary>Account view - Registered, logged-in Users</summary>  
+    <img src="docs/readme_images/login_toast.png">  
+</details>
+
 
 **All Auth**
 
+<details open>
+    <summary>Register - All Users</summary>  
+    <img src="docs/readme_images/register.png">  
+</details>
+
+<details>
+    <summary>Log In - All Users</summary>  
+    <img src="docs/readme_images/login.png">  
+</details>
+
+<details>
+    <summary>Log Out - All Users</summary>  
+    <img src="docs/readme_images/log_out.png">  
+</details>
 
 **Articles**
 
