@@ -63,12 +63,14 @@
                         <div class="col-12 mt-3">
                             <p><strong>Size:</strong></p>
                             <select class="form-control custom-select w-50" name="product_size" id='id_product_size'>
-                                {% if product.is_shoe %}
-                                <option value="32-34">32-34</option>
-                                <option value="35-36">35-36</option>
-                                <option value="38-40">38-40</option>
-                                <option value="41-43">41-43</option>
-                                <option value="44-46">44-46</option>
+                                {% if product.shoe_sizes %}
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
                                 {% elif product.ml_sizes %}
                                 <option value="m">M</option>
                                 <option value="l">L</option>

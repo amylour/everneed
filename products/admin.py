@@ -21,7 +21,7 @@ class ProductAdmin(admin.ModelAdmin):
         'discount',
         'has_sizes',
         'ml_sizes',
-        'is_shoe',
+        'shoe_sizes',
         'carbon_fp',
         'carbon_saved',
         'rating',
