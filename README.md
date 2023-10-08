@@ -380,7 +380,12 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 
 <details open>
     <summary>Header & Navigation - All Users</summary>  
-    <img src="">  
+    <img src="docs/readme_images/header.png">  
+</details>
+
+<details open>
+    <summary>Header & Navigation Menu Demo</summary>  
+    <img src="docs/readme_images/header_demo.gif">  
 </details>
 
 **Home Page**
@@ -391,16 +396,16 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 </details>
 
 <details open>
-    <summary>Home Page: Bestsellers Carousel - All Users</summary>  
-    <img src="docs/readme_images/bestsellers_screenshot.png">  
+    <summary>Home Page: Bestsellers Carousel Demo</summary>  
+    <img src="docs/readme_images/bestsellers_demo.gif">  
 </details>
 
-<details open>
+<details>
     <summary>Home Page: Mission Section - All Users</summary>  
     <img src="docs/readme_images/our_mission.png">  
 </details>
 
-<details open>
+<details>
     <summary>Home Page: FAQ Section - All Users</summary>  
     <img src="docs/readme_images/accordian_faq.png">  
 </details>
@@ -425,13 +430,21 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 **All Products**
 
 <details open>
-    <summary>All Products - All Users</summary>  
-    <img src="docs/readme_images/.png">  
+    <summary>All Products Desktop - All Users</summary>  
+    <img src="docs/readme_images/all_products.png">  
 </details>
 
+<details>
+    <summary>All Products Mobile - All Users</summary>  
+    <img src="docs/readme_images/all_prod_mob.png">  
+</details>
 
 **Categories**
 
+<details>
+    <summary>Everneed Categories - All Users</summary>  
+    <img src="docs/readme_images/categories.png">  
+</details>
 
 **Account**
 
@@ -440,7 +453,6 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/login_toast.png">  
 </details>
 
-
 **All Auth**
 
 <details open>
@@ -448,9 +460,19 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/register.png">  
 </details>
 
+<details open>
+    <summary>Confirm Email - All Users</summary>  
+    <img src="docs/readme_images/email_verify.png">  
+</details>
+
 <details>
     <summary>Log In - All Users</summary>  
     <img src="docs/readme_images/login.png">  
+</details>
+
+<details>
+    <summary>Log In Toast - Registered, Verified Users</summary>  
+    <img src="docs/readme_images/login_toast.png">  
 </details>
 
 <details>
@@ -460,21 +482,107 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 
 **Articles**
 
+<details open>
+    <summary>Articles List - All Users</summary>  
+    <img src="docs/readme_images/article_list.png">  
+</details>
+
+<details open>
+    <summary>Individual Article View Desktop - All Users</summary>  
+    <img src="docs/readme_images/article_dt.png">  
+</details>
+
+<details>
+    <summary>Individual Article View Mobile - All Users</summary>  
+    <img src="docs/readme_images/article_mob.png">  
+</details>
+
+<details open>
+    <summary>Articles List Edit/Delete View - Admin only, accessed via Admin Dashboard</summary>  
+    <img src="docs/readme_images/art_edit_dt.png">  
+</details>
+
+<details>
+    <summary>Add Article Form Mobile View - Admin only, accessed via Admin Dashboard</summary>  
+    <img src="docs/readme_images/add_article.png">  
+</details>
+
+<details>
+    <summary>Articles Edit Form Mobile View - Admin only, accessed via Admin Dashboard</summary>  
+    <img src="docs/readme_images/art_edit_form.png">  
+</details>
+
+<details>
+    <summary>Articles Delete Confirmation Modal - Admin only, accessed via Admin Dashboard</summary>  
+    <img src="docs/readme_images/art_del_modal.png">  
+</details>
 
 **Bag**
 
+<details open>
+    <summary>Bag Contents Desktop/Tablet - All Users</summary>  
+    <img src="docs/readme_images/bag_contents.png">  
+</details>
+
+<details>
+    <summary>Bag Contents Mobile - All Users</summary>  
+    <img src="docs/readme_images/bag_contents_mob.png">  
+</details>
+
+<details>
+    <summary>Bag Toast Message displaying Bag Contents</summary>  
+    <img src="docs/readme_images/bag_toast.png">  
+</details>
+
+<details open>
+    <summary>Confirmation Email for Purchases</summary>  
+    <img src="docs/readme_images/email_confirm_order.png">  
+</details>
 
 **Admin Dashboard**
+
+<details open>
+    <summary>Admin Dashboard View - Admin Only</summary>  
+    <img src="docs/readme_images/admin_dt.png">  
+</details>
+
 
 
 **Footer**
 
+<details open>
+    <summary>Footer - All Users</summary>  
+    <img src="docs/readme_images/footer.png">  
+</details>
 
 **Contact Us**
 
+<details open>
+    <summary>Contact Us Form - All Users</summary>  
+    <img src="docs/readme_images/contact_form.png">  
+</details>
+
+<details open>
+    <summary>Contact Form Thank You</summary>  
+    <img src="docs/readme_images/contact_thanks.png">  
+</details>
+
+<details open>
+    <summary>Contact Form Email</summary>  
+    <img src="docs/readme_images/contact_email.png">  
+</details>
 
 **Newsletter**
 
+<details open>
+    <summary>Everneed Newsletter Form</summary>  
+    <img src="docs/readme_images/newsletter.png">  
+</details>
+
+<details>
+    <summary>MailChimp Newsletter Sign Up Confirmation</summary>  
+    <img src="docs/readme_images/newsletter.png">  
+</details>
 
 **403, 404, 500 Pages**
 
