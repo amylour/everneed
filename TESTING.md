@@ -52,14 +52,16 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 | Wishlist | 0 | 0 |
 | Admin Dashboard | 0 | 0 |
 | Admin Article List | 0 | 0 |
-| User Article List | 0 | 0 |
-| Add Article | 0 | 0 |
-| Edit Article | 0 | 0 |
-| Delete Article |  |  |
-| Add Product |  |  |
-| Edit Product |  |  |
-| Delete Product | 0 | 0 |
+| Admin Add Article | 0 | 0 |
+| Admin Edit Article | 0 | 0 |
+| Admin Delete Article | 0 | 0 |
+| Admin Product List | 0 | 0 |
+| Admin Product Detail | 0 | 0 |
+| Admin Add Product | ID error |  |
+| Admin Edit Product | ID error |  |
+| Admin Delete Product | 0 | 0 |
 | All Products | 0 | 0 |
+| User Article List | 0 | 0 |
 | Bag - Empty | 0 | 0 |
 | Bag - Products | 0 | 0 |
 | Checkout | Errors/Warnings present as a result of Bootstraps form elements, not from the code that I have created. The email ID from the contact form html within the base.html is clashing with the email ID from the checkout html. These ID elements are embedded within the Bootstrap forms and are unaccessible to me without breaking my code up and reconfiguring the code. ![html validation duplicate id bootstrap forms](docs/testing_images/contactus_form_id.png) ![html validation duplicate id bootstrap forms](docs/testing_images/contact_html_issue.png) | As before |
@@ -68,6 +70,9 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 | Eat | 0 | 0 |
 | Travel | 0 | 0 |
 | Read | 0 | 0 |
+| Profile/Account | 0 | 0 |
+| Order History | 0 | 0 |
+| Wishlist | 0 | 0 |
 | Forgot Password | 0 | 0 |
 | Error 403 | 0 | 0 |
 | Error 404 | 0 | 0 |
@@ -88,7 +93,7 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 | Stripe JS | ![js from Stripe elements](docs/testing_images/stripe_js.png) | none | none |
 | Products Quantity Input Script | ![js from product quantity script](docs/testing_images/quantity_input_script_js.png) | none | none |
 | Products Script | ![js from product script](docs/testing_images/product_script.png) | none | none |
-
+| Base Script | ![js from base script](docs/testing_images/base_script_valid.png) | none | none |
 
 ### Python Validation
 
@@ -110,7 +115,7 @@ To keep my document concise I have not included every screenshot of the CSS vali
 | Article | 0 | 0 |
 | Checkout | 0 | 0 |
 | Admin Products | 0 | 0 |
-| Profiles | 0 | 0 |
+| Profiles/Accounts | 0 | 0 |
 | Base CSS | 0 | 0 |
 
 ### Lighthouse Scores
