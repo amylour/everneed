@@ -8,20 +8,24 @@
 
 <div id="hero-image">
     <div class="container-fluid hero-banner w-100 mb-5">
-        <img src="{% static 'images/dt_hero.png' %}" alt="main image of the items available in the store" class="hero-image p-0">
+        <img src="{% static 'images/dt_hero.png' %}" alt="main image of the items available in the store"
+            class="hero-image p-0">
         <div class="text-left hero-text-panel shadow">
-            <p class="text-white text-center mt-5 hero-text">Discover the freedom of a lighter life with just the essentials.</p>
-            <a href="{% url 'products' %}" class="txt-hover">
-            <img src="{% static 'images/hero_button.png' %}" class="hero-button" alt="vector shape for hero button, pill shape with circle end">
-            <p class="hero-btn-txt">Explore Now</p>
-            <img src="{% static 'icons/eco_leaf.png' %}" class="hero-btn-icon" alt="leaf icon for hero button, brings you to 'All Products' page">
+            <p class="text-white text-center mt-5 hero-text">Discover the freedom of a lighter life with just the
+                essentials.</p>
+            <a href="{% url 'products' %}" class="txt-hover" title="Visit all Products">
+                <img src="{% static 'images/hero_button.png' %}" class="hero-button"
+                    alt="vector shape for hero button, pill shape with circle end">
+                <p class="hero-btn-txt">Explore Now</p>
+                <img src="{% static 'icons/eco_leaf.png' %}" class="hero-btn-icon"
+                    alt="leaf icon for hero button, brings you to 'All Products' page">
             </a>
         </div>
     </div>
 </div>
 <section id="bestsellers">
     <div class="container-fluid text-center mb-5 best-sec">
-      <h2 class="heading-text pt-5 best-heading">Bestsellers</h2>
+        <h2 class="heading-text pt-5 best-heading">Bestsellers</h2>
     </div>
     <!-- Bootstrap Carousel for ecomm items credit -> Bootstrap docs & https://www.youtube.com/watch?v=8g9Glz5VlZo  -->
     <div id="productCarousel" class="carousel slide" data-ride="carousel">
@@ -34,11 +38,13 @@
                     <div class="col-md-3 my-2 text-center">
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}"
+                                alt="{{ product.name }}">
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid product-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            <img class="card-img-top img-fluid product-image" src="{{ MEDIA_URL }}noimage.png"
+                                alt="{{ product.name }}">
                         </a>
                         {% endif %}
                         <h4 class="mt-3 mb-1">{{ product.name }}</h4>
@@ -60,53 +66,56 @@
         </a>
     </div>
 </section>
-
 <section id="our_mission">
     <!-- scroll fade in animation credit -> http://tinyurl.com/5c6d5nhy -->
     <div class="reveal">
-    <div class=" container-fluid text-center mission-sec mt-5 p-5">
-        <h2 class="text-center pt-5 pb-2 heading-text heading__line">Our Mission</h2>
-        <p class="text-center mission-text w-75 mx-auto">Everneed is a modern, eco-conscious solution to fast fashion and impulsive shopping. We are your starting point for stylish, mindful choices
-        that support a sustainable future. Shrink your spend and your carbon footprint. We've done the hard work so you don't have to.</p>
-        <div class="row mt-5">
-            <div class="col-md-3">
-                <div class="mt-5 mb-4 icon-container">
-                    <img src="{% static 'icons/eco_friendly.png' %}" class="mission-icon" alt="eco friendly icon">
+        <div class=" container-fluid text-center mission-sec mt-5 p-5">
+            <h2 class="text-center pt-5 pb-2 heading-text heading__line">Our Mission</h2>
+            <p class="text-center mission-text w-75 mx-auto">Everneed is a modern, eco-conscious solution to fast
+                fashion and impulsive shopping. We are your starting point for stylish, mindful choices
+                that support a sustainable future. Shrink your spend and your carbon footprint. We've done the hard work
+                so you don't have to.</p>
+            <div class="row mt-5">
+                <div class="col-md-3">
+                    <div class="mt-5 mb-4 icon-container">
+                        <img src="{% static 'icons/eco_friendly.png' %}" class="mission-icon" alt="eco friendly icon">
+                    </div>
+                    <div class="icon-text mt-4">
+                        <p>Eco Friendly Products</p>
+                    </div>
                 </div>
-                <div class="icon-text mt-4">
-                    <p>Eco Friendly Products</p>
+                <div class="col-md-3">
+                    <div class="mt-5 mb-4 icon-container">
+                        <img src="{% static 'icons/fairtrade.png' %}" class="mission-icon" alt="cruelty free icon">
+                    </div>
+                    <div class="icon-text mt-4">
+                        <p>Fairtrade for All</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="mt-5 mb-4 icon-container">
-                    <img src="{% static 'icons/fairtrade.png' %}" class="mission-icon" alt="cruelty free icon">
+                <div class="col-md-3">
+                    <div class="mt-5 mb-4 icon-container">
+                        <img src="{% static 'icons/cruelty_free.png' %}" class="mission-icon"
+                            alt="carbon footprint icon">
+                    </div>
+                    <div class="icon-text mt-4">
+                        <p>Animal Free Testing</p>
+                    </div>
                 </div>
-                <div class="icon-text mt-4">
-                    <p>Fairtrade for All</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="mt-5 mb-4 icon-container">
-                    <img src="{% static 'icons/cruelty_free.png' %}" class="mission-icon" alt="carbon footprint icon">
-                </div>
-                <div class="icon-text mt-4">
-                    <p>Animal Free Testing</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="mt-5 mb-4 icon-container">
-                    <img src="{% static 'icons/carbon_footprint.png' %}" class="mission-icon" alt="carbon footprint icon">
-                </div>
-                <div class="icon-text mt-4">
-                    <p>Low Carbon Footprint</p>
+                <div class="col-md-3">
+                    <div class="mt-5 mb-4 icon-container">
+                        <img src="{% static 'icons/carbon_footprint.png' %}" class="mission-icon"
+                            alt="carbon footprint icon">
+                    </div>
+                    <div class="icon-text mt-4">
+                        <p>Low Carbon Footprint</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="w-100">
-        <!-- wave effect for bottom of div -->
-        <img src="{% static 'images/div_wave.png' %}" class="mission-wave" alt="div bottom wave effect">
-    </div>
+        <div class="w-100">
+            <!-- wave effect for bottom of div -->
+            <img src="{% static 'images/div_wave.png' %}" class="mission-wave" alt="div bottom wave effect">
+        </div>
     </div>
 </section>
 <!-- Bootstrap Accordian drop down -> https://getbootstrap.com/docs/4.0/components/collapse/ -->
@@ -117,8 +126,9 @@
             <div class="card-faq mb-4">
                 <div class="card-header-faq" id="headingOne">
                     <h5 class="mb-0">
-                        <button class="btn btn-link btn-block font-weight-bold text-center p-3" type="button" data-toggle="collapse"
-                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="btn btn-link btn-block font-weight-bold text-center p-3" type="button"
+                            data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">
                             What makes a product eco-friendly or sustainable?
                         </button>
                     </h5>
@@ -137,16 +147,19 @@
             <div class="card-faq mb-4">
                 <div class="card-header-faq" id="headingTwo">
                     <h5 class="mb-0">
-                        <button class="btn btn-link btn-block font-weight-bold text-center p-3" type="button" data-toggle="collapse"
-                            data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <button class="btn btn-link btn-block font-weight-bold text-center p-3" type="button"
+                            data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                            aria-controls="collapseTwo">
                             Are your products packaged sustainably?
                         </button>
                     </h5>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
                     <div class="card-body-faq">
-                        Yes, we prioritise sustainable packaging for all our products. Our packaging materials are either recyclable,
-                        compostable, or made from recycled content. We constantly evaluate and seek new methods to reduce our packaging
+                        Yes, we prioritise sustainable packaging for all our products. Our packaging materials are
+                        either recyclable,
+                        compostable, or made from recycled content. We constantly evaluate and seek new methods to
+                        reduce our packaging
                         footprint and encourage our customers to recycle or compost the packaging after use.
                     </div>
                 </div>
@@ -154,16 +167,19 @@
             <div class="card-faq mb-4">
                 <div class="card-header-faq" id="headingThree">
                     <h5 class="mb-0">
-                        <button class="btn btn-link btn-block font-weight-bold text-center p-3" type="button" data-toggle="collapse"
-                            data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="btn btn-link btn-block font-weight-bold text-center p-3" type="button"
+                            data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
+                            aria-controls="collapseOne">
                             How do you ensure the ethical sourcing of your products?
                         </button>
                     </h5>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
                     <div class="card-body-faq">
-                        We have a strict vendor assessment process in place. Our suppliers are required to meet our sustainability and ethical
-                        standards, which include fair labor practices, responsible sourcing of raw materials, and minimal environmental impact.
+                        We have a strict vendor assessment process in place. Our suppliers are required to meet our
+                        sustainability and ethical
+                        standards, which include fair labor practices, responsible sourcing of raw materials, and
+                        minimal environmental impact.
                         Regular audits and site visits are conducted to ensure our suppliers adhere to these standards.
                     </div>
                 </div>
@@ -171,18 +187,23 @@
             <div class="card-faq mb-4">
                 <div class="card-header-faq" id="headingFour">
                     <h5 class="mb-0">
-                        <button class="btn btn-link btn-block font-weight-bold text-center p-3" type="button" data-toggle="collapse"
-                            data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        <button class="btn btn-link btn-block font-weight-bold text-center p-3" type="button"
+                            data-toggle="collapse" data-target="#collapseFour" aria-expanded="true"
+                            aria-controls="collapseFour">
                             Why might some sustainable products be more expensive than their conventional counterparts?
                         </button>
                     </h5>
                 </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
                     <div class="card-body-faq">
-                        Sustainable products can sometimes be more expensive due to the higher quality, eco-friendly materials used, and the
-                        ethical and environmentally-friendly production methods employed. The processes involved in creating sustainable
-                        products often prioritise long-term environmental benefits over short-term cost savings. However, in the long run, many
-                        customers find that sustainable products offer better value due to their durability and reduced impact on the
+                        Sustainable products can sometimes be more expensive due to the higher quality, eco-friendly
+                        materials used, and the
+                        ethical and environmentally-friendly production methods employed. The processes involved in
+                        creating sustainable
+                        products often prioritise long-term environmental benefits over short-term cost savings.
+                        However, in the long run, many
+                        customers find that sustainable products offer better value due to their durability and reduced
+                        impact on the
                         environment.
                     </div>
                 </div>
@@ -190,17 +211,21 @@
             <div class="card-faq mb-4">
                 <div class="card-header-faq" id="headingFive">
                     <h5 class="mb-0">
-                        <button class="btn btn-link btn-block font-weight-bold text-center p-3" type="button" data-toggle="collapse"
-                            data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                        <button class="btn btn-link btn-block font-weight-bold text-center p-3" type="button"
+                            data-toggle="collapse" data-target="#collapseFive" aria-expanded="true"
+                            aria-controls="collapseFive">
                             How can I properly dispose of or recycle the products once I'm done using them?
                         </button>
                     </h5>
                 </div>
                 <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion">
                     <div class="card-body-faq">
-                        Each product we sell comes with specific disposal or recycling instructions. Most of our products are designed to be
-                        either recyclable or compostable. If you're unsure, please refer to the product label or contact our customer service
-                        for guidance. We also partner with local recycling initiatives to help our customers find convenient drop-off locations
+                        Each product we sell comes with specific disposal or recycling instructions. Most of our
+                        products are designed to be
+                        either recyclable or compostable. If you're unsure, please refer to the product label or contact
+                        our customer service
+                        for guidance. We also partner with local recycling initiatives to help our customers find
+                        convenient drop-off locations
                         for certain products.
                     </div>
                 </div>
@@ -208,7 +233,6 @@
         </div>
     </div>
 </section>
-
 
 {% endblock %}
 
