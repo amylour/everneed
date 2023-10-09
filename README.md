@@ -539,6 +539,11 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/email_confirm_order.png">  
 </details>
 
+<details>
+    <summary>Bag Empyt- All Users</summary>  
+    <img src="docs/readme_images/empty_bag.png">  
+</details>
+
 **Admin Dashboard**
 
 <details open>

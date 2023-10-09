@@ -51,13 +51,18 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 | Account | 0 | 0 |
 | Wishlist | 0 | 0 |
 | Admin Dashboard | 0 | 0 |
-| Add Article |  |  |
-| Edit Article |  |  |
+| Admin Article List | 0 | 0 |
+| User Article List | 0 | 0 |
+| Add Article | 0 | 0 |
+| Edit Article | 0 | 0 |
 | Delete Article |  |  |
 | Add Product |  |  |
 | Edit Product |  |  |
 | Delete Product | 0 | 0 |
 | All Products | 0 | 0 |
+| Bag - Empty | 0 | 0 |
+| Bag - Products | 0 | 0 |
+| Checkout | Errors/Warnings present as a result of Bootstraps form elements, not from the code that I have created. The email ID from the contact form html within the base.html is clashing with the email ID from the checkout html. These ID elements are embedded within the Bootstrap forms and are unaccessible to me without breaking my code up and reconfiguring the code. ![html validation duplicate id bootstrap forms](docs/testing_images/contactus_form_id.png) ![html validation duplicate id bootstrap forms](docs/testing_images/contact_html_issue.png) | As before |
 | Wear| 0 | 0 |
 | Care | 0 | 0 |
 | Eat | 0 | 0 |
@@ -67,6 +72,9 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 | Error 403 | 0 | 0 |
 | Error 404 | 0 | 0 |
 | Error 500 | 0  | 0 |
+| Footer - Contact Us & Thank You page | 0 | 0 |
+| Footer    | Privacy Policy | External link - N/A | External link - N/A |
+| Footer - Terms & Conditions   | Outside of my control there are multiple errors present as this page contains HTML Content from [Termly.com](https://termly.io/products/terms-and-conditions-generator/) to display the Terms & Conditions for Everneed. None of my templated code contains errors and I felt that attempting to correct all of the Termly errors would render the document incorrectly. I used Termly as they provided this content without personal cost to me. | As before. |
 
 ### JavaScript Validation
 
@@ -74,7 +82,12 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 
 | Page | Screenshot | Errors | Warnings |
 | ---- | ---------- | ------ | -------- |
-| base.html | ![js from base.html](docs/g) | none | none |
+| Home | ![js from Home page](docs/testing_images/home_script.png) | none | none |
+| Article | ![js from Article section](docs/testing_images/article_js_valid.png) | none | none |
+| Bag - Quantity Script | ![js from Bag page](docs/testing_images/quantity_input_validation.png) | none | none |
+| Stripe JS | ![js from Stripe elements](docs/testing_images/stripe_js.png) | none | none |
+| Products Quantity Input Script | ![js from product quantity script](docs/testing_images/quantity_input_script_js.png) | none | none |
+| Products Script | ![js from product script](docs/testing_images/product_script.png) | none | none |
 
 
 ### Python Validation
@@ -89,6 +102,7 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 
 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS files. External CSS for Bootstrap, provided by [CDN](https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css) was not tested.
 
+To keep my document concise I have not included every screenshot of the CSS validations, as they are all the same, but the results are as follows.
 ![css validation](docs/testing_images/css_valid.png)
 
 | CSS File | Errors | Warnings |
