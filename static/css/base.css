@@ -689,10 +689,6 @@ input {
 }
 
 /* Bestseller Section */
-.best-sec {
-    /* color: #fff; */
-}
-
 .best-heading {
     margin-top: 115px;
 }
@@ -834,7 +830,6 @@ input {
     height: 360px;
     object-fit: contain;
     background: linear-gradient(to bottom, #f6f6f6, #f8faf9);
-    /* background-color: #f8f8fa; */
 }
 
 .all-price {
@@ -894,7 +889,6 @@ hr {
 
 .wishlist-delete {
     font-size: 18px;
-    ;
 }
 
 .wishlist-border {
@@ -998,7 +992,7 @@ a.wishlist-delete:hover {
     right: 10px;
     border: 3px dashed #194f4960;
     border-radius: 10px;
-    z-index: 9999px;
+    z-index: 9999;
 }
 
 .btt-link,
@@ -1540,7 +1534,6 @@ footer {
     .wishlist-delete {
         font-size: 16px;
     }
-
 }
 
 /* Media queries for small mobile - under 320px */
