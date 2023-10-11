@@ -34,5 +34,3 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
-# handler404 = "everneed.views.handler404"
-# handler500 = "everneed.views.error_view"
