@@ -34,7 +34,6 @@ def admin_article_list(request):
     return render(request, 'article/admin_article_list.html', context)
 
 
-
 def article(request, slug):
     """ View individual articles """
     # Get  the article based on the slug
@@ -58,10 +57,10 @@ def add_article(request):
             article.save()
             if article.status == 0:  # 0 corresponds to 'Draft'
                 messages.success(request,
-                 'Your article has been saved as a draft.') 
+                                 'Your article has been saved as a draft.')
             else:
                 messages.success(request,
-                 f'Your article {article.title} has been posted.')
+                                 f'{article.title} has been posted.')
             return redirect('admin_article_list')
     else:
         form = ArticleForm()
@@ -74,15 +73,17 @@ def edit_article(request, slug):
     article = get_object_or_404(Article, slug=slug)
     if request.user != article.author:
         raise PermissionDenied
+
     if request.method == 'POST':
-        form = ArticleForm(request.POST, instance=article) 
-        if form.is_valid(): 
-            form.save()
+        form = ArticleForm(request.POST, instance=article)
+        if form.is_valid():
+            updated_article = form.save()
             messages.success(request,
-              f'Your article {article.title} has been updated.')
-            return redirect ('article', slug=slug)
-    else: 
+                             f'{updated_article.title} has been updated.')
+            return redirect('article', slug=updated_article.slug)
+    else:
         form = ArticleForm(instance=article)
+
     context = {
         'form': form,
         'article': article,
@@ -94,13 +95,10 @@ def edit_article(request, slug):
 def delete_article(request, slug):
     """ Delete an Article """
     article = get_object_or_404(Article, slug=slug)
-    if request.user != article.author: 
+    if request.user != article.author:
         raise PermissionDenied
     if request.method == 'POST':
         article.delete()
         messages.success(request,
-         f'Article {article.title} deleted successfully.')
-    return redirect ('admin_article_list')
-
-
-
+                         f'Article {article.title} deleted successfully.')
+    return redirect('admin_article_list')
