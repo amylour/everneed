@@ -64,7 +64,7 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 | User Article List | 0 | 0 |
 | Bag - Empty | 0 | 0 |
 | Bag - Products | 0 | 0 |
-| Checkout | Errors/Warnings present as a result of Bootstraps form elements, not from the code that I have created. The email ID from the contact form html within the base.html is clashing with the email ID from the checkout html. These ID elements are embedded within the Bootstrap forms and are unaccessible to me without breaking my code up and reconfiguring the code. ![html validation duplicate id bootstrap forms](docs/testing_images/contactus_form_id.png) ![html validation duplicate id bootstrap forms](docs/testing_images/contact_html_issue.png) | As before |
+| Checkout | Errors/Warnings present as a result of Bootstraps form elements, not from the code that I have created. The email ID from the contact form html within the base.html is clashing with the email ID from the checkout html. These ID elements are embedded within the Bootstrap forms and are unaccessible to me without breaking my code up and reconfiguring the code. This was double checked with the Assessment Team Oct'23 who confirmed that code not authored by myself, and is Bootstrap/CrispyForms rendering, would not be subject to assessment mark down aslong as it is referenced in the README. I will reinvestigate and break into the code when my Diploma has been awarded to remove errors like these. ![html validation duplicate id bootstrap forms](docs/testing_images/contactus_form_id.png) ![html validation duplicate id bootstrap forms](docs/testing_images/contact_html_issue.png) | As before |
 | Wear| 0 | 0 |
 | Care | 0 | 0 |
 | Eat | 0 | 0 |
@@ -91,7 +91,7 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 | Article | ![js from Article section](docs/testing_images/article_js_valid.png) | none | none |
 | Bag - Quantity Script | ![js from Bag page](docs/testing_images/quantity_input_validation.png) | none | none |
 | Stripe JS | ![js from Stripe elements](docs/testing_images/stripe_js.png) | none | none |
-| Products Quantity Input Script | ![js from product quantity script](docs/testing_images/quantity_input_script_js.png) | none | none |
+| Products Quantity Input Script | ![js from product quantity script](docs/testing_images/quantity_input_script_js.png) | none (code has been highlighted red at the top of the code block but no errors returned from JSHint and code functions as intended. I could not get a definitive answer on why JSHint colours these lines red.) | none |
 | Products Script | ![js from product script](docs/testing_images/product_script.png) | none | none |
 | Base Script | ![js from base script](docs/testing_images/base_script_valid.png) | none | none |
 
@@ -101,7 +101,7 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 
 | Feature | admin.py | forms.py | models.py | urls.py | views.py |
 |---------|----------|----------|-----------|---------|----------|
-|
+| Article | none ![python validation](docs/testing_images/a_admin.png) | none ![python validation](docs/testing_images/a_forms.png) | none ![python validation](docs/testing_images/a_models.png) | none ![python validation](docs/testing_images/a_urls.png) | none ![python validation](docs/testing_images/a_views.png) |
 
 ### CSS Validation
 
@@ -192,7 +192,7 @@ Testing was carried out on desktop using a Chrome browser to ensure all forms ta
 
 ### Browser Compatibility
 
-Freefido was tested on the following browsers, new users were created, old users data edited and all features were tested:
+Everneed was tested on the following browsers, purchases were made, article/products added/edited/deleted, error pages, all features were accessible and working as intended:
 
 - Chrome v117.0.5938.92
 - Firefox v114.0.2
@@ -201,6 +201,10 @@ Freefido was tested on the following browsers, new users were created, old users
 
 | Browser | Issue | Functionality |
 |---------|-------|---------------|
+| Firefox | None  | All Intact    |
+| Edge    | None  | All Intact    |
+| Safari (iPad Pro) | All Intact  |
+| Chrome (Main browser used in development) | All Intact |
 
 
 ### Responsiveness
