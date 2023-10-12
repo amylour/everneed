@@ -13,6 +13,13 @@
 {% load crispy_forms_tags %}
 
 <div class="container article-container mt-5">
+    {% if request.user.is_authenticated %}
+    {% if request.user.is_superuser or request.user.is_staff %}
+    <div class="text-right">
+        <a href="{% url 'admin_article_list' %}" class="wishlist-btn my-3 p-2">Admin Dashboard</a>
+    </div>
+    {% endif %}
+    {% endif %}
     <a href="{% url 'article_list' %}" class="btn wishlist-btn p-2 mb-4 ml-lg-5 ml-md-3 ml-sm-2">
         <span class="icon mr-2">
             <i class="fas fa-chevron-left"></i>
