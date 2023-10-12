@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from djrichtextfield.models import RichTextField
 
-STATUS =((0, 'Draft'), (1, 'Published'))
+STATUS = ((0, 'Draft'), (1, 'Published'))
 
 
 class Article(models.Model):
@@ -24,7 +24,7 @@ class Article(models.Model):
     class Meta:
         """ Order posts by created on date """
         ordering = ["-created_on"]
-    
+
     # Django magic method that returns a string rep of an object
     def __str__(self):
         return self.title

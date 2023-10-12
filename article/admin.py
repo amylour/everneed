@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Article 
+from .models import Article
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -12,7 +12,7 @@ mark_articles_deleted.short_description = "Mark selected articles as deleted"
 
 
 @admin.register(Article)
-class ArticleAdmin(SummernoteModelAdmin): 
+class ArticleAdmin(SummernoteModelAdmin):
     actions = [mark_articles_deleted]
     list_display = ('title', 'slug', 'created_on', 'is_deleted')
     search_fields = ['title', 'content']
@@ -36,4 +36,3 @@ class ArticleAdmin(SummernoteModelAdmin):
             # set additional fields as read-only when 'is_deleted' is True
             readonly_fields += ('title', 'slug', 'content', 'status')
         return readonly_fields
-
