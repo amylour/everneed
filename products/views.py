@@ -116,7 +116,10 @@ def admin_dashboard(request):
     """ A view to return the admin dashboard """
 
     if not request.user.is_superuser:
-        return HttpResponseForbidden("You do not have permission to access this page.")
+        return HttpResponseForbidden(
+            "You do not have permission to "
+            "access this page."
+        )
 
     return render(request, 'products/admin_dashboard.html')
 
@@ -137,7 +140,9 @@ def add_product(request):
             return redirect(reverse('admin_product_detail', args=[product.id]))
         else:
             messages.error(
-                request, 'Failed to add product. Please ensure the form is valid.')
+                request,
+                'Failed to add product. Please ensure the form is valid.'
+            )
     else:
         form = ProductForm()
 
@@ -166,7 +171,9 @@ def edit_product(request, product_id):
             return redirect(reverse('admin_product_detail', args=[product.id]))
         else:
             messages.error(
-                request, 'Failed to update product. Please ensure the form is valid.')
+                request,
+                'Failed to update product. Please ensure the form is valid.'
+            )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')

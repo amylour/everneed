@@ -11,7 +11,7 @@ def bag_contents(request):
     product_count = 0
     bag = request.session.get('bag', {})
     total_carbon_fp = 0
-    total_carbon_saved = 0  
+    total_carbon_saved = 0
 
     for item_id, item_data in bag.items():
         if isinstance(item_data, int):
@@ -23,11 +23,16 @@ def bag_contents(request):
                 'quantity': item_data,
                 'product': product,
             })
+
             # Calculate carbon footprint of order and carbon saved
-            total_carbon_fp += (item_data *
-                                product.carbon_fp) if product.carbon_fp else 0
-            total_carbon_saved += (item_data *
-                                   product.carbon_saved) if product.carbon_saved else 0
+            carbon_fp = (item_data * product.carbon_fp
+                         if product.carbon_fp else 0)
+            carbon_saved = (item_data * product.carbon_saved
+                            if product.carbon_saved else 0)
+
+            total_carbon_fp += carbon_fp
+            total_carbon_saved += carbon_saved
+
         else:
             product = get_object_or_404(Product, pk=item_id)
             for size, quantity in item_data['items_by_size'].items():
@@ -39,20 +44,24 @@ def bag_contents(request):
                     'product': product,
                     'size': size,
                 })
-                total_carbon_fp += (quantity *
-                                    product.carbon_fp) if product.carbon_fp else 0
-                total_carbon_saved += (quantity *
-                                       product.carbon_saved) if product.carbon_saved else 0
+
+                carbon_fp = (quantity * product.carbon_fp
+                             if product.carbon_fp else 0)
+                carbon_saved = (quantity * product.carbon_saved
+                                if product.carbon_saved else 0)
+
+                total_carbon_fp += carbon_fp
+                total_carbon_saved += carbon_saved
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+        delivery_rate = settings.STANDARD_DELIVERY_PERCENTAGE / 100
+        delivery = total * Decimal(delivery_rate)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
     else:
         delivery = 0
         free_delivery_delta = 0
 
     grand_total = delivery + total
-    # display bag item quantity on bag icon
     total_item_count = sum(item.get('quantity', 0) for item in bag_items)
 
     context = {

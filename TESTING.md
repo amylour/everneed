@@ -97,11 +97,16 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 
 ### Python Validation
 
-[CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files that were created or edited by myself. No issues presented and line lengths were double checked. I have included some screenshots with the results below.
+[CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files that were created or edited by myself. No issues presented and line lengths were double checked. I have included some screenshots with the results below. none = no issues present.
 
-| Feature | admin.py | forms.py | models.py | urls.py | views.py |
-|---------|----------|----------|-----------|---------|----------|
-| Article | none ![python validation](docs/testing_images/a_admin.png) | none ![python validation](docs/testing_images/a_forms.png) | none ![python validation](docs/testing_images/a_models.png) | none ![python validation](docs/testing_images/a_urls.png) | none ![python validation](docs/testing_images/a_views.png) |
+| Feature | admin.py | forms.py | models.py | urls.py | views.py | extra |
+|---------|----------|----------|-----------|---------|----------|-------|
+| Article | none ![python validation](docs/testing_images/a_admin.png) | none ![python validation](docs/testing_images/a_forms.png) | none ![python validation](docs/testing_images/a_models.png) | none ![python validation](docs/testing_images/a_urls.png) | none ![python validation](docs/testing_images/a_views.png) | n/a |
+| Bag  | n/a | n/a | n/a contexts.py ![python validation](docs/testing_images/b_contexts.png) | none | none ![python validation](docs/testing_images/b_views.png) | n/a |
+| Checkout | none ![python validation](docs/testing_images/c_admin.png) | none ![python validation](docs/testing_images/c_forms.png) | none ![python validation](docs/testing_images/c_models.png) | none | none ![python validation](docs/testing_images/c_views.png) | none ![python validation](docs/testing_images/c_webh.png) | n/a |
+| Home | none | none | none | none | none ![python validation](docs/testing_images/h_views.png) | n/a |
+| Products | none ![python validation](docs/testing_images/p_admin.png) | none ![python validation](docs/testing_images/p_forms.png) | none ![python validation](docs/testing_images/p_models.png) | none | none ![python validation](docs/testing_images/p_views.png) | none |
+| Profiles | none | none ![python validation](docs/testing_images/pro_forms.png) | none ![python validation](docs/testing_images/pro_models.png) | none | none ![python validation](docs/testing_images/pro_views.png) | n/a |
 
 ### CSS Validation
 
@@ -203,8 +208,8 @@ Everneed was tested on the following browsers, purchases were made, article/prod
 |---------|-------|---------------|
 | Firefox | None  | All Intact    |
 | Edge    | None  | All Intact    |
-| Safari (iPad Pro) | All Intact  |
-| Chrome (Main browser used in development) | All Intact |
+| Safari (iPad Pro) | None | All Intact  |
+| Chrome (Main browser used in development) | None | All Intact |
 
 
 ### Responsiveness

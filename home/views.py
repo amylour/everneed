@@ -36,7 +36,6 @@ def contact_form(request):
             messages.success(request, "Thanks for contacting us!")
             return render(request, 'home/thank_you.html')
 
-
     # redirect back to the previous page
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
@@ -47,8 +46,3 @@ def terms_conditions(request):
 
 def thank_you(request):
     return render(request, 'thank_you.html')
-
-
-
-
-
