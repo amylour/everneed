@@ -57,8 +57,8 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 | Admin Delete Article | 0 | 0 |
 | Admin Product List | 0 | 0 |
 | Admin Product Detail | 0 | 0 |
-| Admin Add Product | ID error |  |
-| Admin Edit Product | ID error |  |
+| Admin Add Product | ID error ![html validation duplicate id bootstrap forms](docs/testing_images/add_prod_er.png) | As before |
+| Admin Edit Product | 0 | 0 |
 | Admin Delete Product | 0 | 0 |
 | All Products | 0 | 0 |
 | User Article List | 0 | 0 |
@@ -107,6 +107,7 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 | Home | none | none | none | none | none ![python validation](docs/testing_images/h_views.png) | n/a |
 | Products | none ![python validation](docs/testing_images/p_admin.png) | none ![python validation](docs/testing_images/p_forms.png) | none ![python validation](docs/testing_images/p_models.png) | none | none ![python validation](docs/testing_images/p_views.png) | none |
 | Profiles | none | none ![python validation](docs/testing_images/pro_forms.png) | none ![python validation](docs/testing_images/pro_models.png) | none | none ![python validation](docs/testing_images/pro_views.png) | n/a |
+| Wishlist | none | none | none | none | none ![python validation](docs/testing_images/wish_views.png) | none |
 
 ### CSS Validation
 
@@ -129,39 +130,18 @@ Lighthouse testing was carried out in Incognito mode to acheive the best result.
 
 | Page | Lighthouse Scores | Notes |
 | ---- | ----------------- | -------- |
-| Home |                   |          |
-| All  |                   |          |
-| Categories |             |          |
-| Read  |                  |          |
-| Account |                |          |
-| Admin Dashboard |        |          |
-| Add Product     |        |          |
-| Edit/Delete Product |           |        |
-| Add Article |            |          |
-| Edit/Delete Article |           |    |
-| Wishlist |               |          |
-| Bag  |                   |          |
-
+| Home |   ![lighthouse home](docs/testing_images/home_lh.png)   |    ![best practise errors](docs/testing_images/home_lh_bp.png)  Score lower due to aspect ratio or images, not using webp images and Stripe Cookie    |
+| All  |  ![lighthouse all](docs/testing_images/prod_lh.png)  |  None        |
+| Read  | ![lighthouse article](docs/testing_images/article_lh.png)   |   None  |
+| Account |  ![lighthouse account](docs/testing_images/profile_lh.png)              |    None      |
+| Wishlist |   ![lighthouse wishlist](docs/testing_images/wishlist_lh.png)   |  None   |
 
 ### Wave Accessibility Score
 
-Accessibility was included in every planning stage for Everneed, through the use of the WAVE report tool I could ensure that any necessary changes were made to make the website as accessible as it could be. 
+Accessibility was included in every planning stage for Everneed, through the use of the WAVE report tool I could ensure that any necessary changes were made to make the website as accessible as it could be. Only 2 issues persisted with form labels. Form label was assigned to the newsletter field with hidden visibility styling applied in CSS file, as it affected the form field positioning, but error persisted. No other issues, contrast or structural issues.
 
-| Page | Wave Scores | Notes |
-| ---- | ----------------- | -------- |
-| Home |                   |          |
-| All  |                   |          |
-| Categories |             |          |
-| Read  |                  |          |
-| Account |                |          |
-| Admin Dashboard |        |          |
-| Add Product     |        |          |
-| Edit/Delete Product |           |        |
-| Add Article |            |          |
-| Edit/Delete Article |           |    |
-| Wishlist |               |          |
-| Bag  |                   |          |
-
+![WAVE Report](docs/testing_images/wave_report.png)  
+*WAVE Report for Everneed*
 
 ## Manual Testing
 
