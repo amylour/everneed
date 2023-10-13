@@ -98,6 +98,19 @@ header {
     color: var(--forest);
 }
 
+/* hide form labels for accessibility */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    white-space: nowrap;
+}
+
 /* Forms */
 /* Remove blue highlight shadow from around input field when selected - credit: https: //tinyurl.com/yk2uaf8c */
 input:focus,
