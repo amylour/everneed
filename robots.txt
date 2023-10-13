@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /admin/
+Disallow: /bag/
+Disallow: /checkout/
+Disallow: /profile/
+Sitemap: https://everneed-096aafe5d13c.herokuapp.com/sitemap.xml
