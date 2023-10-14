@@ -639,6 +639,11 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 </details>
 
 <details>
+    <summary>Checkout Stripe Form - All Users</summary>  
+    <img src="docs/readme_images/stripe_form.png">  
+</details>
+
+<details>
     <summary>Confirmation Email for Purchases</summary>  
     <img src="docs/readme_images/email_confirm_order.png">  
 </details>
