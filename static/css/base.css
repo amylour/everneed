@@ -1025,6 +1025,37 @@ footer {
     overflow: hidden;
 }
 
+.footer-address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-address i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #fff; 
+}
+
+.footer-address p {
+    margin: 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.address-link {
+    text-decoration: none; 
+    display: flex; 
+    align-items: center;
+    transition: color 0.3s; 
+}
+
+.footer-address i:hover,
+.footer-p:hover {
+    color: var(--yellow); 
+}
+
 .footer-p {
     color: #fff;
 }
