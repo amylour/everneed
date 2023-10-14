@@ -14,6 +14,14 @@ Choosing to only purchase 100% necessary items, that have been created in the mo
 
 View live site: [everneed](https://everneed-096aafe5d13c.herokuapp.com/)
 
+If you wish to make a test purchase, you can use the following Stripe Dummy Card details:
+
+Card Number: 4242424242424242
+Exp Date: Any date in the future using the format MM/YY
+CVN: any 3 digit number
+Postcode: any 5 numerals
+Any payments made using a valid debit/credit card will not process and the card will not be charged. No orders made will be fulfilled.
+
 For full Admin access to Django Admin panel with relevant sign-in credentials: [Everneed Admin](https://everneed-096aafe5d13c.herokuapp.com/admin/)
 
 For access to Admin Dashboard frontend view with relebant sign-in credentials: [Everneed Admin Dashboard](https://everneed-096aafe5d13c.herokuapp.com/products/admin_dashboard/)
@@ -677,11 +685,26 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/admin_dt.png">  
 </details>
 
+<details open>
+    <summary>Admin Django Backend Panel - Admin Only</summary>  
+    <img src="docs/readme_images/django_panel.png">  
+</details>
+
 **Footer**
 
 <details open>
     <summary>Footer - All Users</summary>  
     <img src="docs/readme_images/footer.png">  
+</details>
+
+<details >
+    <summary>Privacy Policy - All Users</summary>  
+    <img src="docs/readme_images/privacy_policy.png">  
+</details>
+
+<details >
+    <summary>Terms & Conditions - All Users</summary>  
+    <img src="docs/readme_images/terms_cs.png">  
 </details>
 
 **Contact Us**
