@@ -1054,6 +1054,7 @@ footer {
 .footer-address i:hover,
 .footer-p:hover {
     color: var(--yellow); 
+    cursor: pointer;
 }
 
 .footer-p {
