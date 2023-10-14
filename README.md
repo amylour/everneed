@@ -424,7 +424,7 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 
 ## Features Showcase
 
-**Header/Navigation & Footer**
+**Header & Navigation**
 
 *For features showcase, screenshots of the features in use were taken on Laptop/iPad Pro/iPhone 12 Pro*
 
@@ -460,7 +460,6 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/accordian_faq.png">  
 </details>
 
-
 **Delivery Banner**
 
 <details open>
@@ -468,39 +467,11 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/dt_delivery.png">  
 </details>
 
-
 **Search**
 
 <details open>
     <summary>Search - All Users</summary>  
     <img src="docs/readme_images/search.png">  
-</details>
-
-
-**All Products**
-
-<details open>
-    <summary>All Products Desktop - All Users</summary>  
-    <img src="docs/readme_images/all_products.png">  
-</details>
-
-<details>
-    <summary>All Products Mobile - All Users</summary>  
-    <img src="docs/readme_images/all_prod_mob.png">  
-</details>
-
-**Categories**
-
-<details>
-    <summary>Everneed Categories - All Users</summary>  
-    <img src="docs/readme_images/categories.png">  
-</details>
-
-**Account**
-
-<details open>
-    <summary>Account view - Registered, logged-in Users</summary>  
-    <img src="docs/readme_images/login_toast.png">  
 </details>
 
 **All Auth**
@@ -528,6 +499,72 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 <details>
     <summary>Log Out - All Users</summary>  
     <img src="docs/readme_images/log_out.png">  
+</details>
+
+<details>
+    <summary>Password Reset - All Users</summary>  
+    <img src="docs/readme_images/password_reset.png">  
+</details>
+
+<details>
+    <summary>Password Success - All Users</summary>  
+    <img src="docs/readme_images/password_success.png">  
+</details>
+
+**Account**
+
+<details open>
+    <summary>Account view - Registered, logged-in Users</summary>  
+    <img src="docs/readme_images/login_toast.png">  
+</details>
+
+**All Products**
+
+<details open>
+    <summary>All Products Desktop - All Users</summary>  
+    <img src="docs/readme_images/all_products.png">  
+</details>
+
+<details>
+    <summary>All Products Mobile - All Users</summary>  
+    <img src="docs/readme_images/all_prod_mob.png">  
+</details>
+
+<details open>
+    <summary>Product Detail Desktop - All Users</summary>  
+    <img src="docs/readme_images/prod_det_dt.png">  
+</details>
+
+<details>
+    <summary>Product Detail Mobile - All Users</summary>  
+    <img src="docs/readme_images/prod_det_mob.png">  
+</details>
+
+<details>
+    <summary>Admin Product List - Logged-In, Admin only</summary>  
+    <img src="docs/readme_images/admin_prod_list_dt.png">  
+</details>
+
+<details>
+    <summary>Admin Add Product Form - Logged-In, Admin only</summary>  
+    <img src="docs/readme_images/add_prod_dt.png">  
+</details>
+
+<details>
+    <summary>Admin Edit Product Form - Logged-In, Admin only</summary>  
+    <img src="docs/readme_images/edit_form_prod.png">  
+</details>
+
+<details>
+    <summary>Admin Confirm Delete - Logged-In, Admin only</summary>  
+    <img src="docs/readme_images/confirm_del_prod.png">  
+</details>
+
+**Categories**
+
+<details>
+    <summary>Everneed Categories - All Users</summary>  
+    <img src="docs/readme_images/categories.png">  
 </details>
 
 **Articles**
@@ -584,14 +621,48 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/bag_toast.png">  
 </details>
 
+<details>
+    <summary>Bag Empty - All Users</summary>  
+    <img src="docs/readme_images/empty_bag.png">  
+</details>
+
+**Checkout**
+
 <details open>
+    <summary>Checkout Desktop - All Users</summary>  
+    <img src="docs/readme_images/check_dt.png">  
+</details>
+
+<details open>
+    <summary>Checkout Mobile - All Users</summary>  
+    <img src="docs/readme_images/check_mob.png">  
+</details>
+
+<details>
     <summary>Confirmation Email for Purchases</summary>  
     <img src="docs/readme_images/email_confirm_order.png">  
 </details>
 
 <details>
-    <summary>Bag Empty- All Users</summary>  
-    <img src="docs/readme_images/empty_bag.png">  
+    <summary>Checkout Success - All Users who've made a purchase</summary>  
+    <img src="docs/readme_images/order_placed.png">  
+</details>
+
+<details>
+    <summary>Order History - All Users who've made a purchase witha registered, logged-in account</summary>  
+    <img src="docs/readme_images/order_history.png">  
+</details>
+
+**Wishlist**
+
+<details open>
+    <summary>Wishlist Page Desktop - Registered, logged-in Users</summary>  
+    <img src="docs/readme_images/wishlist_dt.png">  
+</details>
+
+<details open>
+    <summary>Wishlist Page Mobile - Registered, logged-in Users</summary>  
+    <img src="docs/readme_images/wishlist_mob.png">  
 </details>
 
 **Admin Dashboard**
@@ -600,8 +671,6 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <summary>Admin Dashboard View - Admin Only</summary>  
     <img src="docs/readme_images/admin_dt.png">  
 </details>
-
-
 
 **Footer**
 
@@ -636,22 +705,27 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 
 <details>
     <summary>MailChimp Newsletter Sign Up Confirmation</summary>  
-    <img src="docs/readme_images/newsletter.png">  
+    <img src="docs/readme_images/mailchimp.png">  
 </details>
 
-**403, 404, 500 Pages**
+<details>
+    <summary>MailChimp Newsletter Example</summary>  
+    <img src="docs/readme_images/mailchimp_exp.png">  
+</details>
+
+**404 Page**
 
 <details>
     <summary>404 Error Page</summary>  
     <img src="docs/readme_images/404_error.png">  
 </details>
 
-
 ## Future Features
 
 - Article Comment, Article React
 - Reviews feature with Ratings
 - Further Categorise products with eco-labels for materials and production processes
+- Discount codes obtained through newsletter subscription
 
 # Technologies & Languages Used
 
