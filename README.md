@@ -321,13 +321,63 @@ Essential features were:
 ### Wireframes
 
 <details open>
-    <summary>Mobile/Tablet Home Page Wireframe</summary>  
-    <img src="">  
+    <summary>Desktop/Tablet Home Page Wireframe</summary>  
+    <img src="docs/readme_images/wf_home_dt.png">  
+</details>
+
+<details>
+    <summary>Mobile Home Page Wireframe</summary>  
+    <img src="docs/readme_images/wf_home_mob01.png">  
+</details>
+
+<details>
+    <summary>Mobile Home Page Wireframe</summary>  
+    <img src="docs/readme_images/wf_home_mob02.png">  
+</details>
+
+<details open>
+    <summary>Desktop/Tablet/Mobile All Products Page Wireframe</summary>  
+    <img src="docs/readme_images/wf_proddet.png">  
+</details>
+
+<details open>
+    <summary>Desktop/Tablet Product Page Wireframe</summary>  
+    <img src="docs/readme_images/wf_prod.png">  
+</details>
+
+<details>
+    <summary>Shopping Bag Wireframe</summary>  
+    <img src="docs/readme_images/wf_bag.png">  
+</details>
+
+<details>
+    <summary>Bag Contents Toast Wireframe</summary>  
+    <img src="docs/readme_images/wf_toast_bag.png">  
+</details>
+
+<details open>
+    <summary>Mobile Menu & Auth Pages Wireframe</summary>  
+    <img src="docs/readme_images/mob_menu_auth_wf.png">  
+</details>
+
+<details>
+    <summary>Desktop Register Page Wireframe</summary>  
+    <img src="docs/readme_images/wf_reg.png">  
+</details>
+
+<details>
+    <summary>Desktop SignIn Page Wireframe</summary>  
+    <img src="docs/readme_images/wf_signin.png">  
+</details>
+
+<details>
+    <summary>Desktop SignOut Wireframe</summary>  
+    <img src="docs/readme_images/wf_signout.png">  
 </details>
 
 ### Database Schema
 
-![]()  
+![Everneed Eco Eco-Ecommerce ERC](docs/readme_images/everneed_erd.png)  
 *Database Schema (ERD) for Everneed displaying relationships between feature components saved within the database*
 
 ### Defensive Design
@@ -540,7 +590,7 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 </details>
 
 <details>
-    <summary>Bag Empyt- All Users</summary>  
+    <summary>Bag Empty- All Users</summary>  
     <img src="docs/readme_images/empty_bag.png">  
 </details>
 
@@ -590,6 +640,11 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 </details>
 
 **403, 404, 500 Pages**
+
+<details>
+    <summary>404 Error Page</summary>  
+    <img src="docs/readme_images/404_error.png">  
+</details>
 
 
 ## Future Features
