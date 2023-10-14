@@ -57,14 +57,14 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 | Admin Delete Article | 0 | 0 |
 | Admin Product List | 0 | 0 |
 | Admin Product Detail | 0 | 0 |
-| Admin Add Product | ID error ![html validation duplicate id bootstrap forms](docs/testing_images/add_prod_er.png) | As before |
+| Admin Add Product | ID error -> Errors/Warnings present as a result of Bootstraps form elements, not from the code that I have created. The name ID from the contact form html within the base.html is clashing with the name ID from the add product html. These ID elements are embedded within the Bootstrap forms and are unaccessible to me without breaking my code up and reconfiguring the code. This is the same for the `<p>` and `<strong>` error. This was double checked with the Assessment Team Oct'23 who confirmed that code not authored by myself, and is Bootstrap/CrispyForms rendering, would not be subject to assessment mark down aslong as it is referenced in the README. I will reinvestigate and break into the code when my Diploma has been awarded to remove errors like these. ![html validation duplicate id bootstrap forms](docs/testing_images/add_prod_er.png) | As before |
 | Admin Edit Product | 0 | 0 |
 | Admin Delete Product | 0 | 0 |
 | All Products | 0 | 0 |
 | User Article List | 0 | 0 |
 | Bag - Empty | 0 | 0 |
 | Bag - Products | 0 | 0 |
-| Checkout | Errors/Warnings present as a result of Bootstraps form elements, not from the code that I have created. The email ID from the contact form html within the base.html is clashing with the email ID from the checkout html. These ID elements are embedded within the Bootstrap forms and are unaccessible to me without breaking my code up and reconfiguring the code. This was double checked with the Assessment Team Oct'23 who confirmed that code not authored by myself, and is Bootstrap/CrispyForms rendering, would not be subject to assessment mark down aslong as it is referenced in the README. I will reinvestigate and break into the code when my Diploma has been awarded to remove errors like these. ![html validation duplicate id bootstrap forms](docs/testing_images/contactus_form_id.png) ![html validation duplicate id bootstrap forms](docs/testing_images/contact_html_issue.png) | As before |
+| Checkout | Errors/Warnings present as a result of Bootstraps form elements, not from the code that I have created. The name/email ID from the contact form html within the base.html is clashing with the name/email ID from the checkout html. These ID elements are embedded within the Bootstrap forms and are unaccessible to me without breaking my code up and reconfiguring the code. This was double checked with the Assessment Team Oct'23 who confirmed that code not authored by myself, and is Bootstrap/CrispyForms rendering, would not be subject to assessment mark down aslong as it is referenced in the README. I will reinvestigate and break into the code when my Diploma has been awarded to remove errors like these. ![html validation duplicate id bootstrap forms](docs/testing_images/contactus_form_id.png) ![html validation duplicate id bootstrap forms](docs/testing_images/contact_html_issue.png) | As before |
 | Wear| 0 | 0 |
 | Care | 0 | 0 |
 | Eat | 0 | 0 |
@@ -99,10 +99,10 @@ All HTML pages were validated and received a 'No errors or warning to show' for 
 
 [CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files that were created or edited by myself. No issues presented and line lengths were double checked. I have included some screenshots with the results below. none = no issues present.
 
-| Feature | admin.py | forms.py | models.py | urls.py | views.py | extra |
+| Feature | admin | forms | models | urls | views | extra |
 |---------|----------|----------|-----------|---------|----------|-------|
 | Article | none ![python validation](docs/testing_images/a_admin.png) | none ![python validation](docs/testing_images/a_forms.png) | none ![python validation](docs/testing_images/a_models.png) | none ![python validation](docs/testing_images/a_urls.png) | none ![python validation](docs/testing_images/a_views.png) | n/a |
-| Bag  | n/a | n/a | n/a contexts.py ![python validation](docs/testing_images/b_contexts.png) | none | none ![python validation](docs/testing_images/b_views.png) | n/a |
+| Bag  | n/a | n/a | n/a | none | none ![python validation](docs/testing_images/b_views.png) | contexts ![python validation](docs/testing_images/b_contexts.png) |
 | Checkout | none ![python validation](docs/testing_images/c_admin.png) | none ![python validation](docs/testing_images/c_forms.png) | none ![python validation](docs/testing_images/c_models.png) | none | none ![python validation](docs/testing_images/c_views.png) | none ![python validation](docs/testing_images/c_webh.png) | n/a |
 | Home | none | none | none | none | none ![python validation](docs/testing_images/h_views.png) | n/a |
 | Products | none ![python validation](docs/testing_images/p_admin.png) | none ![python validation](docs/testing_images/p_forms.png) | none ![python validation](docs/testing_images/p_models.png) | none | none ![python validation](docs/testing_images/p_views.png) | none |
@@ -126,15 +126,23 @@ To keep my document concise I have not included every screenshot of the CSS vali
 
 ### Lighthouse Scores
 
-Lighthouse testing was carried out in Incognito mode to acheive the best result. Images used in the sites design were saved in webp and png format, and compressed using [tinypng](https://tinypng.com/) and [Convertio](https://www.convertio.co) to offer the best chance for a decent performance score.
+Lighthouse testing was carried out in Incognito mode to acheive the best result. Images used in the sites design were saved in png format, and compressed using [tinypng](https://tinypng.com/) and [Convertio](https://www.convertio.co) to offer the best chance for a decent performance score.
 
-| Page | Lighthouse Scores | Notes |
+| Page | Lighthouse Scores - Desktop | Notes |
 | ---- | ----------------- | -------- |
 | Home |   ![lighthouse home](docs/testing_images/home_lh.png)   |    ![best practise errors](docs/testing_images/home_lh_bp.png)  Score lower due to aspect ratio or images, not using webp images and Stripe Cookie    |
 | All  |  ![lighthouse all](docs/testing_images/prod_lh.png)  |  None        |
 | Read  | ![lighthouse article](docs/testing_images/article_lh.png)   |   None  |
-| Account |  ![lighthouse account](docs/testing_images/profile_lh.png)              |    None      |
-| Wishlist |   ![lighthouse wishlist](docs/testing_images/wishlist_lh.png)   |  None   |
+| Account |  ![lighthouse account](docs/testing_images/profile_lh.png)              |    As before with Stripe Cookie  |
+| Wishlist |  ![lighthouse wishlist](docs/testing_images/wishlist_lh.png)   |  As before with images rendering and Stripe Cookie   |
+
+| Page | Lighthouse Scores - Mobile | Notes |
+| ---- | ----------------- | -------- |
+| Home |  ![lighthouse home](docs/testing_images/home_moblh.png) | ![performance errors](docs/testing_images/home_perform_mob_er.png) Score lower due to images not being webp and STripe/jQuery CDN. I will look into this for future versions to better understand how I can improve this score.  |
+| All  | ![lighthouse all products mobile](docs/testing_images/all_moblh.png)   | As before  |
+| Read |  ![lighthouse article mobile](docs/testing_images/read_moblh.png) |  As before  |
+| Account | ![lighthouse account mobile](docs/testing_images/account_moblh.png)   |  As before  |
+| Wishlist | ![lighthouse wishlist mobile](docs/testing_images/wishlist_moblh.png)  | As before   |
 
 ### Wave Accessibility Score
 
@@ -191,8 +199,10 @@ Everneed was tested on the following browsers, purchases were made, article/prod
 | Safari (iPad Pro) | None | All Intact  |
 | Chrome (Main browser used in development) | None | All Intact |
 
-
 ### Responsiveness
+
+
+
 
 ### Testing User Stories
 
@@ -200,7 +210,34 @@ User Stories are documented in the Everneed [GitHub Projects Board](https://gith
 
 | User Story                 | Acceptance Criteria Met?  | Tested | Response     | Pass/Fail | Fix     |
 |----------------------------|---------------------------|--------|--------------|-----------|---------|
-|
+| As a **customer**, I can **view the site's home page** so that I can **understand the site's intentions and purpose**. | Yes | Yes | Home page is visible | Pass | n/a |
+| As a **customer**, I can **see and use the navigation bar** so that I can **make my way around the site and get to where I would like**. | Yes | Yes | Navbar visible to all users in desktop/tablet and mobile views | Pass | n/a |
+| As a **customer**, I can **enter text into the search bar** so that I can **search for a specific item**. | Yes | Yes | Search bar accepts user input and returns search results when search form is submitted | Pass | n/a |
+| As a **customer** I can **create and manage an account with Everneed** so that I can **keep my personal details, order history and speed up my checkout process**. | Yes | Yes | Register form takes new user information, sends verification email link to confim account. User may then sign in to view their account, edit their personal information and start saving their order histories from purchases made | Pass | n/a |
+| As a **customer**, I can **edit my personal details on my account** so that I can **keep them up to date**. | Yes | Yes | User information is ediatble | Pass | n/a |
+| As a **site user**, I can **enter my login details** so that I can **login in to my account**. | Yes | Yes | User may login with correct details | Pass | n/a |
+|  As a **site user**, I can **click on the visible links in the footer** so that I can **view the relevant information and destinations**. | Yes | Yes | Footer links return user to relevant area in website and external links opne in a new tab | Pass | n/a |
+| As a **site user**, I can **register my email and receive a validation link via email** so that I can **create an account with everneed to track my spending and purchases**. | Yes | Yes | Registration process works as expected to accept new users | Pass | n/a |
+| As a **customer**, I can **use the Contact Us form** so I can **send a message to the business/site admin**. | Yes | Yes | Contact form opens in a modal, accepts user input, submits form and returns thank you page for user, and email to Everneed Admin's inbox. | Pass | n/a |
+| As a **site user** I can **interact with sorting and view features on the 'All Products' page** so that I can **improve my shopping experience on the site**. | Yes | Yes | Price, category, A-Z, rating works as expected to display products in a certain order. | Pass | n/a |
+| As a **site user**, I can **click on a navbar item for a specific category** so that I can **choose to view a smaller amount of related products**. | Yes | Yes | Products sorted correctly into categories. | Pass | n/a |
+| As a **customer**, I can **choose an individual product** so that I can **view its description, price, colours, sizes available etc**. | Yes | Yes | Individual products returned when clicked on, all relevant information displayed and is interactable. | Pass | n/a |
+| As a **site admin** I can **add a product to my inventory using a frontend from** so that I can **increase my range/amount of products available on site**. | Yes | Yes | Add product form takes new information and displays it in the product template correctly. | Pass | n/a |
+| As a**site admin**, I can **edit existing inventory from a frontend form** so I can **change the quantity of stock, sizes, colours or edit products description, price or image**. | edit product form takes user input and returns it correctly in the template. Product stock levels will be implemented in future features. | Pass | n/a |
+| As a **site admin**, I can **delete products from the inventory using a frontend form** so that I can **remove it from sale**. | Yes | Yes | Delete product modal appears when clicked on and delete confirmation is needed before product is removed from database. | Pass | n/a |
+| As a **customer** I can **create and manage an account with everneed** so that I can **keep my personal details, order history and speed up my checkout process**. | Yes | Yes | Account functions as expected, all user information is handled appropriately and displayed within the account template | Pass | n/a |
+| As a **customer**, I can **click on 'Add to Bag' in my product view**so that I can **add the product to my bag**. | Yes | Yes | Add to Bag works when clicked and product is added to bag and displayed in a success toast with the product displayed. A link to the bag is displayed in the toast message. | Pass | n/a |
+| As a **customer**, I can **increase/decrease/remove quantities of a product in my bag** so that I can **have control over what I wish to purchase**. | Yes | Yes | Increment/Decrement/Remove buttons work as axpected when clicked by user. | Pass | n/a |
+| As a **customer**, I can **view my bag total from any page** so that I can **keep track of my potential spending**. | Yes | Yes | Bag item quantity is displayed in a small bubble top right of shopping bag icon in navbar. Bubble disappears if no items in customers bag. | Pass | n/a |
+| As a **customer**, I can **view my running total of carbon saved when I add products** so that I can **see how much carbon my purchases would had saved in their production vs non eco-friendly products of the same type**. | Yes | Yes | Customer can see their carbon total in #cc4818 orange font below their grand total. They are further informed of their carbon total in the checkout page | Pass | n/a |
+| As a **customer**, I can **view my total carbon footprint saving on checkout and it's associated climate impact/lifestyle changes** so that I can **understand the equivalent value of carbon saved versus purchasing the same non eco-friendly products**. | Yes | Yes | Carbon totals again displayed in green portion of checkout page to inform customer of their savings. | Pass | n/a |
+| As a **customer**, I can **checkout my products securely** so that I can **complete my purchase**. | Yes | Yes | Payments handled correctly through Stripe's payment system, tested many times using the '4242424242...' Stripe testing card credentials. | Pass | n/a |
+| As a **customer**, I can **receive an email after purchasing** so that I can **confirm my purchase and keep a record of my order**. | Yes | Yes | Email is delivered to customer after making a purchase. |Pass | n/a |
+| As a **site user** I can **view error pages with 'Home' links** so that I can **return to the main page if a page is missing or forbidden**. | Yes | Yes | Error pages display correctly when user attempts to access non-existent content, restricted content. | Pass | n/a |
+|  As a **logged-in user** I can **click the 'Add to Wishlist' button** so that I can **keep a record of my favourite items**. | Yes | Yes | Add to wishlist button works for logged in user. | Pass | n/a |
+|  As a **logged-in user** I can **click the 'Remove' icon beside my Wishlist item** so that I can **remove that product from my Wishlist**. | Yes | Yes | Remove button eliminates product from user's wishlist | Pass | n/a |
+| As a **customer**, I can **enter my details into the newsletter form** so I can **receive emails about products or environmental issues/climate saving tips**. | Yes | Yes | Newsletter form submission brings user to new tab of MailChimp subscription confirmation. When checked, MailChimp subscription address book shows new user added. | Pass | n/a |
+
 
 ### Dev Tools/Real World Device Testing
 
@@ -220,6 +257,7 @@ Responsiveness testing was carried out using Google Dev Tools on the devices det
 | OPPO Reno 8 Lite |   All features    | No issues | None needed |
 | iPhone XR | All features |  No issues  | None needed |
 | iPhone 12  | All features | No issues | None needed |
+| Samsung Galxy S21 | All features | No issues | None needed |
 | iPad Pro 2021 |    All features      |    No issues    |  None needed |
 | Acer Aspire 3 2019 laptop | All features | No issues | None needed |
 
