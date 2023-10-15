@@ -16,10 +16,11 @@ View live site: [everneed](https://everneed-096aafe5d13c.herokuapp.com/)
 
 If you wish to make a test purchase, you can use the following Stripe Dummy Card details:
 
-Card Number: 4242424242424242
-Exp Date: Any date in the future using the format MM/YY
-CVN: any 3 digit number
-Postcode: any 5 numerals
+-  Card Number: 4242424242424242
+- Exp Date: Any date in the future using the format MM/YY
+- CVN: any 3 digit number
+- Postcode: any 5 numerals  
+
 Any payments made using a valid debit/credit card will not process and the card will not be charged. No orders made will be fulfilled.
 
 For full Admin access to Django Admin panel with relevant sign-in credentials: [Everneed Admin](https://everneed-096aafe5d13c.herokuapp.com/admin/)
@@ -72,10 +73,11 @@ For access to Admin Dashboard frontend view with relebant sign-in credentials: [
 - [Deployment](#deployment)
   - [Connecting to GitHub](#connecting-to-github)
   - [Django Project SetUp](#django-project-setup)
-  - [Relevant API's - details](#relevant-apis---details)
     - [Elephant SQL](#elephant-sql)
   - [Heroku Deployment](#heroku-deployment)
+  - [Google Mail Setup](#google-mail-setup)
   - [AWS Config](#aws-config)
+    - [Media Folder Setup](#media-folder-setup)
   - [Stripe Config](#stripe-config)
   - [Clone Project](#clone-project)
   - [Fork Project](#fork-project)
@@ -104,13 +106,11 @@ Everneed is accessible via all browsers with full responsiveness on different sc
 
 Customers are provided with an easy, intuitive shopping experience and are encouraged to avail of sustainable, eco-friendly products. It is hoped that customers will sign up/register an account with everneed to be able to avail of the full range of user features. Customers are consistenly encouraged to make the best choices in terms of quality, environmentally friendly products. A sense of community is created with a weekly newsletter which will inform the customers of new products, trends and articles on everneed.
 
-
 ## Business Goals
 
-Everneed provides easy Admin functionality for the business owner with an accessible, easy-use Admin Dashboard to manage inventory and articles. The additonal frontend forms allows the business owner to make quick and easy changes. Further information regarding users and orders can be accessed via the Admin Dashboard with a direct link to the information stored within the Django Admin Panel. 
+Everneed provides easy Admin functionality for the business owner with an accessible, easy-use Admin Dashboard to manage inventory and articles. The additonal frontend forms allows the business owner to make quick and easy changes. Further information regarding users and orders can be accessed via the Admin Dashboard with a direct link to the information stored within the Django Admin Panel.
 
 Everneed seeks to build a strong base of regular shoppers who seek long-life, quality products made from high quality, natural materials. The newsletter, articles and carbon footprint features aim to attract those who have concerns for the rising environmental issues that our planet faces. Further marketing is made through the businesses social media channels, in particular their Facebook page.
-
 
 # UX/UI - User Experience/User Interface
 
@@ -224,15 +224,15 @@ My Sprints were broken down into appropriately sized chunks from the beginning a
 
 | Sprint No. | Sprint Content | Start/Finish Dates |
 |------------|----------------|--------------------|
-|    # 1     | Project Setup  |                    |
-|    # 2     | AllAuth & Basic Naviagtion |        |
-|    # 3     | Product Views & CRUD       |        |
-|    # 4     | Shopping Bag Functionality & Styling |      |
-|    # 5     | Wishlist Feature   |                |
-|    # 6     | Carbon Footprint & Articles  |      |
-|    # 7     | Admin Dashboard        |            |
-|    # 8     | User/Customer Correspondence  |     |
-|    # 9     | Documentation & Testing   |         |
+|    # 1     | Project Setup  |   01/08/23 - 20/08/23   |
+|    # 2     | AllAuth & Basic Naviagtion |  20/08/23 - 22/09/23  |
+|    # 3     | Product Views & CRUD       |  22/09/23 - 02/09/23  |
+|    # 4     | Shopping Bag Functionality & Styling | 02/09/23 - 15/09/23   |
+|    # 5     | Wishlist Feature   |   15/09/23 - 17/09/23       |
+|    # 6     | Carbon Footprint & Articles  |  17/09/23 - 22/09/23   |
+|    # 7     | Admin Dashboard        |  22/09/23 - 26/09/23    |
+|    # 8     | User/Customer Correspondence  |  26/09/23 - 02/10/23   |
+|    # 9     | Documentation & Testing   |    02/10/23 - 15/10/23   |
 
 ### Marketing
 
@@ -857,8 +857,6 @@ os.path.join(BASE_DIR, 'templates', 'allauth')
 11. A **Procfile** must be created within the project repo for Heroku deployment with the following placed within it: ```web: gunicorn everneed.wsgi```
 12. Make the necessary migrations again.
 
-## Relevant API's - details
-
 ### Elephant SQL
 
 A new database instance can be created on [Elephant SQL](https://www.elephantsql.com/) for your project. 
@@ -895,7 +893,114 @@ To start the deployment process , please follow the below steps:
 5. Choose from '**Automatic**' or '**Manual**' deployment options, I chose the 'Manual' deployment method. Click '**Deploy Branch**'.
 6.  Once the waiting period for the app to build has finished, click the '**View**' link to bring you to your newly deployed site. If you receive any errors, Heroku will display a reason in the app build log for you to investigate. **DISABLE_COLLECTSTATIC**  may be removed from the Config Vars once you have saved and pushed an image within your project.
 
+## Google Mail Setup
+
+1. Setup a Gmail Account that will be used to hold and store the emails for your project.
+2. Logged in, navigate to **Settings** -> **Other Google Account Settings** -> **Accounts** -> **Import** -> **Other Account Settings**
+3. Activate 2-Step Verification
+4. Once verified access **App Passwords** -> **Other** -> enter a name for the password, eg Everneed.
+5. Click **Create** -> copy the 16 digit password that is generated.
+6. In your `settings.py` add the following Email Settings:
+   
+   ![django email settings](docs/readme_images/email_settings.png)  
+   *Django Email Settings for Everneed Email setup*  
+7. Add EMAIL_HOST_PASS, EMAIL_HOST_USER variable, password and email address to your Heroku Config Vars
+    
 ## AWS Config
+
+[AWS](https://aws.amazon.com) is used to store the media and static files online for Everneed. Please follow the below steps to set it up for yourself:
+
+1. Setup AWS Account and Login
+2. Create a new S3 Bucket -> name it to match your Heroku App name -> Choose the region closest to you.
+3. Allow **Clock All Public Access**, tick 'Bucket will be public' in order for the bucket to connect to Heroku. 
+4. In **Object Ownership** -> **ACLS Enabled** -> **Bucket Owner Preferred**.
+5. **Properties** tab -> turn on static web hosting and add 'index.html' and 'error.html' into the correct fields -> click **Save**
+6. In the **Permissions** tab, paste in the following CORS config:
+
+   ```shell
+	[
+		{
+			"AllowedHeaders": [
+				"Authorization"
+			],
+			"AllowedMethods": [
+				"GET"
+			],
+			"AllowedOrigins": [
+				"*"
+			],
+			"ExposeHeaders": []
+		}
+	]
+	```
+7. Copy your **ARN** string.
+8. From the **Bucket Policy** tab, select the **Policy Generator** link, and use the following steps:
+	- Policy Type: **S3 Bucket Policy**
+	- Effect: **Allow**
+	- Principal: `*`
+	- Actions: **GetObject**
+	- Amazon Resource Name (ARN): **paste-your-ARN-here**
+	- Click **Add Statement**
+	- Click **Generate Policy**
+	- Copy the entire Policy, and paste it into the **Bucket Policy Editor**
+
+		```shell
+		{
+			"Id": "Policy1234567890",
+			"Version": "2012-10-17",
+			"Statement": [
+				{
+					"Sid": "Stmt1234567890",
+					"Action": [
+						"s3:GetObject"
+					],
+					"Effect": "Allow",
+					"Resource": "arn:aws:s3:::bucket-name/*"
+					"Principal": "*",
+				}
+			]
+		}
+		```
+    - Before you click "Save", add `/*` to the end of the Resource key in the Bucket Policy Editor (like above).
+	- Click **Save**.
+9. In the **ACL - Access Control List** -> **Edit** -> enable **List** for **Everyone(Public Access)** -> Accept the warning.
+
+### AWS - IAM setup
+
+1. AWS Services Menu -> **Create New Group** -> add name eg. 'group-project-name'.
+2. Navigate from there to **REview Policy** page -> **User Groups** -> Select newly named group.
+3. Navigate to **Permissions** tab -> **Add Permissions** -> Click **Attach Policies**
+4. Select policy -> **Add Permissions** at the bottom, click when finished.
+5. From **JSON** tab -> select **Import Managed Policy** link -> search for **S3** -> select **Amazon3FullAccess** policy -> **Import**.
+6. Copy **ARN** from S3 Bucket again ->
+
+   ```
+		{
+			"Version": "2012-10-17",
+			"Statement": [
+				{
+					"Effect": "Allow",
+					"Action": "s3:*",
+					"Resource": [
+						"arn:aws:s3:::bucket-name",
+						"arn:aws:s3:::bucket-name/*"
+					]
+				}
+			]
+		}
+	```
+7. Click **Review Policy** -> name eg. 'policy-everneed' -> enter a description -> **Create Policy**
+8. Search for your new policy and click it to **Attach Policy**
+9. **User Groups** -> **Add User** -> name eg. 'user-everneed'
+10. For **Select AWS Access Type** -> select **Programmatic Access** -> Add group to 'user-everneed' -> **Review User** -> **Create User**.
+11. Find **Download.csv** button to download immediately and save a copy.
+    - This contains the user's **Access key ID** and **Secret access key**.
+	- `AWS_ACCESS_KEY_ID` = **Access key ID**
+	- `AWS_SECRET_ACCESS_KEY` = **Secret access key** 
+
+### Media Folder Setup
+1. In Heroku Config Vars, remove `DISABLE_COLLECTSTATIC`.
+2. In AWS S3 create a new folder -> **media** -> Add project images -> **Manage Public Permissions** -> **Grant public read access to the objects** -> **Upload**
 
 ## Stripe Config
 
@@ -950,6 +1055,7 @@ The following blogs/tutorials complemented my learning for this project, alongsi
 - [Pexels](https://www.pexels.com/) for images used within the site
 - [Unsplash](https://unsplash.com/) for images used within the site
 - [Flaticon](https://www.flaticon.com) for icons used in wireframing and on the website
+- [Chat GPT](https://www.chat.openai.com) was used to produce the content text for the Articles section prompted by myself with several talk points about climate change and current eco-issues.
 
 <details>
 <summary>Image credits are as follows:</summary>
@@ -1001,13 +1107,6 @@ The following blogs/tutorials complemented my learning for this project, alongsi
 - bee image by Felice Wolke: <https://unsplash.com/@felicewoelke?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
 - traffic sign image by Photo by Kelly Sikkema: <https://unsplash.com/@kellysikkema?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
   
-  
-  
-  
-
-
-
-
 
 ### Additional reading/tutorials/books/blogs
 
