@@ -14,9 +14,10 @@ Choosing to only purchase 100% necessary items, that have been created in the mo
 
 View live site: [everneed](https://everneed-096aafe5d13c.herokuapp.com/)
 
-If you wish to make a test purchase, you can use the following Stripe Dummy Card details:
+If you wish to make a test purchase, you can use the following [Stripe Dummy Card](https://stripe.com/docs/testing) details:
 
--  Card Number: 4242424242424242
+- Success Card Number: 4242424242424242
+- 3D Secure Auth Number: 4000 0027 6000 3184
 - Exp Date: Any date in the future using the format MM/YY
 - CVN: any 3 digit number
 - Postcode: any 5 numerals  
@@ -26,7 +27,6 @@ Any payments made using a valid debit/credit card will not process and the card 
 For full Admin access to Django Admin panel with relevant sign-in credentials: [Everneed Admin](https://everneed-096aafe5d13c.herokuapp.com/admin/)
 
 For access to Admin Dashboard frontend view with relebant sign-in credentials: [Everneed Admin Dashboard](https://everneed-096aafe5d13c.herokuapp.com/products/admin_dashboard/)
-
 
 ## Table of Contents
 
@@ -578,6 +578,10 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 
 **Articles**
 
+The articles currently displayed on Everneed are informing customers of the ecological, environmental and climate issues our planet is currently facing. The text within the article has been created by Chat GPT when prompted to respond about natural disasters that the world has been facing. The Admin have sole responsibility to add/edit/delete articles with no current option for the customer/reader to respond or engage with the post. This is partly because the brand aims to engage the customer into making a purchase to better the planet, by choosing sustainably-produced, long-life products.
+
+The Admin may add/edit/delete articles via the Admin Dashboard. If no image is included int he form or if the image url brekks, a placeholder image is present so as not to display a broken image link. Deletion is confirmed via a confirm deletion modal. When adding an article, the Admin may choose to save the article to drafts or publish them immediately. Drafts are accessible via the django backend panel and are published by selecting the published checkbox.
+
 <details open>
     <summary>Articles List - All Users</summary>  
     <img src="docs/readme_images/article_list.png">  
@@ -615,6 +619,10 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 
 **Bag**
 
+Everneed's Shopping Bag feature is presented in a clean and clear format to correctly and quickly inform the user of their possible purchase choices. The customer has the option to change the amounts of the items that they wish to buy or to remove them completely form the bag. The customer is shown their running totals as well as their delivery charge and their carbon saved and carbon footprint total. When products are added/updated/removed to/from the bag, then a toast message displays to give the customer feedback on their most recent choice.
+
+A clear message is shown if there are no items in the bag and a 'Keep Shopping' button redirects the user back to the 'All Products' page. A delivery threshold banner informs the customer how much more they need to spend to reach the free delivery threshold.
+
 <details open>
     <summary>Bag Contents Desktop/Tablet - All Users</summary>  
     <img src="docs/readme_images/bag_contents.png">  
@@ -630,12 +638,38 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/bag_toast.png">  
 </details>
 
+<details open>
+    <summary>Bag Toast Delivery Threshold message - All Users</summary>  
+    <img src="docs/readme_images/update_toast.png">  
+</details>
+
 <details>
     <summary>Bag Empty - All Users</summary>  
     <img src="docs/readme_images/empty_bag.png">  
 </details>
 
 **Checkout**
+
+The checkout process for Everneed is operated through the [Stripe](https://stripe.com/docs) API. As stated above -> If you wish to make a test purchase, you can use the following [Stripe Dummy Card](https://stripe.com/docs/testing) details:
+
+- Success Card Number: 4242424242424242
+- 3D Secure Auth Number: 4000 0027 6000 3184
+- Exp Date: Any date in the future using the format MM/YY
+- CVN: any 3 digit number
+- Postcode: any 5 numerals  
+
+Any payments made using a valid debit/credit card will not process and the card will not be charged. No orders made will be fulfilled.
+
+When the customer has added items that they wish to purchase to their bag, they are given the option to proceed to 'Secure Checkout' to complete their order. This checkout form contains a personal, delivery/billing information form that will display previously entered details if the user is logged in and had previously ticked the box to save their details. The Stripe Payment form accepts the user's information and will inform them if they attempt to use an invalid card. Validation is also present in the delivery form area, to remind the user if they have not entered all of the relevant details.
+
+The items the customer has chosen are visible on the right hand side of the webpage with their grand total and an additonal box to display the Carbon saved and Carbon footprint total for their order. If the customer has not satisfied the free delivery threshold of €50, then a delivery charge of 10% of the grand total will be added to cover the cost of delivery.
+
+Once the Checkout form has been submitted, a loading spinner informs the user that their payment is processing. Stripe's webhook handlers make this process smooth as the payment may attempt 5 times before being unsuccessful overall. In the Developer's view in the Stripe Dashboard, developers can check the webhook and payment processes to confirm they are working correctly.
+
+<details open>
+    <summary>Stripe Webhook/Payment Successful - Admin</summary>  
+    <img src="docs/readme_images/webhook_success.png">  
+</details>
 
 <details open>
     <summary>Checkout Desktop - All Users</summary>  
@@ -652,6 +686,8 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/stripe_form.png">  
 </details>
 
+A confirmation email for the order is emailed to all customers. This details their spending amount and the date of their purchase. Their totals and item purchased are also visible in the checkout success page upon successful payment processing. If the user is logged in, they can view this order and all previous orders, if they were logged in at the time of purchase, in their account view.
+
 <details>
     <summary>Confirmation Email for Purchases</summary>  
     <img src="docs/readme_images/email_confirm_order.png">  
@@ -667,7 +703,7 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/order_history.png">  
 </details>
 
-**Wishlist-Registered, logged in Users only**
+**Wishlist - Registered, logged in Users only**
 
 A Wishlist feature allows the logged in user to keep a list of their favourite products. When logged in, on viewing an individual product, the user will see the 'Add to Wishlist' button. When clicked user is informed via toast message that product has been added successfully or whether the product already exists within the Wishlist. The heart icon in the navbar, when hovered displays the 'Wishlist' tooltip, and when clicked brings the logged in user to the wishlist page. If not logged in, when clicked it brings the user to the 'Log In' screen.
 
@@ -702,7 +738,7 @@ When developing this project it was important to me to have a separate Admin are
     <img src="docs/readme_images/django_panel.png">  
 </details>
 
-**Footer -All Users**
+**Footer - All Users**
 
 Everneed's footer is brightly coloured with the defaulyt forest green #194f49 to contrast against the site's important white space. A purple SVG presents the newsletter subscription form for users to sign up for weekly emails. Across from this are a list of links that aim to give the customer all of the information they would need about Everneed. FAQ links the user back to the home page's accordian section of the usual questions and answers. Contact Us opens a contact modal for any queries that remain unanswered by the FAQ's. 
 
@@ -785,6 +821,8 @@ If a customer navigates to a page that does not exist eg 'everneed-herokuapp.com
 - **Newsletter Discount Code**:Discount codes obtained through newsletter subscription will offer the customer a 10% discount on their first purchase if they subscribe to the newsletter distributed via MailChimp.
 
 - **Sale Section**: Inclusion of a sale section for Admin to add stock that is ready to be offered at a discounted price.
+
+- **Product Slugs**: Using Django-Slugify, the future version of Everneed will ensure that the products name is displayed in the URL.
 
 # Technologies & Languages Used
 
