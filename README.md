@@ -667,7 +667,16 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/order_history.png">  
 </details>
 
-**Wishlist**
+**Wishlist-Registered, logged in Users only**
+
+A Wishlist feature allows the logged in user to keep a list of their favourite products. When logged in, on viewing an individual product, the user will see the 'Add to Wishlist' button. When clicked user is informed via toast message that product has been added successfully or whether the product already exists within the Wishlist. The heart icon in the navbar, when hovered displays the 'Wishlist' tooltip, and when clicked brings the logged in user to the wishlist page. If not logged in, when clicked it brings the user to the 'Log In' screen.
+
+The Wishlist is a simple list display with a 'Remove Item' icon and text aside the product. There is no delete confirmation modal as this action is not a permanent deletion action, so is easily rectified if the product is accidentally removed from the list. When the item image is clicked the user is brought to the product detail page where they may add the item to their bag. The item is not automatically deleted from the wishlist if the user adds it to the bag.
+
+<details open>
+    <summary>Wishlist Button - Registered, logged-in Users only</summary>  
+    <img src="docs/readme_images/wishlist_btn.png">  
+</details>
 
 <details open>
     <summary>Wishlist Page Desktop - Registered, logged-in Users</summary>  
@@ -679,7 +688,9 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/wishlist_mob.png">  
 </details>
 
-**Admin Dashboard**
+**Admin Dashboard - Logged in Admin/Superuser only**
+
+When developing this project it was important to me to have a separate Admin area accessible via the frontend, in addition to the Django Backend Panel. I fulfilled this by separating out the CRUD features for the Admin/Superuser into an Admin Dashboard. This provides a direct link to editable forms for adding/editing products and articles. A separated 'Admin' view (viewable only to the Admin when they are logged in) has been created for Articles and Products with lists that display 'Edit' and 'Delete' Buttons. The 'Add' buttons bring the Admin directly to adding products or articles. Crispy Forms and Summernote render forms that allow for a high degree of editing, manipulation and connection to the database models. Defensive design for deletion of items appears in the form of a 'Delete Confirmation' modal.
 
 <details open>
     <summary>Admin Dashboard View - Admin Only</summary>  
@@ -691,7 +702,13 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/django_panel.png">  
 </details>
 
-**Footer**
+**Footer -All Users**
+
+Everneed's footer is brightly coloured with the defaulyt forest green #194f49 to contrast against the site's important white space. A purple SVG presents the newsletter subscription form for users to sign up for weekly emails. Across from this are a list of links that aim to give the customer all of the information they would need about Everneed. FAQ links the user back to the home page's accordian section of the usual questions and answers. Contact Us opens a contact modal for any queries that remain unanswered by the FAQ's. 
+
+The stores Privacy Policy and Terms and Conditions follow underneath. The Privacy Policy opens in a new tab whilst the Terms and Conditions are displayed on a new Everneed webpage thanks to [Termly's](https://termly.io/) pasteable HTML block, once you have given the relevant business details. Finishing off that column are the business's Social Media connections. A Facebook page for Everneed opens in a new tab, as does my Twitter page containing a mix of climate change documents and web development articles. My LinkedIn and GitHub are also connected and will open in a new tab.
+
+At the very bottom of the footer are the business's address which highlights in yellow when hovered and links to the Google Map for a generic address in Mullingar, the address for this fictional business. The copyright link when clicked brings the user to my project's README file.
 
 <details open>
     <summary>Footer - All Users</summary>  
@@ -708,7 +725,9 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/terms_cs.png">  
 </details>
 
-**Contact Us**
+**Contact Us - All Users**
+
+A brief contact form is offered in the footer of Everneed for any queries the customer may have. One submitting their name, email and message, a thank you page is displayed, with a 'Return Home' button. The Admin may view the messages in their connected business email service and reply directly to the customer.
 
 <details open>
     <summary>Contact Us Form - All Users</summary>  
@@ -725,7 +744,9 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/contact_email.png">  
 </details>
 
-**Newsletter**
+**Newsletter - All Users who subscribe**
+
+Everneed customers are invited to subscribe to Everneed's weekly eco newsletter. This form is located on every page in the footer. The newsletter service is offered through Mailchimp. The newsletter aims to keep customers informed of discounts, new products, sales and environmental issues on a weekely basis. On entering their email and clicking subscribe, the user is brought to a new page in a new tab confirming their subscription to Everneed. They may unsubscribe from here or from the bottom of the weekly newsletter.  
 
 <details open>
     <summary>Everneed Newsletter Form</summary>  
@@ -742,7 +763,9 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/mailchimp_exp.png">  
 </details>
 
-**404 Page**
+**404 Page - All Users**
+
+If a customer navigates to a page that does not exist eg 'everneed-herokuapp.com/test/' this page is displayed to the user. A 'Go Home' button takes the user back to the Home page.
 
 <details>
     <summary>404 Error Page</summary>  
@@ -751,10 +774,17 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 
 ## Future Features
 
-- Article Comment, Article React
-- Reviews feature with Ratings
-- Further Categorise products with eco-labels for materials and production processes
-- Discount codes obtained through newsletter subscription
+- **Stock Levels**: Editable stock levels are a priority future feature for Everneed. This will be added to the Admin Dashboard and the customer will be informed of stock levels via display labels if a product is out of stock.
+
+- **Article Comment, Article React**: As the Article's feature is only added to/edited by Admin, I considered having some way for user's to interact with the content. Through it's development I decided that Article Comments would be a 'WON'T HAVE' issue as I felt that having that much of a social media feature would not suit the Everneed brand. I also considered a 'Reaction' feature which at the moment remains at 'COULD HAVE'. Having several eco-related emojis could be a possibility but I would want to ensure that they do not detract from the seriousness of the article's content.
+
+- **Reviews feature with Ratings**: I hope to include a Reviews feature in Everneed's future development. I would like the customer's to have access to real-life reviews of the products' robustness, wear and materials. I feel that for the brand it is important for transparency to be front and centre to ensure customers make the best choice in their purchases, particularly with most of the products aiming to be non-gendered sizing. Reviews will have their averages calculated and this will determine the products' rating out of 5 when implemented.
+  
+- **Eco-Labels**:Further Categorise products with eco-labels for materials and production processes. This will further inform the customer of what exactly they are purchasing and will add to the carbon footprint feature.
+  
+- **Newsletter Discount Code**:Discount codes obtained through newsletter subscription will offer the customer a 10% discount on their first purchase if they subscribe to the newsletter distributed via MailChimp.
+
+- **Sale Section**: Inclusion of a sale section for Admin to add stock that is ready to be offered at a discounted price.
 
 # Technologies & Languages Used
 
@@ -800,6 +830,7 @@ Libraries and frameworks used were dictated by the 'Boutique Ado' walkthrough fr
 - [Favicon](https://favicon.io/) for converting an icon into favicon.
 - [amiresponsive](https://ui.dev/amiresponsive) for screenshot of Everneed on different screen sizes.
 - [Perplexity AI](https://www.perplexity.ai/) for breaking down Python concepts and Django documentation into more understandable chunks.
+- [Mailchimp](https://mailchimp.com/) is used for marketing with their newsletter subscription service.
 
 # Testing
 
