@@ -78,6 +78,7 @@ For access to Admin Dashboard frontend view with relebant sign-in credentials: [
   - [Google Mail Setup](#google-mail-setup)
   - [AWS Config](#aws-config)
     - [Media Folder Setup](#media-folder-setup)
+    - [Django AWS Connect](#django-aws-connect)
   - [Stripe Config](#stripe-config)
   - [Clone Project](#clone-project)
   - [Fork Project](#fork-project)
@@ -775,9 +776,19 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 
 Libraries and frameworks used were dictated by the 'Boutique Ado' walkthrough from our course material with the Code Institute. This project will be upgraded on completion of the course to more recent packages to meet current standards and security packages.
 
-- [Bootstrap v4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
-- [Django v3.2](https://docs.djangoproject.com/en/4.2/releases/3.2/)
-- [AllAuth v0.41](https://django-allauth.readthedocs.io/)
+- [Django v3.2](https://docs.djangoproject.com/en/4.2/releases/3.2/) 
+- [AllAuth v0.41](https://django-allauth.readthedocs.io/) for user authentication and account management.
+- [Bootstrap v4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) for template rendering.
+- [Crispy Forms](https://pypi.org/project/crispy-bootstrap4/) for form rendering.
+- [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) for AWS CRUD with Python scripts.
+- [dj-database-url](https://pypi.org/project/dj-database-url/) for DATABASE_URL.
+- [django-countries](https://pypi.org/project/django-countries/) for country field rendering in checkout form.
+- [django-storages](https://django-storages.readthedocs.io/en/latest/) for handling static and media files.
+- [django-summernote](https://pypi.org/project/django-summernote/) a WYSIWYG editor for Django forms and models.
+- [gunicorn](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/) apure-Python WSGI server for UNIX.
+- [oauthlib](https://pypi.org/project/oauthlib/) OAuth request-signing logic.
+- [psycopg2](https://pypi.org/project/psycopg2/) s PostgreSQL database adapter for Python.
+- [Stripe](https://stripe.com/en-ie) for processing Everneed's payment system.
 
 ## Tools & Programs
 - [ImageCompressor](https://imagecompressor.com/) for compressing PNG/WEbp files
@@ -789,7 +800,6 @@ Libraries and frameworks used were dictated by the 'Boutique Ado' walkthrough fr
 - [Favicon](https://favicon.io/) for converting an icon into favicon.
 - [amiresponsive](https://ui.dev/amiresponsive) for screenshot of Everneed on different screen sizes.
 - [Perplexity AI](https://www.perplexity.ai/) for breaking down Python concepts and Django documentation into more understandable chunks.
-
 
 # Testing
 
@@ -901,7 +911,6 @@ To start the deployment process , please follow the below steps:
 4. Once verified access **App Passwords** -> **Other** -> enter a name for the password, eg Everneed.
 5. Click **Create** -> copy the 16 digit password that is generated.
 6. In your `settings.py` add the following Email Settings:
-   
    ![django email settings](docs/readme_images/email_settings.png)  
    *Django Email Settings for Everneed Email setup*  
 7. Add EMAIL_HOST_PASS, EMAIL_HOST_USER variable, password and email address to your Heroku Config Vars
@@ -917,7 +926,7 @@ To start the deployment process , please follow the below steps:
 5. **Properties** tab -> turn on static web hosting and add 'index.html' and 'error.html' into the correct fields -> click **Save**
 6. In the **Permissions** tab, paste in the following CORS config:
 
-   ```shell
+   ```
 	[
 		{
 			"AllowedHeaders": [
@@ -1002,7 +1011,96 @@ To start the deployment process , please follow the below steps:
 1. In Heroku Config Vars, remove `DISABLE_COLLECTSTATIC`.
 2. In AWS S3 create a new folder -> **media** -> Add project images -> **Manage Public Permissions** -> **Grant public read access to the objects** -> **Upload**
 
+### Django AWS Connect
+
+1. Packages needed to use AWS S3 Buckets in Django:
+   - `pip3 install boto3`
+   - `pip3 install django-storages`
+2. In settings.py add:
+   ```
+   INSTALLED_APPS = [
+       'storages',
+   ]
+3. In env.py ensure AWS variables are present for `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` and environment variable paths are in settings.py:
+   ```
+   import os
+   from pathlib import Path
+   import dj_database_url
+
+   if os.path.isfile('env.py'):
+   import env
+   ```
+4. Ensure DATABASES are set up to connect with Heroku Postgres server in production vs SQLite3 when in local development.
+   ```
+   if "DATABASE_URL" in os.environ:
+	DATABASES = {
+		"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+	}
+    else:
+	DATABASES = {
+		"default": {
+			"ENGINE": "django.db.backends.sqlite3",
+			"NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+		}
+	}
+    ```
+5. Setup media and static file storage in settings.py:
+   ```
+   STATIC_URL = "/static/"
+   STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+
+   MEDIA_URL = "/media/"
+   MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+   ```
+6. S3 Bucket config in settings.py is as follows:
+   ```
+   if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'everneed-096aafe5d13c'
+    AWS_S3_REGION_NAME = 'eu-west-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+    ```
+7. In the main project directory create a 'custom_storages.py' file and add the following:
+   ```
+     from django.conf import settings
+  from storages.backends.s3boto3 import S3Boto3Storage
+
+class StaticStorage(S3Boto3Storage):
+	location = settings.STATICFILES_LOCATION
+
+class MediaStorage(S3Boto3Storage):
+	location = settings.MEDIAFILES_LOCATION
+    ```
+8. AWS S3 Bucket is now connected through the above settings and Heroku's Config Vars.
+
 ## Stripe Config
+
+Stripe's API is used to handle Everneed's payment system. To setup follow the below steps:
+
+1. Create and log in to a Stripe account.
+2. In the Stripe Dashboard -> **Get your test API keys.**
+3. Add your `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY` to your env.py, connect to your settings.py using your environment variables and then enter them into your project's Heroku Config Vars.
+4. Including Stripe's Webhooks creates a failsafe if a customer exits the page during payment authorisation. In Stripe's Dashboard -> **Developers** -> **Webhooks** -> **Add Endpoint**: 'herokuapp url/checkout/wh'
+5.  Choose **Retrieve all events** -> **Add Endpoint**.
+6.  Add new key **STRIPE_WH_SECRET** to env.py, settings.py and Heroku Config Vars as before.
 
 ## Clone Project
 
@@ -1034,7 +1132,7 @@ A copy of the original repository can be made through GitHub. Please follow the 
 
 ## Code
 
-The following blogs/tutorials complemented my learning for this project, alongside the [Code Institute's](https://codeinstitute.net/ie/) Learning Content.
+The following blogs/tutorials complemented my learning for this project, alongside the [Code Institute's](https://codeinstitute.net/ie/) Learning Content. The Portfolio Project 5 - Boutique Ado provided a foundation which I took apart and altered to fit my project's design
 
 - [Django Docs](https://www.djangoproject.com/)
 - [Bootstrap Docs](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
@@ -1106,7 +1204,7 @@ The following blogs/tutorials complemented my learning for this project, alongsi
 - icebergs article image by Melissa Bradley <https://unsplash.com/@alaskanhoneybee?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
 - bee image by Felice Wolke: <https://unsplash.com/@felicewoelke?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
 - traffic sign image by Photo by Kelly Sikkema: <https://unsplash.com/@kellysikkema?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
-  
+</details>
 
 ### Additional reading/tutorials/books/blogs
 
@@ -1114,8 +1212,3 @@ The following blogs/tutorials complemented my learning for this project, alongsi
 - [Geeks for Geeks](https://www.geeksforgeeks.org/python-programming-language/?ref=ghm) for additional Python learning.
 
 ## Acknowledgements
-
-
-
-
-
