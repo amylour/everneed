@@ -119,7 +119,7 @@ Everneed seeks to build a strong base of regular shoppers who seek long-life, qu
 
 From the beginning of the project, I knew that the colour palette would reflect nature with shades of green acting as the primary colour, in particular forest green, #194f49. The website is kept clean, with good flow, using plenty of white space to draw attention to the products and the website's mission in reducing the carbon footprints of its users.
 
-A simple logo, created using [LogoAI](www.logoai.com) is used as a favicon and email branding logo. The logo depicts a plant trapped within a vault, as we must protect our environment at all costs.
+A simple logo, created using [LogoAI](https://www.logoai.com) is used as a favicon and email branding logo. The logo depicts a plant trapped within a vault, as we must protect our environment at all costs.
 
 ![everneed logo](docs/readme_images/en_logo.png)  
 *Everneed logo*
