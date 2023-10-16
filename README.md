@@ -47,7 +47,7 @@ For access to Admin Dashboard frontend view with relebant sign-in credentials: [
   - [Agile Methodologies](#agile-methodologies)
     - [MoSCoW Prioritization](#moscow-prioritization)
     - [Sprints](#sprints)
-    - [Marketing](#marketing)
+  - [Marketing](#marketing)
   - [User Stories](#user-stories)
     - [Visitor User Stories](#visitor-user-stories)
     - [Epic - Home View \& User Account](#epic---home-view--user-account)
@@ -235,9 +235,13 @@ My Sprints were broken down into appropriately sized chunks from the beginning a
 |    # 8     | User/Customer Correspondence  |  26/09/23 - 02/10/23   |
 |    # 9     | Documentation & Testing   |    02/10/23 - 15/10/23   |
 
-### Marketing
+## Marketing
 
-An [Everneed Facebook Page](https://www.facebook.com/profile.php?id=61552368530738) was created to demonstrate promotion of the Everneed store on social media. Posts informing customers of deals and new products would be made on the page with the hopes of drawing in more revenue. Facebook provides an easy, minimal-step process to allow business owners to promote their business, with additional paid 'boost' features to further promote and spread the reach of the posts. 
+An [Everneed Facebook Page](https://www.facebook.com/profile.php?id=61552368530738) was created to demonstrate promotion of the Everneed store on social media. Posts informing customers of deals and new products would be made on the page with the hopes of drawing in more revenue. Facebook provides an easy, minimal-step process to allow business owners to promote their business, with additional paid 'boost' features to further promote and spread the reach of the posts. Everneed also offers a newsletter subscription service through MailChimp. The benfit of both of these services is that the customer is not forced to sign up to either and potentially worry that they will be spammed with an unnecessary amount of information. Everneed avoids this in order to keep it's brand clean and uphold it's eco-friendly efforts. 
+
+Within the head's meta tags of the base template are researched keywords and a description of Everneed's goal as a business. These keywords have been researched using[Wordtracker](https://www.wordtracker.com/) to ensure that both short-tail and long-tail keywords are included. Keywords such as 'carbon-neutral', 'zero waste' and 'practical products' aim to reach most of the market, with additional descriptive key phrases such as 'buy longlife products' and 'buy once products' to craw in users who know exactly what type of product they are looking for. Important keywords like 'Vegan', 'Organic' and 'Bamboo' are present in the product names in the hope to catch a chance to appear at the top of the customers' Google searches.
+
+In addition to this, sitemap.xml and robots.txt files are included to increase the sites visibility. Theses files are essential for SEO (Search Engine Optimisation). The sitemap.xml was generated using [XML Sitemap](https://www.xml-sitemaps.com/) and included in the root folder of the project. A robots.txt file was created in the root folder to instruct search engine crawlers on how to access and crawl the site's pages.
 
 ![Everneed Facebook Business Page](docs/readme_images/everneed_facebook.png)
 *Everneed Facebook Business Page*
@@ -322,9 +326,15 @@ Essential features were:
     
 ## Structural Plane
 
+Everneed is built using Bootstrap, with Code Institute's Boutique Ado e-commerce project as it's foundation. However, I picked apart the structure and styling to fit my own vision and changed quite a bit of the code. In particular I simplified the navbar and made the delivery banner a dropdown source of information, as is common with many modern e-commerce applications. Icons were sourced from Fontawesome and Flaticon through the wireframing process in Figma. The typography was chosen to give a clean, strong reading experience for the user. The Everneed icon was used as the Favicon. This is also repeated through the newsletter email.
+
+A dashed #194f49 2px border is used for form fields throughout the project to replace browsers default blue highlight. Form validation has been left with it's original styling as no change was needed. Bootstrap allowed for easy transition between screen sizes as many ecommerce purchases are made using our mobiles, so this was a priority focus. Bootstrap components such as forms, an accordian section and a product carousel rasied the spec of the project, to give it a professional finish.
+
 ## Skeleton & Surface Planes
 
 ### Wireframes
+
+[Figma](https://www.figma.com) was used to create basic wireframes for Everneed. I had a vision of what the site would look like from the beginning so the planning process went smoothly. Figma allows easy creation of wireframes to the appropriate frame sizes for different screens. Addition of icons and extra design features is easy with their Plugins component which can connect to Flaticon for example.
 
 <details open>
     <summary>Desktop/Tablet Home Page Wireframe</summary>  
@@ -385,6 +395,14 @@ Essential features were:
 
 ![Everneed Eco Eco-Ecommerce ERC](docs/readme_images/everneed_erd.png)  
 *Database Schema (ERD) for Everneed displaying relationships between feature components saved within the database*
+
+[Lucidchart](https://www.lucidchart.com/pages/) was used to create the ERD(Entity RElationship Diagram) for Everneed. To satisy the assessment criteria, multiple models were created to personalise the Everneed project. These include:
+- **Articles**: Articles may be added by Admin with image and text fields within the Add/Edit Article forms.
+- **Order**: Carbon Footprint total and Carbon Saved Total have been added to the Boutique Ado Order model to handle the carbon total logic. This logic duplicates the product adding/updating/quantity logic within the bag contexts to allow for the carbon footprint to be calculated for products that had some form of data available to me to calculate approximate values.
+- **Product**: Carbon Footprint and Carbon Saved have been added to the Boutique Ado Product model to handle the carbon total logic. The Admin can enter these values into the Product Management forms to be made available for the bag/checkout logic to process them.
+- **Wishlist**: The Wishlist model takes simple values of the connected user and the product id to display the tiems in a list fr the individual user.
+
+Future Feature models are visible in the ERD for Reactions, Reviews and Discount Codes. These will be encorporated into the next version of Everneed. At the moment they are beyond the MVP.
 
 ### Defensive Design
 
