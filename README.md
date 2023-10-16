@@ -447,7 +447,11 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/header_demo.gif">  
 </details>
 
-**Home Page**
+**Home Page - All Users**
+
+The Everneed Home Page invites the user in with a large hero graphic, designed in Figma by myself using product images. An 'Explore Now' button brings the user straight to the 'All Products' page. On scrolling down, the bestsellers section is visible in a carousel fashion that displays four products at a time. The Admin has the option to select the 'Featured Item' box in the Admin Product CRUD view. Additonal side arrows allow the user to cycle forwards and backwards through the items at their pace. When clicking the product image the customer is brought to the product page.
+
+Below this is the Mission section with a smooth scroll animation fade-in and underline when the user moves down the flow of the page. Here the customer can identify the business's core values.
 
 <details open>
     <summary>Home Page - All Users</summary>  
@@ -469,21 +473,31 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/accordian_faq.png">  
 </details>
 
-**Delivery Banner**
+**Delivery Banner - All Users**
+
+This dropdown banner is inspired by Patagonia's colourful dropdown banner. I wished to replicate it and I was happy with the outcome. Extra delivery and contact information is displayed to the user when the dropdown arrow is clicked. The webpage that the user was currently visiting is blurred otu and click is disabled outside the delivery banner area. Clicking the x in the top right corner returns the delivery banner back upwards to the top and the blur is removed from the webpage. When extended or in place at the top of the screen, the banner cycles through a selection of the Everneed design palette colours.
 
 <details open>
     <summary>Delivery Banner - All Users</summary>  
     <img src="docs/readme_images/dt_delivery.png">  
 </details>
 
-**Search**
+**Search - All Users**
+
+The search icon when clicked presents the user with a search modal that will take the user's input and return the relevant products. If that product is not available then the search result informs the user that there are '0' products with that name.
 
 <details open>
     <summary>Search - All Users</summary>  
     <img src="docs/readme_images/search.png">  
 </details>
 
-**All Auth**
+**All Auth - All Users who wish to create an account**
+
+Django AllAuth provides a comprehensive, customisable authentication system that keeps user data safe. If a customer wishes to register an account they may enter their username and email and password x 2 to ensure precision. Upon submitting the form the user will receive an email to validate their email and then sign in to Everneed. Similar to all form fields throughout the site, I have applied my own styling to keep in line with Everneed's design. The log in page is similar to the register page with the log out page presenting the user with two buttons to continue the log out process or to return home.
+
+Feedback is continually released to the user through toast messages to confirm successful registration, log in and log out.
+
+AllAuth handles password reset by sending an email to the user with a link to change their password to something new.
 
 <details open>
     <summary>Register - All Users</summary>  
@@ -520,14 +534,29 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/password_success.png">  
 </details>
 
-**Account**
+**Account - Registered, logged in User**
+
+The Account page for Everneed is kept simple, with only relevant information and functionality. The registered, logged in user may adjust their personal, delivery address to be autofilled into their checkout form when making a purchase. Previous purchases are displayed in the Order History, displayed by most recent date.
 
 <details open>
-    <summary>Account view - Registered, logged-in Users</summary>  
+    <summary>Account Toast - Registered, logged-in Users</summary>  
     <img src="docs/readme_images/login_toast.png">  
 </details>
 
-**All Products**
+<details open>
+    <summary>Account View - Registered, logged-in Users</summary>  
+    <img src="docs/readme_images/login_toast.png">  
+</details>
+
+**All Products - All Users**
+
+Everneed sells a curated list of products, selected because of their sustainable production values and natural materials. Products with natural, sustainable materials such as organic wool, bamboo, vegan leather and cotton are available to the customer. Eco-labels will identify these materials quicker to the customer in future versions of Everneed. Clothes are presented as ungendered.
+
+The product list and product details pages are kept responsive and neat thanks to Bootstraps grid system to collapse the rows into single columns. A 'Back to the Top' button appears in the bottom right corner of the webpages if the user has scrolled more than 20 pixels from the top of the screen. Only essential information is displayed with size options broken into three categories for clothes, accessories and shoes.
+
+Admin may access the Admin Dashboard to add/edit/delete any items within the database. Crispy Forms renders the adding/editing forms with some extra styling from myself to remove the default blue highlight border and replace it with a green dashed border to fit within the project's design. Border radius of 15px is added to round the form fields and buttons are styled to be similar across the website.
+
+No information is lost when viewing the website on mobile view. All screen sizes display the same information to give all users the same experience.
 
 <details open>
     <summary>All Products Desktop - All Users</summary>  
@@ -569,14 +598,22 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/confirm_del_prod.png">  
 </details>
 
-**Categories**
+**Categories - All Users**
+
+Everneed keeps it's shopping experience clean and easily accessible with four categories:
+- Wear for clothing, accessories and footwear
+- Care for personal care items
+- Eat for food and drink items
+- Travel for bags and travel items
+
+'All' displays all of the products available. Icons from FontAwesome, below the product images, show which category the item is from.
 
 <details>
     <summary>Everneed Categories - All Users</summary>  
     <img src="docs/readme_images/categories.png">  
 </details>
 
-**Articles**
+**Articles - All Users/Admin CRUD**
 
 The articles currently displayed on Everneed are informing customers of the ecological, environmental and climate issues our planet is currently facing. The text within the article has been created by Chat GPT when prompted to respond about natural disasters that the world has been facing. The Admin have sole responsibility to add/edit/delete articles with no current option for the customer/reader to respond or engage with the post. This is partly because the brand aims to engage the customer into making a purchase to better the planet, by choosing sustainably-produced, long-life products.
 
@@ -617,7 +654,7 @@ The Admin may add/edit/delete articles via the Admin Dashboard. If no image is i
     <img src="docs/readme_images/art_del_modal.png">  
 </details>
 
-**Bag**
+**Bag - All Users**
 
 Everneed's Shopping Bag feature is presented in a clean and clear format to correctly and quickly inform the user of their possible purchase choices. The customer has the option to change the amounts of the items that they wish to buy or to remove them completely form the bag. The customer is shown their running totals as well as their delivery charge and their carbon saved and carbon footprint total. When products are added/updated/removed to/from the bag, then a toast message displays to give the customer feedback on their most recent choice.
 
@@ -648,7 +685,7 @@ A clear message is shown if there are no items in the bag and a 'Keep Shopping' 
     <img src="docs/readme_images/empty_bag.png">  
 </details>
 
-**Checkout**
+**Checkout - All Users**
 
 The checkout process for Everneed is operated through the [Stripe](https://stripe.com/docs) API. As stated above -> If you wish to make a test purchase, you can use the following [Stripe Dummy Card](https://stripe.com/docs/testing) details:
 
