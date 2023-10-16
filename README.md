@@ -433,9 +433,17 @@ Customers have full CRUD functionality with their prospective purchases. They ma
 
 ## Features Showcase
 
-**Header & Navigation**
+**Header & Navigation - All Users**
 
 *For features showcase, screenshots of the features in use were taken on Laptop/iPad Pro/iPhone 12 Pro*
+
+Everneed's navbar is kept clean, with a simple dropdown menu for the 'All Products' section. 
+- The search icon yields a search modal when clicked.
+- The profile icon changes to reflect the logged in/out status of the user.
+- The heart icon takes the user to the wishlist, if logged in, otherwise they will be directed to the log in page.
+- The bag displays the number of items within it if the customer adds an item to it.
+
+The navbar is displayed via a dropdown toggle in mobile view.
 
 <details open>
     <summary>Header & Navigation - All Users</summary>  
@@ -447,11 +455,18 @@ Customers have full CRUD functionality with their prospective purchases. They ma
     <img src="docs/readme_images/header_demo.gif">  
 </details>
 
+<details open>
+    <summary>Header & Navigation Mobile View</summary>  
+    <img src="docs/readme_images/mobile_nav.gif">  
+</details>
+
 **Home Page - All Users**
 
 The Everneed Home Page invites the user in with a large hero graphic, designed in Figma by myself using product images. An 'Explore Now' button brings the user straight to the 'All Products' page. On scrolling down, the bestsellers section is visible in a carousel fashion that displays four products at a time. The Admin has the option to select the 'Featured Item' box in the Admin Product CRUD view. Additonal side arrows allow the user to cycle forwards and backwards through the items at their pace. When clicking the product image the customer is brought to the product page.
 
 Below this is the Mission section with a smooth scroll animation fade-in and underline when the user moves down the flow of the page. Here the customer can identify the business's core values.
+
+A simple accordian section for business FAQ's follows this. Answering a braod spectrum of possible customer questions.
 
 <details open>
     <summary>Home Page - All Users</summary>  
@@ -553,6 +568,8 @@ The Account page for Everneed is kept simple, with only relevant information and
 Everneed sells a curated list of products, selected because of their sustainable production values and natural materials. Products with natural, sustainable materials such as organic wool, bamboo, vegan leather and cotton are available to the customer. Eco-labels will identify these materials quicker to the customer in future versions of Everneed. Clothes are presented as ungendered.
 
 The product list and product details pages are kept responsive and neat thanks to Bootstraps grid system to collapse the rows into single columns. A 'Back to the Top' button appears in the bottom right corner of the webpages if the user has scrolled more than 20 pixels from the top of the screen. Only essential information is displayed with size options broken into three categories for clothes, accessories and shoes.
+
+Products may be sorted according to price, A-Z, rating and category using the dropdown sort field.
 
 Admin may access the Admin Dashboard to add/edit/delete any items within the database. Crispy Forms renders the adding/editing forms with some extra styling from myself to remove the default blue highlight border and replace it with a green dashed border to fit within the project's design. Border radius of 15px is added to round the form fields and buttons are styled to be similar across the website.
 
