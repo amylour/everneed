@@ -4,11 +4,11 @@
 
 ## Introduction
 
-Everneed is an e-commerce site selling practical, sustainable, earth-friendly products with a carbon-footprint total for your order. It has been developed as my Portfolio Project 5 for the Code Institute's Full Stack Software Developer Course using Django, HTML, CSS, JS & Python.
+Everneed is an e-commerce site selling practical, sustainable, earth-friendly products with a carbon footprint total for your order. It has been developed as my Portfolio Project 5 for the Code Institute's Full Stack Software Developer Course using Django, HTML, CSS, JS & Python.
 
-Everneed has been created using carbon data from available product carbon footprints, or [PCFs](https://tinyurl.com/2htnyr9w). As this data is relatively new, this website is to be viewed with the understanding that the data within is unvalidated, 'fictional' data, calculated to the best of my abilities from all available information on the internet. It's purpose is to purely aid in developing the website's concept.
+Everneed has been created using carbon data from available product carbon footprints, or [PCFs](https://tinyurl.com/2htnyr9w). As this data is relatively new, this website is to be viewed with the understanding that the data within is unvalidated, 'fictional' data, calculated to the best of my abilities from all available information on the internet. Its purpose is to purely aid in developing the website's concept.
 
-With the growing threat of climate change and sudden mass displacement of large communities from natural disasters, there has never been a more important time, in recent years, to have a 'Go-Bag' ready for yourself and family members. The initial concept of this website was to introduce the idea of living with a minimum of necessary items, in an attempt to escape capitalism and free ourselves to be able to experience life and spend time with our loved ones. This concept could be a more grim, mandatory idea in the not-too-distant future, if all manufacturing of unnecessary goods were to cease in an sudden effort to meet a new global carbon emmissions target, since we have already shot through the [existing ones](https://www.unep.org/resources/emissions-gap-report-2022#:~:text=The%20world%20is%20not%20on,cent%20to%20avoid%20global%20catastrophe.).
+With the growing threat of climate change and sudden mass displacement of large communities from natural disasters, there has never been a more important time, in recent years, to have a 'Go-Bag' ready for yourself and family members. The initial concept of this website was to introduce the idea of living with a minimum of necessary items, in an attempt to escape capitalism and free ourselves to be able to experience life and spend time with our loved ones. This concept could be a more grim, mandatory idea in the not-too-distant future, if all manufacturing of unnecessary goods were to cease in an sudden effort to meet a new global carbon emissions target, since we have already shot through the [existing ones](https://www.unep.org/resources/emissions-gap-report-2022#:~:text=The%20world%20is%20not%20on,cent%20to%20avoid%20global%20catastrophe.).
 
 Choosing to only purchase 100% necessary items, that have been created in the most sustainable way, and to be aware of your carbon spending at the same time, could be an e-commerce store type that will be with us sooner than we think. [Carbon credits](https://carboncredits.com/carbon-credits-explained-2023-guide/) are already being implemented in industrial and agricultural sectors in an effort to slow our global carbon emissions rate, it could, in the near future, start affecting our purchases as individuals.
 
@@ -22,11 +22,11 @@ If you wish to make a test purchase, you can use the following [Stripe Dummy Car
 - CVN: any 3 digit number
 - Postcode: any 5 numerals  
 
-Any payments made using a valid debit/credit card will not process and the card will not be charged. No orders made will be fulfilled.
+Any payments made using a valid debit/credit card will not be processed and the card will not be charged. No orders made will be fulfilled.
 
 For full Admin access to Django Admin panel with relevant sign-in credentials: [Everneed Admin](https://everneed-096aafe5d13c.herokuapp.com/admin/)
 
-For access to Admin Dashboard frontend view with relebant sign-in credentials: [Everneed Admin Dashboard](https://everneed-096aafe5d13c.herokuapp.com/products/admin_dashboard/)
+For access to Admin Dashboard frontend view with relevant sign-in credentials: [Everneed Admin Dashboard](https://everneed-096aafe5d13c.herokuapp.com/products/admin_dashboard/)
 
 ## Table of Contents
 
@@ -89,7 +89,7 @@ For access to Admin Dashboard frontend view with relebant sign-in credentials: [
   - [Acknowledgements](#acknowledgements)
 
 ## Overview
-Everneed is an eco-friendly products store focusing on procuring the best in sustainabale, long-life products. Users are invited to:
+Everneed is an eco-friendly products store focusing on procuring the best in sustainable, long-life products. Users are invited to:
 
 - View the store as Guests
 - Register for an Account
@@ -101,15 +101,15 @@ Everneed is an eco-friendly products store focusing on procuring the best in sus
 - Read the latest articles on climate change and environmental impacts
 - Sign up for a weekly environment issues newsletters
 
-Everneed is accessible via all browsers with full responsiveness on different screen sizes. It's aim is to raise awareness of our carbon spend and provide an alternative to the fast-fashion trap. 
+Everneed is accessible via all browsers with full responsiveness on different screen sizes. Its aim is to raise awareness of our carbon spend and provide an alternative to the fast-fashion trap.
 
 ## Customer Goals
 
-Customers are provided with an easy, intuitive shopping experience and are encouraged to avail of sustainable, eco-friendly products. It is hoped that customers will sign up/register an account with everneed to be able to avail of the full range of user features. Customers are consistenly encouraged to make the best choices in terms of quality, environmentally friendly products. A sense of community is created with a weekly newsletter which will inform the customers of new products, trends and articles on everneed.
+Customers are provided with an easy, intuitive shopping experience and are encouraged to avail of sustainable, eco-friendly products. It is hoped that customers will sign up/register an account with everneed to be able to avail of the full range of user features. Customers are consistently encouraged to make the best choices in terms of quality, environmentally friendly products. A sense of community is created with a weekly newsletter which will inform the customers of new products, trends and articles on everneed.
 
 ## Business Goals
 
-Everneed provides easy Admin functionality for the business owner with an accessible, easy-use Admin Dashboard to manage inventory and articles. The additonal frontend forms allows the business owner to make quick and easy changes. Further information regarding users and orders can be accessed via the Admin Dashboard with a direct link to the information stored within the Django Admin Panel.
+Everneed provides easy Admin functionality for the business owner with an accessible, easy-use Admin Dashboard to manage inventory and articles. The additional frontend forms allows the business owner to make quick and easy changes. Further information regarding users and orders can be accessed via the Admin Dashboard with a direct link to the information stored within the Django Admin Panel.
 
 Everneed seeks to build a strong base of regular shoppers who seek long-life, quality products made from high quality, natural materials. The newsletter, articles and carbon footprint features aim to attract those who have concerns for the rising environmental issues that our planet faces. Further marketing is made through the businesses social media channels, in particular their Facebook page.
 
@@ -117,19 +117,19 @@ Everneed seeks to build a strong base of regular shoppers who seek long-life, qu
 
 ## Design Inspiration
 
-From the beginning of the project, I knew that the colour palette would reflect nature with shades of green acting as the primary colour, in particular forest green, #194f49. The website is kept clean, with good flow, using plenty of white space to draw attention to the products and the website's mission in reducing the carbon footprints of it's users.
+From the beginning of the project, I knew that the colour palette would reflect nature with shades of green acting as the primary colour, in particular forest green, #194f49. The website is kept clean, with good flow, using plenty of white space to draw attention to the products and the website's mission in reducing the carbon footprints of its users.
 
 A simple logo, created using [LogoAI](www.logoai.com) is used as a favicon and email branding logo. The logo depicts a plant trapped within a vault, as we must protect our environment at all costs.
 
 ![everneed logo](docs/readme_images/en_logo.png)  
 *Everneed logo*
 
-Only the necessary information is displayed so as to not increase the size of the website and it's own carbon footprint. Purple #8E164E and gold #CC4818 are used as accents to draw attention to active buttons and carbon totals. I created a hero image, using Figma and the site's product images, to add a modern, graphic edge to the website.
+Only the necessary information is displayed so as to not increase the size of the website and its own carbon footprint. Purple #8E164E and gold #CC4818 are used as accents to draw attention to active buttons and carbon totals. I created a hero image, using Figma and the site's product images, to add a modern, graphic edge to the website.
 
 ![Hero Image](docs/readme_images/dt_hero.png)
 *Image created by myself in Figma using product images*
 
-Product images are kept clean with no backgrounds so that focus is on the product itself. Feedback is continuously provided to the user via the website's header which displays whether the user is logged in and how many items are in their bag. Message 'toasts' are also visible upon user actions to display further information.
+Product images are kept clean with no backgrounds so that focus is on the product itself. Feedback is continuously provided to the user via the website's header which displays whether the user is logged in and how many items are in their bag. Message 'toasts' are also visible upon user actions to display further information. Buttons are kept similar for continuity.
 
 ![Header Feedback](docs/readme_images/header_feedback.png)  
 *Header feedback is kept clean and intuitive*
@@ -148,17 +148,16 @@ Variables were used within the CSS file to call colours as they were needed:
 - --white: #fff;
 - --black: #0d0d0d;
 
-The above colours were chosen to reflect colours found naturally within nature. The primary, dominant colour of forest green #194f49, is used repretedly throught the website for it's font and main sectioning. A muted version is used for dashed borders for input field focus and feedback to the user, this replaces the default blue border used in most browsers. The main buttons are created using #e5ede8 in a gradient to a darker #b5c9bd. This creates a sense of depth and creates a 3D feel to the buttons.
+The above colours were chosen to reflect colours found naturally within nature. The primary, dominant colour of forest green #194f49, is used repeatedly throughout the website for its font and main sectioning. A muted version is used for dashed borders for input field focus and feedback to the user, this replaces the default blue border used in most browsers. The main buttons are created using #e5ede8 in a gradient to a darker #b5c9bd. This creates a sense of depth and creates a 3D feel to the buttons.
 
 ![Everneed Main Button](docs/readme_images/main_button.png)  
 *Everneed Main Button*
 
-The purple is used when a button or field text is brought into focus by the user, this provides feedback that there is an action available in the feature/area. The gold is used to provide contrast for important text that provides a link and also in the 'Subscribe' button visible in the newsletter section of the footer area.White space is maintained throughout the website to keep it clean, clear and fresh.
+The purple is used when a button or field text is brought into focus by the user, this provides feedback that there is an action available in the feature/area. The gold is used to provide contrast for important text that provides a link and also in the 'Subscribe' button visible in the newsletter section of the footer area. White space is maintained throughout the website to keep it clean, clear and fresh.
 
 Further preparation for the colour scheme was carried out on [Adobe Color](https://color.adobe.com/create/color-accessibility) to check for contrast levels and accessibility for those with sight issues. Text contrasts were checked also to ensure they exceeded the WCAG 2.1 Level for suitable contrast of web text.
 
-
-![Everneed Color Scheme accesssibility Check](docs/readme_images/color_blind_safe.png)  
+![Everneed Color Scheme accessibility Check](docs/readme_images/color_blind_safe.png)  
 *Everneed Color Accessibility Check*
 
 ![Everneed Color Scheme Contrast Check](docs/readme_images/contrast_main.png)  
@@ -167,14 +166,12 @@ Further preparation for the colour scheme was carried out on [Adobe Color](https
 ![Everneed Color Scheme Contrast Check](docs/readme_images/button_contrast.png)  
 *Everneed Color Contrast Check - Button*
 
-
-
 ### Typography & Iconography
 
 ![Everneed Font Pairing](docs/readme_images/fontpair.png)
 *Everneed Font Pairing*
 
-Karla and Inconsolata were both imported foom [Google Fonts](https://fonts.google.com/). They were chosen for their compatibility and aesthetics that aligned with the store brand. Karla is a sans-serif typeface with a clean and modern design which delivers a fresh and simple look to the store. Inconsolata is a monospace font which allows clear display of descriptions and information about the products. Together they apply enough textual contrast to allow for a good flow of information to the user, improving user experience. Using Google Fonts allows for faster, reliable loading times for the website, ensuring the user stays when they visit.
+Karla and Inconsolata were both imported from [Google Fonts](https://fonts.google.com/). They were chosen for their compatibility and aesthetics that aligned with the store brand. Karla is a sans-serif typeface with a clean and modern design which delivers a fresh and simple look to the store. Inconsolata is a monospace font which allows clear display of descriptions and information about the products. Together they apply enough textual contrast to allow for a good flow of information to the user, improving user experience. Using Google Fonts allows for faster, reliable loading times for the website, ensuring the user stays when they visit.
 
 In development, 'Karla' was identified by variable ```--title```, whilst 'Inconsolata' was set as ```--main-font``` within the CSS file. Similar to my setup for the project's colours, using variables helped to speed up the frontend process.
 
@@ -184,7 +181,7 @@ In development, 'Karla' was identified by variable ```--title```, whilst 'Incons
 
 The primary objective was to create an e-commerce store that satisfied the assessment criteria of the Code Institute's Project 5: E-Commerce Module. The store must provide the expected functions of a responsive e-commerce store using Stripe as a payment system, user/guest views for authentication and store features, some extra features of my choosing, wishlist and articles, and demonstration of some marketing/SEO skills. Orders on Everneed were to display the carbon footprint totals and carbon saved, (where data is available, see below), reflecting the pressing need for eco-consciousness in these modern times. The User, whether paying customer or just browsing, must receive the best in UX and feel that Everneed is relatable and trust-worthy. 
 
-The site's design and graphic assets were collected through various copyright-free image websites. Images were edited for the wesite to be cohesive. The hero-image on the home page and above, was created by myself in Figma. Bootstrap and Cripsy Forms were used for the project's frontend to speed up the process and to keep the templates consistent. Further customisation to the buttons, forms, modals, toasts and user feedback processes were added to the project's CSS files. 
+The site's design and graphic assets were collected through various copyright-free image websites. Images were edited for the website to be cohesive. The hero-image on the home page and above, was created by myself in Figma. Bootstrap and Crispy Forms were used for the project's frontend to speed up the process and to keep the templates consistent. Further customisation to the buttons, forms, modals, toasts and user feedback processes were added to the project's CSS files. 
 
 If a customer chooses to make a purchase then they are given consistent feedback through the use of 'toasts' messages and confirmation emails. The purchasing process is presented using Stripe payment handlers, obtained and setup using [Stripe's](https://stripe.com/docs) documentation and website.
 
@@ -203,21 +200,21 @@ I spent a large portion of my project planning and researching to ensure that I 
 - Customers are educated about carbon footprints/credits/sustainable products through the checkout process and through reading the site articles and FAQ's.
 - Customers feel informed that they are making a good choice shopping with Everneed.
 - UX remains similar across screen sizes.
-- CRUD functionalities work as intended with easy to user frontend forms.
+- CRUD functionalities work as intended with easy to use frontend forms.
 - Scalable site to allow for extra features in the future.
 
 ## Agile Methodologies
 
-Everneed followed Agile planning methodolgies to it's completion. [GitHub Projects](https://github.com/users/amylour/projects/6) provided an ideal platform to create issues, boards and milestones for each of the projects Epics. Using labels I could easily identify my next task and organise them into the appropriate Milestones and Sprints. Keeping focused on individual sections as I built Everneed reduced the number of bugs and human errors.
+Everneed followed Agile planning methodologies to its completion. [GitHub Projects](https://github.com/users/amylour/projects/6) provided an ideal platform to create issues, boards and milestones for each of the project's Epics. Using labels I could easily identify my next task and organise them into the appropriate Milestones and Sprints. Keeping focused on individual sections as I built Everneed reduced the number of bugs and human errors.
 
 ### MoSCoW Prioritization
 
-I chose to follow the MoSCoW Prioritization method for Everneed, identifying and labelling my:
+I chose to follow the MoSCoW Prioritization method for Everneed, identifying and labeling my:
 
-- **Must Haves**: the 'required', critical components of the project. Completing my 'Must Haves' helped me to reach the MVP (Minimum Viable Product) for this project. 
+- **Must Haves**: the 'required', critical components of the project. Completing my 'Must Haves' helped me to reach the MVP (Minimum Viable Product) for this project.
 - **Should Haves**: the components that are valuable to the project but not absolutely 'vital' at the MVP stage. The 'Must Haves' must receive priority over the 'Should Haves'.
 - **Could Haves**: these are the features that are a 'bonus' to the project, it would be nice to have them in this phase, but only if the most important issues have been completed first and time allows.
-- **Won't Haves**: the features or components that either no longer fit the project's brief or are of very low priority for this release. 
+- **Won't Haves**: the features or components that either no longer fit the project's brief or are of very low priority for this release.
 
 ### Sprints
 
@@ -226,7 +223,7 @@ My Sprints were broken down into appropriately sized chunks from the beginning a
 | Sprint No. | Sprint Content | Start/Finish Dates |
 |------------|----------------|--------------------|
 |    # 1     | Project Setup  |   01/08/23 - 20/08/23   |
-|    # 2     | AllAuth & Basic Naviagtion |  20/08/23 - 22/09/23  |
+|    # 2     | AllAuth & Basic Navigation |  20/08/23 - 22/09/23  |
 |    # 3     | Product Views & CRUD       |  22/09/23 - 02/09/23  |
 |    # 4     | Shopping Bag Functionality & Styling | 02/09/23 - 15/09/23   |
 |    # 5     | Wishlist Feature   |   15/09/23 - 17/09/23       |
@@ -237,11 +234,11 @@ My Sprints were broken down into appropriately sized chunks from the beginning a
 
 ## Marketing
 
-An [Everneed Facebook Page](https://www.facebook.com/profile.php?id=61552368530738) was created to demonstrate promotion of the Everneed store on social media. Posts informing customers of deals and new products would be made on the page with the hopes of drawing in more revenue. Facebook provides an easy, minimal-step process to allow business owners to promote their business, with additional paid 'boost' features to further promote and spread the reach of the posts. Everneed also offers a newsletter subscription service through MailChimp. The benfit of both of these services is that the customer is not forced to sign up to either and potentially worry that they will be spammed with an unnecessary amount of information. Everneed avoids this in order to keep it's brand clean and uphold it's eco-friendly efforts. 
+An [Everneed Facebook Page](https://www.facebook.com/profile.php?id=61552368530738) was created to demonstrate promotion of the Everneed store on social media. Posts informing customers of deals and new products would be made on the page with the hopes of drawing in more revenue. Facebook provides an easy, minimal-step process to allow business owners to promote their business, with additional paid 'boost' features to further promote and spread the reach of the posts. Everneed also offers a newsletter subscription service through MailChimp. The benefit of both of these services is that the customer is not forced to sign up to either and potentially worry that they will be spammed with an unnecessary amount of information. Everneed avoids this in order to keep its brand clean and uphold its eco-friendly efforts.
 
-Within the head's meta tags of the base template are researched keywords and a description of Everneed's goal as a business. These keywords have been researched using[Wordtracker](https://www.wordtracker.com/) to ensure that both short-tail and long-tail keywords are included. Keywords such as 'carbon-neutral', 'zero waste' and 'practical products' aim to reach most of the market, with additional descriptive key phrases such as 'buy longlife products' and 'buy once products' to craw in users who know exactly what type of product they are looking for. Important keywords like 'Vegan', 'Organic' and 'Bamboo' are present in the product names in the hope to catch a chance to appear at the top of the customers' Google searches.
+Within the head's meta tags of the base template are researched keywords and a description of Everneed's goal as a business. These keywords have been researched using[Wordtracker](https://www.wordtracker.com/) to ensure that both short-tail and long-tail keywords are included. Keywords such as 'carbon-neutral', 'zero waste' and 'practical products' aim to reach most of the market, with additional descriptive key phrases such as 'buy longlife products' and 'buy once products' to draw in users who know exactly what type of product they are looking for. Important keywords like 'Vegan', 'Organic' and 'Bamboo' are present in the product names and descriptions in the hope to catch a chance to appear at the top of the customers' Google searches.
 
-In addition to this, sitemap.xml and robots.txt files are included to increase the sites visibility. Theses files are essential for SEO (Search Engine Optimisation). The sitemap.xml was generated using [XML Sitemap](https://www.xml-sitemaps.com/) and included in the root folder of the project. A robots.txt file was created in the root folder to instruct search engine crawlers on how to access and crawl the site's pages.
+In addition to this, sitemap.xml and robots.txt files are included to increase the site's visibility. These files are essential for SEO (Search Engine Optimisation). The sitemap.xml was generated using [XML Sitemap](https://www.xml-sitemaps.com/) and included in the root folder of the project. A robots.txt file was created in the root folder to instruct search engine crawlers on how to access and crawl the site's pages.
 
 ![Everneed Facebook Business Page](docs/readme_images/everneed_facebook.png)
 *Everneed Facebook Business Page*
@@ -294,7 +291,7 @@ User stories and features were recorded and managed on [GitHub Projects](https:/
 | As a **customer**, I can **receive an email after purchasing** so that I can **confirm my purchase and keep a record of my order**. | **MUST HAVE** |
 | As a **site user** I can **view error pages with 'Home' links** so that I can **return to the main page if a page is missing or forbidden**. | **MUST HAVE** |
 
-### Epic - Wishlist 
+### Epic - Wishlist
 
 | User Story | Priority |
 |------------------|---------------------|
@@ -309,9 +306,9 @@ User stories and features were recorded and managed on [GitHub Projects](https:/
 
 ## Scope Plane
 
-To focus on the learning of the Stripe API and webhook handlers that would ultimately drive the inner workings of the project, I kept my Everneed scope lower than my previous project, FreeFido. A working e-commerce store was essential so I intially planned to keep to the MVP to ensure that I would complete the project successfully. Especially with the project being my final one for this Diploma, a rigorous year of learning left me ecstatic with my progress but cautious not to fall at the final hurdle from fatigue. However through the planning stages I realised that I wanted to push further with the theme of an eco store and introduce carbon footprint as a currency that we may see in the future in the form of carbon credits.
+To focus on the learning of the Stripe API and webhook handlers that would ultimately drive the inner workings of the project, I kept my Everneed scope lower than my previous project, FreeFido. A working e-commerce store was essential so I initially planned to keep to the MVP to ensure that I would complete the project successfully. Especially with the project being my final one for this Diploma, a rigorous year of learning left me ecstatic with my progress but cautious not to fall at the final hurdle from fatigue. However, through the planning stages I realised that I wanted to push further with the theme of an eco store and introduce carbon footprint as a currency that we may see in the future in the form of carbon credits.
 
-Adding an Articles feature posted solely by the Admin of the website felt important to give more information to the customers on climate-change and manufacturing processes and their environmental impacts. An additional Wishlist feature would complement the site as some of the items have a higher price point due to their robust and eco-friendly manufacturing processes and longevity and the customer may like to purchase them at a later date. 
+Adding an Articles feature posted solely by the Admin of the website felt important to give more information to the customers on climate-change and manufacturing processes and their environmental impacts. An additional Wishlist feature would complement the site as some of the items have a higher price point due to their robust and eco-friendly manufacturing processes and longevity and the customer may like to purchase them at a later date.
 
 Django's MVT framework allowed these features to be built quickly and addition of an Admin frontend panel for managing products and articles created a robust e-commerce site that could start taking orders tomorrow.
 
@@ -326,9 +323,9 @@ Essential features were:
     
 ## Structural Plane
 
-Everneed is built using Bootstrap, with Code Institute's Boutique Ado e-commerce project as it's foundation. However, I picked apart the structure and styling to fit my own vision and changed quite a bit of the code. In particular I simplified the navbar and made the delivery banner a dropdown source of information, as is common with many modern e-commerce applications. Icons were sourced from Fontawesome and Flaticon through the wireframing process in Figma. The typography was chosen to give a clean, strong reading experience for the user. The Everneed icon was used as the Favicon. This is also repeated through the newsletter email.
+Everneed is built using Bootstrap, with Code Institute's Boutique Ado e-commerce project as its foundation. However, I picked apart the structure and styling to fit my own vision and changed quite a bit of the code. In particular I simplified the navbar and made the delivery banner a dropdown source of information, as is common with many modern e-commerce applications. Icons were sourced from Fontawesome and Flaticon through the wireframing process in Figma. The typography was chosen to give a clean, strong reading experience for the user. The Everneed icon was used as the Favicon. This is also repeated through the newsletter email.
 
-A dashed #194f49 2px border is used for form fields throughout the project to replace browsers default blue highlight. Form validation has been left with it's original styling as no change was needed. Bootstrap allowed for easy transition between screen sizes as many ecommerce purchases are made using our mobiles, so this was a priority focus. Bootstrap components such as forms, an accordian section and a product carousel rasied the spec of the project, to give it a professional finish.
+A dashed forest green 2px border is used for form fields throughout the project to replace browsers default blue highlight. Form validation has been left with it's original styling as no change was needed. Bootstrap allowed for easy transition between screen sizes as many ecommerce purchases are made using our mobiles, so this was a priority focus. Bootstrap components such as forms, an accordion section and a product carousel raised the spec of the project, to give it a professional finish.
 
 ## Skeleton & Surface Planes
 
@@ -396,13 +393,13 @@ A dashed #194f49 2px border is used for form fields throughout the project to re
 ![Everneed Eco Eco-Ecommerce ERC](docs/readme_images/everneed_erd.png)  
 *Database Schema (ERD) for Everneed displaying relationships between feature components saved within the database*
 
-[Lucidchart](https://www.lucidchart.com/pages/) was used to create the ERD(Entity RElationship Diagram) for Everneed. To satisy the assessment criteria, multiple models were created to personalise the Everneed project. These include:
+[Lucidchart](https://www.lucidchart.com/pages/) was used to create the ERD(Entity Relationship Diagram) for Everneed. To satisfy the assessment criteria, multiple models were created to personalise the Everneed project. These include:
 - **Articles**: Articles may be added by Admin with image and text fields within the Add/Edit Article forms.
 - **Order**: Carbon Footprint total and Carbon Saved Total have been added to the Boutique Ado Order model to handle the carbon total logic. This logic duplicates the product adding/updating/quantity logic within the bag contexts to allow for the carbon footprint to be calculated for products that had some form of data available to me to calculate approximate values.
 - **Product**: Carbon Footprint and Carbon Saved have been added to the Boutique Ado Product model to handle the carbon total logic. The Admin can enter these values into the Product Management forms to be made available for the bag/checkout logic to process them.
-- **Wishlist**: The Wishlist model takes simple values of the connected user and the product id to display the tiems in a list fr the individual user.
+- **Wishlist**: The Wishlist model takes simple values of the connected user and the product id to display the items in a list for the individual user.
 
-Future Feature models are visible in the ERD for Reactions, Reviews and Discount Codes. These will be encorporated into the next version of Everneed. At the moment they are beyond the MVP.
+Future Feature models are visible in the ERD for Reactions, Reviews and Discount Codes. These will be incorporated into the next version of Everneed. At the moment they are beyond the MVP.
 
 ### Defensive Design
 
@@ -418,7 +415,7 @@ Everneed was developed to ensure a reliable user experience. It's intention was 
 
 **CSRF Tokens**
 
-CSRF (Cross-Site Request Forgery) tokens are included in every form to help authenticate the request with the server when the form is submitted. Absence of these tokens can leave a site vulnerable to attackers who may steal a users data.
+CSRF (Cross-Site Request Forgery) tokens are included in every form to help authenticate the request with the server when the form is submitted. Absence of these tokens can leave a site vulnerable to attackers who may steal a user's data.
 
 # Features
 
@@ -426,12 +423,12 @@ CSRF (Cross-Site Request Forgery) tokens are included in every form to help auth
 
 | Feature   | Guest | Registered, Account Holder |
 |-----------|-------------------|-----------------|
-| Home Page | Visable           | Visable         |
-| Account  | Not Visible - 'Account' option only appears for registered, logged-in users | Visable and full feature interaction available |
-| All Products  | Visable - items can be viewed and added to Bag, Wishlist function not available | Visable and full feature interaction available |
-| Categories   | Visable - items can be viewed and added to Bag, Wishlist function not available | Visable and full feature interaction available |
-| Read   | Visable | Visable |
-| Search  | Visable | Visible |
+| Home Page | Visible           | Visible         |
+| Account  | Not Visible - 'Account' option only appears for registered, logged-in users | Visible and full feature interaction available |
+| All Products  | Visable - items can be viewed and added to Bag, Wishlist function not available | Visible and full feature interaction available |
+| Categories   | Visible - items can be viewed and added to Bag, Wishlist function not available | Visible and full feature interaction available |
+| Read   | Visible | Visible |
+| Search  | Visible | Visible |
 | Contact Us/Newsletter | Visible | Visible |
 | Admin Dashboard | Not Visible | Only visible to Admin |
 
@@ -477,11 +474,11 @@ The navbar is displayed via a dropdown toggle in mobile view.
 
 **Home Page - All Users**
 
-The Everneed Home Page invites the user in with a large hero graphic, designed in Figma by myself using product images. An 'Explore Now' button brings the user straight to the 'All Products' page. On scrolling down, the bestsellers section is visible in a carousel fashion that displays four products at a time. The Admin has the option to select the 'Featured Item' box in the Admin Product CRUD view. Additonal side arrows allow the user to cycle forwards and backwards through the items at their pace. When clicking the product image the customer is brought to the product page.
+The Everneed Home Page invites the user in with a large hero graphic, designed in Figma by myself using product images. An 'Explore Now' button brings the user straight to the 'All Products' page. On scrolling down, the bestsellers section is visible in a carousel fashion that displays four products at a time. The Admin has the option to select the 'Featured Item' box in the Admin Product CRUD view. Additional side arrows allow the user to cycle forwards and backwards through the items at their pace. When clicking the product image the customer is brought to the product page.
 
 Below this is the Mission section with a smooth scroll animation fade-in and underline when the user moves down the flow of the page. Here the customer can identify the business's core values.
 
-A simple accordian section for business FAQ's follows this. Answering a braod spectrum of possible customer questions.
+A simple accordion section for business FAQ's follows this. Answering a broad spectrum of possible customer questions.
 
 <details open>
     <summary>Home Page - All Users</summary>  
@@ -505,7 +502,7 @@ A simple accordian section for business FAQ's follows this. Answering a braod sp
 
 **Delivery Banner - All Users**
 
-This dropdown banner is inspired by Patagonia's colourful dropdown banner. I wished to replicate it and I was happy with the outcome. Extra delivery and contact information is displayed to the user when the dropdown arrow is clicked. The webpage that the user was currently visiting is blurred otu and click is disabled outside the delivery banner area. Clicking the x in the top right corner returns the delivery banner back upwards to the top and the blur is removed from the webpage. When extended or in place at the top of the screen, the banner cycles through a selection of the Everneed design palette colours.
+This dropdown banner is inspired by Patagonia's colourful dropdown banner. I wished to replicate it and I was happy with the outcome. Extra delivery and contact information is displayed to the user when the dropdown arrow is clicked. The webpage that the user was currently visiting is blurred out and click is disabled outside the delivery banner area. Clicking the x in the top right corner returns the delivery banner back upwards to the top and the blur is removed from the webpage. When extended or in place at the top of the screen, the banner cycles through a selection of the Everneed design palette colours.
 
 <details open>
     <summary>Delivery Banner - All Users</summary>  
@@ -582,11 +579,11 @@ The Account page for Everneed is kept simple, with only relevant information and
 
 Everneed sells a curated list of products, selected because of their sustainable production values and natural materials. Products with natural, sustainable materials such as organic wool, bamboo, vegan leather and cotton are available to the customer. Eco-labels will identify these materials quicker to the customer in future versions of Everneed. Clothes are presented as ungendered.
 
-The product list and product details pages are kept responsive and neat thanks to Bootstraps grid system to collapse the rows into single columns. A 'Back to the Top' button appears in the bottom right corner of the webpages if the user has scrolled more than 20 pixels from the top of the screen. Only essential information is displayed with size options broken into three categories for clothes, accessories and shoes.
+The product list and product details pages are kept responsive and neat thanks to Bootstrap's grid system to collapse the rows into single columns. A 'Back to the Top' button appears in the bottom right corner of the webpages if the user has scrolled more than 20 pixels from the top of the screen. Only essential information is displayed with size options broken into three categories for clothes, accessories and shoes.
 
 Products may be sorted according to price, A-Z, rating and category using the dropdown sort field.
 
-Admin may access the Admin Dashboard to add/edit/delete any items within the database. Crispy Forms renders the adding/editing forms with some extra styling from myself to remove the default blue highlight border and replace it with a green dashed border to fit within the project's design. Border radius of 15px is added to round the form fields and buttons are styled to be similar across the website.
+Admin may access the Admin Dashboard to add/edit/delete any items within the database. Crispy Forms renders the adding/editing forms with some extra styling from myself to remove the default blue highlight border and replace it with a green dashed border to fit within the project's design. Border radius of 15px is added to round the form fields and buttons are styled to be similar across the website. Products have the ability to display a 'Rating', at themoment it is at the discretion of the Admin to add these values based on sales. With the next version of Everneed, the Reviews feature will dictate the average rating for each product.
 
 No information is lost when viewing the website on mobile view. All screen sizes display the same information to give all users the same experience.
 
@@ -649,7 +646,7 @@ Everneed keeps it's shopping experience clean and easily accessible with four ca
 
 The articles currently displayed on Everneed are informing customers of the ecological, environmental and climate issues our planet is currently facing. The text within the article has been created by Chat GPT when prompted to respond about natural disasters that the world has been facing. The Admin have sole responsibility to add/edit/delete articles with no current option for the customer/reader to respond or engage with the post. This is partly because the brand aims to engage the customer into making a purchase to better the planet, by choosing sustainably-produced, long-life products.
 
-The Admin may add/edit/delete articles via the Admin Dashboard. If no image is included int he form or if the image url brekks, a placeholder image is present so as not to display a broken image link. Deletion is confirmed via a confirm deletion modal. When adding an article, the Admin may choose to save the article to drafts or publish them immediately. Drafts are accessible via the django backend panel and are published by selecting the published checkbox.
+The Admin may add/edit/delete articles via the Admin Dashboard. If no image is included in the form or if the image url brekks, a placeholder image is present so as not to display a broken image link. Deletion is confirmed via a confirm deletion modal. When adding an article, the Admin may choose to save the article to drafts or publish them immediately. Drafts are accessible via the django backend panel and are published by selecting the published checkbox.
 
 <details open>
     <summary>Articles List - All Users</summary>  
@@ -688,7 +685,7 @@ The Admin may add/edit/delete articles via the Admin Dashboard. If no image is i
 
 **Bag - All Users**
 
-Everneed's Shopping Bag feature is presented in a clean and clear format to correctly and quickly inform the user of their possible purchase choices. The customer has the option to change the amounts of the items that they wish to buy or to remove them completely form the bag. The customer is shown their running totals as well as their delivery charge and their carbon saved and carbon footprint total. When products are added/updated/removed to/from the bag, then a toast message displays to give the customer feedback on their most recent choice.
+Everneed's Shopping Bag feature is presented in a clean and clear format to correctly and quickly inform the user of their possible purchase choices. The customer has the option to change the amounts of the items that they wish to buy or to remove them completely from the bag. The customer is shown their running totals as well as their delivery charge and their carbon saved and carbon footprint total. When products are added/updated/removed to/from the bag, then a toast message displays to give the customer feedback on their most recent choice.
 
 A clear message is shown if there are no items in the bag and a 'Keep Shopping' button redirects the user back to the 'All Products' page. A delivery threshold banner informs the customer how much more they need to spend to reach the free delivery threshold.
 
@@ -731,7 +728,7 @@ Any payments made using a valid debit/credit card will not process and the card 
 
 When the customer has added items that they wish to purchase to their bag, they are given the option to proceed to 'Secure Checkout' to complete their order. This checkout form contains a personal, delivery/billing information form that will display previously entered details if the user is logged in and had previously ticked the box to save their details. The Stripe Payment form accepts the user's information and will inform them if they attempt to use an invalid card. Validation is also present in the delivery form area, to remind the user if they have not entered all of the relevant details.
 
-The items the customer has chosen are visible on the right hand side of the webpage with their grand total and an additonal box to display the Carbon saved and Carbon footprint total for their order. If the customer has not satisfied the free delivery threshold of €50, then a delivery charge of 10% of the grand total will be added to cover the cost of delivery.
+The items the customer has chosen are visible on the right hand side of the webpage with their grand total and an additional box to display the Carbon saved and Carbon footprint total for their order. If the customer has not satisfied the free delivery threshold of €50, then a delivery charge of 10% of the grand total will be added to cover the cost of delivery.
 
 Once the Checkout form has been submitted, a loading spinner informs the user that their payment is processing. Stripe's webhook handlers make this process smooth as the payment may attempt 5 times before being unsuccessful overall. In the Developer's view in the Stripe Dashboard, developers can check the webhook and payment processes to confirm they are working correctly.
 
@@ -755,7 +752,7 @@ Once the Checkout form has been submitted, a loading spinner informs the user th
     <img src="docs/readme_images/stripe_form.png">  
 </details>
 
-A confirmation email for the order is emailed to all customers. This details their spending amount and the date of their purchase. Their totals and item purchased are also visible in the checkout success page upon successful payment processing. If the user is logged in, they can view this order and all previous orders, if they were logged in at the time of purchase, in their account view.
+A confirmation email for the order is emailed to all customers. This details their spending amount and the date of their purchase. Their totals and items purchased are also visible in the checkout success page upon successful payment processing. If the user is logged in, they can view this order and all previous orders, if they were logged in at the time of purchase, in their account view.
 
 <details>
     <summary>Confirmation Email for Purchases</summary>  
@@ -768,13 +765,13 @@ A confirmation email for the order is emailed to all customers. This details the
 </details>
 
 <details>
-    <summary>Order History - All Users who've made a purchase witha registered, logged-in account</summary>  
+    <summary>Order History - All Users who've made a purchase with a registered, logged-in account</summary>  
     <img src="docs/readme_images/order_history.png">  
 </details>
 
 **Wishlist - Registered, logged in Users only**
 
-A Wishlist feature allows the logged in user to keep a list of their favourite products. When logged in, on viewing an individual product, the user will see the 'Add to Wishlist' button. When clicked user is informed via toast message that product has been added successfully or whether the product already exists within the Wishlist. The heart icon in the navbar, when hovered displays the 'Wishlist' tooltip, and when clicked brings the logged in user to the wishlist page. If not logged in, when clicked it brings the user to the 'Log In' screen.
+A Wishlist feature allows the logged in user to keep a list of their favourite products. When logged in, on viewing an individual product, the user will see the 'Add to Wishlist' button. When clicked, user is informed via toast message that the product has been added successfully or whether the product already exists within the Wishlist. The heart icon in the navbar, when hovered displays the 'Wishlist' tooltip, and when clicked brings the logged in user to the wishlist page. If not logged in, when clicked it brings the user to the 'Log In' screen.
 
 The Wishlist is a simple list display with a 'Remove Item' icon and text aside the product. There is no delete confirmation modal as this action is not a permanent deletion action, so is easily rectified if the product is accidentally removed from the list. When the item image is clicked the user is brought to the product detail page where they may add the item to their bag. The item is not automatically deleted from the wishlist if the user adds it to the bag.
 
@@ -809,7 +806,7 @@ When developing this project it was important to me to have a separate Admin are
 
 **Footer - All Users**
 
-Everneed's footer is brightly coloured with the defaulyt forest green #194f49 to contrast against the site's important white space. A purple SVG presents the newsletter subscription form for users to sign up for weekly emails. Across from this are a list of links that aim to give the customer all of the information they would need about Everneed. FAQ links the user back to the home page's accordian section of the usual questions and answers. Contact Us opens a contact modal for any queries that remain unanswered by the FAQ's. 
+Everneed's footer is brightly coloured with the default forest green colour to contrast against the site's important white space. A purple SVG presents the newsletter subscription form for users to sign up for weekly emails. Across from this are a list of links that aim to give the customer all of the information they would need about Everneed. FAQ links the user back to the home page's accordion section of the usual questions and answers. Contact Us opens a contact modal for any queries that remain unanswered by the FAQ's. 
 
 The stores Privacy Policy and Terms and Conditions follow underneath. The Privacy Policy opens in a new tab whilst the Terms and Conditions are displayed on a new Everneed webpage thanks to [Termly's](https://termly.io/) pasteable HTML block, once you have given the relevant business details. Finishing off that column are the business's Social Media connections. A Facebook page for Everneed opens in a new tab, as does my Twitter page containing a mix of climate change documents and web development articles. My LinkedIn and GitHub are also connected and will open in a new tab.
 
@@ -832,7 +829,7 @@ At the very bottom of the footer are the business's address which highlights in 
 
 **Contact Us - All Users**
 
-A brief contact form is offered in the footer of Everneed for any queries the customer may have. One submitting their name, email and message, a thank you page is displayed, with a 'Return Home' button. The Admin may view the messages in their connected business email service and reply directly to the customer.
+A brief contact form is offered in the footer of Everneed for any queries the customer may have. Once they have submitted their name, email and message, a thank you page is displayed, with a 'Return Home' button. The Admin may view the messages in their connected business email service and reply directly to the customer.
 
 <details open>
     <summary>Contact Us Form - All Users</summary>  
@@ -851,7 +848,7 @@ A brief contact form is offered in the footer of Everneed for any queries the cu
 
 **Newsletter - All Users who subscribe**
 
-Everneed customers are invited to subscribe to Everneed's weekly eco newsletter. This form is located on every page in the footer. The newsletter service is offered through Mailchimp. The newsletter aims to keep customers informed of discounts, new products, sales and environmental issues on a weekely basis. On entering their email and clicking subscribe, the user is brought to a new page in a new tab confirming their subscription to Everneed. They may unsubscribe from here or from the bottom of the weekly newsletter.  
+Everneed customers are invited to subscribe to Everneed's weekly eco newsletter. This form is located on every page in the footer. The newsletter service is offered through Mailchimp. The newsletter aims to keep customers informed of discounts, new products, sales and environmental issues on a weekly basis. On entering their email and clicking subscribe, the user is brought to a new page in a new tab confirming their subscription to Everneed. They may unsubscribe from here or from the bottom of the weekly newsletter.  
 
 <details open>
     <summary>Everneed Newsletter Form</summary>  
@@ -881,7 +878,7 @@ If a customer navigates to a page that does not exist eg 'everneed-herokuapp.com
 
 - **Stock Levels**: Editable stock levels are a priority future feature for Everneed. This will be added to the Admin Dashboard and the customer will be informed of stock levels via display labels if a product is out of stock.
 
-- **Article Comment, Article React**: As the Article's feature is only added to/edited by Admin, I considered having some way for user's to interact with the content. Through it's development I decided that Article Comments would be a 'WON'T HAVE' issue as I felt that having that much of a social media feature would not suit the Everneed brand. I also considered a 'Reaction' feature which at the moment remains at 'COULD HAVE'. Having several eco-related emojis could be a possibility but I would want to ensure that they do not detract from the seriousness of the article's content.
+- **Article Comment, Article React**: As the Article's feature is only added to/edited by Admin, I considered having some way for user's to interact with the content. Through its development I decided that Article Comments would be a 'WON'T HAVE' issue as I felt that having that much of a social media feature would not suit the Everneed brand. I also considered a 'Reaction' feature which at the moment remains at 'COULD HAVE'. Having several eco-related emojis could be a possibility but I would want to ensure that they do not detract from the seriousness of the article's content.
 
 - **Reviews feature with Ratings**: I hope to include a Reviews feature in Everneed's future development. I would like the customer's to have access to real-life reviews of the products' robustness, wear and materials. I feel that for the brand it is important for transparency to be front and centre to ensure customers make the best choice in their purchases, particularly with most of the products aiming to be non-gendered sizing. Reviews will have their averages calculated and this will determine the products' rating out of 5 when implemented.
   
@@ -891,7 +888,7 @@ If a customer navigates to a page that does not exist eg 'everneed-herokuapp.com
 
 - **Sale Section**: Inclusion of a sale section for Admin to add stock that is ready to be offered at a discounted price.
 
-- **Product Slugs**: Using Django-Slugify, the future version of Everneed will ensure that the products name is displayed in the URL.
+- **Product Slugs**: Using Django-Slugify, the future version of Everneed will ensure that the product's name is displayed in the URL.
 
 # Technologies & Languages Used
 
@@ -934,7 +931,7 @@ Libraries and frameworks used were dictated by the 'Boutique Ado' walkthrough fr
 - [Convertio](https://convertio.co/) for file conversion to PNG, WEBP.
 - [Tiny Png](https://tinypng.com/) for file size reduction.
 - [Lucidchart](https://www.lucidchart.com/pages) for ERD (entity relationship diagram) creation.
-- [Favicon](https://favicon.io/) for converting an icon into favicon.
+- [Favicon](https://favicon.io/) for converting an icon into a favicon.
 - [amiresponsive](https://ui.dev/amiresponsive) for screenshot of Everneed on different screen sizes.
 - [Perplexity AI](https://www.perplexity.ai/) for breaking down Python concepts and Django documentation into more understandable chunks.
 - [Mailchimp](https://mailchimp.com/) is used for marketing with their newsletter subscription service.
@@ -1000,7 +997,7 @@ os.path.join(BASE_DIR, 'templates'),
 os.path.join(BASE_DIR, 'templates', 'allauth')
 ```
 
-- Create the media, static and templates directories in top level of project file in IDE workspace.
+- Create the media, static and templates directories in the top level of the project file in the IDE workspace.
 
 11. A **Procfile** must be created within the project repo for Heroku deployment with the following placed within it: ```web: gunicorn everneed.wsgi```
 12. Make the necessary migrations again.
@@ -1253,7 +1250,7 @@ A local clone of this repository can be made on GitHub. Please follow the below 
 7. Type `git clone` and paste in the copied URL from step 4.
 8. Press '**Enter**' for the local clone to be created.
 9. Using the ``pip3 install -r requirements.txt`` command, the dependencies and libraries needed for FreeFido will be installed.
-10. Set up your **env.py** file and from the above steps for ElephantSQL, gather the Elephant SQL url for additon to your code and add your SECRET_KEY and STRIPE/AWS keys if using these services.
+10. Set up your **env.py** file and from the above steps for ElephantSQL, gather the Elephant SQL url for addition to your code and add your SECRET_KEY and STRIPE/AWS keys if using these services.
 11. Ensure that your **env.py** file is placed in your **.gitignore** file and follow the remaining steps in the above Django Project Setup section before pushing your code to GitHub.
 
 ## Fork Project
@@ -1270,7 +1267,7 @@ A copy of the original repository can be made through GitHub. Please follow the 
 
 ## Code
 
-The following blogs/tutorials complemented my learning for this project, alongside the [Code Institute's](https://codeinstitute.net/ie/) Learning Content. The Portfolio Project 5 - Boutique Ado provided a foundation which I took apart and altered to fit my project's design
+The following blogs/tutorials complimented my learning for this project, alongside the [Code Institute's](https://codeinstitute.net/ie/) Learning Content. The Portfolio Project 5 - Boutique Ado provided a foundation which I took apart and altered to fit my project's design
 
 - [Django Docs](https://www.djangoproject.com/)
 - [Bootstrap Docs](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
@@ -1350,3 +1347,7 @@ The following blogs/tutorials complemented my learning for this project, alongsi
 - [Geeks for Geeks](https://www.geeksforgeeks.org/python-programming-language/?ref=ghm) for additional Python learning.
 
 ## Acknowledgements
+
+- A huge thanks to my family for their continued support during this project and Diploma and the many, many cups of coffee sent my way. 
+- Much gratitude is extended to my mentor Rahul Lakhanpal for his expert guidance and advice during this Diploma, which gave me the confidence to make the most out of every project.
+- Thank you to my fellow students and Code Institute alumni for their guidance and support.
