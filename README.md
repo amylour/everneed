@@ -322,9 +322,6 @@ Essential features were:
     
 ## Structural Plane
 
-![]()  
-**
-
 ## Skeleton & Surface Planes
 
 ### Wireframes
