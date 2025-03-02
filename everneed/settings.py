@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-amylour-everneed-f3sgpqbcec.us2.codeanyapp.com',
+ALLOWED_HOSTS = ['8000-debug-amylour-everneed-8za24fciknn.ws-eu118.gitpod.io',
                  'everneed-096aafe5d13c.herokuapp.com', 'localhost']
 
 
@@ -156,6 +156,9 @@ else:
         }
     }
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-debug-amylour-everneed-8za24fciknn.ws-eu118.gitpod.io',
+]
 
 # Password-validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
