@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-debug-amylour-everneed-8za24fciknn.ws-eu118.gitpod.io',
                  'everneed-096aafe5d13c.herokuapp.com', 'localhost']
